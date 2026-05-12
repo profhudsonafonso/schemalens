@@ -1,0 +1,2 @@
+scale_label,official_id,query_name,best_config,best_design_pattern,best_p95_ms,best_primary_config,best_primary_p95_ms,primary_regret,activated_regret
+sf1,IS4,IS4_ContentOfMessage,G0,root_with_references,2.2880744814756326,G1,3.4728619502857314,0.5178098346020632,0.5178098346020632

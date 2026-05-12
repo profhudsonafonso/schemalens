@@ -1,0 +1,88 @@
+erDiagram
+
+    PERSON {
+        bigint person_id PK
+        string first_name
+        string last_name
+        string gender
+        date birthday
+        datetime creation_date
+        string location_ip
+        string browser_used
+    }
+
+    FORUM {
+        bigint forum_id PK
+        string title
+        datetime creation_date
+    }
+
+    POST {
+        bigint post_id PK
+        datetime creation_date
+        string image_file
+        string location_ip
+        string browser_used
+        string language
+        string content
+        int length
+    }
+
+    COMMENT {
+        bigint comment_id PK
+        datetime creation_date
+        string location_ip
+        string browser_used
+        string content
+        int length
+    }
+
+    PLACE {
+        bigint place_id PK
+        string name
+        string url
+        string type
+    }
+
+    ORGANISATION {
+        bigint organisation_id PK
+        string type
+        string name
+        string url
+    }
+
+    TAG {
+        bigint tag_id PK
+        string name
+        string url
+    }
+
+    TAGCLASS {
+        bigint tagclass_id PK
+        string name
+        string url
+    }
+
+    COMMENT ||--o{ COMMENT : "comment_reply_of_comment"
+    COMMENT }o--|| PERSON : "comment_has_creator_person"
+    COMMENT }o--|| PLACE : "comment_is_located_in_place"
+    COMMENT }o--o{ TAG : "comment_has_tag"
+    FORUM }o--o{ PERSON : "forum_has_member_person"
+    FORUM }o--|| PERSON : "forum_has_moderator_person"
+    FORUM ||--o{ POST : "forum_container_of_post"
+    FORUM }o--o{ TAG : "forum_has_tag"
+    ORGANISATION }o--|| PLACE : "organisation_is_located_in_place"
+    PERSON }o--o{ COMMENT : "person_likes_comment"
+    PERSON }o--o{ ORGANISATION : "person_study_at_organisation"
+    PERSON }o--o{ ORGANISATION : "person_work_at_organisation"
+    PERSON }o--o{ PERSON : "person_knows_person"
+    PERSON }o--|| PLACE : "person_is_located_in_place"
+    PERSON }o--o{ POST : "person_likes_post"
+    PERSON }o--o{ TAG : "person_has_interest_tag"
+    PLACE ||--o{ PLACE : "place_is_part_of_place"
+    POST ||--o{ COMMENT : "comment_reply_of_post"
+    POST }o--|| PERSON : "post_has_creator_person"
+    POST }o--|| PLACE : "post_is_located_in_place"
+    POST }o--o{ TAG : "post_has_tag"
+    TAG }o--|| TAGCLASS : "tag_has_type_tagclass"
+    TAGCLASS }o--|| TAGCLASS : "tagclass_is_subclass_of_tagclass"

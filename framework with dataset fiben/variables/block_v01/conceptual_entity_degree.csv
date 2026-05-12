@@ -1,0 +1,16 @@
+entity,degree,neighbors,relationships
+Corporation,4,"['Country', 'FinancialReport', 'Industry', 'ListedSecurity']","['corporation_has_country', 'corporation_has_financial_report', 'corporation_has_industry', 'corporation_has_listed_security']"
+ListedSecurity,4,"['Corporation', 'Holding', 'Security', 'Transaction']","['corporation_has_listed_security', 'holding_refers_to_listed_security', 'listed_security_represents_security', 'transaction_refers_to_listed_security']"
+Transaction,4,"['BuyTransaction', 'FinancialServiceAccount', 'ListedSecurity', 'SellTransaction']","['account_records_transaction', 'buy_transaction_is_transaction', 'sell_transaction_is_transaction', 'transaction_refers_to_listed_security']"
+FinancialReport,3,"['Corporation', 'Disclosure', 'ReportElement']","['corporation_has_financial_report', 'financial_report_contains_disclosure', 'financial_report_contains_report_element']"
+FinancialServiceAccount,3,"['Holding', 'Person', 'Transaction']","['account_has_holding', 'account_records_transaction', 'person_owns_financial_service_account']"
+Holding,2,"['FinancialServiceAccount', 'ListedSecurity']","['account_has_holding', 'holding_refers_to_listed_security']"
+ReportElement,2,"['FinancialReport', 'StatementElement']","['financial_report_contains_report_element', 'report_element_has_statement_element']"
+BuyTransaction,1,['Transaction'],['buy_transaction_is_transaction']
+Country,1,['Corporation'],['corporation_has_country']
+Disclosure,1,['FinancialReport'],['financial_report_contains_disclosure']
+Industry,1,['Corporation'],['corporation_has_industry']
+Person,1,['FinancialServiceAccount'],['person_owns_financial_service_account']
+Security,1,['ListedSecurity'],['listed_security_represents_security']
+SellTransaction,1,['Transaction'],['sell_transaction_is_transaction']
+StatementElement,1,['ReportElement'],['report_element_has_statement_element']

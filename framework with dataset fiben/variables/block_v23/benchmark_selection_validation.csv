@@ -1,0 +1,7 @@
+check_name,status,details
+every_query_has_selected_configuration,passed,queries_without_any_selected_config=0
+every_query_has_control_configuration,passed,queries_without_control=0
+every_query_has_primary_configuration,passed,queries_without_primary=0
+selected_candidate_ids_are_unique,passed,duplicated_candidate_ids=0
+every_selected_candidate_has_collection_name,passed,candidates_without_collection=0
+row_count_matches_selected_candidates,passed,"{'selection_rows': 60, 'execution_plan_rows': 60}"

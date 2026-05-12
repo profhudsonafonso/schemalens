@@ -1,0 +1,4 @@
+scale_factor,scale_label,execution_phase
+0.25,sf0.25,included_in_study
+0.5,sf0.5,included_in_study
+1.0,sf1,included_in_study

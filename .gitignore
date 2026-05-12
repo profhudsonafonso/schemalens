@@ -1,0 +1,27 @@
+# datasets
+data/
+raw/
+
+# benchmark heavy outputs
+benchmark_artifacts_dir/**/dataframes/
+benchmark_artifacts_dir/**/checkpoints/
+
+# huge generated files
+*.parquet
+*.zst
+
+# notebook cache
+.ipynb_checkpoints/
+
+# environments
+.venv/
+env/
+
+# python cache
+__pycache__/
+# Large benchmark generated files
+framework with dataset LDBC SNB/benchmark_artifacts_dir/ldbc_snb_checkpoints/dataframes/snb_update_stream_operations_df.json
+
+framework with dataset LDBC SNB/benchmark_artifacts_dir/ldbc_snb_update_volatility_official/update_stream_operations.csv
+
+framework with dataset LDBC SNB/exported_benchmark_bundles/ldbc_snb_sf0_1_mongo_benchmark_bundle/volatility/update_stream_operations.csv

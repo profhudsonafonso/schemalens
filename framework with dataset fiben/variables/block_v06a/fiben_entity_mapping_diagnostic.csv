@@ -1,0 +1,16 @@
+conceptual_entity,normalized_entity,possible_alias_matches,n_possible_alias_matches
+Corporation,corporation,"['corporation', 'corporations']",2
+Industry,industry,['industrysectorclassifier'],1
+Country,country,['country'],1
+Security,security,"['listedsecurity', 'security']",2
+ListedSecurity,listedsecurity,"['listedsecurity', 'security']",2
+Person,person,['person'],1
+FinancialServiceAccount,financialserviceaccount,['financialserviceaccount'],1
+Holding,holding,['holding'],1
+Transaction,transaction,['securitiestransaction'],1
+BuyTransaction,buytransaction,[],0
+SellTransaction,selltransaction,[],0
+FinancialReport,financialreport,"['elementsoffinancialreport', 'financialreport']",2
+ReportElement,reportelement,[],0
+StatementElement,statementelement,[],0
+Disclosure,disclosure,"['disclosure', 'disclosures']",2

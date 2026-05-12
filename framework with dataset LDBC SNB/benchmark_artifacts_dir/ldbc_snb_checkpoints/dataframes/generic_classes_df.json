@@ -1,0 +1,72 @@
+[
+  {
+    "g_class":"G0",
+    "family":"association",
+    "role":"baseline",
+    "label":"Root document with referenced associations",
+    "description":"Baseline root-centric document. Associated entities are kept mostly as references."
+  },
+  {
+    "g_class":"G1",
+    "family":"lookup",
+    "role":"baseline",
+    "label":"Single-entity lookup document",
+    "description":"Minimal document for direct lookup queries with no structural traversal."
+  },
+  {
+    "g_class":"G2",
+    "family":"association",
+    "role":"embedding_candidate",
+    "label":"Root document with embedded low-risk associations",
+    "description":"Embed associated data when reduction is high and sharedness\/volatility are not high."
+  },
+  {
+    "g_class":"G3",
+    "family":"association",
+    "role":"reference_or_summary_candidate",
+    "label":"Root document with references or denormalized summaries",
+    "description":"Use references or summaries when association paths involve high sharedness, high volatility, or deeper traversals."
+  },
+  {
+    "g_class":"G4",
+    "family":"associative",
+    "role":"baseline",
+    "label":"Associative relationship as explicit document",
+    "description":"Represent associative relationships such as likes, membership, or friendship as first-class documents."
+  },
+  {
+    "g_class":"G5",
+    "family":"associative",
+    "role":"source_embedded_edges",
+    "label":"Source-root document with embedded associative edges",
+    "description":"Embed associative edges near the source when fanout\/sharedness risk is manageable."
+  },
+  {
+    "g_class":"G6",
+    "family":"associative",
+    "role":"referenced_or_reverse_associative",
+    "label":"Referenced or reverse-indexed associative pattern",
+    "description":"Use references, reverse lookups, or edge collections when associative relationships are volatile or highly shared."
+  },
+  {
+    "g_class":"G7",
+    "family":"containment",
+    "role":"baseline",
+    "label":"Containment baseline",
+    "description":"Baseline containment-oriented root document."
+  },
+  {
+    "g_class":"G8",
+    "family":"containment",
+    "role":"deep_embedding_candidate",
+    "label":"Deep containment embedding",
+    "description":"Embed contained children when containment is deep and sharedness\/volatility are low."
+  },
+  {
+    "g_class":"G9",
+    "family":"containment",
+    "role":"hybrid_containment_candidate",
+    "label":"Hybrid containment with references or summaries",
+    "description":"Use hybrid containment when fanout, sharedness, or volatility makes full embedding risky."
+  }
+]

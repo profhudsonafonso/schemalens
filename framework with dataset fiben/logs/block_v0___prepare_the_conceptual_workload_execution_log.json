@@ -1,0 +1,15 @@
+{
+  "block_name": "BLOCK V0 — PREPARE THE CONCEPTUAL WORKLOAD",
+  "timestamp": "2026-04-30T14:45:02",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_queries": 10,
+    "n_unique_entities_touched": 15,
+    "workload_conceptual_csv": "variables/block_v00/workload_conceptual.csv",
+    "workload_entity_incidence_csv": "variables/block_v00/workload_entity_incidence.csv",
+    "summary_by_generic_class_csv": "variables/block_v00/workload_summary_by_generic_class.csv",
+    "summary_by_query_type_csv": "variables/block_v00/workload_summary_by_query_type.csv",
+    "metadata_json": "variables/block_v00/workload_conceptual_metadata.json"
+  }
+}

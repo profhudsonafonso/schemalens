@@ -1,0 +1,36 @@
+generic_class,query_family,document_depth,n_queries,avg_Rc,avg_Re,avg_DeltaR,avg_DeltaRratio,max_DeltaRratio,n_full_coverage
+QG1,Local lookup,0,1,0.0,0.0,0.0,0.0,0.0,1
+QG10,Update / insertion with relationship creation,0,1,5.0,5.0,0.0,0.0,0.0,0
+QG10,Update / insertion with relationship creation,1,1,5.0,4.0,1.0,0.2,0.2,0
+QG10,Update / insertion with relationship creation,2,1,5.0,2.0,3.0,0.6,0.6,0
+QG10,Update / insertion with relationship creation,3,1,5.0,0.0,5.0,1.0,1.0,1
+QG2,Shallow rooted retrieval,0,1,3.0,3.0,0.0,0.0,0.0,0
+QG2,Shallow rooted retrieval,1,1,3.0,0.0,3.0,1.0,1.0,1
+QG3,Associative retrieval,0,1,3.0,3.0,0.0,0.0,0.0,0
+QG3,Associative retrieval,1,1,3.0,2.0,1.0,0.3333333333333333,0.3333333333333333,0
+QG3,Associative retrieval,2,1,3.0,1.0,2.0,0.6666666666666666,0.6666666666666666,0
+QG3,Associative retrieval,3,1,3.0,0.0,3.0,1.0,1.0,1
+QG4,Deep traversal,0,1,4.0,4.0,0.0,0.0,0.0,0
+QG4,Deep traversal,1,1,4.0,3.0,1.0,0.25,0.25,0
+QG4,Deep traversal,2,1,4.0,2.0,2.0,0.5,0.5,0
+QG4,Deep traversal,3,1,4.0,1.0,3.0,0.75,0.75,0
+QG4,Deep traversal,4,1,4.0,0.0,4.0,1.0,1.0,1
+QG5,Containment retrieval,0,1,4.0,4.0,0.0,0.0,0.0,0
+QG5,Containment retrieval,1,1,4.0,3.0,1.0,0.25,0.25,0
+QG5,Containment retrieval,2,1,4.0,1.0,3.0,0.75,0.75,0
+QG5,Containment retrieval,3,1,4.0,0.0,4.0,1.0,1.0,1
+QG6,Filtered search / recommendation,0,1,3.0,3.0,0.0,0.0,0.0,0
+QG6,Filtered search / recommendation,1,1,3.0,2.0,1.0,0.3333333333333333,0.3333333333333333,0
+QG6,Filtered search / recommendation,2,1,3.0,0.0,3.0,1.0,1.0,1
+QG7,Aggregation / ranking,0,1,6.0,7.0,-1.0,-0.16666666666666666,-0.16666666666666666,0
+QG7,Aggregation / ranking,1,1,6.0,6.0,0.0,0.0,0.0,0
+QG7,Aggregation / ranking,2,1,6.0,4.0,2.0,0.3333333333333333,0.3333333333333333,0
+QG7,Aggregation / ranking,3,1,6.0,1.0,5.0,0.8333333333333334,0.8333333333333334,0
+QG7,Aggregation / ranking,4,1,6.0,0.0,6.0,1.0,1.0,1
+QG8,Aggregation / ranking,0,1,3.0,3.0,0.0,0.0,0.0,0
+QG8,Aggregation / ranking,1,1,3.0,1.0,2.0,0.6666666666666666,0.6666666666666666,0
+QG8,Aggregation / ranking,2,1,3.0,0.0,3.0,1.0,1.0,1
+QG9,Associative retrieval + comparison,0,1,5.0,6.0,-1.0,-0.2,-0.2,0
+QG9,Associative retrieval + comparison,1,1,5.0,5.0,0.0,0.0,0.0,0
+QG9,Associative retrieval + comparison,2,1,5.0,3.0,2.0,0.4,0.4,0
+QG9,Associative retrieval + comparison,3,1,5.0,0.0,5.0,1.0,1.0,1

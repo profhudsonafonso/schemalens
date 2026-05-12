@@ -1,0 +1,47 @@
+query_name,generic_class,query_family,query_type,entity,entity_role_in_query,update_volatility_score,update_volatility_level,has_update_volatility
+Q1_CompanyProfileIBM,QG1,Local lookup,select,Corporation,touched_entity,0.0,none,False
+Q2_CompanyWithIndustryCountryAndListedSecurities,QG2,Shallow rooted retrieval,select,Corporation,touched_entity,0.0,none,False
+Q2_CompanyWithIndustryCountryAndListedSecurities,QG2,Shallow rooted retrieval,select,Industry,touched_entity,0.0,none,False
+Q2_CompanyWithIndustryCountryAndListedSecurities,QG2,Shallow rooted retrieval,select,Country,touched_entity,0.0,none,False
+Q2_CompanyWithIndustryCountryAndListedSecurities,QG2,Shallow rooted retrieval,select,ListedSecurity,touched_entity,0.6599999999999999,high,True
+Q3_SecuritiesHeldInEachFinancialServiceAccount,QG3,Associative retrieval,select,FinancialServiceAccount,touched_entity,1.0,high,True
+Q3_SecuritiesHeldInEachFinancialServiceAccount,QG3,Associative retrieval,select,Holding,touched_entity,1.0,high,True
+Q3_SecuritiesHeldInEachFinancialServiceAccount,QG3,Associative retrieval,select,ListedSecurity,touched_entity,0.6599999999999999,high,True
+Q3_SecuritiesHeldInEachFinancialServiceAccount,QG3,Associative retrieval,select,Security,touched_entity,0.0,none,False
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,Person,touched_entity,0.6599999999999999,high,True
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,FinancialServiceAccount,touched_entity,1.0,high,True
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,Holding,touched_entity,1.0,high,True
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,ListedSecurity,touched_entity,0.6599999999999999,high,True
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,Corporation,touched_entity,0.0,none,False
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,select,Corporation,touched_entity,0.0,none,False
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,select,FinancialReport,touched_entity,0.0,none,False
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,select,ReportElement,touched_entity,0.0,none,False
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,select,StatementElement,touched_entity,0.0,none,False
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,select,Disclosure,touched_entity,0.0,none,False
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,QG6,Filtered search / recommendation,select,Corporation,touched_entity,0.0,none,False
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,QG6,Filtered search / recommendation,select,Industry,touched_entity,0.0,none,False
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,QG6,Filtered search / recommendation,select,Country,touched_entity,0.0,none,False
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,QG6,Filtered search / recommendation,select,ListedSecurity,touched_entity,0.6599999999999999,high,True
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,Person,touched_entity,0.6599999999999999,high,True
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,FinancialServiceAccount,touched_entity,1.0,high,True
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,BuyTransaction,touched_entity,1.0,high,True
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,SellTransaction,touched_entity,0.0,none,False
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,Transaction,touched_entity,1.0,high,True
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,ListedSecurity,touched_entity,0.6599999999999999,high,True
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,Corporation,touched_entity,0.0,none,False
+Q8_IBMTransactionsBelowAverageSellingPrice,QG8,Aggregation / ranking,select,Transaction,touched_entity,1.0,high,True
+Q8_IBMTransactionsBelowAverageSellingPrice,QG8,Aggregation / ranking,select,SellTransaction,touched_entity,0.0,none,False
+Q8_IBMTransactionsBelowAverageSellingPrice,QG8,Aggregation / ranking,select,ListedSecurity,touched_entity,0.6599999999999999,high,True
+Q8_IBMTransactionsBelowAverageSellingPrice,QG8,Aggregation / ranking,select,Corporation,touched_entity,0.0,none,False
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,Person,touched_entity,0.6599999999999999,high,True
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,FinancialServiceAccount,touched_entity,1.0,high,True
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,BuyTransaction,touched_entity,1.0,high,True
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,SellTransaction,touched_entity,0.0,none,False
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,Transaction,touched_entity,1.0,high,True
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,ListedSecurity,touched_entity,0.6599999999999999,high,True
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,Person,touched_entity,0.6599999999999999,high,True
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,FinancialServiceAccount,touched_entity,1.0,high,True
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,Holding,touched_entity,1.0,high,True
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,ListedSecurity,touched_entity,0.6599999999999999,high,True
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,Transaction,touched_entity,1.0,high,True
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,BuyTransaction,touched_entity,1.0,high,True

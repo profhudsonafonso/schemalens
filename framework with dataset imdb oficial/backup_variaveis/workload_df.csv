@@ -1,0 +1,11 @@
+query_name,type,generic_class,entities,abstract_query,notes
+QG1_WatchItemById,select,QG1,['WatchItem'],RETURN WatchItem WHERE watchitem_id = ?,Busca pontual por identificador único de WatchItem.
+QG2_WatchItemByTitle,select,QG2,['WatchItem'],RETURN ALL FROM WatchItem WHERE title = ?,Recuperação simples da entidade raiz por atributo direto.
+QG3_RecommendationByGenreAndSubtype,select,QG3,"['WatchItem', 'Genre', 'Movie', 'Series', 'Episode']","RETURN WatchItem recommendations FILTER BY genre, subtype and nearby title components",Query centrada em WatchItem com filtros sobre descritor compartilhado e subtipos/componentes próximos.
+QG4_AllPersonsOfTypeForWatchItem,select,QG4,"['WatchItem', 'Role', 'Person']",RETURN Person.ALL FROM WatchItem WHERE watchitem_id = ? AND role_category = ?,"Consulta associativa que parte de WatchItem, passa por Role e alcança Person."
+QG5_AllPersonsForEpisodesOfSeries,select,QG5,"['Series', 'Episode', 'WatchItem', 'Role', 'Person']",RETURN Person.ALL FOR all Episode of Series WHERE series_watchitem_id = ?,Travessia multi-hop que percorre Series -> Episode -> WatchItem -> Role -> Person.
+QG6_EpisodesOfSeries,select,QG6,"['Series', 'Episode']",RETURN Episode.ALL FROM Series WHERE series_watchitem_id = ?,Query de containment para a relação parte-todo Series -> Episode.
+QG7_UpdateWatchItemMetadata,update,QG7,['WatchItem'],"UPDATE WatchItem SET runtime_minutes = ?, primary_genre = ? WHERE watchitem_id = ?","Escrita isolada sobre a entidade raiz, sem criação de novo relacionamento."
+QG8_AddPersonRoleToWatchItem,insert,QG8,"['Person', 'WatchItem', 'Role']",INSERT Person if needed and connect Person to WatchItem via Role,Escrita com criação de vínculo estrutural via entidade associativa.
+QG9_TopRatedSeriesByGenre,select,QG9,"['WatchItem', 'Series', 'Genre']",RETURN TOP K Series BY avg_rating GROUPED/FILTERED BY Genre,Consulta analítica com agrupamento/ordenação sobre Series e descritor de gênero.
+QG10_AdvancedSearchWatchItems,select,QG10,"['WatchItem', 'Genre', 'Movie', 'Series', 'Episode']","SEARCH WatchItem BY title keywords, genre, year range, rating threshold and subtype ORDERED BY ranking",Busca mais extensa com múltiplos filtros e ordenação/ranking.

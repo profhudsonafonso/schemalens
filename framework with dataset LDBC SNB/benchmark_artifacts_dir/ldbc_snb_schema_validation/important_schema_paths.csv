@@ -1,0 +1,16 @@
+source_entity,target_entity,reachable,distance,path
+Person,Person,True,0.0,Person
+Person,Post,True,1.0,Person -> Post
+Person,Comment,True,1.0,Person -> Comment
+Person,Forum,False,,
+Forum,Post,True,1.0,Forum -> Post
+Forum,Comment,True,2.0,Forum -> Person -> Comment
+Post,Comment,True,1.0,Post -> Comment
+Post,Tag,True,1.0,Post -> Tag
+Comment,Tag,True,1.0,Comment -> Tag
+Person,Tag,True,1.0,Person -> Tag
+Person,Organisation,True,1.0,Person -> Organisation
+Person,Place,True,1.0,Person -> Place
+Organisation,Place,True,1.0,Organisation -> Place
+Tag,TagClass,True,1.0,Tag -> TagClass
+Place,Place,True,0.0,Place

@@ -1,0 +1,112 @@
+{
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "matched_entities": [
+    "corporations",
+    "reports",
+    "disclosures",
+    "securities",
+    "listed_securities"
+  ],
+  "unmatched_entities": [
+    "report_elements",
+    "statement_elements",
+    "accounts",
+    "industries",
+    "classifications"
+  ],
+  "created_semantic_views": {
+    "corporations": "fiben_corporations",
+    "reports": "fiben_reports",
+    "disclosures": "fiben_disclosures",
+    "securities": "fiben_securities",
+    "listed_securities": "fiben_listed_securities"
+  },
+  "semantic_views_in_bundle": {
+    "corporations": "fiben_corporations",
+    "reports": "fiben_reports",
+    "disclosures": "fiben_disclosures",
+    "securities": "fiben_securities",
+    "listed_securities": "fiben_listed_securities"
+  },
+  "raw_views_in_bundle": {
+    "corporation": "fiben_raw_corporation",
+    "country": "fiben_raw_country",
+    "disclosure": "fiben_raw_disclosure",
+    "elementoffinancialstatement": "fiben_raw_elementoffinancialstatement",
+    "elementsoffinancialreport": "fiben_raw_elementsoffinancialreport",
+    "financialreport": "fiben_raw_financialreport",
+    "financialserviceaccount": "fiben_raw_financialserviceaccount",
+    "holding": "fiben_raw_holding",
+    "industrysectorclassifier": "fiben_raw_industrysectorclassifier",
+    "listedsecurity": "fiben_raw_listedsecurity",
+    "monetaryamount": "fiben_raw_monetaryamount",
+    "person": "fiben_raw_person",
+    "securitiestransaction": "fiben_raw_securitiestransaction",
+    "security": "fiben_raw_security"
+  },
+  "conceptual_entity_candidates": {
+    "corporations": [
+      "corporation",
+      "corporations",
+      "corp",
+      "company",
+      "companies"
+    ],
+    "reports": [
+      "report",
+      "reports",
+      "financial_report",
+      "financial_reports",
+      "filing",
+      "filings"
+    ],
+    "report_elements": [
+      "report_element",
+      "report_elements",
+      "reportelement",
+      "reportelements",
+      "report_el",
+      "report_els"
+    ],
+    "statement_elements": [
+      "statement_element",
+      "statement_elements",
+      "statementelement",
+      "statementelements",
+      "statement_el",
+      "statement_els"
+    ],
+    "disclosures": [
+      "disclosure",
+      "disclosures"
+    ],
+    "securities": [
+      "security",
+      "securities"
+    ],
+    "listed_securities": [
+      "listed_security",
+      "listed_securities",
+      "listedsecurity",
+      "listedsecurities"
+    ],
+    "accounts": [
+      "account",
+      "accounts"
+    ],
+    "industries": [
+      "industry",
+      "industries",
+      "industry_classification",
+      "industry_classifications"
+    ],
+    "classifications": [
+      "classification",
+      "classifications",
+      "corporation_classification",
+      "corporation_classifications",
+      "isclassifiedby"
+    ]
+  }
+}

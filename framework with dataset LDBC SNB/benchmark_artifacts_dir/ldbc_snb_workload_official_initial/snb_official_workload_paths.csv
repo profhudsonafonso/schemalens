@@ -1,0 +1,65 @@
+query_name,official_id,root_entity,target_entity,reachable,distance,path
+IS1_ProfileOfPerson,IS1,Person,Person,True,0,Person
+IS1_ProfileOfPerson,IS1,Person,Place,True,1,Person -> Place
+IS2_RecentMessagesOfPerson,IS2,Person,Person,True,0,Person
+IS2_RecentMessagesOfPerson,IS2,Person,Post,True,1,Person -> Post
+IS2_RecentMessagesOfPerson,IS2,Person,Comment,True,1,Person -> Comment
+IS3_FriendsOfPerson,IS3,Person,Person,True,0,Person
+IS4_ContentOfMessage,IS4,Post,Post,True,0,Post
+IS4_ContentOfMessage,IS4,Post,Comment,True,1,Post -> Comment
+IS5_CreatorOfMessage,IS5,Post,Post,True,0,Post
+IS5_CreatorOfMessage,IS5,Post,Comment,True,1,Post -> Comment
+IS5_CreatorOfMessage,IS5,Post,Person,True,1,Post -> Person
+IS6_ForumOfMessage,IS6,Post,Post,True,0,Post
+IS6_ForumOfMessage,IS6,Post,Comment,True,1,Post -> Comment
+IS6_ForumOfMessage,IS6,Post,Forum,True,1,Post -> Forum
+IS6_ForumOfMessage,IS6,Post,Person,True,1,Post -> Person
+IS7_RepliesOfMessage,IS7,Post,Post,True,0,Post
+IS7_RepliesOfMessage,IS7,Post,Comment,True,1,Post -> Comment
+IS7_RepliesOfMessage,IS7,Post,Person,True,1,Post -> Person
+IC1_TransitiveFriendsWithName,IC1,Person,Person,True,0,Person
+IC1_TransitiveFriendsWithName,IC1,Person,Place,True,1,Person -> Place
+IC1_TransitiveFriendsWithName,IC1,Person,Organisation,True,1,Person -> Organisation
+IC2_RecentMessagesByFriends,IC2,Person,Person,True,0,Person
+IC2_RecentMessagesByFriends,IC2,Person,Post,True,1,Person -> Post
+IC2_RecentMessagesByFriends,IC2,Person,Comment,True,1,Person -> Comment
+IC3_FriendsAndFriendsOfFriendsInCountries,IC3,Person,Person,True,0,Person
+IC3_FriendsAndFriendsOfFriendsInCountries,IC3,Person,Post,True,1,Person -> Post
+IC3_FriendsAndFriendsOfFriendsInCountries,IC3,Person,Comment,True,1,Person -> Comment
+IC3_FriendsAndFriendsOfFriendsInCountries,IC3,Person,Place,True,1,Person -> Place
+IC4_NewTopics,IC4,Person,Person,True,0,Person
+IC4_NewTopics,IC4,Person,Post,True,1,Person -> Post
+IC4_NewTopics,IC4,Person,Tag,True,1,Person -> Tag
+IC5_NewGroups,IC5,Person,Person,True,0,Person
+IC5_NewGroups,IC5,Person,Forum,True,1,Person -> Forum
+IC5_NewGroups,IC5,Person,Post,True,1,Person -> Post
+IC6_TagCoOccurrence,IC6,Person,Person,True,0,Person
+IC6_TagCoOccurrence,IC6,Person,Post,True,1,Person -> Post
+IC6_TagCoOccurrence,IC6,Person,Tag,True,1,Person -> Tag
+IC7_RecentLikers,IC7,Person,Person,True,0,Person
+IC7_RecentLikers,IC7,Person,Post,True,1,Person -> Post
+IC7_RecentLikers,IC7,Person,Comment,True,1,Person -> Comment
+INS1_AddPerson,INS1,Person,Person,True,0,Person
+INS1_AddPerson,INS1,Person,Place,True,1,Person -> Place
+INS1_AddPerson,INS1,Person,Tag,True,1,Person -> Tag
+INS1_AddPerson,INS1,Person,Organisation,True,1,Person -> Organisation
+INS2_AddLikeToPost,INS2,Person,Person,True,0,Person
+INS2_AddLikeToPost,INS2,Person,Post,True,1,Person -> Post
+INS3_AddLikeToComment,INS3,Person,Person,True,0,Person
+INS3_AddLikeToComment,INS3,Person,Comment,True,1,Person -> Comment
+INS4_AddForum,INS4,Forum,Forum,True,0,Forum
+INS4_AddForum,INS4,Forum,Person,True,1,Forum -> Person
+INS4_AddForum,INS4,Forum,Tag,True,1,Forum -> Tag
+INS5_AddForumMembership,INS5,Forum,Forum,True,0,Forum
+INS5_AddForumMembership,INS5,Forum,Person,True,1,Forum -> Person
+INS6_AddPost,INS6,Post,Post,True,0,Post
+INS6_AddPost,INS6,Post,Person,True,1,Post -> Person
+INS6_AddPost,INS6,Post,Forum,True,1,Post -> Forum
+INS6_AddPost,INS6,Post,Place,True,1,Post -> Place
+INS6_AddPost,INS6,Post,Tag,True,1,Post -> Tag
+INS7_AddComment,INS7,Comment,Comment,True,0,Comment
+INS7_AddComment,INS7,Comment,Person,True,1,Comment -> Person
+INS7_AddComment,INS7,Comment,Post,True,1,Comment -> Post
+INS7_AddComment,INS7,Comment,Place,True,1,Comment -> Place
+INS7_AddComment,INS7,Comment,Tag,True,1,Comment -> Tag
+INS8_AddFriendship,INS8,Person,Person,True,0,Person

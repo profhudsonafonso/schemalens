@@ -1,0 +1,286 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "entities": [
+    "Corporation",
+    "Industry",
+    "Country",
+    "Security",
+    "ListedSecurity",
+    "Person",
+    "FinancialServiceAccount",
+    "Holding",
+    "Transaction",
+    "BuyTransaction",
+    "SellTransaction",
+    "FinancialReport",
+    "ReportElement",
+    "StatementElement",
+    "Disclosure"
+  ],
+  "relationships": [
+    {
+      "source": "Corporation",
+      "target": "Industry",
+      "name": "corporation_has_industry",
+      "semantic_type": "descriptor",
+      "notes": "Connects a corporation to its industry classification."
+    },
+    {
+      "source": "Corporation",
+      "target": "Country",
+      "name": "corporation_has_country",
+      "semantic_type": "descriptor",
+      "notes": "Connects a corporation to its country."
+    },
+    {
+      "source": "Corporation",
+      "target": "ListedSecurity",
+      "name": "corporation_has_listed_security",
+      "semantic_type": "association",
+      "notes": "Connects a corporation to listed securities."
+    },
+    {
+      "source": "ListedSecurity",
+      "target": "Security",
+      "name": "listed_security_represents_security",
+      "semantic_type": "association",
+      "notes": "Connects a listed security to the underlying security."
+    },
+    {
+      "source": "Person",
+      "target": "FinancialServiceAccount",
+      "name": "person_owns_financial_service_account",
+      "semantic_type": "ownership",
+      "notes": "Connects a person to a financial service account."
+    },
+    {
+      "source": "FinancialServiceAccount",
+      "target": "Holding",
+      "name": "account_has_holding",
+      "semantic_type": "containment",
+      "notes": "Connects an account to the holdings inside it."
+    },
+    {
+      "source": "Holding",
+      "target": "ListedSecurity",
+      "name": "holding_refers_to_listed_security",
+      "semantic_type": "association",
+      "notes": "Connects a holding to the listed security being held."
+    },
+    {
+      "source": "FinancialServiceAccount",
+      "target": "Transaction",
+      "name": "account_records_transaction",
+      "semantic_type": "containment",
+      "notes": "Connects an account to its transactions."
+    },
+    {
+      "source": "Transaction",
+      "target": "ListedSecurity",
+      "name": "transaction_refers_to_listed_security",
+      "semantic_type": "association",
+      "notes": "Connects a transaction to the listed security traded."
+    },
+    {
+      "source": "BuyTransaction",
+      "target": "Transaction",
+      "name": "buy_transaction_is_transaction",
+      "semantic_type": "subtype",
+      "notes": "Models buy transactions as a subtype of transaction."
+    },
+    {
+      "source": "SellTransaction",
+      "target": "Transaction",
+      "name": "sell_transaction_is_transaction",
+      "semantic_type": "subtype",
+      "notes": "Models sell transactions as a subtype of transaction."
+    },
+    {
+      "source": "Corporation",
+      "target": "FinancialReport",
+      "name": "corporation_has_financial_report",
+      "semantic_type": "containment",
+      "notes": "Connects a corporation to its financial reports."
+    },
+    {
+      "source": "FinancialReport",
+      "target": "ReportElement",
+      "name": "financial_report_contains_report_element",
+      "semantic_type": "containment",
+      "notes": "Connects a financial report to report-level metric data."
+    },
+    {
+      "source": "ReportElement",
+      "target": "StatementElement",
+      "name": "report_element_has_statement_element",
+      "semantic_type": "containment",
+      "notes": "Connects report elements to statement elements."
+    },
+    {
+      "source": "FinancialReport",
+      "target": "Disclosure",
+      "name": "financial_report_contains_disclosure",
+      "semantic_type": "containment",
+      "notes": "Connects a financial report to disclosure data."
+    }
+  ],
+  "workload_queries": [
+    {
+      "name": "Q1_CompanyProfileIBM",
+      "type": "select",
+      "generic_class": "QG1",
+      "query_family": "Local lookup",
+      "entities": [
+        "Corporation"
+      ],
+      "abstract_query": "Show the profile of company IBM.",
+      "notes": "Local lookup over Corporation. The concrete company name IBM is treated as a query parameter."
+    },
+    {
+      "name": "Q2_CompanyWithIndustryCountryAndListedSecurities",
+      "type": "select",
+      "generic_class": "QG2",
+      "query_family": "Shallow rooted retrieval",
+      "entities": [
+        "Corporation",
+        "Industry",
+        "Country",
+        "ListedSecurity"
+      ],
+      "abstract_query": "Show IBM with its industry, country, and listed securities.",
+      "notes": "Shallow rooted retrieval centered on Corporation with direct descriptor and associated entities."
+    },
+    {
+      "name": "Q3_SecuritiesHeldInEachFinancialServiceAccount",
+      "type": "select",
+      "generic_class": "QG3",
+      "query_family": "Associative retrieval",
+      "entities": [
+        "FinancialServiceAccount",
+        "Holding",
+        "ListedSecurity",
+        "Security"
+      ],
+      "abstract_query": "Show the securities held in each financial service account.",
+      "notes": "Associative retrieval from financial service accounts through holdings to listed securities and underlying securities."
+    },
+    {
+      "name": "Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity",
+      "type": "select",
+      "generic_class": "QG4",
+      "query_family": "Deep traversal",
+      "entities": [
+        "Person",
+        "FinancialServiceAccount",
+        "Holding",
+        "ListedSecurity",
+        "Corporation"
+      ],
+      "abstract_query": "Show the companies reached from a person through account, holding, and listed security.",
+      "notes": "Deep traversal from Person to Corporation through the account and holding structure."
+    },
+    {
+      "name": "Q5_ReportsAndMetricDataOfCompany",
+      "type": "select",
+      "generic_class": "QG5",
+      "query_family": "Containment retrieval",
+      "entities": [
+        "Corporation",
+        "FinancialReport",
+        "ReportElement",
+        "StatementElement",
+        "Disclosure"
+      ],
+      "abstract_query": "Show the financial reports of a company and the metric data contained in each report.",
+      "notes": "Containment retrieval from Corporation to FinancialReport and its contained report elements, statement elements, and disclosures."
+    },
+    {
+      "name": "Q6_TechUSListedSecuritiesWithHighLastTradedValue",
+      "type": "select",
+      "generic_class": "QG6",
+      "query_family": "Filtered search / recommendation",
+      "entities": [
+        "Corporation",
+        "Industry",
+        "Country",
+        "ListedSecurity"
+      ],
+      "abstract_query": "Find listed securities of technology companies in the US with high last traded value.",
+      "notes": "Filtered search over listed securities using corporation industry, country, and traded-value predicates."
+    },
+    {
+      "name": "Q7_PersonsWhoBoughtMoreIBMThanSold",
+      "type": "select",
+      "generic_class": "QG7",
+      "query_family": "Aggregation / ranking",
+      "entities": [
+        "Person",
+        "FinancialServiceAccount",
+        "BuyTransaction",
+        "SellTransaction",
+        "Transaction",
+        "ListedSecurity",
+        "Corporation"
+      ],
+      "abstract_query": "Who bought more IBM stocks than they sold?",
+      "notes": "Aggregation comparing buy and sell quantities per person for the IBM listed security."
+    },
+    {
+      "name": "Q8_IBMTransactionsBelowAverageSellingPrice",
+      "type": "select",
+      "generic_class": "QG8",
+      "query_family": "Aggregation / ranking",
+      "entities": [
+        "Transaction",
+        "SellTransaction",
+        "ListedSecurity",
+        "Corporation"
+      ],
+      "abstract_query": "Show me each transaction for IBM whose price is less than the average selling price.",
+      "notes": "Comparison query that computes an average selling price and returns IBM transactions below that value."
+    },
+    {
+      "name": "Q9_PersonsWhoBoughtAndSoldSameStock",
+      "type": "select",
+      "generic_class": "QG9",
+      "query_family": "Associative retrieval + comparison",
+      "entities": [
+        "Person",
+        "FinancialServiceAccount",
+        "BuyTransaction",
+        "SellTransaction",
+        "Transaction",
+        "ListedSecurity"
+      ],
+      "abstract_query": "Show me everyone who bought and sold the same stock.",
+      "notes": "Associative comparison query identifying persons with both buy and sell activity for the same listed security."
+    },
+    {
+      "name": "Q10_CreateAccountHoldingAndBuyTransaction",
+      "type": "insert",
+      "generic_class": "QG10",
+      "query_family": "Update / insertion with relationship creation",
+      "entities": [
+        "Person",
+        "FinancialServiceAccount",
+        "Holding",
+        "ListedSecurity",
+        "Transaction",
+        "BuyTransaction"
+      ],
+      "abstract_query": "Create a financial service account for a person, add a holding for a listed security, and register a buy transaction with price and quantity.",
+      "notes": "Insertion workload with relationship creation across person, account, holding, listed security, and buy transaction."
+    }
+  ],
+  "recommendation_name": "FIBEN_Q1_Q10_Workload",
+  "materialization_recommendation": "FIBEN_Mongo_Baseline",
+  "benchmark_workload_name": "FIBEN_Methodology_Workload_Q1_Q10",
+  "compatibility_aliases": {
+    "imdb_scenario": "fiben_scenario",
+    "imdb_workload_mongo": "fiben_workload_mongo",
+    "hubara_imdb_recommendation": "hubara_fiben_recommendation",
+    "hubara_imdb_mongo_materialization": "hubara_fiben_mongo_materialization"
+  }
+}

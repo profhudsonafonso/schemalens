@@ -1,0 +1,8 @@
+Local lookup: touches a main entity
+Shallow rooted retrieval: touches the root and entities at a distance of 1
+Associative retrieval: traverses associative entities
+Deep traversal: requires depth 2 or more
+Containment retrieval: part-whole/composition
+Filtered search / recommendation
+Aggregation / ranking
+Update / insertion with relationship creation

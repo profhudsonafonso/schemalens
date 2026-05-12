@@ -1,0 +1,20 @@
+{
+  "block_name": "BLOCK V10 — CALCULATE Re(Qi, er, D) AND DeltaR",
+  "timestamp": "2026-04-30T15:36:55",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_re_delta_rows": 35,
+    "n_queries": 10,
+    "n_negative_delta_rows": 2,
+    "n_invalid_ratio_rows": 0,
+    "n_queries_without_full_coverage": 0,
+    "re_delta_csv": "variables/block_v10/re_delta_by_query_depth.csv",
+    "re_df_csv": "variables/block_v10/re_df.csv",
+    "delta_r_df_csv": "variables/block_v10/delta_r_df.csv",
+    "best_depth_by_query_csv": "variables/block_v10/best_depth_by_query.csv",
+    "re_delta_summary_csv": "variables/block_v10/re_delta_summary_by_class_depth.csv",
+    "depth_candidate_matrix_csv": "variables/block_v10/depth_candidate_matrix.csv",
+    "metadata_json": "variables/block_v10/re_delta_metadata.json"
+  }
+}

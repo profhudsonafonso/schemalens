@@ -1,0 +1,23 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "max_document_depth_to_test": null,
+  "n_re_delta_rows": 35,
+  "n_queries": 10,
+  "max_document_depth_observed": 4,
+  "n_negative_delta_rows": 2,
+  "n_invalid_ratio_rows": 0,
+  "n_queries_without_full_coverage": 0,
+  "output_files": {
+    "re_delta_csv": "variables/block_v10/re_delta_by_query_depth.csv",
+    "re_df_csv": "variables/block_v10/re_df.csv",
+    "delta_r_df_csv": "variables/block_v10/delta_r_df.csv",
+    "best_depth_by_query_csv": "variables/block_v10/best_depth_by_query.csv",
+    "re_delta_summary_csv": "variables/block_v10/re_delta_summary_by_class_depth.csv",
+    "depth_candidate_matrix_csv": "variables/block_v10/depth_candidate_matrix.csv",
+    "negative_delta_csv": "variables/block_v10/negative_delta_rows.csv",
+    "invalid_ratio_csv": "variables/block_v10/invalid_ratio_rows.csv",
+    "queries_without_full_coverage_csv": "variables/block_v10/queries_without_full_coverage.csv"
+  }
+}

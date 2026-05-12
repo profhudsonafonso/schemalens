@@ -1,0 +1,19 @@
+{
+  "block_name": "BLOCK V12 — ANALYTICAL MATRIX OF FIBEN EXPANDED BY DEPTH",
+  "timestamp": "2026-04-30T15:43:06",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_rows": 35,
+    "n_queries": 10,
+    "n_columns": 67,
+    "n_best_depth_rows": 10,
+    "n_full_coverage_rows": 10,
+    "n_missing_value_rows": 0,
+    "n_negative_delta_rows": 2,
+    "analytical_matrix_expanded_csv": "variables/block_v12/analytical_matrix_expanded_by_depth.csv",
+    "summary_by_depth_csv": "variables/block_v12/expanded_matrix_summary_by_depth.csv",
+    "summary_by_query_csv": "variables/block_v12/expanded_matrix_summary_by_query.csv",
+    "metadata_json": "variables/block_v12/analytical_matrix_expanded_metadata.json"
+  }
+}

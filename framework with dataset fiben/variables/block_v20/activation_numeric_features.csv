@@ -1,0 +1,11 @@
+query_name,Rc,Re,DeltaR,DeltaRratio,document_depth,selected_document_depth,max_depth_for_query,document_depth_ratio,n_entities_touched,n_reachable_entities,n_total_edges,n_covered_edges,n_remaining_edges,n_descriptor_edges,n_association_edges,n_ownership_edges,n_containment_edges,n_subtype_edges,query_update_volatility_score,avg_observed_sharedness_score,max_observed_sharedness_score,sum_observed_sharedness_score,n_edges_with_sharedness,n_high_sharedness_edges
+Q10_CreateAccountHoldingAndBuyTransaction,5.0,0.0,5.0,1.0,3.0,3.0,3.0,1.0,6.0,6.0,5.0,5.0,0.0,0,1,1,2,1,0.932,0.17194961377608717,0.2958825,0.8597480688804359,4.0,0.0
+Q1_CompanyProfileIBM,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0,0,0,0,0,0.0,0.0,0.0,0.0,0.0,0.0
+Q2_CompanyWithIndustryCountryAndListedSecurities,3.0,0.0,3.0,1.0,1.0,1.0,1.0,1.0,4.0,4.0,3.0,3.0,0.0,2,1,0,0,0,0.36299999999999993,0.18373493975903613,0.2974182444061962,0.5512048192771084,2.0,0.0
+Q3_SecuritiesHeldInEachFinancialServiceAccount,3.0,0.0,3.0,1.0,3.0,3.0,3.0,1.0,4.0,4.0,3.0,3.0,0.0,0,2,0,1,0,0.799,0.180405,0.2958825,0.541215,2.0,0.0
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,4.0,0.0,4.0,1.0,4.0,4.0,4.0,1.0,5.0,5.0,4.0,4.0,0.0,0,2,1,1,0,0.7984,0.17175126722010897,0.2958825,0.6870050688804359,3.0,0.0
+Q5_ReportsAndMetricDataOfCompany,4.0,0.0,4.0,1.0,3.0,3.0,3.0,1.0,5.0,5.0,4.0,4.0,0.0,0,0,0,4,0,0.0,0.14504662906047494,0.29462099999999997,0.5801865162418998,2.0,0.0
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,3.0,0.0,3.0,1.0,2.0,2.0,2.0,1.0,4.0,4.0,3.0,3.0,0.0,2,1,0,0,0,0.36299999999999993,0.18373493975903613,0.2974182444061962,0.5512048192771084,2.0,0.0
+Q7_PersonsWhoBoughtMoreIBMThanSold,6.0,0.0,6.0,1.0,4.0,4.0,4.0,1.0,7.0,7.0,6.0,7.0,0.0,0,2,1,1,2,0.7702857142857144,0.10240259481340598,0.2958825,0.6144155688804359,3.0,0.0
+Q8_IBMTransactionsBelowAverageSellingPrice,3.0,0.0,3.0,1.0,2.0,2.0,2.0,1.0,4.0,4.0,3.0,3.0,0.0,0,2,0,0,1,0.649,0.09862749999999999,0.2958825,0.2958825,1.0,0.0
+Q9_PersonsWhoBoughtAndSoldSameStock,5.0,0.0,5.0,1.0,3.0,3.0,3.0,1.0,6.0,6.0,5.0,6.0,0.0,0,1,1,1,2,0.8320000000000001,0.12288311377608718,0.2958825,0.6144155688804359,3.0,0.0

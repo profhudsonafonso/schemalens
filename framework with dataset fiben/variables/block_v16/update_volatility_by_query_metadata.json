@@ -1,0 +1,26 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "n_queries": 10,
+  "n_queries_with_update_volatility": 8,
+  "n_write_queries": 1,
+  "query_update_volatility_level_counts": {
+    "high": 6,
+    "none": 2,
+    "medium": 2
+  },
+  "max_query_update_volatility_score": 0.932,
+  "output_files": {
+    "update_volatility_by_query_csv": "variables/block_v16/update_volatility_by_query.csv",
+    "query_update_volatility_csv": "variables/block_v16/query_update_volatility.csv",
+    "update_volatility_query_csv": "variables/block_v16/update_volatility_query.csv",
+    "query_entity_long_csv": "variables/block_v16/query_entity_update_volatility_long.csv",
+    "query_write_related_long_csv": "variables/block_v16/query_write_related_update_volatility_long.csv",
+    "query_summary_csv": "variables/block_v16/update_volatility_query_summary.csv",
+    "by_generic_class_csv": "variables/block_v16/update_volatility_by_generic_class.csv",
+    "missing_query_update_volatility_csv": "variables/block_v16/missing_query_update_volatility.csv",
+    "write_queries_low_or_no_volatility_csv": "variables/block_v16/write_queries_low_or_no_volatility.csv",
+    "read_queries_with_volatility_csv": "variables/block_v16/read_queries_with_volatility.csv"
+  }
+}

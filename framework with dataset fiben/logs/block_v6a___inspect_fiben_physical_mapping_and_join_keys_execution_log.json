@@ -1,0 +1,17 @@
+{
+  "block_name": "BLOCK V6A — INSPECT FIBEN PHYSICAL MAPPING AND JOIN KEYS",
+  "timestamp": "2026-04-30T15:09:51",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_physical_views": 19,
+    "n_likely_key_columns": 34,
+    "n_relationships_need_review": 13,
+    "physical_view_inventory_csv": "variables/block_v06a/fiben_physical_view_inventory.csv",
+    "physical_column_dictionary_csv": "variables/block_v06a/fiben_physical_column_dictionary.csv",
+    "likely_key_columns_csv": "variables/block_v06a/fiben_likely_key_columns.csv",
+    "entity_mapping_diagnostic_csv": "variables/block_v06a/fiben_entity_mapping_diagnostic.csv",
+    "relationships_need_manual_review_csv": "variables/block_v06a/relationships_need_manual_review.csv",
+    "metadata_json": "variables/block_v06a/fiben_physical_mapping_diagnostic_metadata.json"
+  }
+}

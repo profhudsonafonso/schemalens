@@ -1,0 +1,23 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "n_edge_depth_rows": 75,
+  "n_structural_edges_by_depth": 38,
+  "n_queries": 10,
+  "n_queries_with_no_edges": 1,
+  "n_edges_missing_semantics": 0,
+  "max_entity_depth_global": 4,
+  "max_edge_depth_global": 4,
+  "output_files": {
+    "edge_depth_csv": "variables/block_v09/edge_depth.csv",
+    "query_edges_with_semantics_csv": "variables/block_v09/query_edges_with_semantics.csv",
+    "structural_edges_by_depth_csv": "variables/block_v09/structural_edges_by_depth.csv",
+    "query_depth_summary_csv": "variables/block_v09/query_depth_summary.csv",
+    "entity_depth_summary_csv": "variables/block_v09/entity_depth_summary.csv",
+    "query_edge_depth_profile_csv": "variables/block_v09/query_edge_depth_profile.csv",
+    "max_depth_by_query_csv": "variables/block_v09/max_depth_by_query.csv",
+    "edges_missing_semantics_csv": "variables/block_v09/edges_missing_semantics.csv",
+    "queries_with_no_edges_csv": "variables/block_v09/queries_with_no_edges.csv"
+  }
+}

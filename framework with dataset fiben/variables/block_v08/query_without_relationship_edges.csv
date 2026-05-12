@@ -1,0 +1,2 @@
+query_name,generic_class,query_family,query_type,entities_touched,n_entities_touched,relationship_status,n_relationship_edges,semantic_types_touched,n_semantic_types,relationship_names_touched,edge_ids_touched,touches_association,n_association_edges,touches_containment,n_containment_edges,touches_descriptor,n_descriptor_edges,touches_ownership,n_ownership_edges,touches_subtype,n_subtype_edges
+Q1_CompanyProfileIBM,QG1,Local lookup,select,['Corporation'],1,no_relationship_edges,0,[],0,[],[],False,0,False,0,False,0,False,0,False,0

@@ -1,0 +1,7 @@
+check_name,status,details
+required_artifacts_exist,passed,missing_required_artifacts=0
+required_artifacts_are_not_empty,passed,empty_required_artifacts=0
+candidate_specs_cover_execution_plan,passed,[]
+no_extra_candidate_specs,passed,[]
+query_mapping_covers_execution_plan,passed,[]
+manifest_created,passed,/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/benchmark_manifest.json

@@ -1,0 +1,11 @@
+required_file,exists,size_bytes,status
+bundle_manifest.json,True,1671,OK
+README.md,True,3043,OK
+mongo_configurations/mongodb_candidate_specs_by_candidate_id.json,True,230560,OK
+mongo_configurations/mongodb_candidate_specs_overview.csv,True,21691,OK
+mongo_configurations/benchmark_execution_plan.csv,True,37520,OK
+mongo_configurations/benchmark_execution_plan_smoke.csv,True,13658,OK
+mongo_configurations/benchmark_manifest.json,True,1575,OK
+final_analytical_matrix/snb_final_analytical_matrix.csv,True,13203,OK
+activation/snb_activation_matrix.csv,True,17433,OK
+activation/snb_activation_summary.csv,True,3021,OK

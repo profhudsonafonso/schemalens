@@ -1,0 +1,5 @@
+primary_activation_class,primary_activation_name,n_queries,queries,avg_primary_activation_score,avg_DeltaRratio,avg_update_volatility,avg_sharedness
+G0,Root-only document,1,['Q1_CompanyProfileIBM'],1.0,0.0,0.0,0.0
+G1,Root with direct descriptors,2,"['Q2_CompanyWithIndustryCountryAndListedSecurities', 'Q6_TechUSListedSecuritiesWithHighLastTradedValue']",1.0,1.0,0.36299999999999993,0.2974182444061962
+G2,Root with contained children,6,"['Q10_CreateAccountHoldingAndBuyTransaction', 'Q3_SecuritiesHeldInEachFinancialServiceAccount', 'Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity', 'Q5_ReportsAndMetricDataOfCompany', 'Q7_PersonsWhoBoughtMoreIBMThanSold', 'Q9_PersonsWhoBoughtAndSoldSameStock']",1.0,1.0,0.6886142857142857,0.29567224999999997
+G6,Aggregation-oriented document,1,['Q8_IBMTransactionsBelowAverageSellingPrice'],1.0,1.0,0.649,0.2958825

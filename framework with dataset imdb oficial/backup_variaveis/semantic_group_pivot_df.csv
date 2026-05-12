@@ -1,0 +1,8 @@
+query_name,n_association,n_associative,n_containment
+QG10_AdvancedSearchWatchItems,4,0,0
+QG3_RecommendationByGenreAndSubtype,4,0,0
+QG4_AllPersonsOfTypeForWatchItem,0,2,0
+QG5_AllPersonsForEpisodesOfSeries,2,2,0
+QG6_EpisodesOfSeries,0,0,1
+QG8_AddPersonRoleToWatchItem,0,2,0
+QG9_TopRatedSeriesByGenre,2,0,0

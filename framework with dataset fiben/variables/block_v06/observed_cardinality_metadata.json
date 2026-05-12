@@ -1,0 +1,28 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "row_limit": 200000,
+  "n_relationships": 15,
+  "n_computed_relationships": 15,
+  "n_uncomputed_relationships": 0,
+  "n_low_or_medium_confidence_relationships": 6,
+  "n_no_match_relationships": 4,
+  "observed_cardinality_counts": {
+    "observed_N_to_M": 9,
+    "no_observed_matches": 4,
+    "observed_1_to_1": 2
+  },
+  "computation_status_counts": {
+    "computed": 15
+  },
+  "output_files": {
+    "observed_cardinality_csv": "variables/block_v06/observed_cardinality_by_relationship.csv",
+    "relationship_cardinality_csv": "variables/block_v06/relationship_cardinality.csv",
+    "cardinality_observed_csv": "variables/block_v06/cardinality_observed.csv",
+    "observed_cardinality_summary_csv": "variables/block_v06/observed_cardinality_summary.csv",
+    "uncomputed_cardinality_csv": "variables/block_v06/uncomputed_cardinality_relationships.csv",
+    "low_confidence_cardinality_csv": "variables/block_v06/low_confidence_cardinality_relationships.csv",
+    "no_match_cardinality_csv": "variables/block_v06/no_match_cardinality_relationships.csv"
+  }
+}

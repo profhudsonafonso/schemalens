@@ -1,0 +1,32 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "row_limit": 200000,
+  "n_relationships": 15,
+  "n_computed_relationships": 15,
+  "n_not_computed_relationships": 0,
+  "n_high_sharedness_relationships": 0,
+  "n_queries": 10,
+  "n_queries_with_observed_sharedness": 9,
+  "sharedness_level_counts": {
+    "medium": 6,
+    "none": 6,
+    "low": 3
+  },
+  "query_sharedness_level_counts": {
+    "medium": 9,
+    "none": 1
+  },
+  "output_files": {
+    "observed_sharedness_csv": "variables/block_v18/observed_sharedness_by_relationship.csv",
+    "relationship_sharedness_csv": "variables/block_v18/relationship_sharedness.csv",
+    "sharedness_observed_csv": "variables/block_v18/sharedness_observed.csv",
+    "query_edge_sharedness_csv": "variables/block_v18/query_edge_sharedness.csv",
+    "query_sharedness_profile_csv": "variables/block_v18/query_sharedness_profile.csv",
+    "sharedness_summary_csv": "variables/block_v18/sharedness_summary.csv",
+    "query_sharedness_summary_csv": "variables/block_v18/query_sharedness_summary.csv",
+    "sharedness_not_computed_csv": "variables/block_v18/sharedness_not_computed.csv",
+    "high_sharedness_relationships_csv": "variables/block_v18/high_sharedness_relationships.csv"
+  }
+}

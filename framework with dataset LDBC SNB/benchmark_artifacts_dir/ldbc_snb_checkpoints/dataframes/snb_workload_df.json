@@ -1,0 +1,419 @@
+[
+  {
+    "query_name":"IS1_ProfileOfPerson",
+    "official_id":"IS1",
+    "official_title":"Profile of a person",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "root_entity":"Person",
+    "accessed_entities":[
+      "Person",
+      "Place"
+    ],
+    "relationships_used":[
+      "person_is_located_in_place"
+    ],
+    "description":"Official IS1: retrieve a person's profile and city of residence."
+  },
+  {
+    "query_name":"IS2_RecentMessagesOfPerson",
+    "official_id":"IS2",
+    "official_title":"Recent messages of a person",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "root_entity":"Person",
+    "accessed_entities":[
+      "Person",
+      "Post",
+      "Comment"
+    ],
+    "relationships_used":[
+      "post_has_creator_person",
+      "comment_has_creator_person",
+      "comment_reply_of_post",
+      "comment_reply_of_comment"
+    ],
+    "description":"Official IS2: retrieve the last messages created by a person and the original post in the conversation."
+  },
+  {
+    "query_name":"IS3_FriendsOfPerson",
+    "official_id":"IS3",
+    "official_title":"Friends of a person",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "root_entity":"Person",
+    "accessed_entities":[
+      "Person"
+    ],
+    "relationships_used":[
+      "person_knows_person"
+    ],
+    "description":"Official IS3: retrieve all friends of a person and the friendship creation date."
+  },
+  {
+    "query_name":"IS4_ContentOfMessage",
+    "official_id":"IS4",
+    "official_title":"Content of a message",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "root_entity":"Post",
+    "accessed_entities":[
+      "Post",
+      "Comment"
+    ],
+    "relationships_used":[
+
+    ],
+    "description":"Official IS4: retrieve content and creation date of a Message. Message is represented by Post or Comment."
+  },
+  {
+    "query_name":"IS5_CreatorOfMessage",
+    "official_id":"IS5",
+    "official_title":"Creator of a message",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "root_entity":"Post",
+    "accessed_entities":[
+      "Post",
+      "Comment",
+      "Person"
+    ],
+    "relationships_used":[
+      "post_has_creator_person",
+      "comment_has_creator_person"
+    ],
+    "description":"Official IS5: retrieve the author of a Message. Message is represented by Post or Comment."
+  },
+  {
+    "query_name":"IS6_ForumOfMessage",
+    "official_id":"IS6",
+    "official_title":"Forum of a message",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "root_entity":"Post",
+    "accessed_entities":[
+      "Post",
+      "Comment",
+      "Forum",
+      "Person"
+    ],
+    "relationships_used":[
+      "forum_container_of_post",
+      "comment_reply_of_post",
+      "comment_reply_of_comment",
+      "forum_has_moderator_person"
+    ],
+    "description":"Official IS6: retrieve the forum containing a Message and the moderator of that forum."
+  },
+  {
+    "query_name":"IS7_RepliesOfMessage",
+    "official_id":"IS7",
+    "official_title":"Replies of a message",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "root_entity":"Post",
+    "accessed_entities":[
+      "Post",
+      "Comment",
+      "Person"
+    ],
+    "relationships_used":[
+      "comment_reply_of_post",
+      "comment_reply_of_comment",
+      "comment_has_creator_person",
+      "post_has_creator_person",
+      "person_knows_person"
+    ],
+    "description":"Official IS7: retrieve one-hop replies of a Message and whether reply author knows original author."
+  },
+  {
+    "query_name":"IC1_TransitiveFriendsWithName",
+    "official_id":"IC1",
+    "official_title":"Transitive friends with a certain name",
+    "query_group":"complex_read",
+    "operation_type":"read",
+    "root_entity":"Person",
+    "accessed_entities":[
+      "Person",
+      "Place",
+      "Organisation"
+    ],
+    "relationships_used":[
+      "person_knows_person",
+      "person_is_located_in_place",
+      "person_study_at_organisation",
+      "person_work_at_organisation",
+      "organisation_is_located_in_place"
+    ],
+    "description":"Official IC1: find people connected by up to 3 knows hops with a given first name, including workplaces and studies."
+  },
+  {
+    "query_name":"IC2_RecentMessagesByFriends",
+    "official_id":"IC2",
+    "official_title":"Recent messages by your friends",
+    "query_group":"complex_read",
+    "operation_type":"read",
+    "root_entity":"Person",
+    "accessed_entities":[
+      "Person",
+      "Post",
+      "Comment"
+    ],
+    "relationships_used":[
+      "person_knows_person",
+      "post_has_creator_person",
+      "comment_has_creator_person"
+    ],
+    "description":"Official IC2: find recent messages created by the friends of a person."
+  },
+  {
+    "query_name":"IC3_FriendsAndFriendsOfFriendsInCountries",
+    "official_id":"IC3",
+    "official_title":"Friends and friends of friends that have been to given countries",
+    "query_group":"complex_read",
+    "operation_type":"read",
+    "root_entity":"Person",
+    "accessed_entities":[
+      "Person",
+      "Post",
+      "Comment",
+      "Place"
+    ],
+    "relationships_used":[
+      "person_knows_person",
+      "person_is_located_in_place",
+      "post_has_creator_person",
+      "comment_has_creator_person",
+      "post_is_located_in_place",
+      "comment_is_located_in_place",
+      "place_is_part_of_place"
+    ],
+    "description":"Official IC3: find friends and friends-of-friends who created messages in two countries."
+  },
+  {
+    "query_name":"IC4_NewTopics",
+    "official_id":"IC4",
+    "official_title":"New topics",
+    "query_group":"complex_read",
+    "operation_type":"read",
+    "root_entity":"Person",
+    "accessed_entities":[
+      "Person",
+      "Post",
+      "Tag"
+    ],
+    "relationships_used":[
+      "person_knows_person",
+      "post_has_creator_person",
+      "post_has_tag"
+    ],
+    "description":"Official IC4: find new tags attached to posts created by friends in a time interval."
+  },
+  {
+    "query_name":"IC5_NewGroups",
+    "official_id":"IC5",
+    "official_title":"New groups",
+    "query_group":"complex_read",
+    "operation_type":"read",
+    "root_entity":"Person",
+    "accessed_entities":[
+      "Person",
+      "Forum",
+      "Post"
+    ],
+    "relationships_used":[
+      "person_knows_person",
+      "forum_has_member_person",
+      "forum_container_of_post",
+      "post_has_creator_person"
+    ],
+    "description":"Official IC5: find forums joined by friends\/friends-of-friends and count their posts."
+  },
+  {
+    "query_name":"IC6_TagCoOccurrence",
+    "official_id":"IC6",
+    "official_title":"Tag co-occurrence",
+    "query_group":"complex_read",
+    "operation_type":"read",
+    "root_entity":"Person",
+    "accessed_entities":[
+      "Person",
+      "Post",
+      "Tag"
+    ],
+    "relationships_used":[
+      "person_knows_person",
+      "post_has_creator_person",
+      "post_has_tag"
+    ],
+    "description":"Official IC6: find tags co-occurring with a given tag on posts by friends\/friends-of-friends."
+  },
+  {
+    "query_name":"IC7_RecentLikers",
+    "official_id":"IC7",
+    "official_title":"Recent likers",
+    "query_group":"complex_read",
+    "operation_type":"read",
+    "root_entity":"Person",
+    "accessed_entities":[
+      "Person",
+      "Post",
+      "Comment"
+    ],
+    "relationships_used":[
+      "post_has_creator_person",
+      "comment_has_creator_person",
+      "person_likes_post",
+      "person_likes_comment",
+      "person_knows_person"
+    ],
+    "description":"Official IC7: find recent likes on a person's messages and whether likers are friends."
+  },
+  {
+    "query_name":"INS1_AddPerson",
+    "official_id":"INS1",
+    "official_title":"Add person",
+    "query_group":"insert",
+    "operation_type":"insert",
+    "root_entity":"Person",
+    "accessed_entities":[
+      "Person",
+      "Place",
+      "Tag",
+      "Organisation"
+    ],
+    "relationships_used":[
+      "person_is_located_in_place",
+      "person_has_interest_tag",
+      "person_study_at_organisation",
+      "person_work_at_organisation"
+    ],
+    "description":"Official INS1: add a Person connected by location, interests, studyAt and workAt."
+  },
+  {
+    "query_name":"INS2_AddLikeToPost",
+    "official_id":"INS2",
+    "official_title":"Add like to post",
+    "query_group":"insert",
+    "operation_type":"insert",
+    "root_entity":"Person",
+    "accessed_entities":[
+      "Person",
+      "Post"
+    ],
+    "relationships_used":[
+      "person_likes_post"
+    ],
+    "description":"Official INS2: add a likes edge from Person to Post."
+  },
+  {
+    "query_name":"INS3_AddLikeToComment",
+    "official_id":"INS3",
+    "official_title":"Add like to comment",
+    "query_group":"insert",
+    "operation_type":"insert",
+    "root_entity":"Person",
+    "accessed_entities":[
+      "Person",
+      "Comment"
+    ],
+    "relationships_used":[
+      "person_likes_comment"
+    ],
+    "description":"Official INS3: add a likes edge from Person to Comment."
+  },
+  {
+    "query_name":"INS4_AddForum",
+    "official_id":"INS4",
+    "official_title":"Add forum",
+    "query_group":"insert",
+    "operation_type":"insert",
+    "root_entity":"Forum",
+    "accessed_entities":[
+      "Forum",
+      "Person",
+      "Tag"
+    ],
+    "relationships_used":[
+      "forum_has_moderator_person",
+      "forum_has_tag"
+    ],
+    "description":"Official INS4: add a Forum connected to a moderator and tags."
+  },
+  {
+    "query_name":"INS5_AddForumMembership",
+    "official_id":"INS5",
+    "official_title":"Add forum membership",
+    "query_group":"insert",
+    "operation_type":"insert",
+    "root_entity":"Forum",
+    "accessed_entities":[
+      "Forum",
+      "Person"
+    ],
+    "relationships_used":[
+      "forum_has_member_person"
+    ],
+    "description":"Official INS5: add a hasMember edge between Forum and Person."
+  },
+  {
+    "query_name":"INS6_AddPost",
+    "official_id":"INS6",
+    "official_title":"Add post",
+    "query_group":"insert",
+    "operation_type":"insert",
+    "root_entity":"Post",
+    "accessed_entities":[
+      "Post",
+      "Person",
+      "Forum",
+      "Place",
+      "Tag"
+    ],
+    "relationships_used":[
+      "post_has_creator_person",
+      "forum_container_of_post",
+      "post_is_located_in_place",
+      "post_has_tag"
+    ],
+    "description":"Official INS6: add a Post connected by creator, forum, location and tags."
+  },
+  {
+    "query_name":"INS7_AddComment",
+    "official_id":"INS7",
+    "official_title":"Add comment",
+    "query_group":"insert",
+    "operation_type":"insert",
+    "root_entity":"Comment",
+    "accessed_entities":[
+      "Comment",
+      "Person",
+      "Post",
+      "Place",
+      "Tag"
+    ],
+    "relationships_used":[
+      "comment_has_creator_person",
+      "comment_reply_of_post",
+      "comment_reply_of_comment",
+      "comment_is_located_in_place",
+      "comment_has_tag"
+    ],
+    "description":"Official INS7: add a Comment connected by replyOf, creator, location and tags."
+  },
+  {
+    "query_name":"INS8_AddFriendship",
+    "official_id":"INS8",
+    "official_title":"Add friendship",
+    "query_group":"insert",
+    "operation_type":"insert",
+    "root_entity":"Person",
+    "accessed_entities":[
+      "Person"
+    ],
+    "relationships_used":[
+      "person_knows_person"
+    ],
+    "description":"Official INS8: add a knows edge between two Persons."
+  }
+]

@@ -1,0 +1,11 @@
+query_name,generic_class,query_type,selected_root,Rc,D_value,all_entities_reachable,unreachable_entities
+QG1_WatchItemById,QG1,select,WatchItem,0,0,True,[]
+QG2_WatchItemByTitle,QG2,select,WatchItem,0,0,True,[]
+QG3_RecommendationByGenreAndSubtype,QG3,select,WatchItem,4,1,True,[]
+QG4_AllPersonsOfTypeForWatchItem,QG4,select,WatchItem,2,2,True,[]
+QG5_AllPersonsForEpisodesOfSeries,QG5,select,WatchItem,4,2,True,[]
+QG6_EpisodesOfSeries,QG6,select,Series,1,1,True,[]
+QG7_UpdateWatchItemMetadata,QG7,update,WatchItem,0,0,True,[]
+QG8_AddPersonRoleToWatchItem,QG8,insert,WatchItem,2,2,True,[]
+QG9_TopRatedSeriesByGenre,QG9,select,WatchItem,2,1,True,[]
+QG10_AdvancedSearchWatchItems,QG10,select,WatchItem,4,1,True,[]

@@ -1,0 +1,84 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "selected_root_by_query": {
+    "Q1_CompanyProfileIBM": "Corporation",
+    "Q2_CompanyWithIndustryCountryAndListedSecurities": "Corporation",
+    "Q3_SecuritiesHeldInEachFinancialServiceAccount": "FinancialServiceAccount",
+    "Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity": "Person",
+    "Q5_ReportsAndMetricDataOfCompany": "Corporation",
+    "Q6_TechUSListedSecuritiesWithHighLastTradedValue": "ListedSecurity",
+    "Q7_PersonsWhoBoughtMoreIBMThanSold": "Person",
+    "Q8_IBMTransactionsBelowAverageSellingPrice": "Transaction",
+    "Q9_PersonsWhoBoughtAndSoldSameStock": "Person",
+    "Q10_CreateAccountHoldingAndBuyTransaction": "Person"
+  },
+  "selected_root_decisions": {
+    "Q1_CompanyProfileIBM": {
+      "selected_root": "Corporation",
+      "selection_strategy": "query_subject",
+      "selection_reason": "The query is a local lookup over the profile of one company, represented as Corporation in the conceptual schema."
+    },
+    "Q2_CompanyWithIndustryCountryAndListedSecurities": {
+      "selected_root": "Corporation",
+      "selection_strategy": "query_subject",
+      "selection_reason": "The query starts from IBM and retrieves directly related descriptor and listed-security information."
+    },
+    "Q3_SecuritiesHeldInEachFinancialServiceAccount": {
+      "selected_root": "FinancialServiceAccount",
+      "selection_strategy": "container_entity",
+      "selection_reason": "The query asks for securities held inside each financial service account, so the account is the natural container root."
+    },
+    "Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity": {
+      "selected_root": "Person",
+      "selection_strategy": "traversal_start",
+      "selection_reason": "The query starts from a person and traverses account, holding, and listed security to reach companies."
+    },
+    "Q5_ReportsAndMetricDataOfCompany": {
+      "selected_root": "Corporation",
+      "selection_strategy": "query_subject",
+      "selection_reason": "The query starts from a company and retrieves its financial reports and contained metric data."
+    },
+    "Q6_TechUSListedSecuritiesWithHighLastTradedValue": {
+      "selected_root": "ListedSecurity",
+      "selection_strategy": "result_entity",
+      "selection_reason": "The query returns listed securities filtered by company industry, country, and traded-value predicates."
+    },
+    "Q7_PersonsWhoBoughtMoreIBMThanSold": {
+      "selected_root": "Person",
+      "selection_strategy": "result_entity",
+      "selection_reason": "The query returns persons after aggregating buy and sell activity for IBM stock."
+    },
+    "Q8_IBMTransactionsBelowAverageSellingPrice": {
+      "selected_root": "Transaction",
+      "selection_strategy": "result_entity",
+      "selection_reason": "The query returns transactions for IBM whose price is below the average selling price."
+    },
+    "Q9_PersonsWhoBoughtAndSoldSameStock": {
+      "selected_root": "Person",
+      "selection_strategy": "result_entity",
+      "selection_reason": "The query returns persons who bought and sold the same stock."
+    },
+    "Q10_CreateAccountHoldingAndBuyTransaction": {
+      "selected_root": "Person",
+      "selection_strategy": "update_owner",
+      "selection_reason": "The insertion creates a financial service account, holding, and buy transaction associated with a person."
+    }
+  },
+  "n_queries": 10,
+  "n_invalid_selected_roots": 0,
+  "unique_selected_roots": [
+    "Corporation",
+    "FinancialServiceAccount",
+    "ListedSecurity",
+    "Person",
+    "Transaction"
+  ],
+  "output_files": {
+    "selected_root_by_query_csv": "variables/block_v04/selected_root_by_query.csv",
+    "selected_root_summary_csv": "variables/block_v04/selected_root_summary.csv",
+    "selected_root_by_generic_class_csv": "variables/block_v04/selected_root_by_generic_class.csv",
+    "invalid_selected_roots_csv": "variables/block_v04/invalid_selected_roots.csv"
+  }
+}

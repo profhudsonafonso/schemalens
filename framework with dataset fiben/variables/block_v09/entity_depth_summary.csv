@@ -1,0 +1,36 @@
+query_name,generic_class,query_family,query_type,selected_root,D,n_entities_at_depth,entities_at_depth
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,Person,0,1,['Person']
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,Person,1,1,['FinancialServiceAccount']
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,Person,2,2,"['Holding', 'Transaction']"
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,Person,3,2,"['BuyTransaction', 'ListedSecurity']"
+Q1_CompanyProfileIBM,QG1,Local lookup,select,Corporation,0,1,['Corporation']
+Q2_CompanyWithIndustryCountryAndListedSecurities,QG2,Shallow rooted retrieval,select,Corporation,0,1,['Corporation']
+Q2_CompanyWithIndustryCountryAndListedSecurities,QG2,Shallow rooted retrieval,select,Corporation,1,3,"['Country', 'Industry', 'ListedSecurity']"
+Q3_SecuritiesHeldInEachFinancialServiceAccount,QG3,Associative retrieval,select,FinancialServiceAccount,0,1,['FinancialServiceAccount']
+Q3_SecuritiesHeldInEachFinancialServiceAccount,QG3,Associative retrieval,select,FinancialServiceAccount,1,1,['Holding']
+Q3_SecuritiesHeldInEachFinancialServiceAccount,QG3,Associative retrieval,select,FinancialServiceAccount,2,1,['ListedSecurity']
+Q3_SecuritiesHeldInEachFinancialServiceAccount,QG3,Associative retrieval,select,FinancialServiceAccount,3,1,['Security']
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,Person,0,1,['Person']
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,Person,1,1,['FinancialServiceAccount']
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,Person,2,1,['Holding']
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,Person,3,1,['ListedSecurity']
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,Person,4,1,['Corporation']
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,select,Corporation,0,1,['Corporation']
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,select,Corporation,1,1,['FinancialReport']
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,select,Corporation,2,2,"['Disclosure', 'ReportElement']"
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,select,Corporation,3,1,['StatementElement']
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,QG6,Filtered search / recommendation,select,ListedSecurity,0,1,['ListedSecurity']
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,QG6,Filtered search / recommendation,select,ListedSecurity,1,1,['Corporation']
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,QG6,Filtered search / recommendation,select,ListedSecurity,2,2,"['Country', 'Industry']"
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,Person,0,1,['Person']
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,Person,1,1,['FinancialServiceAccount']
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,Person,2,1,['Transaction']
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,Person,3,3,"['BuyTransaction', 'ListedSecurity', 'SellTransaction']"
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,Person,4,1,['Corporation']
+Q8_IBMTransactionsBelowAverageSellingPrice,QG8,Aggregation / ranking,select,Transaction,0,1,['Transaction']
+Q8_IBMTransactionsBelowAverageSellingPrice,QG8,Aggregation / ranking,select,Transaction,1,2,"['ListedSecurity', 'SellTransaction']"
+Q8_IBMTransactionsBelowAverageSellingPrice,QG8,Aggregation / ranking,select,Transaction,2,1,['Corporation']
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,Person,0,1,['Person']
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,Person,1,1,['FinancialServiceAccount']
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,Person,2,1,['Transaction']
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,Person,3,3,"['BuyTransaction', 'ListedSecurity', 'SellTransaction']"

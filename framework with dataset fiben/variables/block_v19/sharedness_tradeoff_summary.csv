@@ -1,0 +1,5 @@
+document_potential_class,query_observed_sharedness_level,query_update_volatility_level,combined_document_design_risk_class,n_queries,queries,avg_DeltaRratio,avg_sharedness_score
+high_reduction_potential,medium,high,strong_read_candidate_high_update_pressure,6,"['Q10_CreateAccountHoldingAndBuyTransaction', 'Q3_SecuritiesHeldInEachFinancialServiceAccount', 'Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity', 'Q7_PersonsWhoBoughtMoreIBMThanSold', 'Q8_IBMTransactionsBelowAverageSellingPrice', 'Q9_PersonsWhoBoughtAndSoldSameStock']",1.0,0.2958825
+high_reduction_potential,medium,medium,strong_read_candidate_low_maintenance_pressure,2,"['Q2_CompanyWithIndustryCountryAndListedSecurities', 'Q6_TechUSListedSecuritiesWithHighLastTradedValue']",1.0,0.2974182444061962
+high_reduction_potential,medium,none,strong_read_candidate_low_maintenance_pressure,1,['Q5_ReportsAndMetricDataOfCompany'],1.0,0.29462099999999997
+no_relationship_traversal,none,none,low_overall_design_pressure,1,['Q1_CompanyProfileIBM'],0.0,0.0

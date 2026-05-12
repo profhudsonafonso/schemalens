@@ -1,0 +1,11 @@
+query_name,query_weight
+QG1_WatchItemById,1.0
+QG2_WatchItemByTitle,1.0
+QG3_RecommendationByGenreAndSubtype,1.0
+QG4_AllPersonsOfTypeForWatchItem,1.0
+QG5_AllPersonsForEpisodesOfSeries,1.0
+QG6_EpisodesOfSeries,1.0
+QG7_UpdateWatchItemMetadata,1.0
+QG8_AddPersonRoleToWatchItem,1.0
+QG9_TopRatedSeriesByGenre,1.0
+QG10_AdvancedSearchWatchItems,1.0

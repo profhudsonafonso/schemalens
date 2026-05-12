@@ -1,0 +1,441 @@
+# LDBC SNB MongoDB benchmark execution log
+# Created at: 2026-05-10T19:47:27.517133
+# Command: run_ldbc_snb_mongo_benchmark.py --data-dir /home/hudson/Documents/framework_test/ldbc_snb_benchmark/data/sf1 --artifacts-dir /home/hudson/Documents/framework_test/ldbc_snb_benchmark/ldbc_snb_sf0_1_mongo_benchmark_bundle/mongo_configurations --results-dir /home/hudson/Documents/framework_test/ldbc_snb_benchmark/results/ldbc_snb_sf1_full_fiben_format_clean --execution-plan benchmark_execution_plan.csv --scale-label sf1 --execution-db-prefix ldbc_snb_sf1_exec_clean --mongo-host 127.0.0.1 --mongo-port 27018 --batch-size 5000 --repetitions 10 --run-phase cold hot --force-rebuild-db --verbose
+#
+# data_dir: /home/hudson/Documents/framework_test/ldbc_snb_benchmark/data/sf1
+# artifacts_dir: /home/hudson/Documents/framework_test/ldbc_snb_benchmark/ldbc_snb_sf0_1_mongo_benchmark_bundle/mongo_configurations
+# results_dir: /home/hudson/Documents/framework_test/ldbc_snb_benchmark/results/ldbc_snb_sf1_full_fiben_format_clean
+# scale_label: sf1
+# repetitions: 10
+# row_limit: None
+# batch_size: 5000
+
+[2026-05-10 19:47:27] [INFO] Execution log file: /home/hudson/Documents/framework_test/ldbc_snb_benchmark/results/ldbc_snb_sf1_full_fiben_format_clean/execution.log
+[2026-05-10 19:47:27] [INFO] Command: run_ldbc_snb_mongo_benchmark.py --data-dir /home/hudson/Documents/framework_test/ldbc_snb_benchmark/data/sf1 --artifacts-dir /home/hudson/Documents/framework_test/ldbc_snb_benchmark/ldbc_snb_sf0_1_mongo_benchmark_bundle/mongo_configurations --results-dir /home/hudson/Documents/framework_test/ldbc_snb_benchmark/results/ldbc_snb_sf1_full_fiben_format_clean --execution-plan benchmark_execution_plan.csv --scale-label sf1 --execution-db-prefix ldbc_snb_sf1_exec_clean --mongo-host 127.0.0.1 --mongo-port 27018 --batch-size 5000 --repetitions 10 --run-phase cold hot --force-rebuild-db --verbose
+[2026-05-10 19:47:27] [INFO] Selected plan rows: 64
+[2026-05-10 19:47:27] [INFO] Selected candidates: 64
+[2026-05-10 19:47:27] [True] [load] dynamic_dir=/home/hudson/Documents/framework_test/ldbc_snb_benchmark/data/sf1/social_network-sf1-CsvMergeForeign-StringDateFormatter/dynamic
+[2026-05-10 19:47:27] [True] [load] static_dir=/home/hudson/Documents/framework_test/ldbc_snb_benchmark/data/sf1/social_network-sf1-CsvMergeForeign-StringDateFormatter/static
+[2026-05-10 19:48:07] [True] [load] loaded dataframes:
+[2026-05-10 19:48:07] [True]   - persons: 9892 rows
+[2026-05-10 19:48:07] [True]   - forums: 90492 rows
+[2026-05-10 19:48:07] [True]   - posts: 1003605 rows
+[2026-05-10 19:48:07] [True]   - comments: 2052169 rows
+[2026-05-10 19:48:07] [True]   - places: 1460 rows
+[2026-05-10 19:48:07] [True]   - organisations: 7955 rows
+[2026-05-10 19:48:07] [True]   - tags: 16080 rows
+[2026-05-10 19:48:07] [True]   - tagclasses: 71 rows
+[2026-05-10 19:48:07] [True]   - person_knows_person: 180623 rows
+[2026-05-10 19:48:07] [True]   - forum_has_member_person: 1611869 rows
+[2026-05-10 19:48:07] [True]   - person_likes_post: 751677 rows
+[2026-05-10 19:48:07] [True]   - person_likes_comment: 1438418 rows
+[2026-05-10 19:48:07] [True]   - post_has_tag: 713258 rows
+[2026-05-10 19:48:07] [True]   - comment_has_tag: 2698393 rows
+[2026-05-10 19:48:07] [True]   - forum_has_tag: 309766 rows
+[2026-05-10 19:48:07] [True]   - person_has_interest_tag: 229166 rows
+[2026-05-10 19:48:07] [True]   - person_study_at_organisation: 7949 rows
+[2026-05-10 19:48:07] [True]   - person_work_at_organisation: 21654 rows
+[2026-05-10 19:48:07] [True]   - person_is_located_in_place: 9892 rows
+[2026-05-10 19:48:07] [True]   - forum_has_moderator_person: 90492 rows
+[2026-05-10 19:48:07] [True]   - forum_container_of_post: 1003605 rows
+[2026-05-10 19:48:07] [True]   - post_has_creator_person: 1003605 rows
+[2026-05-10 19:48:07] [True]   - post_is_located_in_place: 1003605 rows
+[2026-05-10 19:48:07] [True]   - comment_has_creator_person: 2052169 rows
+[2026-05-10 19:48:07] [True]   - comment_is_located_in_place: 2052169 rows
+[2026-05-10 19:48:07] [True]   - comment_reply_of_post: 1011420 rows
+[2026-05-10 19:48:07] [True]   - comment_reply_of_comment: 1040749 rows
+[2026-05-10 19:48:07] [True]   - organisation_is_located_in_place: 7955 rows
+[2026-05-10 19:48:07] [True]   - tag_has_type_tagclass: 16080 rows
+[2026-05-10 19:48:07] [True]   - tagclass_is_subclass_of_tagclass: 70 rows
+[2026-05-10 19:48:07] [True]   - place_is_part_of_place: 1454 rows
+[2026-05-10 19:48:07] [INFO] MongoDB connection OK
+[2026-05-10 19:48:07] [INFO] === CANDIDATE 1/64 candidate=ldbc_snb_ic1_g0_6aac8974 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic1_g0_6aac8974 ===
+[2026-05-10 19:49:28] [INFO] === BENCHMARK START candidate=ldbc_snb_ic1_g0_6aac8974 rows=20 ===
+[2026-05-10 19:49:28] [INFO] [benchmark-progress] candidate=ldbc_snb_ic1_g0_6aac8974 row=1/20 query=IC1_TransitiveFriendsWithName official_id=IC1 group=primary phase=cold rep=1
+[2026-05-10 19:49:46] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 19:49:50] [INFO] [benchmark-progress] candidate=ldbc_snb_ic1_g0_6aac8974 row=20/20 query=IC1_TransitiveFriendsWithName official_id=IC1 group=primary phase=hot rep=10
+[2026-05-10 19:49:50] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic1_g0_6aac8974 rows=20 ===
+[2026-05-10 19:49:50] [INFO] === CANDIDATE 2/64 candidate=ldbc_snb_ic1_g3_89a97e97 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic1_g3_89a97e97 ===
+[2026-05-10 19:51:12] [INFO] === BENCHMARK START candidate=ldbc_snb_ic1_g3_89a97e97 rows=20 ===
+[2026-05-10 19:51:12] [INFO] [benchmark-progress] candidate=ldbc_snb_ic1_g3_89a97e97 row=1/20 query=IC1_TransitiveFriendsWithName official_id=IC1 group=primary phase=cold rep=1
+[2026-05-10 19:51:29] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 19:51:33] [INFO] [benchmark-progress] candidate=ldbc_snb_ic1_g3_89a97e97 row=20/20 query=IC1_TransitiveFriendsWithName official_id=IC1 group=primary phase=hot rep=10
+[2026-05-10 19:51:33] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic1_g3_89a97e97 rows=20 ===
+[2026-05-10 19:51:33] [INFO] === CANDIDATE 3/64 candidate=ldbc_snb_ic2_g0_bcc20fff db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic2_g0_bcc20fff ===
+[2026-05-10 19:53:22] [INFO] === BENCHMARK START candidate=ldbc_snb_ic2_g0_bcc20fff rows=20 ===
+[2026-05-10 19:53:22] [INFO] [benchmark-progress] candidate=ldbc_snb_ic2_g0_bcc20fff row=1/20 query=IC2_RecentMessagesByFriends official_id=IC2 group=primary phase=cold rep=1
+[2026-05-10 19:53:39] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 19:53:40] [INFO] [benchmark-progress] candidate=ldbc_snb_ic2_g0_bcc20fff row=20/20 query=IC2_RecentMessagesByFriends official_id=IC2 group=primary phase=hot rep=10
+[2026-05-10 19:53:40] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic2_g0_bcc20fff rows=20 ===
+[2026-05-10 19:53:40] [INFO] === CANDIDATE 4/64 candidate=ldbc_snb_ic2_g3_8f05f032 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic2_g3_8f05f032 ===
+[2026-05-10 19:55:29] [INFO] === BENCHMARK START candidate=ldbc_snb_ic2_g3_8f05f032 rows=20 ===
+[2026-05-10 19:55:29] [INFO] [benchmark-progress] candidate=ldbc_snb_ic2_g3_8f05f032 row=1/20 query=IC2_RecentMessagesByFriends official_id=IC2 group=primary phase=cold rep=1
+[2026-05-10 19:55:47] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 19:55:48] [INFO] [benchmark-progress] candidate=ldbc_snb_ic2_g3_8f05f032 row=20/20 query=IC2_RecentMessagesByFriends official_id=IC2 group=primary phase=hot rep=10
+[2026-05-10 19:55:48] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic2_g3_8f05f032 rows=20 ===
+[2026-05-10 19:55:48] [INFO] === CANDIDATE 5/64 candidate=ldbc_snb_ic3_g0_f7817cbe db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic3_g0_f7817cbe ===
+[2026-05-10 19:58:03] [INFO] === BENCHMARK START candidate=ldbc_snb_ic3_g0_f7817cbe rows=20 ===
+[2026-05-10 19:58:03] [INFO] [benchmark-progress] candidate=ldbc_snb_ic3_g0_f7817cbe row=1/20 query=IC3_FriendsAndFriendsOfFriendsInCountries official_id=IC3 group=primary phase=cold rep=1
+[2026-05-10 19:58:21] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 19:58:24] [INFO] [benchmark-progress] candidate=ldbc_snb_ic3_g0_f7817cbe row=20/20 query=IC3_FriendsAndFriendsOfFriendsInCountries official_id=IC3 group=primary phase=hot rep=10
+[2026-05-10 19:58:25] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic3_g0_f7817cbe rows=20 ===
+[2026-05-10 19:58:25] [INFO] === CANDIDATE 6/64 candidate=ldbc_snb_ic3_g3_f4732bc1 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic3_g3_f4732bc1 ===
+[2026-05-10 20:00:42] [INFO] === BENCHMARK START candidate=ldbc_snb_ic3_g3_f4732bc1 rows=20 ===
+[2026-05-10 20:00:42] [INFO] [benchmark-progress] candidate=ldbc_snb_ic3_g3_f4732bc1 row=1/20 query=IC3_FriendsAndFriendsOfFriendsInCountries official_id=IC3 group=primary phase=cold rep=1
+[2026-05-10 20:00:59] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:01:03] [INFO] [benchmark-progress] candidate=ldbc_snb_ic3_g3_f4732bc1 row=20/20 query=IC3_FriendsAndFriendsOfFriendsInCountries official_id=IC3 group=primary phase=hot rep=10
+[2026-05-10 20:01:03] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic3_g3_f4732bc1 rows=20 ===
+[2026-05-10 20:01:03] [INFO] === CANDIDATE 7/64 candidate=ldbc_snb_ic3_g7_a1750f34 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic3_g7_a1750f34 ===
+[2026-05-10 20:03:19] [INFO] === BENCHMARK START candidate=ldbc_snb_ic3_g7_a1750f34 rows=20 ===
+[2026-05-10 20:03:19] [INFO] [benchmark-progress] candidate=ldbc_snb_ic3_g7_a1750f34 row=1/20 query=IC3_FriendsAndFriendsOfFriendsInCountries official_id=IC3 group=secondary_affected phase=cold rep=1
+[2026-05-10 20:03:36] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:03:39] [INFO] [benchmark-progress] candidate=ldbc_snb_ic3_g7_a1750f34 row=20/20 query=IC3_FriendsAndFriendsOfFriendsInCountries official_id=IC3 group=secondary_affected phase=hot rep=10
+[2026-05-10 20:03:39] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic3_g7_a1750f34 rows=20 ===
+[2026-05-10 20:03:39] [INFO] === CANDIDATE 8/64 candidate=ldbc_snb_ic3_g9_75aa81cd db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic3_g9_75aa81cd ===
+[2026-05-10 20:05:57] [INFO] === BENCHMARK START candidate=ldbc_snb_ic3_g9_75aa81cd rows=20 ===
+[2026-05-10 20:05:57] [INFO] [benchmark-progress] candidate=ldbc_snb_ic3_g9_75aa81cd row=1/20 query=IC3_FriendsAndFriendsOfFriendsInCountries official_id=IC3 group=secondary_affected phase=cold rep=1
+[2026-05-10 20:06:14] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:06:17] [INFO] [benchmark-progress] candidate=ldbc_snb_ic3_g9_75aa81cd row=20/20 query=IC3_FriendsAndFriendsOfFriendsInCountries official_id=IC3 group=secondary_affected phase=hot rep=10
+[2026-05-10 20:06:17] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic3_g9_75aa81cd rows=20 ===
+[2026-05-10 20:06:17] [INFO] === CANDIDATE 9/64 candidate=ldbc_snb_ic4_g0_54d8940c db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic4_g0_54d8940c ===
+[2026-05-10 20:07:55] [INFO] === BENCHMARK START candidate=ldbc_snb_ic4_g0_54d8940c rows=20 ===
+[2026-05-10 20:07:55] [INFO] [benchmark-progress] candidate=ldbc_snb_ic4_g0_54d8940c row=1/20 query=IC4_NewTopics official_id=IC4 group=primary phase=cold rep=1
+[2026-05-10 20:08:08] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:08:09] [INFO] [benchmark-progress] candidate=ldbc_snb_ic4_g0_54d8940c row=20/20 query=IC4_NewTopics official_id=IC4 group=primary phase=hot rep=10
+[2026-05-10 20:08:09] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic4_g0_54d8940c rows=20 ===
+[2026-05-10 20:08:09] [INFO] === CANDIDATE 10/64 candidate=ldbc_snb_ic4_g3_00df9f3e db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic4_g3_00df9f3e ===
+[2026-05-10 20:09:48] [INFO] === BENCHMARK START candidate=ldbc_snb_ic4_g3_00df9f3e rows=20 ===
+[2026-05-10 20:09:48] [INFO] [benchmark-progress] candidate=ldbc_snb_ic4_g3_00df9f3e row=1/20 query=IC4_NewTopics official_id=IC4 group=primary phase=cold rep=1
+[2026-05-10 20:10:00] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:10:01] [INFO] [benchmark-progress] candidate=ldbc_snb_ic4_g3_00df9f3e row=20/20 query=IC4_NewTopics official_id=IC4 group=primary phase=hot rep=10
+[2026-05-10 20:10:01] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic4_g3_00df9f3e rows=20 ===
+[2026-05-10 20:10:01] [INFO] === CANDIDATE 11/64 candidate=ldbc_snb_ic5_g0_f44bd6f8 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic5_g0_f44bd6f8 ===
+[2026-05-10 20:12:04] [INFO] === BENCHMARK START candidate=ldbc_snb_ic5_g0_f44bd6f8 rows=20 ===
+[2026-05-10 20:12:04] [INFO] [benchmark-progress] candidate=ldbc_snb_ic5_g0_f44bd6f8 row=1/20 query=IC5_NewGroups official_id=IC5 group=primary phase=cold rep=1
+[2026-05-10 20:12:16] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:12:20] [INFO] [benchmark-progress] candidate=ldbc_snb_ic5_g0_f44bd6f8 row=20/20 query=IC5_NewGroups official_id=IC5 group=primary phase=hot rep=10
+[2026-05-10 20:12:20] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic5_g0_f44bd6f8 rows=20 ===
+[2026-05-10 20:12:20] [INFO] === CANDIDATE 12/64 candidate=ldbc_snb_ic5_g3_45734260 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic5_g3_45734260 ===
+[2026-05-10 20:14:23] [INFO] === BENCHMARK START candidate=ldbc_snb_ic5_g3_45734260 rows=20 ===
+[2026-05-10 20:14:23] [INFO] [benchmark-progress] candidate=ldbc_snb_ic5_g3_45734260 row=1/20 query=IC5_NewGroups official_id=IC5 group=primary phase=cold rep=1
+[2026-05-10 20:14:36] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:14:39] [INFO] [benchmark-progress] candidate=ldbc_snb_ic5_g3_45734260 row=20/20 query=IC5_NewGroups official_id=IC5 group=primary phase=hot rep=10
+[2026-05-10 20:14:39] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic5_g3_45734260 rows=20 ===
+[2026-05-10 20:14:39] [INFO] === CANDIDATE 13/64 candidate=ldbc_snb_ic5_g4_69144c92 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic5_g4_69144c92 ===
+[2026-05-10 20:16:43] [INFO] === BENCHMARK START candidate=ldbc_snb_ic5_g4_69144c92 rows=20 ===
+[2026-05-10 20:16:43] [INFO] [benchmark-progress] candidate=ldbc_snb_ic5_g4_69144c92 row=1/20 query=IC5_NewGroups official_id=IC5 group=secondary_affected phase=cold rep=1
+[2026-05-10 20:16:55] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:16:58] [INFO] [benchmark-progress] candidate=ldbc_snb_ic5_g4_69144c92 row=20/20 query=IC5_NewGroups official_id=IC5 group=secondary_affected phase=hot rep=10
+[2026-05-10 20:16:59] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic5_g4_69144c92 rows=20 ===
+[2026-05-10 20:16:59] [INFO] === CANDIDATE 14/64 candidate=ldbc_snb_ic5_g6_733601c1 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic5_g6_733601c1 ===
+[2026-05-10 20:19:04] [INFO] === BENCHMARK START candidate=ldbc_snb_ic5_g6_733601c1 rows=20 ===
+[2026-05-10 20:19:04] [INFO] [benchmark-progress] candidate=ldbc_snb_ic5_g6_733601c1 row=1/20 query=IC5_NewGroups official_id=IC5 group=secondary_affected phase=cold rep=1
+[2026-05-10 20:19:16] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:19:19] [INFO] [benchmark-progress] candidate=ldbc_snb_ic5_g6_733601c1 row=20/20 query=IC5_NewGroups official_id=IC5 group=secondary_affected phase=hot rep=10
+[2026-05-10 20:19:19] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic5_g6_733601c1 rows=20 ===
+[2026-05-10 20:19:19] [INFO] === CANDIDATE 15/64 candidate=ldbc_snb_ic5_g7_a2002d4c db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic5_g7_a2002d4c ===
+[2026-05-10 20:21:23] [INFO] === BENCHMARK START candidate=ldbc_snb_ic5_g7_a2002d4c rows=20 ===
+[2026-05-10 20:21:23] [INFO] [benchmark-progress] candidate=ldbc_snb_ic5_g7_a2002d4c row=1/20 query=IC5_NewGroups official_id=IC5 group=secondary_affected phase=cold rep=1
+[2026-05-10 20:21:36] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:21:39] [INFO] [benchmark-progress] candidate=ldbc_snb_ic5_g7_a2002d4c row=20/20 query=IC5_NewGroups official_id=IC5 group=secondary_affected phase=hot rep=10
+[2026-05-10 20:21:39] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic5_g7_a2002d4c rows=20 ===
+[2026-05-10 20:21:39] [INFO] === CANDIDATE 16/64 candidate=ldbc_snb_ic5_g9_7a7a63d2 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic5_g9_7a7a63d2 ===
+[2026-05-10 20:23:44] [INFO] === BENCHMARK START candidate=ldbc_snb_ic5_g9_7a7a63d2 rows=20 ===
+[2026-05-10 20:23:44] [INFO] [benchmark-progress] candidate=ldbc_snb_ic5_g9_7a7a63d2 row=1/20 query=IC5_NewGroups official_id=IC5 group=secondary_affected phase=cold rep=1
+[2026-05-10 20:23:57] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:24:00] [INFO] [benchmark-progress] candidate=ldbc_snb_ic5_g9_7a7a63d2 row=20/20 query=IC5_NewGroups official_id=IC5 group=secondary_affected phase=hot rep=10
+[2026-05-10 20:24:00] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic5_g9_7a7a63d2 rows=20 ===
+[2026-05-10 20:24:00] [INFO] === CANDIDATE 17/64 candidate=ldbc_snb_ic6_g0_f6a698ed db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic6_g0_f6a698ed ===
+[2026-05-10 20:25:40] [INFO] === BENCHMARK START candidate=ldbc_snb_ic6_g0_f6a698ed rows=20 ===
+[2026-05-10 20:25:40] [INFO] [benchmark-progress] candidate=ldbc_snb_ic6_g0_f6a698ed row=1/20 query=IC6_TagCoOccurrence official_id=IC6 group=primary phase=cold rep=1
+[2026-05-10 20:25:52] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:25:57] [INFO] [benchmark-progress] candidate=ldbc_snb_ic6_g0_f6a698ed row=20/20 query=IC6_TagCoOccurrence official_id=IC6 group=primary phase=hot rep=10
+[2026-05-10 20:25:57] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic6_g0_f6a698ed rows=20 ===
+[2026-05-10 20:25:57] [INFO] === CANDIDATE 18/64 candidate=ldbc_snb_ic6_g3_9a00a0b5 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic6_g3_9a00a0b5 ===
+[2026-05-10 20:27:36] [INFO] === BENCHMARK START candidate=ldbc_snb_ic6_g3_9a00a0b5 rows=20 ===
+[2026-05-10 20:27:36] [INFO] [benchmark-progress] candidate=ldbc_snb_ic6_g3_9a00a0b5 row=1/20 query=IC6_TagCoOccurrence official_id=IC6 group=primary phase=cold rep=1
+[2026-05-10 20:27:49] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:27:53] [INFO] [benchmark-progress] candidate=ldbc_snb_ic6_g3_9a00a0b5 row=20/20 query=IC6_TagCoOccurrence official_id=IC6 group=primary phase=hot rep=10
+[2026-05-10 20:27:53] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic6_g3_9a00a0b5 rows=20 ===
+[2026-05-10 20:27:53] [INFO] === CANDIDATE 19/64 candidate=ldbc_snb_ic7_g0_39cfc8f6 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic7_g0_39cfc8f6 ===
+[2026-05-10 20:30:11] [INFO] === BENCHMARK START candidate=ldbc_snb_ic7_g0_39cfc8f6 rows=20 ===
+[2026-05-10 20:30:11] [INFO] [benchmark-progress] candidate=ldbc_snb_ic7_g0_39cfc8f6 row=1/20 query=IC7_RecentLikers official_id=IC7 group=primary phase=cold rep=1
+[2026-05-10 20:30:28] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:30:28] [INFO] [benchmark-progress] candidate=ldbc_snb_ic7_g0_39cfc8f6 row=20/20 query=IC7_RecentLikers official_id=IC7 group=primary phase=hot rep=10
+[2026-05-10 20:30:28] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic7_g0_39cfc8f6 rows=20 ===
+[2026-05-10 20:30:28] [INFO] === CANDIDATE 20/64 candidate=ldbc_snb_ic7_g3_d6d26f02 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic7_g3_d6d26f02 ===
+[2026-05-10 20:32:45] [INFO] === BENCHMARK START candidate=ldbc_snb_ic7_g3_d6d26f02 rows=20 ===
+[2026-05-10 20:32:45] [INFO] [benchmark-progress] candidate=ldbc_snb_ic7_g3_d6d26f02 row=1/20 query=IC7_RecentLikers official_id=IC7 group=primary phase=cold rep=1
+[2026-05-10 20:33:01] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:33:01] [INFO] [benchmark-progress] candidate=ldbc_snb_ic7_g3_d6d26f02 row=20/20 query=IC7_RecentLikers official_id=IC7 group=primary phase=hot rep=10
+[2026-05-10 20:33:01] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic7_g3_d6d26f02 rows=20 ===
+[2026-05-10 20:33:01] [INFO] === CANDIDATE 21/64 candidate=ldbc_snb_ic7_g4_5de4a081 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic7_g4_5de4a081 ===
+[2026-05-10 20:35:22] [INFO] === BENCHMARK START candidate=ldbc_snb_ic7_g4_5de4a081 rows=20 ===
+[2026-05-10 20:35:22] [INFO] [benchmark-progress] candidate=ldbc_snb_ic7_g4_5de4a081 row=1/20 query=IC7_RecentLikers official_id=IC7 group=secondary_affected phase=cold rep=1
+[2026-05-10 20:35:39] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:35:40] [INFO] [benchmark-progress] candidate=ldbc_snb_ic7_g4_5de4a081 row=20/20 query=IC7_RecentLikers official_id=IC7 group=secondary_affected phase=hot rep=10
+[2026-05-10 20:35:40] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic7_g4_5de4a081 rows=20 ===
+[2026-05-10 20:35:40] [INFO] === CANDIDATE 22/64 candidate=ldbc_snb_ic7_g6_084f8a43 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ic7_g6_084f8a43 ===
+[2026-05-10 20:37:57] [INFO] === BENCHMARK START candidate=ldbc_snb_ic7_g6_084f8a43 rows=20 ===
+[2026-05-10 20:37:57] [INFO] [benchmark-progress] candidate=ldbc_snb_ic7_g6_084f8a43 row=1/20 query=IC7_RecentLikers official_id=IC7 group=secondary_affected phase=cold rep=1
+[2026-05-10 20:38:14] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:38:14] [INFO] [benchmark-progress] candidate=ldbc_snb_ic7_g6_084f8a43 row=20/20 query=IC7_RecentLikers official_id=IC7 group=secondary_affected phase=hot rep=10
+[2026-05-10 20:38:14] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ic7_g6_084f8a43 rows=20 ===
+[2026-05-10 20:38:14] [INFO] === CANDIDATE 23/64 candidate=ldbc_snb_ins1_g0_ffbfd07e db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins1_g0_ffbfd07e ===
+[2026-05-10 20:39:38] [INFO] === BENCHMARK START candidate=ldbc_snb_ins1_g0_ffbfd07e rows=20 ===
+[2026-05-10 20:39:38] [INFO] [benchmark-progress] candidate=ldbc_snb_ins1_g0_ffbfd07e row=1/20 query=INS1_AddPerson official_id=INS1 group=primary phase=cold rep=1
+[2026-05-10 20:39:38] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:39:38] [INFO] [benchmark-progress] candidate=ldbc_snb_ins1_g0_ffbfd07e row=20/20 query=INS1_AddPerson official_id=INS1 group=primary phase=hot rep=10
+[2026-05-10 20:39:38] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins1_g0_ffbfd07e rows=20 ===
+[2026-05-10 20:39:38] [INFO] === CANDIDATE 24/64 candidate=ldbc_snb_ins1_g3_10a467d5 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins1_g3_10a467d5 ===
+[2026-05-10 20:41:02] [INFO] === BENCHMARK START candidate=ldbc_snb_ins1_g3_10a467d5 rows=20 ===
+[2026-05-10 20:41:02] [INFO] [benchmark-progress] candidate=ldbc_snb_ins1_g3_10a467d5 row=1/20 query=INS1_AddPerson official_id=INS1 group=primary phase=cold rep=1
+[2026-05-10 20:41:02] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:41:02] [INFO] [benchmark-progress] candidate=ldbc_snb_ins1_g3_10a467d5 row=20/20 query=INS1_AddPerson official_id=INS1 group=primary phase=hot rep=10
+[2026-05-10 20:41:02] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins1_g3_10a467d5 rows=20 ===
+[2026-05-10 20:41:02] [INFO] === CANDIDATE 25/64 candidate=ldbc_snb_ins2_g4_9fb1f96c db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins2_g4_9fb1f96c ===
+[2026-05-10 20:42:30] [INFO] === BENCHMARK START candidate=ldbc_snb_ins2_g4_9fb1f96c rows=20 ===
+[2026-05-10 20:42:30] [INFO] [benchmark-progress] candidate=ldbc_snb_ins2_g4_9fb1f96c row=1/20 query=INS2_AddLikeToPost official_id=INS2 group=primary phase=cold rep=1
+[2026-05-10 20:42:30] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=6 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:42:30] [INFO] [benchmark-progress] candidate=ldbc_snb_ins2_g4_9fb1f96c row=20/20 query=INS2_AddLikeToPost official_id=INS2 group=primary phase=hot rep=10
+[2026-05-10 20:42:30] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins2_g4_9fb1f96c rows=20 ===
+[2026-05-10 20:42:30] [INFO] === CANDIDATE 26/64 candidate=ldbc_snb_ins2_g6_f226f1c0 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins2_g6_f226f1c0 ===
+[2026-05-10 20:43:59] [INFO] === BENCHMARK START candidate=ldbc_snb_ins2_g6_f226f1c0 rows=20 ===
+[2026-05-10 20:43:59] [INFO] [benchmark-progress] candidate=ldbc_snb_ins2_g6_f226f1c0 row=1/20 query=INS2_AddLikeToPost official_id=INS2 group=primary phase=cold rep=1
+[2026-05-10 20:43:59] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=6 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:43:59] [INFO] [benchmark-progress] candidate=ldbc_snb_ins2_g6_f226f1c0 row=20/20 query=INS2_AddLikeToPost official_id=INS2 group=primary phase=hot rep=10
+[2026-05-10 20:43:59] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins2_g6_f226f1c0 rows=20 ===
+[2026-05-10 20:43:59] [INFO] === CANDIDATE 27/64 candidate=ldbc_snb_ins3_g4_9ec9f8f6 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins3_g4_9ec9f8f6 ===
+[2026-05-10 20:45:40] [INFO] === BENCHMARK START candidate=ldbc_snb_ins3_g4_9ec9f8f6 rows=20 ===
+[2026-05-10 20:45:40] [INFO] [benchmark-progress] candidate=ldbc_snb_ins3_g4_9ec9f8f6 row=1/20 query=INS3_AddLikeToComment official_id=INS3 group=primary phase=cold rep=1
+[2026-05-10 20:45:40] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=20 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:45:40] [INFO] [benchmark-progress] candidate=ldbc_snb_ins3_g4_9ec9f8f6 row=20/20 query=INS3_AddLikeToComment official_id=INS3 group=primary phase=hot rep=10
+[2026-05-10 20:45:40] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins3_g4_9ec9f8f6 rows=20 ===
+[2026-05-10 20:45:40] [INFO] === CANDIDATE 28/64 candidate=ldbc_snb_ins3_g6_c1c01729 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins3_g6_c1c01729 ===
+[2026-05-10 20:47:17] [INFO] === BENCHMARK START candidate=ldbc_snb_ins3_g6_c1c01729 rows=20 ===
+[2026-05-10 20:47:17] [INFO] [benchmark-progress] candidate=ldbc_snb_ins3_g6_c1c01729 row=1/20 query=INS3_AddLikeToComment official_id=INS3 group=primary phase=cold rep=1
+[2026-05-10 20:47:17] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=20 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:47:17] [INFO] [benchmark-progress] candidate=ldbc_snb_ins3_g6_c1c01729 row=20/20 query=INS3_AddLikeToComment official_id=INS3 group=primary phase=hot rep=10
+[2026-05-10 20:47:17] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins3_g6_c1c01729 rows=20 ===
+[2026-05-10 20:47:17] [INFO] === CANDIDATE 29/64 candidate=ldbc_snb_ins4_g0_63b0def3 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins4_g0_63b0def3 ===
+[2026-05-10 20:48:42] [INFO] === BENCHMARK START candidate=ldbc_snb_ins4_g0_63b0def3 rows=20 ===
+[2026-05-10 20:48:42] [INFO] [benchmark-progress] candidate=ldbc_snb_ins4_g0_63b0def3 row=1/20 query=INS4_AddForum official_id=INS4 group=primary phase=cold rep=1
+[2026-05-10 20:48:42] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:48:42] [INFO] [benchmark-progress] candidate=ldbc_snb_ins4_g0_63b0def3 row=20/20 query=INS4_AddForum official_id=INS4 group=primary phase=hot rep=10
+[2026-05-10 20:48:42] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins4_g0_63b0def3 rows=20 ===
+[2026-05-10 20:48:42] [INFO] === CANDIDATE 30/64 candidate=ldbc_snb_ins4_g3_b5f0ac72 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins4_g3_b5f0ac72 ===
+[2026-05-10 20:50:06] [INFO] === BENCHMARK START candidate=ldbc_snb_ins4_g3_b5f0ac72 rows=20 ===
+[2026-05-10 20:50:06] [INFO] [benchmark-progress] candidate=ldbc_snb_ins4_g3_b5f0ac72 row=1/20 query=INS4_AddForum official_id=INS4 group=primary phase=cold rep=1
+[2026-05-10 20:50:06] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:50:06] [INFO] [benchmark-progress] candidate=ldbc_snb_ins4_g3_b5f0ac72 row=20/20 query=INS4_AddForum official_id=INS4 group=primary phase=hot rep=10
+[2026-05-10 20:50:06] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins4_g3_b5f0ac72 rows=20 ===
+[2026-05-10 20:50:06] [INFO] === CANDIDATE 31/64 candidate=ldbc_snb_ins5_g4_79a744a2 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins5_g4_79a744a2 ===
+[2026-05-10 20:51:49] [INFO] === BENCHMARK START candidate=ldbc_snb_ins5_g4_79a744a2 rows=20 ===
+[2026-05-10 20:51:49] [INFO] [benchmark-progress] candidate=ldbc_snb_ins5_g4_79a744a2 row=1/20 query=INS5_AddForumMembership official_id=INS5 group=primary phase=cold rep=1
+[2026-05-10 20:51:49] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:51:49] [INFO] [benchmark-progress] candidate=ldbc_snb_ins5_g4_79a744a2 row=20/20 query=INS5_AddForumMembership official_id=INS5 group=primary phase=hot rep=10
+[2026-05-10 20:51:49] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins5_g4_79a744a2 rows=20 ===
+[2026-05-10 20:51:49] [INFO] === CANDIDATE 32/64 candidate=ldbc_snb_ins5_g6_9496cfdb db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins5_g6_9496cfdb ===
+[2026-05-10 20:53:28] [INFO] === BENCHMARK START candidate=ldbc_snb_ins5_g6_9496cfdb rows=20 ===
+[2026-05-10 20:53:28] [INFO] [benchmark-progress] candidate=ldbc_snb_ins5_g6_9496cfdb row=1/20 query=INS5_AddForumMembership official_id=INS5 group=primary phase=cold rep=1
+[2026-05-10 20:53:29] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:53:29] [INFO] [benchmark-progress] candidate=ldbc_snb_ins5_g6_9496cfdb row=20/20 query=INS5_AddForumMembership official_id=INS5 group=primary phase=hot rep=10
+[2026-05-10 20:53:29] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins5_g6_9496cfdb rows=20 ===
+[2026-05-10 20:53:29] [INFO] === CANDIDATE 33/64 candidate=ldbc_snb_ins6_g0_50983b9d db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins6_g0_50983b9d ===
+[2026-05-10 20:55:28] [INFO] === BENCHMARK START candidate=ldbc_snb_ins6_g0_50983b9d rows=20 ===
+[2026-05-10 20:55:28] [INFO] [benchmark-progress] candidate=ldbc_snb_ins6_g0_50983b9d row=1/20 query=INS6_AddPost official_id=INS6 group=primary phase=cold rep=1
+[2026-05-10 20:55:28] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:55:28] [INFO] [benchmark-progress] candidate=ldbc_snb_ins6_g0_50983b9d row=20/20 query=INS6_AddPost official_id=INS6 group=primary phase=hot rep=10
+[2026-05-10 20:55:28] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins6_g0_50983b9d rows=20 ===
+[2026-05-10 20:55:28] [INFO] === CANDIDATE 34/64 candidate=ldbc_snb_ins6_g3_d110d93b db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins6_g3_d110d93b ===
+[2026-05-10 20:57:25] [INFO] === BENCHMARK START candidate=ldbc_snb_ins6_g3_d110d93b rows=20 ===
+[2026-05-10 20:57:25] [INFO] [benchmark-progress] candidate=ldbc_snb_ins6_g3_d110d93b row=1/20 query=INS6_AddPost official_id=INS6 group=primary phase=cold rep=1
+[2026-05-10 20:57:26] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:57:26] [INFO] [benchmark-progress] candidate=ldbc_snb_ins6_g3_d110d93b row=20/20 query=INS6_AddPost official_id=INS6 group=primary phase=hot rep=10
+[2026-05-10 20:57:26] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins6_g3_d110d93b rows=20 ===
+[2026-05-10 20:57:26] [INFO] === CANDIDATE 35/64 candidate=ldbc_snb_ins6_g7_2ba4aefb db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins6_g7_2ba4aefb ===
+[2026-05-10 20:59:24] [INFO] === BENCHMARK START candidate=ldbc_snb_ins6_g7_2ba4aefb rows=20 ===
+[2026-05-10 20:59:24] [INFO] [benchmark-progress] candidate=ldbc_snb_ins6_g7_2ba4aefb row=1/20 query=INS6_AddPost official_id=INS6 group=secondary_affected phase=cold rep=1
+[2026-05-10 20:59:24] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 20:59:24] [INFO] [benchmark-progress] candidate=ldbc_snb_ins6_g7_2ba4aefb row=20/20 query=INS6_AddPost official_id=INS6 group=secondary_affected phase=hot rep=10
+[2026-05-10 20:59:24] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins6_g7_2ba4aefb rows=20 ===
+[2026-05-10 20:59:24] [INFO] === CANDIDATE 36/64 candidate=ldbc_snb_ins6_g9_0dad4d32 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins6_g9_0dad4d32 ===
+[2026-05-10 21:01:23] [INFO] === BENCHMARK START candidate=ldbc_snb_ins6_g9_0dad4d32 rows=20 ===
+[2026-05-10 21:01:23] [INFO] [benchmark-progress] candidate=ldbc_snb_ins6_g9_0dad4d32 row=1/20 query=INS6_AddPost official_id=INS6 group=secondary_affected phase=cold rep=1
+[2026-05-10 21:01:23] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:01:23] [INFO] [benchmark-progress] candidate=ldbc_snb_ins6_g9_0dad4d32 row=20/20 query=INS6_AddPost official_id=INS6 group=secondary_affected phase=hot rep=10
+[2026-05-10 21:01:23] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins6_g9_0dad4d32 rows=20 ===
+[2026-05-10 21:01:23] [INFO] === CANDIDATE 37/64 candidate=ldbc_snb_ins7_g0_1f628fad db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins7_g0_1f628fad ===
+[2026-05-10 21:04:19] [INFO] === BENCHMARK START candidate=ldbc_snb_ins7_g0_1f628fad rows=20 ===
+[2026-05-10 21:04:19] [INFO] [benchmark-progress] candidate=ldbc_snb_ins7_g0_1f628fad row=1/20 query=INS7_AddComment official_id=INS7 group=primary phase=cold rep=1
+[2026-05-10 21:04:20] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:04:20] [INFO] [benchmark-progress] candidate=ldbc_snb_ins7_g0_1f628fad row=20/20 query=INS7_AddComment official_id=INS7 group=primary phase=hot rep=10
+[2026-05-10 21:04:20] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins7_g0_1f628fad rows=20 ===
+[2026-05-10 21:04:20] [INFO] === CANDIDATE 38/64 candidate=ldbc_snb_ins7_g3_e7300dd8 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins7_g3_e7300dd8 ===
+[2026-05-10 21:07:16] [INFO] === BENCHMARK START candidate=ldbc_snb_ins7_g3_e7300dd8 rows=20 ===
+[2026-05-10 21:07:16] [INFO] [benchmark-progress] candidate=ldbc_snb_ins7_g3_e7300dd8 row=1/20 query=INS7_AddComment official_id=INS7 group=primary phase=cold rep=1
+[2026-05-10 21:07:17] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:07:17] [INFO] [benchmark-progress] candidate=ldbc_snb_ins7_g3_e7300dd8 row=20/20 query=INS7_AddComment official_id=INS7 group=primary phase=hot rep=10
+[2026-05-10 21:07:17] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins7_g3_e7300dd8 rows=20 ===
+[2026-05-10 21:07:17] [INFO] === CANDIDATE 39/64 candidate=ldbc_snb_ins7_g7_c86de251 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins7_g7_c86de251 ===
+[2026-05-10 21:10:14] [INFO] === BENCHMARK START candidate=ldbc_snb_ins7_g7_c86de251 rows=20 ===
+[2026-05-10 21:10:14] [INFO] [benchmark-progress] candidate=ldbc_snb_ins7_g7_c86de251 row=1/20 query=INS7_AddComment official_id=INS7 group=secondary_affected phase=cold rep=1
+[2026-05-10 21:10:16] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:10:16] [INFO] [benchmark-progress] candidate=ldbc_snb_ins7_g7_c86de251 row=20/20 query=INS7_AddComment official_id=INS7 group=secondary_affected phase=hot rep=10
+[2026-05-10 21:10:16] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins7_g7_c86de251 rows=20 ===
+[2026-05-10 21:10:16] [INFO] === CANDIDATE 40/64 candidate=ldbc_snb_ins7_g9_bcd2ce9b db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins7_g9_bcd2ce9b ===
+[2026-05-10 21:13:10] [INFO] === BENCHMARK START candidate=ldbc_snb_ins7_g9_bcd2ce9b rows=20 ===
+[2026-05-10 21:13:10] [INFO] [benchmark-progress] candidate=ldbc_snb_ins7_g9_bcd2ce9b row=1/20 query=INS7_AddComment official_id=INS7 group=secondary_affected phase=cold rep=1
+[2026-05-10 21:13:12] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:13:12] [INFO] [benchmark-progress] candidate=ldbc_snb_ins7_g9_bcd2ce9b row=20/20 query=INS7_AddComment official_id=INS7 group=secondary_affected phase=hot rep=10
+[2026-05-10 21:13:12] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins7_g9_bcd2ce9b rows=20 ===
+[2026-05-10 21:13:12] [INFO] === CANDIDATE 41/64 candidate=ldbc_snb_ins8_g0_2acc6939 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins8_g0_2acc6939 ===
+[2026-05-10 21:14:34] [INFO] === BENCHMARK START candidate=ldbc_snb_ins8_g0_2acc6939 rows=20 ===
+[2026-05-10 21:14:34] [INFO] [benchmark-progress] candidate=ldbc_snb_ins8_g0_2acc6939 row=1/20 query=INS8_AddFriendship official_id=INS8 group=primary phase=cold rep=1
+[2026-05-10 21:14:51] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:14:51] [INFO] [benchmark-progress] candidate=ldbc_snb_ins8_g0_2acc6939 row=20/20 query=INS8_AddFriendship official_id=INS8 group=primary phase=hot rep=10
+[2026-05-10 21:14:51] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins8_g0_2acc6939 rows=20 ===
+[2026-05-10 21:14:51] [INFO] === CANDIDATE 42/64 candidate=ldbc_snb_ins8_g3_8e5c5f42 db=ldbc_snb_sf1_exec_clean_ldbc_snb_ins8_g3_8e5c5f42 ===
+[2026-05-10 21:16:13] [INFO] === BENCHMARK START candidate=ldbc_snb_ins8_g3_8e5c5f42 rows=20 ===
+[2026-05-10 21:16:13] [INFO] [benchmark-progress] candidate=ldbc_snb_ins8_g3_8e5c5f42 row=1/20 query=INS8_AddFriendship official_id=INS8 group=primary phase=cold rep=1
+[2026-05-10 21:16:30] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:16:30] [INFO] [benchmark-progress] candidate=ldbc_snb_ins8_g3_8e5c5f42 row=20/20 query=INS8_AddFriendship official_id=INS8 group=primary phase=hot rep=10
+[2026-05-10 21:16:30] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_ins8_g3_8e5c5f42 rows=20 ===
+[2026-05-10 21:16:30] [INFO] === CANDIDATE 43/64 candidate=ldbc_snb_is1_g0_edd90ee3 db=ldbc_snb_sf1_exec_clean_ldbc_snb_is1_g0_edd90ee3 ===
+[2026-05-10 21:17:50] [INFO] === BENCHMARK START candidate=ldbc_snb_is1_g0_edd90ee3 rows=20 ===
+[2026-05-10 21:17:50] [INFO] [benchmark-progress] candidate=ldbc_snb_is1_g0_edd90ee3 row=1/20 query=IS1_ProfileOfPerson official_id=IS1 group=primary phase=cold rep=1
+[2026-05-10 21:17:50] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:17:50] [INFO] [benchmark-progress] candidate=ldbc_snb_is1_g0_edd90ee3 row=20/20 query=IS1_ProfileOfPerson official_id=IS1 group=primary phase=hot rep=10
+[2026-05-10 21:17:50] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is1_g0_edd90ee3 rows=20 ===
+[2026-05-10 21:17:50] [INFO] === CANDIDATE 44/64 candidate=ldbc_snb_is1_g3_6c817501 db=ldbc_snb_sf1_exec_clean_ldbc_snb_is1_g3_6c817501 ===
+[2026-05-10 21:19:08] [INFO] === BENCHMARK START candidate=ldbc_snb_is1_g3_6c817501 rows=20 ===
+[2026-05-10 21:19:08] [INFO] [benchmark-progress] candidate=ldbc_snb_is1_g3_6c817501 row=1/20 query=IS1_ProfileOfPerson official_id=IS1 group=primary phase=cold rep=1
+[2026-05-10 21:19:08] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:19:09] [INFO] [benchmark-progress] candidate=ldbc_snb_is1_g3_6c817501 row=20/20 query=IS1_ProfileOfPerson official_id=IS1 group=primary phase=hot rep=10
+[2026-05-10 21:19:09] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is1_g3_6c817501 rows=20 ===
+[2026-05-10 21:19:09] [INFO] === CANDIDATE 45/64 candidate=ldbc_snb_is2_g0_1d094f1c db=ldbc_snb_sf1_exec_clean_ldbc_snb_is2_g0_1d094f1c ===
+[2026-05-10 21:21:19] [INFO] === BENCHMARK START candidate=ldbc_snb_is2_g0_1d094f1c rows=20 ===
+[2026-05-10 21:21:19] [INFO] [benchmark-progress] candidate=ldbc_snb_is2_g0_1d094f1c row=1/20 query=IS2_RecentMessagesOfPerson official_id=IS2 group=secondary_affected phase=cold rep=1
+[2026-05-10 21:21:21] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:21:21] [INFO] [benchmark-progress] candidate=ldbc_snb_is2_g0_1d094f1c row=20/20 query=IS2_RecentMessagesOfPerson official_id=IS2 group=secondary_affected phase=hot rep=10
+[2026-05-10 21:21:21] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is2_g0_1d094f1c rows=20 ===
+[2026-05-10 21:21:21] [INFO] === CANDIDATE 46/64 candidate=ldbc_snb_is2_g3_b993236d db=ldbc_snb_sf1_exec_clean_ldbc_snb_is2_g3_b993236d ===
+[2026-05-10 21:23:34] [INFO] === BENCHMARK START candidate=ldbc_snb_is2_g3_b993236d rows=20 ===
+[2026-05-10 21:23:34] [INFO] [benchmark-progress] candidate=ldbc_snb_is2_g3_b993236d row=1/20 query=IS2_RecentMessagesOfPerson official_id=IS2 group=secondary_affected phase=cold rep=1
+[2026-05-10 21:23:36] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:23:36] [INFO] [benchmark-progress] candidate=ldbc_snb_is2_g3_b993236d row=20/20 query=IS2_RecentMessagesOfPerson official_id=IS2 group=secondary_affected phase=hot rep=10
+[2026-05-10 21:23:36] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is2_g3_b993236d rows=20 ===
+[2026-05-10 21:23:36] [INFO] === CANDIDATE 47/64 candidate=ldbc_snb_is2_g4_9622e695 db=ldbc_snb_sf1_exec_clean_ldbc_snb_is2_g4_9622e695 ===
+[2026-05-10 21:25:47] [INFO] === BENCHMARK START candidate=ldbc_snb_is2_g4_9622e695 rows=20 ===
+[2026-05-10 21:25:47] [INFO] [benchmark-progress] candidate=ldbc_snb_is2_g4_9622e695 row=1/20 query=IS2_RecentMessagesOfPerson official_id=IS2 group=secondary_affected phase=cold rep=1
+[2026-05-10 21:25:49] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:25:49] [INFO] [benchmark-progress] candidate=ldbc_snb_is2_g4_9622e695 row=20/20 query=IS2_RecentMessagesOfPerson official_id=IS2 group=secondary_affected phase=hot rep=10
+[2026-05-10 21:25:49] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is2_g4_9622e695 rows=20 ===
+[2026-05-10 21:25:49] [INFO] === CANDIDATE 48/64 candidate=ldbc_snb_is2_g6_7253ed90 db=ldbc_snb_sf1_exec_clean_ldbc_snb_is2_g6_7253ed90 ===
+[2026-05-10 21:28:02] [INFO] === BENCHMARK START candidate=ldbc_snb_is2_g6_7253ed90 rows=20 ===
+[2026-05-10 21:28:02] [INFO] [benchmark-progress] candidate=ldbc_snb_is2_g6_7253ed90 row=1/20 query=IS2_RecentMessagesOfPerson official_id=IS2 group=secondary_affected phase=cold rep=1
+[2026-05-10 21:28:04] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:28:04] [INFO] [benchmark-progress] candidate=ldbc_snb_is2_g6_7253ed90 row=20/20 query=IS2_RecentMessagesOfPerson official_id=IS2 group=secondary_affected phase=hot rep=10
+[2026-05-10 21:28:04] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is2_g6_7253ed90 rows=20 ===
+[2026-05-10 21:28:04] [INFO] === CANDIDATE 49/64 candidate=ldbc_snb_is2_g7_26e684aa db=ldbc_snb_sf1_exec_clean_ldbc_snb_is2_g7_26e684aa ===
+[2026-05-10 21:30:17] [INFO] === BENCHMARK START candidate=ldbc_snb_is2_g7_26e684aa rows=20 ===
+[2026-05-10 21:30:17] [INFO] [benchmark-progress] candidate=ldbc_snb_is2_g7_26e684aa row=1/20 query=IS2_RecentMessagesOfPerson official_id=IS2 group=secondary_affected phase=cold rep=1
+[2026-05-10 21:30:18] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:30:18] [INFO] [benchmark-progress] candidate=ldbc_snb_is2_g7_26e684aa row=20/20 query=IS2_RecentMessagesOfPerson official_id=IS2 group=secondary_affected phase=hot rep=10
+[2026-05-10 21:30:18] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is2_g7_26e684aa rows=20 ===
+[2026-05-10 21:30:18] [INFO] === CANDIDATE 50/64 candidate=ldbc_snb_is2_g9_b1df45f6 db=ldbc_snb_sf1_exec_clean_ldbc_snb_is2_g9_b1df45f6 ===
+[2026-05-10 21:32:31] [INFO] === BENCHMARK START candidate=ldbc_snb_is2_g9_b1df45f6 rows=20 ===
+[2026-05-10 21:32:31] [INFO] [benchmark-progress] candidate=ldbc_snb_is2_g9_b1df45f6 row=1/20 query=IS2_RecentMessagesOfPerson official_id=IS2 group=secondary_affected phase=cold rep=1
+[2026-05-10 21:32:33] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:32:33] [INFO] [benchmark-progress] candidate=ldbc_snb_is2_g9_b1df45f6 row=20/20 query=IS2_RecentMessagesOfPerson official_id=IS2 group=secondary_affected phase=hot rep=10
+[2026-05-10 21:32:33] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is2_g9_b1df45f6 rows=20 ===
+[2026-05-10 21:32:33] [INFO] === CANDIDATE 51/64 candidate=ldbc_snb_is3_g0_fc24df68 db=ldbc_snb_sf1_exec_clean_ldbc_snb_is3_g0_fc24df68 ===
+[2026-05-10 21:33:55] [INFO] === BENCHMARK START candidate=ldbc_snb_is3_g0_fc24df68 rows=20 ===
+[2026-05-10 21:33:55] [INFO] [benchmark-progress] candidate=ldbc_snb_is3_g0_fc24df68 row=1/20 query=IS3_FriendsOfPerson official_id=IS3 group=primary phase=cold rep=1
+[2026-05-10 21:34:12] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:34:12] [INFO] [benchmark-progress] candidate=ldbc_snb_is3_g0_fc24df68 row=20/20 query=IS3_FriendsOfPerson official_id=IS3 group=primary phase=hot rep=10
+[2026-05-10 21:34:12] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is3_g0_fc24df68 rows=20 ===
+[2026-05-10 21:34:12] [INFO] === CANDIDATE 52/64 candidate=ldbc_snb_is3_g3_ebc00ba6 db=ldbc_snb_sf1_exec_clean_ldbc_snb_is3_g3_ebc00ba6 ===
+[2026-05-10 21:35:34] [INFO] === BENCHMARK START candidate=ldbc_snb_is3_g3_ebc00ba6 rows=20 ===
+[2026-05-10 21:35:34] [INFO] [benchmark-progress] candidate=ldbc_snb_is3_g3_ebc00ba6 row=1/20 query=IS3_FriendsOfPerson official_id=IS3 group=primary phase=cold rep=1
+[2026-05-10 21:35:51] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:35:52] [INFO] [benchmark-progress] candidate=ldbc_snb_is3_g3_ebc00ba6 row=20/20 query=IS3_FriendsOfPerson official_id=IS3 group=primary phase=hot rep=10
+[2026-05-10 21:35:52] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is3_g3_ebc00ba6 rows=20 ===
+[2026-05-10 21:35:52] [INFO] === CANDIDATE 53/64 candidate=ldbc_snb_is4_g0_103e0c60 db=ldbc_snb_sf1_exec_clean_ldbc_snb_is4_g0_103e0c60 ===
+[2026-05-10 21:37:11] [INFO] === BENCHMARK START candidate=ldbc_snb_is4_g0_103e0c60 rows=20 ===
+[2026-05-10 21:37:11] [INFO] [benchmark-progress] candidate=ldbc_snb_is4_g0_103e0c60 row=1/20 query=IS4_ContentOfMessage official_id=IS4 group=control phase=cold rep=1
+[2026-05-10 21:37:11] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:37:11] [INFO] [benchmark-progress] candidate=ldbc_snb_is4_g0_103e0c60 row=20/20 query=IS4_ContentOfMessage official_id=IS4 group=control phase=hot rep=10
+[2026-05-10 21:37:11] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is4_g0_103e0c60 rows=20 ===
+[2026-05-10 21:37:11] [INFO] === CANDIDATE 54/64 candidate=ldbc_snb_is4_g1_c923c633 db=ldbc_snb_sf1_exec_clean_ldbc_snb_is4_g1_c923c633 ===
+[2026-05-10 21:38:32] [INFO] === BENCHMARK START candidate=ldbc_snb_is4_g1_c923c633 rows=20 ===
+[2026-05-10 21:38:32] [INFO] [benchmark-progress] candidate=ldbc_snb_is4_g1_c923c633 row=1/20 query=IS4_ContentOfMessage official_id=IS4 group=primary phase=cold rep=1
+[2026-05-10 21:38:32] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:38:32] [INFO] [benchmark-progress] candidate=ldbc_snb_is4_g1_c923c633 row=20/20 query=IS4_ContentOfMessage official_id=IS4 group=primary phase=hot rep=10
+[2026-05-10 21:38:32] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is4_g1_c923c633 rows=20 ===
+[2026-05-10 21:38:32] [INFO] === CANDIDATE 55/64 candidate=ldbc_snb_is5_g0_0e8582ef db=ldbc_snb_sf1_exec_clean_ldbc_snb_is5_g0_0e8582ef ===
+[2026-05-10 21:40:20] [INFO] === BENCHMARK START candidate=ldbc_snb_is5_g0_0e8582ef rows=20 ===
+[2026-05-10 21:40:20] [INFO] [benchmark-progress] candidate=ldbc_snb_is5_g0_0e8582ef row=1/20 query=IS5_CreatorOfMessage official_id=IS5 group=primary phase=cold rep=1
+[2026-05-10 21:40:20] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:40:20] [INFO] [benchmark-progress] candidate=ldbc_snb_is5_g0_0e8582ef row=20/20 query=IS5_CreatorOfMessage official_id=IS5 group=primary phase=hot rep=10
+[2026-05-10 21:40:20] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is5_g0_0e8582ef rows=20 ===
+[2026-05-10 21:40:20] [INFO] === CANDIDATE 56/64 candidate=ldbc_snb_is5_g3_f332352f db=ldbc_snb_sf1_exec_clean_ldbc_snb_is5_g3_f332352f ===
+[2026-05-10 21:42:08] [INFO] === BENCHMARK START candidate=ldbc_snb_is5_g3_f332352f rows=20 ===
+[2026-05-10 21:42:08] [INFO] [benchmark-progress] candidate=ldbc_snb_is5_g3_f332352f row=1/20 query=IS5_CreatorOfMessage official_id=IS5 group=primary phase=cold rep=1
+[2026-05-10 21:42:08] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:42:08] [INFO] [benchmark-progress] candidate=ldbc_snb_is5_g3_f332352f row=20/20 query=IS5_CreatorOfMessage official_id=IS5 group=primary phase=hot rep=10
+[2026-05-10 21:42:08] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is5_g3_f332352f rows=20 ===
+[2026-05-10 21:42:08] [INFO] === CANDIDATE 57/64 candidate=ldbc_snb_is6_g7_0aecbe5c db=ldbc_snb_sf1_exec_clean_ldbc_snb_is6_g7_0aecbe5c ===
+[2026-05-10 21:44:06] [INFO] === BENCHMARK START candidate=ldbc_snb_is6_g7_0aecbe5c rows=20 ===
+[2026-05-10 21:44:06] [INFO] [benchmark-progress] candidate=ldbc_snb_is6_g7_0aecbe5c row=1/20 query=IS6_ForumOfMessage official_id=IS6 group=primary phase=cold rep=1
+[2026-05-10 21:44:07] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:44:07] [INFO] [benchmark-progress] candidate=ldbc_snb_is6_g7_0aecbe5c row=20/20 query=IS6_ForumOfMessage official_id=IS6 group=primary phase=hot rep=10
+[2026-05-10 21:44:07] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is6_g7_0aecbe5c rows=20 ===
+[2026-05-10 21:44:07] [INFO] === CANDIDATE 58/64 candidate=ldbc_snb_is6_g9_c7584187 db=ldbc_snb_sf1_exec_clean_ldbc_snb_is6_g9_c7584187 ===
+[2026-05-10 21:46:06] [INFO] === BENCHMARK START candidate=ldbc_snb_is6_g9_c7584187 rows=20 ===
+[2026-05-10 21:46:06] [INFO] [benchmark-progress] candidate=ldbc_snb_is6_g9_c7584187 row=1/20 query=IS6_ForumOfMessage official_id=IS6 group=primary phase=cold rep=1
+[2026-05-10 21:46:07] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:46:07] [INFO] [benchmark-progress] candidate=ldbc_snb_is6_g9_c7584187 row=20/20 query=IS6_ForumOfMessage official_id=IS6 group=primary phase=hot rep=10
+[2026-05-10 21:46:07] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is6_g9_c7584187 rows=20 ===
+[2026-05-10 21:46:07] [INFO] === CANDIDATE 59/64 candidate=ldbc_snb_is6_g0_768bbe02 db=ldbc_snb_sf1_exec_clean_ldbc_snb_is6_g0_768bbe02 ===
+[2026-05-10 21:48:10] [INFO] === BENCHMARK START candidate=ldbc_snb_is6_g0_768bbe02 rows=20 ===
+[2026-05-10 21:48:10] [INFO] [benchmark-progress] candidate=ldbc_snb_is6_g0_768bbe02 row=1/20 query=IS6_ForumOfMessage official_id=IS6 group=secondary_affected phase=cold rep=1
+[2026-05-10 21:48:11] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:48:11] [INFO] [benchmark-progress] candidate=ldbc_snb_is6_g0_768bbe02 row=20/20 query=IS6_ForumOfMessage official_id=IS6 group=secondary_affected phase=hot rep=10
+[2026-05-10 21:48:11] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is6_g0_768bbe02 rows=20 ===
+[2026-05-10 21:48:11] [INFO] === CANDIDATE 60/64 candidate=ldbc_snb_is6_g3_f811f02c db=ldbc_snb_sf1_exec_clean_ldbc_snb_is6_g3_f811f02c ===
+[2026-05-10 21:50:10] [INFO] === BENCHMARK START candidate=ldbc_snb_is6_g3_f811f02c rows=20 ===
+[2026-05-10 21:50:10] [INFO] [benchmark-progress] candidate=ldbc_snb_is6_g3_f811f02c row=1/20 query=IS6_ForumOfMessage official_id=IS6 group=secondary_affected phase=cold rep=1
+[2026-05-10 21:50:12] [INFO] [param-pool] IC1=1 IC2=1 IC3=1 IC4=1 IC5=1 IC6=1 IC7=1 INS1=1 INS2=20 INS3=20 INS4=1 INS5=20 INS6=20 INS7=20 INS8=1 IS1=1 IS2=1 IS3=1 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:50:12] [INFO] [benchmark-progress] candidate=ldbc_snb_is6_g3_f811f02c row=20/20 query=IS6_ForumOfMessage official_id=IS6 group=secondary_affected phase=hot rep=10
+[2026-05-10 21:50:12] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is6_g3_f811f02c rows=20 ===
+[2026-05-10 21:50:12] [INFO] === CANDIDATE 61/64 candidate=ldbc_snb_is7_g0_7dff7761 db=ldbc_snb_sf1_exec_clean_ldbc_snb_is7_g0_7dff7761 ===
+[2026-05-10 21:52:27] [INFO] === BENCHMARK START candidate=ldbc_snb_is7_g0_7dff7761 rows=20 ===
+[2026-05-10 21:52:27] [INFO] [benchmark-progress] candidate=ldbc_snb_is7_g0_7dff7761 row=1/20 query=IS7_RepliesOfMessage official_id=IS7 group=primary phase=cold rep=1
+[2026-05-10 21:52:47] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:52:47] [INFO] [benchmark-progress] candidate=ldbc_snb_is7_g0_7dff7761 row=20/20 query=IS7_RepliesOfMessage official_id=IS7 group=primary phase=hot rep=10
+[2026-05-10 21:52:47] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is7_g0_7dff7761 rows=20 ===
+[2026-05-10 21:52:47] [INFO] === CANDIDATE 62/64 candidate=ldbc_snb_is7_g3_6298fb5e db=ldbc_snb_sf1_exec_clean_ldbc_snb_is7_g3_6298fb5e ===
+[2026-05-10 21:55:03] [INFO] === BENCHMARK START candidate=ldbc_snb_is7_g3_6298fb5e rows=20 ===
+[2026-05-10 21:55:03] [INFO] [benchmark-progress] candidate=ldbc_snb_is7_g3_6298fb5e row=1/20 query=IS7_RepliesOfMessage official_id=IS7 group=primary phase=cold rep=1
+[2026-05-10 21:55:22] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:55:22] [INFO] [benchmark-progress] candidate=ldbc_snb_is7_g3_6298fb5e row=20/20 query=IS7_RepliesOfMessage official_id=IS7 group=primary phase=hot rep=10
+[2026-05-10 21:55:22] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is7_g3_6298fb5e rows=20 ===
+[2026-05-10 21:55:22] [INFO] === CANDIDATE 63/64 candidate=ldbc_snb_is7_g7_4e6a7bf8 db=ldbc_snb_sf1_exec_clean_ldbc_snb_is7_g7_4e6a7bf8 ===
+[2026-05-10 21:57:38] [INFO] === BENCHMARK START candidate=ldbc_snb_is7_g7_4e6a7bf8 rows=20 ===
+[2026-05-10 21:57:38] [INFO] [benchmark-progress] candidate=ldbc_snb_is7_g7_4e6a7bf8 row=1/20 query=IS7_RepliesOfMessage official_id=IS7 group=secondary_affected phase=cold rep=1
+[2026-05-10 21:57:58] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 21:57:58] [INFO] [benchmark-progress] candidate=ldbc_snb_is7_g7_4e6a7bf8 row=20/20 query=IS7_RepliesOfMessage official_id=IS7 group=secondary_affected phase=hot rep=10
+[2026-05-10 21:57:58] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is7_g7_4e6a7bf8 rows=20 ===
+[2026-05-10 21:57:58] [INFO] === CANDIDATE 64/64 candidate=ldbc_snb_is7_g9_392f7469 db=ldbc_snb_sf1_exec_clean_ldbc_snb_is7_g9_392f7469 ===
+[2026-05-10 22:00:13] [INFO] === BENCHMARK START candidate=ldbc_snb_is7_g9_392f7469 rows=20 ===
+[2026-05-10 22:00:13] [INFO] [benchmark-progress] candidate=ldbc_snb_is7_g9_392f7469 row=1/20 query=IS7_RepliesOfMessage official_id=IS7 group=secondary_affected phase=cold rep=1
+[2026-05-10 22:00:33] [INFO] [param-pool] IC1=20 IC2=20 IC3=20 IC4=20 IC5=20 IC6=20 IC7=20 INS1=20 INS2=20 INS3=20 INS4=20 INS5=20 INS6=20 INS7=20 INS8=20 IS1=20 IS2=20 IS3=20 IS4=20 IS5=20 IS6=20 IS7=20
+[2026-05-10 22:00:33] [INFO] [benchmark-progress] candidate=ldbc_snb_is7_g9_392f7469 row=20/20 query=IS7_RepliesOfMessage official_id=IS7 group=secondary_affected phase=hot rep=10
+[2026-05-10 22:00:33] [INFO] === BENCHMARK COMPLETED candidate=ldbc_snb_is7_g9_392f7469 rows=20 ===
+[2026-05-10 22:00:33] [INFO] Saved initialization summary: /home/hudson/Documents/framework_test/ldbc_snb_benchmark/results/ldbc_snb_sf1_full_fiben_format_clean/scale_db_initialization_summary.csv
+[2026-05-10 22:00:33] [INFO] Saved candidate load summary: /home/hudson/Documents/framework_test/ldbc_snb_benchmark/results/ldbc_snb_sf1_full_fiben_format_clean/candidate_load_summary.csv
+[2026-05-10 22:00:33] [INFO] Saved raw benchmark results: /home/hudson/Documents/framework_test/ldbc_snb_benchmark/results/ldbc_snb_sf1_full_fiben_format_clean/benchmark_raw_results.csv
+[2026-05-10 22:00:33] [INFO] Saved aggregate benchmark results: /home/hudson/Documents/framework_test/ldbc_snb_benchmark/results/ldbc_snb_sf1_full_fiben_format_clean/benchmark_aggregate_results.csv
+[2026-05-10 22:00:33] [INFO] Saved run manifest: /home/hudson/Documents/framework_test/ldbc_snb_benchmark/results/ldbc_snb_sf1_full_fiben_format_clean/benchmark_run_manifest.json
+[2026-05-10 22:00:33] [INFO] Done. Results in: /home/hudson/Documents/framework_test/ldbc_snb_benchmark/results/ldbc_snb_sf1_full_fiben_format_clean

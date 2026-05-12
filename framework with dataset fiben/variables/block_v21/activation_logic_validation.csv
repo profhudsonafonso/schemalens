@@ -1,0 +1,5 @@
+check_name,status,details
+every_query_has_at_least_one_active_class,passed,queries_without_activation=0
+primary_activation_defined,passed,missing_primary_rows=0
+activation_merge_complete,passed,missing_after_merge=0
+row_count_preserved,passed,"{'before': 10, 'after': 10}"

@@ -1,0 +1,2 @@
+query_name,generic_class,query_family,query_type,entities_touched,n_entities_touched,Rc,Rc_selected_edges,Rc_status
+Q1_CompanyProfileIBM,QG1,Local lookup,select,['Corporation'],1,0,[],single_or_no_terminal

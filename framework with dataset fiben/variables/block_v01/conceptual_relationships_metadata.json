@@ -1,0 +1,41 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "n_conceptual_relationships": 15,
+  "n_bidirectional_edges": 30,
+  "n_entities_in_graph": 15,
+  "entities_in_graph": [
+    "BuyTransaction",
+    "Corporation",
+    "Country",
+    "Disclosure",
+    "FinancialReport",
+    "FinancialServiceAccount",
+    "Holding",
+    "Industry",
+    "ListedSecurity",
+    "Person",
+    "ReportElement",
+    "Security",
+    "SellTransaction",
+    "StatementElement",
+    "Transaction"
+  ],
+  "entities_only_in_relationships": [],
+  "entities_without_relationships": [],
+  "semantic_types": [
+    "association",
+    "containment",
+    "descriptor",
+    "ownership",
+    "subtype"
+  ],
+  "output_files": {
+    "conceptual_relationships_csv": "variables/block_v01/conceptual_relationships.csv",
+    "conceptual_bidirectional_edges_csv": "variables/block_v01/conceptual_bidirectional_edges.csv",
+    "conceptual_adjacency_csv": "variables/block_v01/conceptual_adjacency.csv",
+    "conceptual_relationship_summary_csv": "variables/block_v01/conceptual_relationship_summary.csv",
+    "conceptual_entity_degree_csv": "variables/block_v01/conceptual_entity_degree.csv"
+  }
+}

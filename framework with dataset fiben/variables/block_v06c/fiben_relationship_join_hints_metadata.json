@@ -1,0 +1,181 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "relationship_join_hints": {
+    "corporation_has_industry": {
+      "hint_type": "direct",
+      "source_entity": "Corporation",
+      "target_entity": "Industry",
+      "source_view": "fiben_corporations",
+      "target_view": "fiben_industries",
+      "source_column": "ISCLASSIFIEDBY",
+      "target_column": "INDUSTRYSECTORCLASSIFIERID",
+      "confidence": "high",
+      "notes": "Corporation points to IndustrySectorClassifier through ISCLASSIFIEDBY."
+    },
+    "corporation_has_country": {
+      "hint_type": "direct",
+      "source_entity": "Corporation",
+      "target_entity": "Country",
+      "source_view": "fiben_corporations",
+      "target_view": "fiben_countries",
+      "source_column": "ISDOMICILEDIN",
+      "target_column": "COUNTRYID",
+      "confidence": "high",
+      "notes": "Corporation points to Country through ISDOMICILEDIN."
+    },
+    "corporation_has_listed_security": {
+      "hint_type": "bridge",
+      "source_entity": "Corporation",
+      "target_entity": "ListedSecurity",
+      "source_view": "fiben_corporations",
+      "bridge_view": "fiben_securities",
+      "target_view": "fiben_listed_securities",
+      "source_column": "CORPORATIONID",
+      "source_to_bridge_bridge_column": "ISPROVIDEDBY",
+      "bridge_to_target_bridge_column": "ISTRADEDON",
+      "target_column": "LISTEDSECURITYID",
+      "confidence": "medium",
+      "notes": "Derived path Corporation -> Security -> ListedSecurity."
+    },
+    "listed_security_represents_security": {
+      "hint_type": "direct",
+      "source_entity": "ListedSecurity",
+      "target_entity": "Security",
+      "source_view": "fiben_listed_securities",
+      "target_view": "fiben_securities",
+      "source_column": "LISTEDSECURITYID",
+      "target_column": "ISTRADEDON",
+      "confidence": "medium",
+      "notes": "Security appears to point to ListedSecurity through ISTRADEDON."
+    },
+    "person_owns_financial_service_account": {
+      "hint_type": "direct",
+      "source_entity": "Person",
+      "target_entity": "FinancialServiceAccount",
+      "source_view": "fiben_persons",
+      "target_view": "fiben_financial_service_accounts",
+      "source_column": "PERSONID",
+      "target_column": "ISOWNEDBY",
+      "confidence": "high",
+      "notes": "FinancialServiceAccount points to Person through ISOWNEDBY."
+    },
+    "account_has_holding": {
+      "hint_type": "direct",
+      "source_entity": "FinancialServiceAccount",
+      "target_entity": "Holding",
+      "source_view": "fiben_financial_service_accounts",
+      "target_view": "fiben_holdings",
+      "source_column": "FINANCIALSERVICEACCOUNTID",
+      "target_column": "ISHELDBY",
+      "confidence": "high",
+      "notes": "Holding points to FinancialServiceAccount through ISHELDBY."
+    },
+    "holding_refers_to_listed_security": {
+      "hint_type": "direct",
+      "source_entity": "Holding",
+      "target_entity": "ListedSecurity",
+      "source_view": "fiben_holdings",
+      "target_view": "fiben_listed_securities",
+      "source_column": "REFERSTO",
+      "target_column": "LISTEDSECURITYID",
+      "confidence": "high",
+      "notes": "Holding points to ListedSecurity through REFERSTO."
+    },
+    "account_records_transaction": {
+      "hint_type": "direct",
+      "source_entity": "FinancialServiceAccount",
+      "target_entity": "Transaction",
+      "source_view": "fiben_financial_service_accounts",
+      "target_view": "fiben_transactions",
+      "source_column": "FINANCIALSERVICEACCOUNTID",
+      "target_column": "ISFACILITATEDBY",
+      "confidence": "high",
+      "notes": "SecuritiesTransaction points to FinancialServiceAccount through ISFACILITATEDBY."
+    },
+    "transaction_refers_to_listed_security": {
+      "hint_type": "direct",
+      "source_entity": "Transaction",
+      "target_entity": "ListedSecurity",
+      "source_view": "fiben_transactions",
+      "target_view": "fiben_listed_securities",
+      "source_column": "REFERSTO",
+      "target_column": "LISTEDSECURITYID",
+      "confidence": "high",
+      "notes": "SecuritiesTransaction points to ListedSecurity through REFERSTO."
+    },
+    "buy_transaction_is_transaction": {
+      "hint_type": "subtype_alias",
+      "source_entity": "BuyTransaction",
+      "target_entity": "Transaction",
+      "source_view": "fiben_buy_transactions",
+      "target_view": "fiben_transactions",
+      "source_column": "SECURITIESTRANSACTIONID",
+      "target_column": "SECURITIESTRANSACTIONID",
+      "confidence": "medium",
+      "notes": "BuyTransaction is currently a conceptual alias over SecuritiesTransaction."
+    },
+    "sell_transaction_is_transaction": {
+      "hint_type": "subtype_alias",
+      "source_entity": "SellTransaction",
+      "target_entity": "Transaction",
+      "source_view": "fiben_sell_transactions",
+      "target_view": "fiben_transactions",
+      "source_column": "SECURITIESTRANSACTIONID",
+      "target_column": "SECURITIESTRANSACTIONID",
+      "confidence": "medium",
+      "notes": "SellTransaction is currently a conceptual alias over SecuritiesTransaction."
+    },
+    "corporation_has_financial_report": {
+      "hint_type": "direct",
+      "source_entity": "Corporation",
+      "target_entity": "FinancialReport",
+      "source_view": "fiben_corporations",
+      "target_view": "fiben_reports",
+      "source_column": "CORPORATIONID",
+      "target_column": "ISPROVIDEDBY",
+      "confidence": "high",
+      "notes": "FinancialReport points to Corporation through ISPROVIDEDBY."
+    },
+    "financial_report_contains_report_element": {
+      "hint_type": "direct",
+      "source_entity": "FinancialReport",
+      "target_entity": "ReportElement",
+      "source_view": "fiben_reports",
+      "target_view": "fiben_report_elements",
+      "source_column": "FINANCIALREPORTID",
+      "target_column": "ISMEMBEROF",
+      "confidence": "high",
+      "notes": "ReportElement points to FinancialReport through ISMEMBEROF."
+    },
+    "report_element_has_statement_element": {
+      "hint_type": "direct",
+      "source_entity": "ReportElement",
+      "target_entity": "StatementElement",
+      "source_view": "fiben_report_elements",
+      "target_view": "fiben_statement_elements",
+      "source_column": "ELEMENTSOFFINANCIALREPORTID",
+      "target_column": "ELEMENTOFFINANCIALSTATEMENTID",
+      "confidence": "low",
+      "notes": "Tentative mapping. Needs validation with observed matches."
+    },
+    "financial_report_contains_disclosure": {
+      "hint_type": "direct",
+      "source_entity": "FinancialReport",
+      "target_entity": "Disclosure",
+      "source_view": "fiben_reports",
+      "target_view": "fiben_disclosures",
+      "source_column": "HASUNIQUEIDENTIFIER",
+      "target_column": "HASUNIQUEIDENTIFIER",
+      "confidence": "low",
+      "notes": "Tentative mapping because Disclosure has no obvious report foreign key."
+    }
+  },
+  "n_join_hints": 15,
+  "n_invalid_join_hints": 0,
+  "output_files": {
+    "join_hints_csv": "variables/block_v06c/fiben_relationship_join_hints.csv",
+    "invalid_join_hints_csv": "variables/block_v06c/invalid_relationship_join_hints.csv"
+  }
+}

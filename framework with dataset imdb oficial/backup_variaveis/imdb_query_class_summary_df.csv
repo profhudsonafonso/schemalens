@@ -1,0 +1,11 @@
+name,generic_class,type,entities,notes
+QG1_WatchItemById,QG1,select,['WatchItem'],Busca pontual por identificador único de WatchItem.
+QG2_WatchItemByTitle,QG2,select,['WatchItem'],Recuperação simples da entidade raiz por atributo direto.
+QG3_RecommendationByGenreAndSubtype,QG3,select,"['WatchItem', 'Genre', 'Movie', 'Series', 'Episode']",Query centrada em WatchItem com filtros sobre descritor compartilhado e subtipos/componentes próximos.
+QG4_AllPersonsOfTypeForWatchItem,QG4,select,"['WatchItem', 'Role', 'Person']","Consulta associativa que parte de WatchItem, passa por Role e alcança Person."
+QG5_AllPersonsForEpisodesOfSeries,QG5,select,"['Series', 'Episode', 'WatchItem', 'Role', 'Person']",Travessia multi-hop que percorre Series -> Episode -> WatchItem -> Role -> Person.
+QG6_EpisodesOfSeries,QG6,select,"['Series', 'Episode']",Query de containment para a relação parte-todo Series -> Episode.
+QG7_UpdateWatchItemMetadata,QG7,update,['WatchItem'],"Escrita isolada sobre a entidade raiz, sem criação de novo relacionamento."
+QG8_AddPersonRoleToWatchItem,QG8,insert,"['Person', 'WatchItem', 'Role']",Escrita com criação de vínculo estrutural via entidade associativa.
+QG9_TopRatedSeriesByGenre,QG9,select,"['WatchItem', 'Series', 'Genre']",Consulta analítica com agrupamento/ordenação sobre Series e descritor de gênero.
+QG10_AdvancedSearchWatchItems,QG10,select,"['WatchItem', 'Genre', 'Movie', 'Series', 'Episode']",Busca mais extensa com múltiplos filtros e ordenação/ranking.

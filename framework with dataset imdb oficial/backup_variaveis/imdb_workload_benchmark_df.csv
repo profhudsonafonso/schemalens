@@ -1,0 +1,11 @@
+name,query_type,entities_involved,expected_fragment,expected_db_model,abstract_query
+QG1_WatchItemById,select,['WatchItem'],ContentFragment,document,RETURN WatchItem WHERE watchitem_id = ?
+QG2_WatchItemByTitle,select,['WatchItem'],ContentFragment,document,RETURN ALL FROM WatchItem WHERE title = ?
+QG3_RecommendationByGenreAndSubtype,select,"['WatchItem', 'Genre', 'Movie', 'Series', 'Episode']",ContentFragment,document,"RETURN WatchItem recommendations FILTER BY genre, subtype and nearby title components"
+QG4_AllPersonsOfTypeForWatchItem,select,"['WatchItem', 'Role', 'Person']",ContentFragment,document,RETURN Person.ALL FROM WatchItem WHERE watchitem_id = ? AND role_category = ?
+QG5_AllPersonsForEpisodesOfSeries,select,"['Series', 'Episode', 'WatchItem', 'Role', 'Person']",ContentFragment,document,RETURN Person.ALL FOR all Episode of Series WHERE series_watchitem_id = ?
+QG6_EpisodesOfSeries,select,"['Series', 'Episode']",ContentFragment,document,RETURN Episode.ALL FROM Series WHERE series_watchitem_id = ?
+QG7_UpdateWatchItemMetadata,update,['WatchItem'],ContentFragment,document,"UPDATE WatchItem SET runtime_minutes = ?, primary_genre = ? WHERE watchitem_id = ?"
+QG8_AddPersonRoleToWatchItem,insert,"['Person', 'WatchItem', 'Role']",ContentFragment,document,INSERT Person if needed and connect Person to WatchItem via Role
+QG9_TopRatedSeriesByGenre,select,"['WatchItem', 'Series', 'Genre']",ContentFragment,document,RETURN TOP K Series BY avg_rating GROUPED/FILTERED BY Genre
+QG10_AdvancedSearchWatchItems,select,"['WatchItem', 'Genre', 'Movie', 'Series', 'Episode']",ContentFragment,document,"SEARCH WatchItem BY title keywords, genre, year range, rating threshold and subtype ORDERED BY ranking"

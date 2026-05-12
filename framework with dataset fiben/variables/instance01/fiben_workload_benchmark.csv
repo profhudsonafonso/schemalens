@@ -1,0 +1,11 @@
+name,query_type,entities_involved,expected_fragment,expected_db_model,abstract_query
+Q1_CompanyProfileIBM,select,['Corporation'],FIBENFragment,document,Show the profile of company IBM.
+Q2_CompanyWithIndustryCountryAndListedSecurities,select,"['Corporation', 'Industry', 'Country', 'ListedSecurity']",FIBENFragment,document,"Show IBM with its industry, country, and listed securities."
+Q3_SecuritiesHeldInEachFinancialServiceAccount,select,"['FinancialServiceAccount', 'Holding', 'ListedSecurity', 'Security']",FIBENFragment,document,Show the securities held in each financial service account.
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,select,"['Person', 'FinancialServiceAccount', 'Holding', 'ListedSecurity', 'Corporation']",FIBENFragment,document,"Show the companies reached from a person through account, holding, and listed security."
+Q5_ReportsAndMetricDataOfCompany,select,"['Corporation', 'FinancialReport', 'ReportElement', 'StatementElement', 'Disclosure']",FIBENFragment,document,Show the financial reports of a company and the metric data contained in each report.
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,select,"['Corporation', 'Industry', 'Country', 'ListedSecurity']",FIBENFragment,document,Find listed securities of technology companies in the US with high last traded value.
+Q7_PersonsWhoBoughtMoreIBMThanSold,select,"['Person', 'FinancialServiceAccount', 'BuyTransaction', 'SellTransaction', 'Transaction', 'ListedSecurity', 'Corporation']",FIBENFragment,document,Who bought more IBM stocks than they sold?
+Q8_IBMTransactionsBelowAverageSellingPrice,select,"['Transaction', 'SellTransaction', 'ListedSecurity', 'Corporation']",FIBENFragment,document,Show me each transaction for IBM whose price is less than the average selling price.
+Q9_PersonsWhoBoughtAndSoldSameStock,select,"['Person', 'FinancialServiceAccount', 'BuyTransaction', 'SellTransaction', 'Transaction', 'ListedSecurity']",FIBENFragment,document,Show me everyone who bought and sold the same stock.
+Q10_CreateAccountHoldingAndBuyTransaction,insert,"['Person', 'FinancialServiceAccount', 'Holding', 'ListedSecurity', 'Transaction', 'BuyTransaction']",FIBENFragment,document,"Create a financial service account for a person, add a holding for a listed security, and register a buy transaction with price and quantity."

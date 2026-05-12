@@ -1,0 +1,33 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "category_weights": {
+    "created": 1.0,
+    "updated": 1.0,
+    "deleted": 1.0,
+    "relationship_created": 0.6,
+    "affected_persistence_region": 0.4,
+    "referenced_existing": 0.15
+  },
+  "excluded_categories": [
+    "explicitly_modified",
+    "all_write_related"
+  ],
+  "n_total_queries": 10,
+  "n_write_queries": 1,
+  "n_entities": 15,
+  "n_entities_with_update_volatility": 6,
+  "n_entities_without_update_volatility": 9,
+  "max_weighted_update_events": 2.0,
+  "output_files": {
+    "update_volatility_by_entity_csv": "variables/block_v15/update_volatility_by_entity.csv",
+    "entity_update_volatility_csv": "variables/block_v15/entity_update_volatility.csv",
+    "update_volatility_entity_csv": "variables/block_v15/update_volatility_entity.csv",
+    "update_volatility_events_csv": "variables/block_v15/update_volatility_events.csv",
+    "update_volatility_summary_csv": "variables/block_v15/update_volatility_summary.csv",
+    "update_volatility_category_summary_csv": "variables/block_v15/update_volatility_category_summary.csv",
+    "entities_with_update_volatility_csv": "variables/block_v15/entities_with_update_volatility.csv",
+    "entities_without_update_volatility_csv": "variables/block_v15/entities_without_update_volatility.csv"
+  }
+}

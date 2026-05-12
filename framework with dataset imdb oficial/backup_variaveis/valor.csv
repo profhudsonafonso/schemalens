@@ -1,0 +1,8 @@
+relationship_name,source_entity,target_entity,n_distinct_sources,n_distinct_targets,avg_targets_per_source,max_targets_per_source,avg_sources_per_target,max_sources_per_target,observed_pattern
+episode_is_watchitem,Episode,WatchItem,2294687,2294687,1.0,1,1.0,1,1:1
+has_genre,Genre,WatchItem,28,2979386,106406.6429,644278,1.0,1,1:N
+movie_is_watchitem,Movie,WatchItem,182165,182165,1.0,1,1.0,1,1:1
+person_in_role,Person,Role,2326466,16451315,7.0714,6856,1.0,1,1:N
+role_of_watchitem,Role,WatchItem,16451315,1850401,1.0,1,8.8907,65,N:1
+series_contains_episode,Series,Episode,180299,2294687,12.7271,4656,1.0,1,1:N
+series_is_watchitem,Series,WatchItem,186514,186514,1.0,1,1.0,1,1:1

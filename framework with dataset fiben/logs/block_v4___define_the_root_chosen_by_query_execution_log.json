@@ -1,0 +1,15 @@
+{
+  "block_name": "BLOCK V4 — DEFINE THE ROOT CHOSEN BY QUERY",
+  "timestamp": "2026-04-30T14:59:49",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_queries": 10,
+    "n_invalid_selected_roots": 0,
+    "selected_root_by_query_csv": "variables/block_v04/selected_root_by_query.csv",
+    "selected_root_summary_csv": "variables/block_v04/selected_root_summary.csv",
+    "selected_root_by_generic_class_csv": "variables/block_v04/selected_root_by_generic_class.csv",
+    "invalid_selected_roots_csv": "variables/block_v04/invalid_selected_roots.csv",
+    "metadata_json": "variables/block_v04/selected_root_metadata.json"
+  }
+}

@@ -1,0 +1,11 @@
+query_name,generic_class,query_type,selected_root,Rc,D_value,selected_document_depth,selected_Re,selected_DeltaR,selected_DeltaR_ratio,selected_structural_coverage,dominant_semantic_group,dominant_semantic_detail,n_shared_descriptor_edges,n_structural_component_edges,n_associative_bridge_edges,n_containment_edges,depth_selection_reason_v13
+QG1_WatchItemById,QG1,select,WatchItem,0,0,,,,,No structural traversal,none,none,0,0,0,0,max_tested_depth_no_total_absorption
+QG10_AdvancedSearchWatchItems,QG10,select,WatchItem,4,1,1.0,0.0,4.0,1.0,Full absorption,association,structural_association,1,3,0,0,min_depth_with_total_absorption
+QG2_WatchItemByTitle,QG2,select,WatchItem,0,0,,,,,No structural traversal,none,none,0,0,0,0,max_tested_depth_no_total_absorption
+QG3_RecommendationByGenreAndSubtype,QG3,select,WatchItem,4,1,1.0,0.0,4.0,1.0,Full absorption,association,structural_association,1,3,0,0,min_depth_with_total_absorption
+QG4_AllPersonsOfTypeForWatchItem,QG4,select,WatchItem,2,2,2.0,0.0,2.0,1.0,Full absorption,associative,associative,0,0,2,0,min_depth_with_total_absorption
+QG5_AllPersonsForEpisodesOfSeries,QG5,select,WatchItem,4,2,2.0,0.0,4.0,1.0,Full absorption,mixed_association_associative,mixed_associative_structural_association,0,2,2,0,min_depth_with_total_absorption
+QG6_EpisodesOfSeries,QG6,select,Series,1,1,1.0,0.0,1.0,1.0,Full absorption,containment,containment,0,0,0,1,min_depth_with_total_absorption
+QG7_UpdateWatchItemMetadata,QG7,update,WatchItem,0,0,,,,,No structural traversal,none,none,0,0,0,0,max_tested_depth_no_total_absorption
+QG8_AddPersonRoleToWatchItem,QG8,insert,WatchItem,2,2,2.0,0.0,2.0,1.0,Full absorption,associative,associative,0,0,2,0,min_depth_with_total_absorption
+QG9_TopRatedSeriesByGenre,QG9,select,WatchItem,2,1,1.0,0.0,2.0,1.0,Full absorption,association,mixed_descriptive_association_structural_association,1,1,0,0,min_depth_with_total_absorption

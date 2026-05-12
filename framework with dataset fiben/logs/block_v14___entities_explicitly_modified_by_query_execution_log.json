@@ -1,0 +1,16 @@
+{
+  "block_name": "BLOCK V14 — ENTITIES EXPLICITLY MODIFIED BY QUERY",
+  "timestamp": "2026-04-30T15:51:56",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_queries": 10,
+    "n_write_queries": 1,
+    "n_read_queries": 9,
+    "modified_entities_by_query_csv": "variables/block_v14/modified_entities_by_query.csv",
+    "modified_entities_long_csv": "variables/block_v14/modified_entities_long.csv",
+    "relationship_creation_by_query_csv": "variables/block_v14/relationship_creation_by_query.csv",
+    "document_variable_matrix_with_modifications_csv": "variables/block_v14/document_variable_matrix_with_modifications.csv",
+    "metadata_json": "variables/block_v14/modified_entities_metadata.json"
+  }
+}

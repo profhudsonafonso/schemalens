@@ -1,0 +1,1 @@
+relationship_name,hint_type,source_entity,target_entity,source_view,target_view,source_column,target_column,bridge_view,source_view_exists,target_view_exists,bridge_view_exists,source_column_exists,target_column_exists,bridge_columns_exist,confidence,is_valid,notes

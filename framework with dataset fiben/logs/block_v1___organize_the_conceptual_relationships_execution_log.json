@@ -1,0 +1,17 @@
+{
+  "block_name": "BLOCK V1 — ORGANIZE THE CONCEPTUAL RELATIONSHIPS",
+  "timestamp": "2026-04-30T14:49:11",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_conceptual_relationships": 15,
+    "n_bidirectional_edges": 30,
+    "n_entities_in_graph": 15,
+    "conceptual_relationships_csv": "variables/block_v01/conceptual_relationships.csv",
+    "conceptual_bidirectional_edges_csv": "variables/block_v01/conceptual_bidirectional_edges.csv",
+    "conceptual_adjacency_csv": "variables/block_v01/conceptual_adjacency.csv",
+    "conceptual_relationship_summary_csv": "variables/block_v01/conceptual_relationship_summary.csv",
+    "conceptual_entity_degree_csv": "variables/block_v01/conceptual_entity_degree.csv",
+    "metadata_json": "variables/block_v01/conceptual_relationships_metadata.json"
+  }
+}

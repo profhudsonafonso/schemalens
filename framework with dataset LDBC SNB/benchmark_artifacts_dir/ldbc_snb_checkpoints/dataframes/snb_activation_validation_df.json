@@ -1,0 +1,18 @@
+[
+  {
+    "check":"queries_without_activation",
+    "value":0,
+    "details":[
+
+    ],
+    "status":"OK"
+  },
+  {
+    "check":"invalid_g_classes",
+    "value":0,
+    "details":[
+
+    ],
+    "status":"OK"
+  }
+]

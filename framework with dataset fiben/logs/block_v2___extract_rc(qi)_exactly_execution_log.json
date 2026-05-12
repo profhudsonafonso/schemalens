@@ -1,0 +1,16 @@
+{
+  "block_name": "BLOCK V2 — EXTRACT Rc(Qi) EXACTLY",
+  "timestamp": "2026-04-30T14:51:47",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_queries": 10,
+    "n_queries_with_rc_zero": 1,
+    "n_queries_with_missing_rc": 0,
+    "rc_by_query_csv": "variables/block_v02/rc_by_query.csv",
+    "rc_selected_edges_long_csv": "variables/block_v02/rc_selected_edges_long.csv",
+    "rc_summary_by_generic_class_csv": "variables/block_v02/rc_summary_by_generic_class.csv",
+    "rc_disconnected_queries_csv": "variables/block_v02/rc_disconnected_queries.csv",
+    "metadata_json": "variables/block_v02/rc_metadata.json"
+  }
+}

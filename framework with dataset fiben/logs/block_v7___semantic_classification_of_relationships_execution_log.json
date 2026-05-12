@@ -1,0 +1,24 @@
+{
+  "block_name": "BLOCK V7 — SEMANTIC CLASSIFICATION OF RELATIONSHIPS",
+  "timestamp": "2026-04-30T15:29:10",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_relationships": 15,
+    "semantic_types": [
+      "association",
+      "containment",
+      "descriptor",
+      "ownership",
+      "subtype"
+    ],
+    "n_missing_semantic_type": 0,
+    "n_missing_cardinality_merge": 0,
+    "relationship_semantics_csv": "variables/block_v07/relationship_semantics.csv",
+    "semantic_relationships_csv": "variables/block_v07/semantic_relationships.csv",
+    "relationship_semantic_profile_csv": "variables/block_v07/relationship_semantic_profile.csv",
+    "semantic_type_summary_csv": "variables/block_v07/semantic_type_summary.csv",
+    "semantic_cardinality_summary_csv": "variables/block_v07/semantic_cardinality_summary.csv",
+    "metadata_json": "variables/block_v07/relationship_semantics_metadata.json"
+  }
+}

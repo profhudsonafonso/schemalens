@@ -1,0 +1,17 @@
+{
+  "block_name": "BLOCK V5 — CALCULATE D(E, er, Qi)",
+  "timestamp": "2026-04-30T15:01:37",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_query_entity_pairs": 46,
+    "n_queries": 10,
+    "n_unreachable_pairs": 0,
+    "distance_by_query_entity_csv": "variables/block_v05/distance_by_query_entity.csv",
+    "d_df_csv": "variables/block_v05/d_df.csv",
+    "distance_summary_by_query_csv": "variables/block_v05/distance_summary_by_query.csv",
+    "distance_by_depth_csv": "variables/block_v05/distance_by_depth.csv",
+    "distance_unreachable_entities_csv": "variables/block_v05/distance_unreachable_entities.csv",
+    "metadata_json": "variables/block_v05/distance_metadata.json"
+  }
+}

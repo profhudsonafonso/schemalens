@@ -1,0 +1,36 @@
+[
+  {
+    "check":"full_plan_count_matches_candidates",
+    "value":"64 \/ 64",
+    "status":"OK",
+    "details":null
+  },
+  {
+    "check":"full_plan_candidate_ids_unique",
+    "value":"64 \/ 64",
+    "status":"OK",
+    "details":null
+  },
+  {
+    "check":"valid_benchmark_groups",
+    "value":0,
+    "status":"OK",
+    "details":[
+
+    ]
+  },
+  {
+    "check":"smoke_plan_non_empty",
+    "value":24,
+    "status":"OK",
+    "details":null
+  },
+  {
+    "check":"smoke_plan_covers_all_benchmark_groups",
+    "value":0,
+    "status":"OK",
+    "details":[
+
+    ]
+  }
+]

@@ -1,0 +1,11 @@
+generic_class,query_family,n_queries,primary_classes,active_class_sets,avg_n_active_g_classes,avg_DeltaRratio
+QG1,Local lookup,1,['G0'],[['G0']],1.0,0.0
+QG10,Update / insertion with relationship creation,1,['G2'],"[['G2', 'G3', 'G4', 'G5', 'G7', 'G9']]",6.0,1.0
+QG2,Shallow rooted retrieval,1,['G1'],"[['G1', 'G3', 'G5', 'G7', 'G9']]",5.0,1.0
+QG3,Associative retrieval,1,['G2'],"[['G2', 'G3', 'G4', 'G5', 'G7', 'G9']]",6.0,1.0
+QG4,Deep traversal,1,['G2'],"[['G2', 'G3', 'G4', 'G5', 'G7', 'G9']]",6.0,1.0
+QG5,Containment retrieval,1,['G2'],"[['G2', 'G4', 'G9']]",3.0,1.0
+QG6,Filtered search / recommendation,1,['G1'],"[['G1', 'G3', 'G5', 'G7', 'G9']]",5.0,1.0
+QG7,Aggregation / ranking,1,['G2'],"[['G2', 'G3', 'G4', 'G5', 'G6', 'G7', 'G9']]",7.0,1.0
+QG8,Aggregation / ranking,1,['G6'],"[['G3', 'G5', 'G6', 'G7', 'G9']]",5.0,1.0
+QG9,Associative retrieval + comparison,1,['G2'],"[['G2', 'G3', 'G4', 'G5', 'G7', 'G9']]",6.0,1.0

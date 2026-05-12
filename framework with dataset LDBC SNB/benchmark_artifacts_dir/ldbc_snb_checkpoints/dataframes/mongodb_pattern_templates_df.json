@@ -1,0 +1,102 @@
+[
+  {
+    "g_class":"G0",
+    "mongodb_pattern":"root_with_references",
+    "document_strategy":"reference",
+    "description":"Root collection stores root entity fields and references to related entities.",
+    "embedding_level":"none_or_minimal",
+    "reference_level":"high",
+    "summary_level":"optional",
+    "risk_profile":"safe_baseline"
+  },
+  {
+    "g_class":"G1",
+    "mongodb_pattern":"single_entity_lookup",
+    "document_strategy":"single_collection",
+    "description":"Single entity collection optimized for direct lookup by primary key.",
+    "embedding_level":"none",
+    "reference_level":"none",
+    "summary_level":"none",
+    "risk_profile":"lookup_baseline"
+  },
+  {
+    "g_class":"G2",
+    "mongodb_pattern":"root_with_embedded_low_risk_associations",
+    "document_strategy":"embed",
+    "description":"Embed low-risk associated data inside the root document.",
+    "embedding_level":"medium",
+    "reference_level":"low",
+    "summary_level":"optional",
+    "risk_profile":"embedding_when_safe"
+  },
+  {
+    "g_class":"G3",
+    "mongodb_pattern":"root_with_references_or_summaries",
+    "document_strategy":"reference_summary",
+    "description":"Use references and\/or denormalized summaries for associated entities.",
+    "embedding_level":"low",
+    "reference_level":"high",
+    "summary_level":"medium",
+    "risk_profile":"shared_or_volatile_safe"
+  },
+  {
+    "g_class":"G4",
+    "mongodb_pattern":"explicit_edge_collection",
+    "document_strategy":"edge_document",
+    "description":"Represent associative relationships as explicit edge\/relationship collections.",
+    "embedding_level":"none",
+    "reference_level":"high",
+    "summary_level":"none",
+    "risk_profile":"associative_baseline"
+  },
+  {
+    "g_class":"G5",
+    "mongodb_pattern":"source_embedded_edges",
+    "document_strategy":"embed_edges",
+    "description":"Embed associative edges near the source root when fanout is manageable.",
+    "embedding_level":"medium",
+    "reference_level":"medium",
+    "summary_level":"optional",
+    "risk_profile":"direct_associative_embedding"
+  },
+  {
+    "g_class":"G6",
+    "mongodb_pattern":"referenced_or_reverse_indexed_edges",
+    "document_strategy":"edge_reference_reverse_index",
+    "description":"Use references, edge collections, and optional reverse indexes for volatile\/shared associative relationships.",
+    "embedding_level":"low",
+    "reference_level":"high",
+    "summary_level":"optional",
+    "risk_profile":"volatile_associative_safe"
+  },
+  {
+    "g_class":"G7",
+    "mongodb_pattern":"containment_baseline",
+    "document_strategy":"containment_reference",
+    "description":"Baseline containment layout with parent-child references.",
+    "embedding_level":"low",
+    "reference_level":"medium",
+    "summary_level":"optional",
+    "risk_profile":"containment_baseline"
+  },
+  {
+    "g_class":"G8",
+    "mongodb_pattern":"deep_containment_embedding",
+    "document_strategy":"embed_contained_children",
+    "description":"Embed contained child entities inside the root document when risk is low.",
+    "embedding_level":"high",
+    "reference_level":"low",
+    "summary_level":"optional",
+    "risk_profile":"deep_embedding_when_safe"
+  },
+  {
+    "g_class":"G9",
+    "mongodb_pattern":"hybrid_containment",
+    "document_strategy":"hybrid_embed_reference_summary",
+    "description":"Use partial embedding, references, and summaries for containment paths with fanout\/sharedness\/volatility risk.",
+    "embedding_level":"medium_partial",
+    "reference_level":"high",
+    "summary_level":"medium",
+    "risk_profile":"hybrid_containment_safe"
+  }
+]

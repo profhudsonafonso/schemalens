@@ -1,0 +1,10 @@
+query_name,observed_cardinalities_touched,hint_confidences_touched,n_low_confidence_edges,n_medium_confidence_edges,n_high_confidence_edges,n_no_match_edges
+Q10_CreateAccountHoldingAndBuyTransaction,"['observed_1_to_1', 'observed_N_to_M']","['high', 'medium']",0,1,4,0
+Q2_CompanyWithIndustryCountryAndListedSecurities,"['no_observed_matches', 'observed_N_to_M']","['high', 'medium']",0,1,2,1
+Q3_SecuritiesHeldInEachFinancialServiceAccount,"['no_observed_matches', 'observed_N_to_M']","['high', 'medium']",0,1,2,1
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,"['no_observed_matches', 'observed_N_to_M']","['high', 'medium']",0,1,3,1
+Q5_ReportsAndMetricDataOfCompany,"['no_observed_matches', 'observed_N_to_M']","['high', 'low']",2,0,2,2
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,"['no_observed_matches', 'observed_N_to_M']","['high', 'medium']",0,1,2,1
+Q7_PersonsWhoBoughtMoreIBMThanSold,"['no_observed_matches', 'observed_1_to_1', 'observed_N_to_M']","['high', 'medium']",0,3,3,1
+Q8_IBMTransactionsBelowAverageSellingPrice,"['no_observed_matches', 'observed_1_to_1', 'observed_N_to_M']","['high', 'medium']",0,2,1,1
+Q9_PersonsWhoBoughtAndSoldSameStock,"['observed_1_to_1', 'observed_N_to_M']","['high', 'medium']",0,2,3,0

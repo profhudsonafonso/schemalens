@@ -1,0 +1,23 @@
+query_name,official_id,Rc_distinct,Rc_weighted,weighted_relationships
+IS1_ProfileOfPerson,IS1,1,1,['person_is_located_in_place x1']
+IS2_RecentMessagesOfPerson,IS2,4,4,"['post_has_creator_person x1', 'comment_has_creator_person x1', 'comment_reply_of_post x1', 'comment_reply_of_comment x1']"
+IS3_FriendsOfPerson,IS3,1,1,['person_knows_person x1']
+IS4_ContentOfMessage,IS4,0,0,[]
+IS5_CreatorOfMessage,IS5,2,2,"['post_has_creator_person x1', 'comment_has_creator_person x1']"
+IS6_ForumOfMessage,IS6,4,4,"['forum_container_of_post x1', 'comment_reply_of_post x1', 'comment_reply_of_comment x1', 'forum_has_moderator_person x1']"
+IS7_RepliesOfMessage,IS7,5,5,"['comment_reply_of_post x1', 'comment_reply_of_comment x1', 'comment_has_creator_person x1', 'post_has_creator_person x1', 'person_knows_person x1']"
+IC1_TransitiveFriendsWithName,IC1,5,7,"['person_knows_person x3', 'person_is_located_in_place x1', 'person_study_at_organisation x1', 'person_work_at_organisation x1', 'organisation_is_located_in_place x1']"
+IC2_RecentMessagesByFriends,IC2,3,3,"['person_knows_person x1', 'post_has_creator_person x1', 'comment_has_creator_person x1']"
+IC3_FriendsAndFriendsOfFriendsInCountries,IC3,7,8,"['person_knows_person x2', 'person_is_located_in_place x1', 'post_has_creator_person x1', 'comment_has_creator_person x1', 'post_is_located_in_place x1', 'comment_is_located_in_place x1', 'place_is_part_of_place x1']"
+IC4_NewTopics,IC4,3,3,"['person_knows_person x1', 'post_has_creator_person x1', 'post_has_tag x1']"
+IC5_NewGroups,IC5,4,5,"['person_knows_person x2', 'forum_has_member_person x1', 'forum_container_of_post x1', 'post_has_creator_person x1']"
+IC6_TagCoOccurrence,IC6,3,4,"['person_knows_person x2', 'post_has_creator_person x1', 'post_has_tag x1']"
+IC7_RecentLikers,IC7,5,5,"['post_has_creator_person x1', 'comment_has_creator_person x1', 'person_likes_post x1', 'person_likes_comment x1', 'person_knows_person x1']"
+INS1_AddPerson,INS1,4,4,"['person_is_located_in_place x1', 'person_has_interest_tag x1', 'person_study_at_organisation x1', 'person_work_at_organisation x1']"
+INS2_AddLikeToPost,INS2,1,1,['person_likes_post x1']
+INS3_AddLikeToComment,INS3,1,1,['person_likes_comment x1']
+INS4_AddForum,INS4,2,2,"['forum_has_moderator_person x1', 'forum_has_tag x1']"
+INS5_AddForumMembership,INS5,1,1,['forum_has_member_person x1']
+INS6_AddPost,INS6,4,4,"['post_has_creator_person x1', 'forum_container_of_post x1', 'post_is_located_in_place x1', 'post_has_tag x1']"
+INS7_AddComment,INS7,5,5,"['comment_has_creator_person x1', 'comment_reply_of_post x1', 'comment_reply_of_comment x1', 'comment_is_located_in_place x1', 'comment_has_tag x1']"
+INS8_AddFriendship,INS8,1,1,['person_knows_person x1']

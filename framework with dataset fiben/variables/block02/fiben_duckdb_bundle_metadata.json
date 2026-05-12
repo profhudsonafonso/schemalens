@@ -1,0 +1,60 @@
+{
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "scale_factor_folder": "/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables",
+  "registered_raw_views": {
+    "corporation": "fiben_raw_corporation",
+    "country": "fiben_raw_country",
+    "disclosure": "fiben_raw_disclosure",
+    "elementoffinancialstatement": "fiben_raw_elementoffinancialstatement",
+    "elementsoffinancialreport": "fiben_raw_elementsoffinancialreport",
+    "financialreport": "fiben_raw_financialreport",
+    "financialserviceaccount": "fiben_raw_financialserviceaccount",
+    "holding": "fiben_raw_holding",
+    "industrysectorclassifier": "fiben_raw_industrysectorclassifier",
+    "listedsecurity": "fiben_raw_listedsecurity",
+    "monetaryamount": "fiben_raw_monetaryamount",
+    "person": "fiben_raw_person",
+    "securitiestransaction": "fiben_raw_securitiestransaction",
+    "security": "fiben_raw_security"
+  },
+  "registered_semantic_views": {},
+  "available_aliases": [
+    "corporation",
+    "country",
+    "disclosure",
+    "elementoffinancialstatement",
+    "elementsoffinancialreport",
+    "financialreport",
+    "financialserviceaccount",
+    "holding",
+    "industrysectorclassifier",
+    "listedsecurity",
+    "monetaryamount",
+    "person",
+    "securitiestransaction",
+    "security"
+  ],
+  "available_view_names": [
+    "fiben_raw_corporation",
+    "fiben_raw_country",
+    "fiben_raw_disclosure",
+    "fiben_raw_elementoffinancialstatement",
+    "fiben_raw_elementsoffinancialreport",
+    "fiben_raw_financialreport",
+    "fiben_raw_financialserviceaccount",
+    "fiben_raw_holding",
+    "fiben_raw_industrysectorclassifier",
+    "fiben_raw_listedsecurity",
+    "fiben_raw_monetaryamount",
+    "fiben_raw_person",
+    "fiben_raw_securitiestransaction",
+    "fiben_raw_security"
+  ],
+  "fiben_sf_paths": {
+    "SF1": "/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables",
+    "SF10": "/home/jovyan/privado/fiben/fiben_sf_artifacts/scaled_corp_rooted/SF10/tables",
+    "SF30": "/home/jovyan/privado/fiben/fiben_sf_artifacts/scaled_corp_rooted/SF30/tables"
+  },
+  "duckdb_file": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/duckdb/fiben_sf1.duckdb"
+}

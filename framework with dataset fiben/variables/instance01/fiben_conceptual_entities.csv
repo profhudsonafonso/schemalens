@@ -1,0 +1,16 @@
+entity
+Corporation
+Industry
+Country
+Security
+ListedSecurity
+Person
+FinancialServiceAccount
+Holding
+Transaction
+BuyTransaction
+SellTransaction
+FinancialReport
+ReportElement
+StatementElement
+Disclosure

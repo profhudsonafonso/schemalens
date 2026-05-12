@@ -1,0 +1,43 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "semantic_view_specs": {
+    "fiben_industries": "fiben_raw_industrysectorclassifier",
+    "fiben_countries": "fiben_raw_country",
+    "fiben_persons": "fiben_raw_person",
+    "fiben_financial_service_accounts": "fiben_raw_financialserviceaccount",
+    "fiben_holdings": "fiben_raw_holding",
+    "fiben_transactions": "fiben_raw_securitiestransaction",
+    "fiben_report_elements": "fiben_raw_elementsoffinancialreport",
+    "fiben_statement_elements": "fiben_raw_elementoffinancialstatement",
+    "fiben_buy_transactions": "fiben_raw_securitiestransaction",
+    "fiben_sell_transactions": "fiben_raw_securitiestransaction"
+  },
+  "entity_view_overrides": {
+    "Corporation": "fiben_corporations",
+    "Industry": "fiben_industries",
+    "Country": "fiben_countries",
+    "Security": "fiben_securities",
+    "ListedSecurity": "fiben_listed_securities",
+    "Person": "fiben_persons",
+    "FinancialServiceAccount": "fiben_financial_service_accounts",
+    "Holding": "fiben_holdings",
+    "Transaction": "fiben_transactions",
+    "BuyTransaction": "fiben_buy_transactions",
+    "SellTransaction": "fiben_sell_transactions",
+    "FinancialReport": "fiben_reports",
+    "ReportElement": "fiben_report_elements",
+    "StatementElement": "fiben_statement_elements",
+    "Disclosure": "fiben_disclosures"
+  },
+  "n_semantic_views_created_or_replaced": 10,
+  "n_missing_source_views": 0,
+  "n_entity_overrides": 15,
+  "n_valid_entity_overrides": 15,
+  "output_files": {
+    "semantic_view_creation_csv": "variables/block_v06b/fiben_semantic_view_creation.csv",
+    "entity_view_override_validation_csv": "variables/block_v06b/fiben_entity_view_override_validation.csv",
+    "entity_override_columns_csv": "variables/block_v06b/fiben_entity_override_columns.csv"
+  }
+}

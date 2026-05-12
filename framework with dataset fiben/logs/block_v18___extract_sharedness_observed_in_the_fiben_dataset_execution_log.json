@@ -1,0 +1,17 @@
+{
+  "block_name": "BLOCK V18 — EXTRACT SHAREDNESS OBSERVED IN THE FIBEN DATASET",
+  "timestamp": "2026-04-30T15:57:45",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "row_limit": 200000,
+    "n_relationships": 15,
+    "n_computed_relationships": 15,
+    "n_not_computed_relationships": 0,
+    "n_high_sharedness_relationships": 0,
+    "n_queries_with_observed_sharedness": 9,
+    "observed_sharedness_csv": "variables/block_v18/observed_sharedness_by_relationship.csv",
+    "query_sharedness_profile_csv": "variables/block_v18/query_sharedness_profile.csv",
+    "metadata_json": "variables/block_v18/observed_sharedness_metadata.json"
+  }
+}

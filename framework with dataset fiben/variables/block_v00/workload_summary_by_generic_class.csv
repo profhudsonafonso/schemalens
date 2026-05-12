@@ -1,0 +1,11 @@
+generic_class,query_family,n_queries,avg_entities_touched,min_entities_touched,max_entities_touched
+QG1,Local lookup,1,1.0,1,1
+QG10,Update / insertion with relationship creation,1,6.0,6,6
+QG2,Shallow rooted retrieval,1,4.0,4,4
+QG3,Associative retrieval,1,4.0,4,4
+QG4,Deep traversal,1,5.0,5,5
+QG5,Containment retrieval,1,5.0,5,5
+QG6,Filtered search / recommendation,1,4.0,4,4
+QG7,Aggregation / ranking,1,7.0,7,7
+QG8,Aggregation / ranking,1,4.0,4,4
+QG9,Associative retrieval + comparison,1,6.0,6,6

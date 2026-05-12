@@ -1,0 +1,121 @@
+[
+  {
+    "source_entity":"Person",
+    "target_entity":"Person",
+    "reachable":true,
+    "distance":0,
+    "path":"Person"
+  },
+  {
+    "source_entity":"Person",
+    "target_entity":"Post",
+    "reachable":true,
+    "distance":1,
+    "path":"Person -> Post"
+  },
+  {
+    "source_entity":"Person",
+    "target_entity":"Comment",
+    "reachable":true,
+    "distance":1,
+    "path":"Person -> Comment"
+  },
+  {
+    "source_entity":"Person",
+    "target_entity":"Forum",
+    "reachable":true,
+    "distance":1,
+    "path":"Person -> Forum"
+  },
+  {
+    "source_entity":"Forum",
+    "target_entity":"Post",
+    "reachable":true,
+    "distance":1,
+    "path":"Forum -> Post"
+  },
+  {
+    "source_entity":"Forum",
+    "target_entity":"Comment",
+    "reachable":true,
+    "distance":2,
+    "path":"Forum -> Person -> Comment"
+  },
+  {
+    "source_entity":"Post",
+    "target_entity":"Comment",
+    "reachable":true,
+    "distance":1,
+    "path":"Post -> Comment"
+  },
+  {
+    "source_entity":"Post",
+    "target_entity":"Tag",
+    "reachable":true,
+    "distance":1,
+    "path":"Post -> Tag"
+  },
+  {
+    "source_entity":"Comment",
+    "target_entity":"Tag",
+    "reachable":true,
+    "distance":1,
+    "path":"Comment -> Tag"
+  },
+  {
+    "source_entity":"Person",
+    "target_entity":"Tag",
+    "reachable":true,
+    "distance":1,
+    "path":"Person -> Tag"
+  },
+  {
+    "source_entity":"Person",
+    "target_entity":"Organisation",
+    "reachable":true,
+    "distance":1,
+    "path":"Person -> Organisation"
+  },
+  {
+    "source_entity":"Person",
+    "target_entity":"Place",
+    "reachable":true,
+    "distance":1,
+    "path":"Person -> Place"
+  },
+  {
+    "source_entity":"Organisation",
+    "target_entity":"Place",
+    "reachable":true,
+    "distance":1,
+    "path":"Organisation -> Place"
+  },
+  {
+    "source_entity":"Tag",
+    "target_entity":"TagClass",
+    "reachable":true,
+    "distance":1,
+    "path":"Tag -> TagClass"
+  },
+  {
+    "source_entity":"Place",
+    "target_entity":"Place",
+    "reachable":true,
+    "distance":0,
+    "path":"Place"
+  },
+  {
+    "source_entity":"TagClass",
+    "target_entity":"Post",
+    "reachable":true,
+    "distance":2,
+    "path":"TagClass -> Tag -> Post"
+  },
+  {
+    "source_entity":"Place",
+    "target_entity":"Person",
+    "reachable":true,
+    "distance":1,
+    "path":"Place -> Person"
+  }
+]

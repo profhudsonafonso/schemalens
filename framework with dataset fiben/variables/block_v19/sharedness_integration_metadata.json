@@ -1,0 +1,36 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "n_rows_before_merge": 10,
+  "n_rows_after_merge": 10,
+  "n_columns_after_merge": 122,
+  "n_queries_with_observed_sharedness": 9,
+  "sharedness_level_counts": {
+    "medium": 9,
+    "none": 1
+  },
+  "sharedness_embedding_tradeoff_counts": {
+    "high_read_gain_manageable_sharedness": 9,
+    "no_sharedness_pressure": 1
+  },
+  "combined_document_design_risk_counts": {
+    "strong_read_candidate_high_update_pressure": 6,
+    "strong_read_candidate_low_maintenance_pressure": 3,
+    "low_overall_design_pressure": 1
+  },
+  "n_failed_integration_checks": 0,
+  "output_files": {
+    "document_variable_matrix_with_sharedness_csv": "variables/block_v19/document_variable_matrix_with_sharedness.csv",
+    "analytical_matrix_with_sharedness_csv": "variables/block_v19/analytical_matrix_with_sharedness.csv",
+    "document_variable_matrix_sharedness_enriched_csv": "variables/block_v19/document_variable_matrix_sharedness_enriched.csv",
+    "document_variable_matrix_csv": "variables/block_v19/document_variable_matrix.csv",
+    "integration_check_csv": "variables/block_v19/sharedness_integration_check.csv",
+    "matrix_summary_csv": "variables/block_v19/sharedness_matrix_summary.csv",
+    "tradeoff_summary_csv": "variables/block_v19/sharedness_tradeoff_summary.csv",
+    "by_root_summary_csv": "variables/block_v19/sharedness_by_root_summary.csv",
+    "missing_merge_csv": "variables/block_v19/missing_sharedness_merge.csv",
+    "failed_checks_csv": "variables/block_v19/failed_sharedness_integration_checks.csv",
+    "high_read_gain_high_sharedness_csv": "variables/block_v19/high_read_gain_high_sharedness_queries.csv"
+  }
+}

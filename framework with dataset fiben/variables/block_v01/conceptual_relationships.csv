@@ -1,0 +1,16 @@
+source,target,name,semantic_type,notes,edge_id,source_target_pair
+Corporation,Industry,corporation_has_industry,descriptor,Connects a corporation to its industry classification.,Corporation -- Industry [corporation_has_industry],Corporation -> Industry
+Corporation,Country,corporation_has_country,descriptor,Connects a corporation to its country.,Corporation -- Country [corporation_has_country],Corporation -> Country
+Corporation,ListedSecurity,corporation_has_listed_security,association,Connects a corporation to listed securities.,Corporation -- ListedSecurity [corporation_has_listed_security],Corporation -> ListedSecurity
+ListedSecurity,Security,listed_security_represents_security,association,Connects a listed security to the underlying security.,ListedSecurity -- Security [listed_security_represents_security],ListedSecurity -> Security
+Person,FinancialServiceAccount,person_owns_financial_service_account,ownership,Connects a person to a financial service account.,Person -- FinancialServiceAccount [person_owns_financial_service_account],Person -> FinancialServiceAccount
+FinancialServiceAccount,Holding,account_has_holding,containment,Connects an account to the holdings inside it.,FinancialServiceAccount -- Holding [account_has_holding],FinancialServiceAccount -> Holding
+Holding,ListedSecurity,holding_refers_to_listed_security,association,Connects a holding to the listed security being held.,Holding -- ListedSecurity [holding_refers_to_listed_security],Holding -> ListedSecurity
+FinancialServiceAccount,Transaction,account_records_transaction,containment,Connects an account to its transactions.,FinancialServiceAccount -- Transaction [account_records_transaction],FinancialServiceAccount -> Transaction
+Transaction,ListedSecurity,transaction_refers_to_listed_security,association,Connects a transaction to the listed security traded.,Transaction -- ListedSecurity [transaction_refers_to_listed_security],Transaction -> ListedSecurity
+BuyTransaction,Transaction,buy_transaction_is_transaction,subtype,Models buy transactions as a subtype of transaction.,BuyTransaction -- Transaction [buy_transaction_is_transaction],BuyTransaction -> Transaction
+SellTransaction,Transaction,sell_transaction_is_transaction,subtype,Models sell transactions as a subtype of transaction.,SellTransaction -- Transaction [sell_transaction_is_transaction],SellTransaction -> Transaction
+Corporation,FinancialReport,corporation_has_financial_report,containment,Connects a corporation to its financial reports.,Corporation -- FinancialReport [corporation_has_financial_report],Corporation -> FinancialReport
+FinancialReport,ReportElement,financial_report_contains_report_element,containment,Connects a financial report to report-level metric data.,FinancialReport -- ReportElement [financial_report_contains_report_element],FinancialReport -> ReportElement
+ReportElement,StatementElement,report_element_has_statement_element,containment,Connects report elements to statement elements.,ReportElement -- StatementElement [report_element_has_statement_element],ReportElement -> StatementElement
+FinancialReport,Disclosure,financial_report_contains_disclosure,containment,Connects a financial report to disclosure data.,FinancialReport -- Disclosure [financial_report_contains_disclosure],FinancialReport -> Disclosure

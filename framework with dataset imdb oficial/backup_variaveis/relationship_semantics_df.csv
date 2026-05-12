@@ -1,0 +1,8 @@
+relationship_name,source,target,semantic_group,semantic_detail,is_shared_descriptor,is_structural_component,is_associative_bridge,is_containment,notes,edge_id
+has_genre,Genre,WatchItem,association,descriptive_association,True,False,False,False,Genre funciona como descritor pequeno e compartilhado ligado à raiz WatchItem.,Genre -- WatchItem [has_genre]
+movie_is_watchitem,Movie,WatchItem,association,structural_association,False,True,False,False,Movie é subtipo/componente estrutural próximo da raiz WatchItem.,Movie -- WatchItem [movie_is_watchitem]
+series_is_watchitem,Series,WatchItem,association,structural_association,False,True,False,False,Series é subtipo/componente estrutural próximo da raiz WatchItem.,Series -- WatchItem [series_is_watchitem]
+episode_is_watchitem,Episode,WatchItem,association,structural_association,False,True,False,False,Episode é subtipo/componente estrutural próximo da raiz WatchItem.,Episode -- WatchItem [episode_is_watchitem]
+person_in_role,Person,Role,associative,associative,False,False,True,False,Aresta do caminho associativo entre entidade final compartilhada e entidade associativa.,Person -- Role [person_in_role]
+role_of_watchitem,Role,WatchItem,associative,associative,False,False,True,False,Aresta do caminho associativo entre a entidade associativa e a raiz WatchItem.,Role -- WatchItem [role_of_watchitem]
+series_contains_episode,Series,Episode,containment,containment,False,False,False,True,Relação parte-todo explícita entre Series e Episode.,Series -- Episode [series_contains_episode]

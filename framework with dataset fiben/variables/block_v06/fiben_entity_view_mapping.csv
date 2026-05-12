@@ -1,0 +1,16 @@
+entity,status,alias,view_name,candidate_used
+Corporation,matched_semantic,corporations,fiben_corporations,corporations
+Industry,unmatched,,,
+Country,matched_raw,country,fiben_raw_country,country
+Security,matched_semantic,securities,fiben_securities,securities
+ListedSecurity,matched_semantic,listed_securities,fiben_listed_securities,listed_securities
+Person,matched_raw,person,fiben_raw_person,person
+FinancialServiceAccount,matched_raw,financialserviceaccount,fiben_raw_financialserviceaccount,financial_service_account
+Holding,matched_raw,holding,fiben_raw_holding,holding
+Transaction,unmatched,,,
+BuyTransaction,unmatched,,,
+SellTransaction,unmatched,,,
+FinancialReport,matched_semantic,reports,fiben_reports,reports
+ReportElement,unmatched,,,
+StatementElement,unmatched,,,
+Disclosure,matched_semantic,disclosures,fiben_disclosures,disclosures

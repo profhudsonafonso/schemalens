@@ -1,0 +1,23 @@
+query_name,official_id,official_D,depth_note
+IS1_ProfileOfPerson,IS1,1,Person profile plus location place.
+IS2_RecentMessagesOfPerson,IS2,2,Person -> Message plus possible Comment -> original Post traversal.
+IS3_FriendsOfPerson,IS3,1,Person -> knows -> Person.
+IS4_ContentOfMessage,IS4,0,Direct lookup of Message content; represented physically as Post or Comment.
+IS5_CreatorOfMessage,IS5,1,Message -> creator Person.
+IS6_ForumOfMessage,IS6,3,Message -> original Post -> Forum -> Moderator Person. Comments may require reply traversal.
+IS7_RepliesOfMessage,IS7,2,"Message -> replies -> reply creator, plus friendship check."
+IC1_TransitiveFriendsWithName,IC1,4,Up to 3 knows hops plus profile/organisation/place expansion.
+IC2_RecentMessagesByFriends,IC2,2,Person -> friend -> recent messages.
+IC3_FriendsAndFriendsOfFriendsInCountries,IC3,4,Friends/friends-of-friends plus messages and country/place traversal.
+IC4_NewTopics,IC4,3,Person -> friends -> posts -> tags.
+IC5_NewGroups,IC5,3,Person -> friends/friends-of-friends -> forums -> posts.
+IC6_TagCoOccurrence,IC6,3,Person -> friends/friends-of-friends -> posts -> tags.
+IC7_RecentLikers,IC7,2,"Person messages -> likers, plus knows check."
+INS1_AddPerson,INS1,1,"Insert Person plus direct relationships to Place, Tag and Organisation."
+INS2_AddLikeToPost,INS2,1,Person -> likes -> Post.
+INS3_AddLikeToComment,INS3,1,Person -> likes -> Comment.
+INS4_AddForum,INS4,1,Forum plus moderator and tags.
+INS5_AddForumMembership,INS5,1,Forum -> hasMember -> Person.
+INS6_AddPost,INS6,1,"Post plus creator, forum, place and tags."
+INS7_AddComment,INS7,1,"Comment plus creator, reply target, place and tags."
+INS8_AddFriendship,INS8,1,Person -> knows -> Person.

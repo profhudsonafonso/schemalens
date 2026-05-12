@@ -1,0 +1,1241 @@
+[
+  {
+    "candidate_id":"ldbc_snb_is1_g0_edd90ee3",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IS1_ProfileOfPerson",
+    "official_id":"IS1",
+    "official_title":"Profile of a person",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "benchmark_group":"primary",
+    "benchmark_group_priority":1,
+    "query_group_priority":1,
+    "activation_strength":"primary",
+    "activation_reason":"Association-family baseline root document.",
+    "root_entity":"Person",
+    "root_collection":"persons",
+    "root_pk":"person_id",
+    "g_class":"G0",
+    "g_family":"association",
+    "g_role":"baseline",
+    "g_label":"Root document with referenced associations",
+    "mongodb_pattern":"root_with_references",
+    "document_strategy":"reference",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Place"
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+      "person_is_located_in_place"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":1,
+    "D":1,
+    "Re":0,
+    "DeltaRratio":1.0,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":1.0,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_is1_g3_6c817501",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IS1_ProfileOfPerson",
+    "official_id":"IS1",
+    "official_title":"Profile of a person",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "benchmark_group":"primary",
+    "benchmark_group_priority":1,
+    "query_group_priority":1,
+    "activation_strength":"primary",
+    "activation_reason":"Association path has high sharedness, high volatility, deep traversal, or residual traversal.",
+    "root_entity":"Person",
+    "root_collection":"persons",
+    "root_pk":"person_id",
+    "g_class":"G3",
+    "g_family":"association",
+    "g_role":"reference_or_summary_candidate",
+    "g_label":"Root document with references or denormalized summaries",
+    "mongodb_pattern":"root_with_references_or_summaries",
+    "document_strategy":"reference_summary",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Place"
+    ],
+    "summarized_entities":[
+      "Place"
+    ],
+    "edge_collections":[
+      "person_is_located_in_place"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":1,
+    "D":1,
+    "Re":0,
+    "DeltaRratio":1.0,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":1.0,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_is3_g0_fc24df68",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IS3_FriendsOfPerson",
+    "official_id":"IS3",
+    "official_title":"Friends of a person",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "benchmark_group":"primary",
+    "benchmark_group_priority":1,
+    "query_group_priority":1,
+    "activation_strength":"primary",
+    "activation_reason":"Association-family baseline root document.",
+    "root_entity":"Person",
+    "root_collection":"persons",
+    "root_pk":"person_id",
+    "g_class":"G0",
+    "g_family":"association",
+    "g_role":"baseline",
+    "g_label":"Root document with referenced associations",
+    "mongodb_pattern":"root_with_references",
+    "document_strategy":"reference",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+      "person_knows_person"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":1,
+    "D":1,
+    "Re":0,
+    "DeltaRratio":1.0,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_is3_g3_ebc00ba6",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IS3_FriendsOfPerson",
+    "official_id":"IS3",
+    "official_title":"Friends of a person",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "benchmark_group":"primary",
+    "benchmark_group_priority":1,
+    "query_group_priority":1,
+    "activation_strength":"primary",
+    "activation_reason":"Association path has high sharedness, high volatility, deep traversal, or residual traversal.",
+    "root_entity":"Person",
+    "root_collection":"persons",
+    "root_pk":"person_id",
+    "g_class":"G3",
+    "g_family":"association",
+    "g_role":"reference_or_summary_candidate",
+    "g_label":"Root document with references or denormalized summaries",
+    "mongodb_pattern":"root_with_references_or_summaries",
+    "document_strategy":"reference_summary",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+      "person_knows_person"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":1,
+    "D":1,
+    "Re":0,
+    "DeltaRratio":1.0,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_is4_g1_c923c633",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IS4_ContentOfMessage",
+    "official_id":"IS4",
+    "official_title":"Content of a message",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "benchmark_group":"primary",
+    "benchmark_group_priority":1,
+    "query_group_priority":1,
+    "activation_strength":"primary",
+    "activation_reason":"Lookup query with no explicit relationship traversal.",
+    "root_entity":"Post",
+    "root_collection":"posts",
+    "root_pk":"post_id",
+    "g_class":"G1",
+    "g_family":"lookup",
+    "g_role":"baseline",
+    "g_label":"Single-entity lookup document",
+    "mongodb_pattern":"single_entity_lookup",
+    "document_strategy":"single_collection",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":0,
+    "D":0,
+    "Re":0,
+    "DeltaRratio":0.0,
+    "dominant_semantic_type":"lookup",
+    "update_volatility_max":0.4311836564,
+    "observed_sharedness_max":0.0165119687,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_is4_g0_103e0c60",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IS4_ContentOfMessage",
+    "official_id":"IS4",
+    "official_title":"Content of a message",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "benchmark_group":"control",
+    "benchmark_group_priority":3,
+    "query_group_priority":1,
+    "activation_strength":"control",
+    "activation_reason":"Control baseline for root document comparison.",
+    "root_entity":"Post",
+    "root_collection":"posts",
+    "root_pk":"post_id",
+    "g_class":"G0",
+    "g_family":"association",
+    "g_role":"baseline",
+    "g_label":"Root document with referenced associations",
+    "mongodb_pattern":"root_with_references",
+    "document_strategy":"reference",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Comment"
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":0,
+    "D":0,
+    "Re":0,
+    "DeltaRratio":0.0,
+    "dominant_semantic_type":"lookup",
+    "update_volatility_max":0.4311836564,
+    "observed_sharedness_max":0.0165119687,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_is6_g7_0aecbe5c",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IS6_ForumOfMessage",
+    "official_id":"IS6",
+    "official_title":"Forum of a message",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "benchmark_group":"primary",
+    "benchmark_group_priority":1,
+    "query_group_priority":1,
+    "activation_strength":"primary",
+    "activation_reason":"Containment-family baseline.",
+    "root_entity":"Post",
+    "root_collection":"posts",
+    "root_pk":"post_id",
+    "g_class":"G7",
+    "g_family":"containment",
+    "g_role":"baseline",
+    "g_label":"Containment baseline",
+    "mongodb_pattern":"containment_baseline",
+    "document_strategy":"containment_reference",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Comment",
+      "Forum",
+      "Person"
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+      "comment_reply_of_comment",
+      "comment_reply_of_post",
+      "forum_container_of_post",
+      "forum_has_moderator_person"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":4,
+    "D":3,
+    "Re":1,
+    "DeltaRratio":0.75,
+    "dominant_semantic_type":"containment",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_is6_g9_c7584187",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IS6_ForumOfMessage",
+    "official_id":"IS6",
+    "official_title":"Forum of a message",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "benchmark_group":"primary",
+    "benchmark_group_priority":1,
+    "query_group_priority":1,
+    "activation_strength":"primary",
+    "activation_reason":"Containment path has high sharedness, high volatility, or high residual traversal.",
+    "root_entity":"Post",
+    "root_collection":"posts",
+    "root_pk":"post_id",
+    "g_class":"G9",
+    "g_family":"containment",
+    "g_role":"hybrid_containment_candidate",
+    "g_label":"Hybrid containment with references or summaries",
+    "mongodb_pattern":"hybrid_containment",
+    "document_strategy":"hybrid_embed_reference_summary",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Comment",
+      "Forum",
+      "Person"
+    ],
+    "summarized_entities":[
+      "Comment",
+      "Forum",
+      "Person"
+    ],
+    "edge_collections":[
+      "comment_reply_of_comment",
+      "comment_reply_of_post",
+      "forum_container_of_post",
+      "forum_has_moderator_person"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":4,
+    "D":3,
+    "Re":1,
+    "DeltaRratio":0.75,
+    "dominant_semantic_type":"containment",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_is6_g0_768bbe02",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IS6_ForumOfMessage",
+    "official_id":"IS6",
+    "official_title":"Forum of a message",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "benchmark_group":"secondary_affected",
+    "benchmark_group_priority":2,
+    "query_group_priority":1,
+    "activation_strength":"secondary",
+    "activation_reason":"Association-family baseline root document.",
+    "root_entity":"Post",
+    "root_collection":"posts",
+    "root_pk":"post_id",
+    "g_class":"G0",
+    "g_family":"association",
+    "g_role":"baseline",
+    "g_label":"Root document with referenced associations",
+    "mongodb_pattern":"root_with_references",
+    "document_strategy":"reference",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Comment",
+      "Forum",
+      "Person"
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+      "comment_reply_of_comment",
+      "comment_reply_of_post",
+      "forum_container_of_post",
+      "forum_has_moderator_person"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":4,
+    "D":3,
+    "Re":1,
+    "DeltaRratio":0.75,
+    "dominant_semantic_type":"containment",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_is6_g3_f811f02c",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IS6_ForumOfMessage",
+    "official_id":"IS6",
+    "official_title":"Forum of a message",
+    "query_group":"short_read",
+    "operation_type":"read",
+    "benchmark_group":"secondary_affected",
+    "benchmark_group_priority":2,
+    "query_group_priority":1,
+    "activation_strength":"secondary",
+    "activation_reason":"Association path has high sharedness, high volatility, deep traversal, or residual traversal.",
+    "root_entity":"Post",
+    "root_collection":"posts",
+    "root_pk":"post_id",
+    "g_class":"G3",
+    "g_family":"association",
+    "g_role":"reference_or_summary_candidate",
+    "g_label":"Root document with references or denormalized summaries",
+    "mongodb_pattern":"root_with_references_or_summaries",
+    "document_strategy":"reference_summary",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Comment",
+      "Forum",
+      "Person"
+    ],
+    "summarized_entities":[
+      "Comment",
+      "Forum",
+      "Person"
+    ],
+    "edge_collections":[
+      "comment_reply_of_comment",
+      "comment_reply_of_post",
+      "forum_container_of_post",
+      "forum_has_moderator_person"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":4,
+    "D":3,
+    "Re":1,
+    "DeltaRratio":0.75,
+    "dominant_semantic_type":"containment",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_ic2_g0_bcc20fff",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IC2_RecentMessagesByFriends",
+    "official_id":"IC2",
+    "official_title":"Recent messages by your friends",
+    "query_group":"complex_read",
+    "operation_type":"read",
+    "benchmark_group":"primary",
+    "benchmark_group_priority":1,
+    "query_group_priority":2,
+    "activation_strength":"primary",
+    "activation_reason":"Association-family baseline root document.",
+    "root_entity":"Person",
+    "root_collection":"persons",
+    "root_pk":"person_id",
+    "g_class":"G0",
+    "g_family":"association",
+    "g_role":"baseline",
+    "g_label":"Root document with referenced associations",
+    "mongodb_pattern":"root_with_references",
+    "document_strategy":"reference",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Comment",
+      "Post"
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+      "comment_has_creator_person",
+      "person_knows_person",
+      "post_has_creator_person"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":3,
+    "D":2,
+    "Re":1,
+    "DeltaRratio":0.6666666667,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_ic2_g3_8f05f032",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IC2_RecentMessagesByFriends",
+    "official_id":"IC2",
+    "official_title":"Recent messages by your friends",
+    "query_group":"complex_read",
+    "operation_type":"read",
+    "benchmark_group":"primary",
+    "benchmark_group_priority":1,
+    "query_group_priority":2,
+    "activation_strength":"primary",
+    "activation_reason":"Association path has high sharedness, high volatility, deep traversal, or residual traversal.",
+    "root_entity":"Person",
+    "root_collection":"persons",
+    "root_pk":"person_id",
+    "g_class":"G3",
+    "g_family":"association",
+    "g_role":"reference_or_summary_candidate",
+    "g_label":"Root document with references or denormalized summaries",
+    "mongodb_pattern":"root_with_references_or_summaries",
+    "document_strategy":"reference_summary",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Comment",
+      "Post"
+    ],
+    "summarized_entities":[
+      "Comment",
+      "Post"
+    ],
+    "edge_collections":[
+      "comment_has_creator_person",
+      "person_knows_person",
+      "post_has_creator_person"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":3,
+    "D":2,
+    "Re":1,
+    "DeltaRratio":0.6666666667,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_ic5_g0_f44bd6f8",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IC5_NewGroups",
+    "official_id":"IC5",
+    "official_title":"New groups",
+    "query_group":"complex_read",
+    "operation_type":"read",
+    "benchmark_group":"primary",
+    "benchmark_group_priority":1,
+    "query_group_priority":2,
+    "activation_strength":"primary",
+    "activation_reason":"Association-family baseline root document.",
+    "root_entity":"Person",
+    "root_collection":"persons",
+    "root_pk":"person_id",
+    "g_class":"G0",
+    "g_family":"association",
+    "g_role":"baseline",
+    "g_label":"Root document with referenced associations",
+    "mongodb_pattern":"root_with_references",
+    "document_strategy":"reference",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Forum",
+      "Post"
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+      "forum_container_of_post",
+      "forum_has_member_person",
+      "person_knows_person",
+      "post_has_creator_person"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":5,
+    "D":3,
+    "Re":2,
+    "DeltaRratio":0.6,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_ic5_g3_45734260",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IC5_NewGroups",
+    "official_id":"IC5",
+    "official_title":"New groups",
+    "query_group":"complex_read",
+    "operation_type":"read",
+    "benchmark_group":"primary",
+    "benchmark_group_priority":1,
+    "query_group_priority":2,
+    "activation_strength":"primary",
+    "activation_reason":"Association path has high sharedness, high volatility, deep traversal, or residual traversal.",
+    "root_entity":"Person",
+    "root_collection":"persons",
+    "root_pk":"person_id",
+    "g_class":"G3",
+    "g_family":"association",
+    "g_role":"reference_or_summary_candidate",
+    "g_label":"Root document with references or denormalized summaries",
+    "mongodb_pattern":"root_with_references_or_summaries",
+    "document_strategy":"reference_summary",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Forum",
+      "Post"
+    ],
+    "summarized_entities":[
+      "Forum",
+      "Post"
+    ],
+    "edge_collections":[
+      "forum_container_of_post",
+      "forum_has_member_person",
+      "person_knows_person",
+      "post_has_creator_person"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":5,
+    "D":3,
+    "Re":2,
+    "DeltaRratio":0.6,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_ic5_g4_69144c92",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IC5_NewGroups",
+    "official_id":"IC5",
+    "official_title":"New groups",
+    "query_group":"complex_read",
+    "operation_type":"read",
+    "benchmark_group":"secondary_affected",
+    "benchmark_group_priority":2,
+    "query_group_priority":2,
+    "activation_strength":"secondary",
+    "activation_reason":"Associative-family baseline using explicit relationship documents.",
+    "root_entity":"Person",
+    "root_collection":"persons",
+    "root_pk":"person_id",
+    "g_class":"G4",
+    "g_family":"associative",
+    "g_role":"baseline",
+    "g_label":"Associative relationship as explicit document",
+    "mongodb_pattern":"explicit_edge_collection",
+    "document_strategy":"edge_document",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Forum",
+      "Post"
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+      "forum_container_of_post",
+      "forum_has_member_person",
+      "person_knows_person",
+      "post_has_creator_person"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":5,
+    "D":3,
+    "Re":2,
+    "DeltaRratio":0.6,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_ic5_g6_733601c1",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IC5_NewGroups",
+    "official_id":"IC5",
+    "official_title":"New groups",
+    "query_group":"complex_read",
+    "operation_type":"read",
+    "benchmark_group":"secondary_affected",
+    "benchmark_group_priority":2,
+    "query_group_priority":2,
+    "activation_strength":"secondary",
+    "activation_reason":"Associative relation is volatile\/shared and should be represented with references or reverse indexes.",
+    "root_entity":"Person",
+    "root_collection":"persons",
+    "root_pk":"person_id",
+    "g_class":"G6",
+    "g_family":"associative",
+    "g_role":"referenced_or_reverse_associative",
+    "g_label":"Referenced or reverse-indexed associative pattern",
+    "mongodb_pattern":"referenced_or_reverse_indexed_edges",
+    "document_strategy":"edge_reference_reverse_index",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Forum",
+      "Post"
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+      "forum_container_of_post",
+      "forum_has_member_person",
+      "person_knows_person",
+      "post_has_creator_person"
+    ],
+    "reverse_indexes":[
+      "forum_container_of_post",
+      "forum_has_member_person",
+      "person_knows_person",
+      "post_has_creator_person"
+    ],
+    "Rc_weighted":5,
+    "D":3,
+    "Re":2,
+    "DeltaRratio":0.6,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_ic5_g7_a2002d4c",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IC5_NewGroups",
+    "official_id":"IC5",
+    "official_title":"New groups",
+    "query_group":"complex_read",
+    "operation_type":"read",
+    "benchmark_group":"secondary_affected",
+    "benchmark_group_priority":2,
+    "query_group_priority":2,
+    "activation_strength":"secondary",
+    "activation_reason":"Containment-family baseline.",
+    "root_entity":"Person",
+    "root_collection":"persons",
+    "root_pk":"person_id",
+    "g_class":"G7",
+    "g_family":"containment",
+    "g_role":"baseline",
+    "g_label":"Containment baseline",
+    "mongodb_pattern":"containment_baseline",
+    "document_strategy":"containment_reference",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Forum",
+      "Post"
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+      "forum_container_of_post",
+      "forum_has_member_person",
+      "person_knows_person",
+      "post_has_creator_person"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":5,
+    "D":3,
+    "Re":2,
+    "DeltaRratio":0.6,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_ic5_g9_7a7a63d2",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"IC5_NewGroups",
+    "official_id":"IC5",
+    "official_title":"New groups",
+    "query_group":"complex_read",
+    "operation_type":"read",
+    "benchmark_group":"secondary_affected",
+    "benchmark_group_priority":2,
+    "query_group_priority":2,
+    "activation_strength":"secondary",
+    "activation_reason":"Containment path has high sharedness, high volatility, or high residual traversal.",
+    "root_entity":"Person",
+    "root_collection":"persons",
+    "root_pk":"person_id",
+    "g_class":"G9",
+    "g_family":"containment",
+    "g_role":"hybrid_containment_candidate",
+    "g_label":"Hybrid containment with references or summaries",
+    "mongodb_pattern":"hybrid_containment",
+    "document_strategy":"hybrid_embed_reference_summary",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Forum",
+      "Post"
+    ],
+    "summarized_entities":[
+      "Forum",
+      "Post"
+    ],
+    "edge_collections":[
+      "forum_container_of_post",
+      "forum_has_member_person",
+      "person_knows_person",
+      "post_has_creator_person"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":5,
+    "D":3,
+    "Re":2,
+    "DeltaRratio":0.6,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_ins2_g4_9fb1f96c",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"INS2_AddLikeToPost",
+    "official_id":"INS2",
+    "official_title":"Add like to post",
+    "query_group":"insert",
+    "operation_type":"insert",
+    "benchmark_group":"primary",
+    "benchmark_group_priority":1,
+    "query_group_priority":3,
+    "activation_strength":"primary",
+    "activation_reason":"Associative-family baseline using explicit relationship documents.",
+    "root_entity":"Person",
+    "root_collection":"persons",
+    "root_pk":"person_id",
+    "g_class":"G4",
+    "g_family":"associative",
+    "g_role":"baseline",
+    "g_label":"Associative relationship as explicit document",
+    "mongodb_pattern":"explicit_edge_collection",
+    "document_strategy":"edge_document",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Post"
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+      "person_likes_post"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":1,
+    "D":1,
+    "Re":0,
+    "DeltaRratio":1.0,
+    "dominant_semantic_type":"associative",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_ins2_g6_f226f1c0",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"INS2_AddLikeToPost",
+    "official_id":"INS2",
+    "official_title":"Add like to post",
+    "query_group":"insert",
+    "operation_type":"insert",
+    "benchmark_group":"primary",
+    "benchmark_group_priority":1,
+    "query_group_priority":3,
+    "activation_strength":"primary",
+    "activation_reason":"Associative relation is volatile\/shared and should be represented with references or reverse indexes.",
+    "root_entity":"Person",
+    "root_collection":"persons",
+    "root_pk":"person_id",
+    "g_class":"G6",
+    "g_family":"associative",
+    "g_role":"referenced_or_reverse_associative",
+    "g_label":"Referenced or reverse-indexed associative pattern",
+    "mongodb_pattern":"referenced_or_reverse_indexed_edges",
+    "document_strategy":"edge_reference_reverse_index",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Post"
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+      "person_likes_post"
+    ],
+    "reverse_indexes":[
+      "person_likes_post"
+    ],
+    "Rc_weighted":1,
+    "D":1,
+    "Re":0,
+    "DeltaRratio":1.0,
+    "dominant_semantic_type":"associative",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":0.1064484612,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_ins6_g0_50983b9d",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"INS6_AddPost",
+    "official_id":"INS6",
+    "official_title":"Add post",
+    "query_group":"insert",
+    "operation_type":"insert",
+    "benchmark_group":"primary",
+    "benchmark_group_priority":1,
+    "query_group_priority":3,
+    "activation_strength":"primary",
+    "activation_reason":"Association-family baseline root document.",
+    "root_entity":"Post",
+    "root_collection":"posts",
+    "root_pk":"post_id",
+    "g_class":"G0",
+    "g_family":"association",
+    "g_role":"baseline",
+    "g_label":"Root document with referenced associations",
+    "mongodb_pattern":"root_with_references",
+    "document_strategy":"reference",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Forum",
+      "Person",
+      "Place",
+      "Tag"
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+      "forum_container_of_post",
+      "post_has_creator_person",
+      "post_has_tag",
+      "post_is_located_in_place"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":4,
+    "D":1,
+    "Re":3,
+    "DeltaRratio":0.25,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":1.0,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_ins6_g3_d110d93b",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"INS6_AddPost",
+    "official_id":"INS6",
+    "official_title":"Add post",
+    "query_group":"insert",
+    "operation_type":"insert",
+    "benchmark_group":"primary",
+    "benchmark_group_priority":1,
+    "query_group_priority":3,
+    "activation_strength":"primary",
+    "activation_reason":"Association path has high sharedness, high volatility, deep traversal, or residual traversal.",
+    "root_entity":"Post",
+    "root_collection":"posts",
+    "root_pk":"post_id",
+    "g_class":"G3",
+    "g_family":"association",
+    "g_role":"reference_or_summary_candidate",
+    "g_label":"Root document with references or denormalized summaries",
+    "mongodb_pattern":"root_with_references_or_summaries",
+    "document_strategy":"reference_summary",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Forum",
+      "Person",
+      "Place",
+      "Tag"
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+      "forum_container_of_post",
+      "post_has_creator_person",
+      "post_has_tag",
+      "post_is_located_in_place"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":4,
+    "D":1,
+    "Re":3,
+    "DeltaRratio":0.25,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":1.0,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_ins6_g7_2ba4aefb",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"INS6_AddPost",
+    "official_id":"INS6",
+    "official_title":"Add post",
+    "query_group":"insert",
+    "operation_type":"insert",
+    "benchmark_group":"secondary_affected",
+    "benchmark_group_priority":2,
+    "query_group_priority":3,
+    "activation_strength":"secondary",
+    "activation_reason":"Containment-family baseline.",
+    "root_entity":"Post",
+    "root_collection":"posts",
+    "root_pk":"post_id",
+    "g_class":"G7",
+    "g_family":"containment",
+    "g_role":"baseline",
+    "g_label":"Containment baseline",
+    "mongodb_pattern":"containment_baseline",
+    "document_strategy":"containment_reference",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Forum",
+      "Person",
+      "Place",
+      "Tag"
+    ],
+    "summarized_entities":[
+
+    ],
+    "edge_collections":[
+      "forum_container_of_post",
+      "post_has_creator_person",
+      "post_has_tag",
+      "post_is_located_in_place"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":4,
+    "D":1,
+    "Re":3,
+    "DeltaRratio":0.25,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":1.0,
+    "include_in_full_benchmark":true
+  },
+  {
+    "candidate_id":"ldbc_snb_ins6_g9_0dad4d32",
+    "dataset":"ldbc_snb",
+    "scale_label":"sf0.1",
+    "workload":"LDBC SNB Interactive v1 official-based subset",
+    "query_name":"INS6_AddPost",
+    "official_id":"INS6",
+    "official_title":"Add post",
+    "query_group":"insert",
+    "operation_type":"insert",
+    "benchmark_group":"secondary_affected",
+    "benchmark_group_priority":2,
+    "query_group_priority":3,
+    "activation_strength":"secondary",
+    "activation_reason":"Containment path has high sharedness, high volatility, or high residual traversal.",
+    "root_entity":"Post",
+    "root_collection":"posts",
+    "root_pk":"post_id",
+    "g_class":"G9",
+    "g_family":"containment",
+    "g_role":"hybrid_containment_candidate",
+    "g_label":"Hybrid containment with references or summaries",
+    "mongodb_pattern":"hybrid_containment",
+    "document_strategy":"hybrid_embed_reference_summary",
+    "embedded_entities":[
+
+    ],
+    "referenced_entities":[
+      "Forum",
+      "Person",
+      "Place",
+      "Tag"
+    ],
+    "summarized_entities":[
+      "Forum",
+      "Person",
+      "Place",
+      "Tag"
+    ],
+    "edge_collections":[
+      "forum_container_of_post",
+      "post_has_creator_person",
+      "post_has_tag",
+      "post_is_located_in_place"
+    ],
+    "reverse_indexes":[
+
+    ],
+    "Rc_weighted":4,
+    "D":1,
+    "Re":3,
+    "DeltaRratio":0.25,
+    "dominant_semantic_type":"association",
+    "update_volatility_max":1.0,
+    "observed_sharedness_max":1.0,
+    "include_in_full_benchmark":true
+  }
+]

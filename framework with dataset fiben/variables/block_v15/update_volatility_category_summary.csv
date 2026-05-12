@@ -1,0 +1,5 @@
+modification_category,n_event_rows,n_entities,entities,total_weighted_update_events
+affected_persistence_region,6,6,"['BuyTransaction', 'FinancialServiceAccount', 'Holding', 'ListedSecurity', 'Person', 'Transaction']",2.4000000000000004
+created,4,4,"['BuyTransaction', 'FinancialServiceAccount', 'Holding', 'Transaction']",4.0
+referenced_existing,42,15,"['BuyTransaction', 'Corporation', 'Country', 'Disclosure', 'FinancialReport', 'FinancialServiceAccount', 'Holding', 'Industry', 'ListedSecurity', 'Person', 'ReportElement', 'Security', 'SellTransaction', 'StatementElement', 'Transaction']",0.3
+relationship_created,6,6,"['BuyTransaction', 'FinancialServiceAccount', 'Holding', 'ListedSecurity', 'Person', 'Transaction']",3.5999999999999996

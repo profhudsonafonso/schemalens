@@ -1,0 +1,59 @@
+query_name,generic_class,query_family,query_type,operation_class,is_write_query,entity,modification_category,category_weight,weighted_update_event
+Q1_CompanyProfileIBM,QG1,Local lookup,select,read,False,Corporation,referenced_existing,0.15,0.0
+Q2_CompanyWithIndustryCountryAndListedSecurities,QG2,Shallow rooted retrieval,select,read,False,Corporation,referenced_existing,0.15,0.0
+Q2_CompanyWithIndustryCountryAndListedSecurities,QG2,Shallow rooted retrieval,select,read,False,Industry,referenced_existing,0.15,0.0
+Q2_CompanyWithIndustryCountryAndListedSecurities,QG2,Shallow rooted retrieval,select,read,False,Country,referenced_existing,0.15,0.0
+Q2_CompanyWithIndustryCountryAndListedSecurities,QG2,Shallow rooted retrieval,select,read,False,ListedSecurity,referenced_existing,0.15,0.0
+Q3_SecuritiesHeldInEachFinancialServiceAccount,QG3,Associative retrieval,select,read,False,FinancialServiceAccount,referenced_existing,0.15,0.0
+Q3_SecuritiesHeldInEachFinancialServiceAccount,QG3,Associative retrieval,select,read,False,Holding,referenced_existing,0.15,0.0
+Q3_SecuritiesHeldInEachFinancialServiceAccount,QG3,Associative retrieval,select,read,False,ListedSecurity,referenced_existing,0.15,0.0
+Q3_SecuritiesHeldInEachFinancialServiceAccount,QG3,Associative retrieval,select,read,False,Security,referenced_existing,0.15,0.0
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,read,False,Person,referenced_existing,0.15,0.0
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,read,False,FinancialServiceAccount,referenced_existing,0.15,0.0
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,read,False,Holding,referenced_existing,0.15,0.0
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,read,False,ListedSecurity,referenced_existing,0.15,0.0
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,read,False,Corporation,referenced_existing,0.15,0.0
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,select,read,False,Corporation,referenced_existing,0.15,0.0
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,select,read,False,FinancialReport,referenced_existing,0.15,0.0
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,select,read,False,ReportElement,referenced_existing,0.15,0.0
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,select,read,False,StatementElement,referenced_existing,0.15,0.0
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,select,read,False,Disclosure,referenced_existing,0.15,0.0
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,QG6,Filtered search / recommendation,select,read,False,Corporation,referenced_existing,0.15,0.0
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,QG6,Filtered search / recommendation,select,read,False,Industry,referenced_existing,0.15,0.0
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,QG6,Filtered search / recommendation,select,read,False,Country,referenced_existing,0.15,0.0
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,QG6,Filtered search / recommendation,select,read,False,ListedSecurity,referenced_existing,0.15,0.0
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,read,False,Person,referenced_existing,0.15,0.0
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,read,False,FinancialServiceAccount,referenced_existing,0.15,0.0
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,read,False,BuyTransaction,referenced_existing,0.15,0.0
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,read,False,SellTransaction,referenced_existing,0.15,0.0
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,read,False,Transaction,referenced_existing,0.15,0.0
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,read,False,ListedSecurity,referenced_existing,0.15,0.0
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,read,False,Corporation,referenced_existing,0.15,0.0
+Q8_IBMTransactionsBelowAverageSellingPrice,QG8,Aggregation / ranking,select,read,False,Transaction,referenced_existing,0.15,0.0
+Q8_IBMTransactionsBelowAverageSellingPrice,QG8,Aggregation / ranking,select,read,False,SellTransaction,referenced_existing,0.15,0.0
+Q8_IBMTransactionsBelowAverageSellingPrice,QG8,Aggregation / ranking,select,read,False,ListedSecurity,referenced_existing,0.15,0.0
+Q8_IBMTransactionsBelowAverageSellingPrice,QG8,Aggregation / ranking,select,read,False,Corporation,referenced_existing,0.15,0.0
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,read,False,Person,referenced_existing,0.15,0.0
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,read,False,FinancialServiceAccount,referenced_existing,0.15,0.0
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,read,False,BuyTransaction,referenced_existing,0.15,0.0
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,read,False,SellTransaction,referenced_existing,0.15,0.0
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,read,False,Transaction,referenced_existing,0.15,0.0
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,read,False,ListedSecurity,referenced_existing,0.15,0.0
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,FinancialServiceAccount,created,1.0,1.0
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,Holding,created,1.0,1.0
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,BuyTransaction,created,1.0,1.0
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,Transaction,created,1.0,1.0
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,Person,referenced_existing,0.15,0.15
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,ListedSecurity,referenced_existing,0.15,0.15
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,Person,relationship_created,0.6,0.6
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,FinancialServiceAccount,relationship_created,0.6,0.6
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,Holding,relationship_created,0.6,0.6
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,ListedSecurity,relationship_created,0.6,0.6
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,BuyTransaction,relationship_created,0.6,0.6
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,Transaction,relationship_created,0.6,0.6
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,Person,affected_persistence_region,0.4,0.4
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,FinancialServiceAccount,affected_persistence_region,0.4,0.4
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,Holding,affected_persistence_region,0.4,0.4
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,ListedSecurity,affected_persistence_region,0.4,0.4
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,BuyTransaction,affected_persistence_region,0.4,0.4
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,Transaction,affected_persistence_region,0.4,0.4

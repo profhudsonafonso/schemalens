@@ -1,0 +1,19 @@
+{
+  "script": "run_ldbc_snb_mongo_benchmark.py",
+  "data_dir": "/home/hudson/Documents/framework_test/ldbc_snb_benchmark/data/sf1",
+  "artifacts_dir": "/home/hudson/Documents/framework_test/ldbc_snb_benchmark/ldbc_snb_sf0_1_mongo_benchmark_bundle/mongo_configurations",
+  "results_dir": "/home/hudson/Documents/framework_test/ldbc_snb_benchmark/results/ldbc_snb_sf1_full_fiben_format_clean",
+  "scale_label": "sf1",
+  "execution_db_name": "ldbc_snb_sf1_exec_clean_sf1",
+  "execution_log_file": "/home/hudson/Documents/framework_test/ldbc_snb_benchmark/results/ldbc_snb_sf1_full_fiben_format_clean/execution.log",
+  "execution_plan": "benchmark_execution_plan.csv",
+  "n_selected_candidates": 64,
+  "n_selected_plan_rows": 64,
+  "repetitions": 10,
+  "phases": [
+    "cold",
+    "hot"
+  ],
+  "row_limit": null,
+  "batch_size": 5000
+}

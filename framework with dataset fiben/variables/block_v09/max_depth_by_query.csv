@@ -1,0 +1,11 @@
+query_name,generic_class,query_family,query_type,selected_root,max_entity_depth,max_edge_depth,n_unique_edges
+Q1_CompanyProfileIBM,QG1,Local lookup,select,Corporation,0,0,0
+Q2_CompanyWithIndustryCountryAndListedSecurities,QG2,Shallow rooted retrieval,select,Corporation,1,1,3
+Q3_SecuritiesHeldInEachFinancialServiceAccount,QG3,Associative retrieval,select,FinancialServiceAccount,3,3,3
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,select,Person,4,4,4
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,select,Corporation,3,3,4
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,QG6,Filtered search / recommendation,select,ListedSecurity,2,2,3
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,select,Person,4,4,7
+Q8_IBMTransactionsBelowAverageSellingPrice,QG8,Aggregation / ranking,select,Transaction,2,2,3
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,select,Person,3,3,6
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,Person,3,3,5

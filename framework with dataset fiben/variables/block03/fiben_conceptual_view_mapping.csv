@@ -1,0 +1,11 @@
+canonical_entity,status,raw_alias,raw_view,semantic_view,candidate_aliases
+corporations,matched,corporation,fiben_raw_corporation,fiben_corporations,"['corporation', 'corporations', 'corp', 'company', 'companies']"
+reports,matched,financialreport,fiben_raw_financialreport,fiben_reports,"['report', 'reports', 'financial_report', 'financial_reports', 'filing', 'filings']"
+report_elements,unmatched,,,fiben_report_elements,"['report_element', 'report_elements', 'reportelement', 'reportelements', 'report_el', 'report_els']"
+statement_elements,unmatched,,,fiben_statement_elements,"['statement_element', 'statement_elements', 'statementelement', 'statementelements', 'statement_el', 'statement_els']"
+disclosures,matched,disclosure,fiben_raw_disclosure,fiben_disclosures,"['disclosure', 'disclosures']"
+securities,matched,security,fiben_raw_security,fiben_securities,"['security', 'securities']"
+listed_securities,matched,listedsecurity,fiben_raw_listedsecurity,fiben_listed_securities,"['listed_security', 'listed_securities', 'listedsecurity', 'listedsecurities']"
+accounts,unmatched,,,fiben_accounts,"['account', 'accounts']"
+industries,unmatched,,,fiben_industries,"['industry', 'industries', 'industry_classification', 'industry_classifications']"
+classifications,unmatched,,,fiben_classifications,"['classification', 'classifications', 'corporation_classification', 'corporation_classifications', 'isclassifiedby']"

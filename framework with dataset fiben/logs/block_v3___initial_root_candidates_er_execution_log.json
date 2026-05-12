@@ -1,0 +1,14 @@
+{
+  "block_name": "BLOCK V3 — INITIAL ROOT CANDIDATES er",
+  "timestamp": "2026-04-30T14:54:32",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_queries": 10,
+    "n_root_candidate_rows": 46,
+    "root_candidates_csv": "variables/block_v03/root_candidates.csv",
+    "root_candidate_summary_csv": "variables/block_v03/root_candidate_summary.csv",
+    "root_candidate_entity_frequency_csv": "variables/block_v03/root_candidate_entity_frequency.csv",
+    "metadata_json": "variables/block_v03/root_candidates_metadata.json"
+  }
+}

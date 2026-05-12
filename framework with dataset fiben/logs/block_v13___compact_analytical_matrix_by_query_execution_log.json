@@ -1,0 +1,15 @@
+{
+  "block_name": "BLOCK V13 — COMPACT ANALYTICAL MATRIX BY QUERY",
+  "timestamp": "2026-04-30T15:46:38",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_queries": 10,
+    "n_columns": 71,
+    "n_validation_failed": 0,
+    "analytical_matrix_compact_csv": "variables/block_v13/analytical_matrix_compact_by_query.csv",
+    "document_variable_matrix_csv": "variables/block_v13/document_variable_matrix.csv",
+    "compact_matrix_summary_csv": "variables/block_v13/compact_matrix_summary.csv",
+    "metadata_json": "variables/block_v13/analytical_matrix_compact_metadata.json"
+  }
+}

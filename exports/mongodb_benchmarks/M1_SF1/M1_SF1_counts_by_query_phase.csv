@@ -1,0 +1,5 @@
+query_name,benchmark_phase,n_runs,n_success,n_failures
+Q2_SimpleSearch,cold,3,3,0
+Q2_SimpleSearch,hot,20,20,0
+Q4_Recommendation,cold,3,3,0
+Q4_Recommendation,hot,20,20,0

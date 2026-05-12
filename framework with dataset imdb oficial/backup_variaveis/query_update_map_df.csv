@@ -1,0 +1,11 @@
+query_name,generic_class,query_type,entities_touched,query_notes,updated_entities,update_rationale,n_updated_entities,is_write_query
+QG1_WatchItemById,QG1,select,['WatchItem'],Busca pontual por identificador único de WatchItem.,[],Query apenas de leitura.,0,False
+QG2_WatchItemByTitle,QG2,select,['WatchItem'],Recuperação simples da entidade raiz por atributo direto.,[],Query apenas de leitura.,0,False
+QG3_RecommendationByGenreAndSubtype,QG3,select,"['WatchItem', 'Genre', 'Movie', 'Series', 'Episode']",Query centrada em WatchItem com filtros sobre descritor compartilhado e subtipos/componentes próximos.,[],Query apenas de leitura.,0,False
+QG4_AllPersonsOfTypeForWatchItem,QG4,select,"['WatchItem', 'Role', 'Person']","Consulta associativa que parte de WatchItem, passa por Role e alcança Person.",[],Query apenas de leitura.,0,False
+QG5_AllPersonsForEpisodesOfSeries,QG5,select,"['Series', 'Episode', 'WatchItem', 'Role', 'Person']",Travessia multi-hop que percorre Series -> Episode -> WatchItem -> Role -> Person.,[],Query apenas de leitura.,0,False
+QG6_EpisodesOfSeries,QG6,select,"['Series', 'Episode']",Query de containment para a relação parte-todo Series -> Episode.,[],Query apenas de leitura.,0,False
+QG7_UpdateWatchItemMetadata,QG7,update,['WatchItem'],"Escrita isolada sobre a entidade raiz, sem criação de novo relacionamento.",['WatchItem'],QG7 representa escrita isolada. A query atualiza explicitamente atributos de WatchItem sem criar novo relacionamento.,1,True
+QG8_AddPersonRoleToWatchItem,QG8,insert,"['Person', 'WatchItem', 'Role']",Escrita com criação de vínculo estrutural via entidade associativa.,"['Person', 'Role']","QG8 representa escrita com criação de relacionamento. A query cria/insere Person quando necessário e cria Role para ligar Person ao WatchItem. WatchItem é referenciado, mas não é atualizado explicitamente.",2,True
+QG9_TopRatedSeriesByGenre,QG9,select,"['WatchItem', 'Series', 'Genre']",Consulta analítica com agrupamento/ordenação sobre Series e descritor de gênero.,[],Query apenas de leitura.,0,False
+QG10_AdvancedSearchWatchItems,QG10,select,"['WatchItem', 'Genre', 'Movie', 'Series', 'Episode']",Busca mais extensa com múltiplos filtros e ordenação/ranking.,[],Query apenas de leitura.,0,False

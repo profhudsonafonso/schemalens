@@ -1,0 +1,9 @@
+view_name,rows,columns
+snb_persons_entity,125038,"['person_id', 'first_name', 'last_name', 'gender', 'birthday', 'creation_date', 'location_ip', 'browser_used', 'place_id']"
+snb_forums_entity,13751,"['forum_id', 'title', 'creation_date', 'moderator_person_id']"
+snb_posts_entity,135702,"['post_id', 'image_file', 'creation_date', 'location_ip', 'browser_used', 'language', 'content', 'length', 'creator_person_id', 'forum_id', 'place_id']"
+snb_comments_entity,151044,"['comment_id', 'creation_date', 'location_ip', 'browser_used', 'content', 'length', 'creator_person_id', 'place_id', 'reply_post_id', 'reply_comment_id']"
+snb_places_entity,1460,"['place_id', 'name', 'url', 'type', 'parent_place_id']"
+snb_organisations_entity,7955,"['organisation_id', 'type', 'name', 'url', 'place_id']"
+snb_tags_entity,16080,"['tag_id', 'name', 'url', 'tagclass_id']"
+snb_tagclasses_entity,71,"['tagclass_id', 'name', 'url', 'parent_tagclass_id']"

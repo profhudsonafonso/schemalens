@@ -1,0 +1,11 @@
+generic_class,query_family,n_queries,avg_query_update_volatility_score,max_query_update_volatility_score,n_queries_with_update_volatility
+QG1,Local lookup,1,0.0,0.0,0
+QG10,Update / insertion with relationship creation,1,0.932,0.932,1
+QG2,Shallow rooted retrieval,1,0.36299999999999993,0.36299999999999993,1
+QG3,Associative retrieval,1,0.799,0.799,1
+QG4,Deep traversal,1,0.7984,0.7984,1
+QG5,Containment retrieval,1,0.0,0.0,0
+QG6,Filtered search / recommendation,1,0.36299999999999993,0.36299999999999993,1
+QG7,Aggregation / ranking,1,0.7702857142857144,0.7702857142857144,1
+QG8,Aggregation / ranking,1,0.649,0.649,1
+QG9,Associative retrieval + comparison,1,0.8320000000000001,0.8320000000000001,1

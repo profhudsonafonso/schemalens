@@ -1,0 +1,10 @@
+comparison_execution_order,scale_label,family_label,n_configurations_in_group,n_primary_queries_union,n_secondary_affected_queries_union,n_control_queries_union,comparison_question
+1,sf0.25,WatchItem rasa,3,9,7,1,Quanto cada política rasa melhora consultas centradas na raiz e qual o custo em queries afetadas?
+2,sf0.25,Associativa,3,3,6,1,"Vale mais embutimento parcial, snapshot ou full embedding na região associativa WatchItem–Role–Person?"
+3,sf0.25,Containment,3,1,4,5,"Containment baseline, reduzido ou completo: qual traz o melhor trade-off na relação Series–Episode?"
+4,sf0.5,WatchItem rasa,3,9,7,1,Quanto cada política rasa melhora consultas centradas na raiz e qual o custo em queries afetadas?
+5,sf0.5,Associativa,3,3,6,1,"Vale mais embutimento parcial, snapshot ou full embedding na região associativa WatchItem–Role–Person?"
+6,sf0.5,Containment,3,1,4,5,"Containment baseline, reduzido ou completo: qual traz o melhor trade-off na relação Series–Episode?"
+7,sf1,WatchItem rasa,3,9,7,1,Quanto cada política rasa melhora consultas centradas na raiz e qual o custo em queries afetadas?
+8,sf1,Associativa,3,3,6,1,"Vale mais embutimento parcial, snapshot ou full embedding na região associativa WatchItem–Role–Person?"
+9,sf1,Containment,3,1,4,5,"Containment baseline, reduzido ou completo: qual traz o melhor trade-off na relação Series–Episode?"

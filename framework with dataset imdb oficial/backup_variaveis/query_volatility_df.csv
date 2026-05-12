@@ -1,0 +1,11 @@
+query_name,entities_touched_for_volatility,updavg,updmax,n_entities_with_nonzero_update_volatility
+QG1_WatchItemById,['WatchItem'],0.1,0.1,1.0
+QG10_AdvancedSearchWatchItems,"['WatchItem', 'Genre', 'Movie', 'Series', 'Episode']",0.02,0.1,1.0
+QG2_WatchItemByTitle,['WatchItem'],0.1,0.1,1.0
+QG3_RecommendationByGenreAndSubtype,"['WatchItem', 'Genre', 'Movie', 'Series', 'Episode']",0.02,0.1,1.0
+QG4_AllPersonsOfTypeForWatchItem,"['WatchItem', 'Role', 'Person']",0.10000000000000002,0.1,3.0
+QG5_AllPersonsForEpisodesOfSeries,"['Series', 'Episode', 'WatchItem', 'Role', 'Person']",0.06000000000000001,0.1,3.0
+QG6_EpisodesOfSeries,"['Series', 'Episode']",0.0,0.0,0.0
+QG7_UpdateWatchItemMetadata,['WatchItem'],0.1,0.1,1.0
+QG8_AddPersonRoleToWatchItem,"['Person', 'WatchItem', 'Role']",0.10000000000000002,0.1,3.0
+QG9_TopRatedSeriesByGenre,"['WatchItem', 'Series', 'Genre']",0.03333333333333333,0.1,1.0

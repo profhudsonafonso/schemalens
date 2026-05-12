@@ -1,0 +1,216 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "query_modification_spec": {
+    "Q1_CompanyProfileIBM": {
+      "operation_class": "read",
+      "created_entities": [],
+      "updated_entities": [],
+      "deleted_entities": [],
+      "referenced_existing_entities": [
+        "Corporation"
+      ],
+      "relationship_created_edges": [],
+      "relationship_created_entities": [],
+      "affected_persistence_region_entities": [],
+      "notes": "Read-only local lookup over Corporation."
+    },
+    "Q2_CompanyWithIndustryCountryAndListedSecurities": {
+      "operation_class": "read",
+      "created_entities": [],
+      "updated_entities": [],
+      "deleted_entities": [],
+      "referenced_existing_entities": [
+        "Corporation",
+        "Industry",
+        "Country",
+        "ListedSecurity"
+      ],
+      "relationship_created_edges": [],
+      "relationship_created_entities": [],
+      "affected_persistence_region_entities": [],
+      "notes": "Read-only shallow rooted retrieval."
+    },
+    "Q3_SecuritiesHeldInEachFinancialServiceAccount": {
+      "operation_class": "read",
+      "created_entities": [],
+      "updated_entities": [],
+      "deleted_entities": [],
+      "referenced_existing_entities": [
+        "FinancialServiceAccount",
+        "Holding",
+        "ListedSecurity",
+        "Security"
+      ],
+      "relationship_created_edges": [],
+      "relationship_created_entities": [],
+      "affected_persistence_region_entities": [],
+      "notes": "Read-only associative retrieval over accounts and holdings."
+    },
+    "Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity": {
+      "operation_class": "read",
+      "created_entities": [],
+      "updated_entities": [],
+      "deleted_entities": [],
+      "referenced_existing_entities": [
+        "Person",
+        "FinancialServiceAccount",
+        "Holding",
+        "ListedSecurity",
+        "Corporation"
+      ],
+      "relationship_created_edges": [],
+      "relationship_created_entities": [],
+      "affected_persistence_region_entities": [],
+      "notes": "Read-only deep traversal from Person to Corporation."
+    },
+    "Q5_ReportsAndMetricDataOfCompany": {
+      "operation_class": "read",
+      "created_entities": [],
+      "updated_entities": [],
+      "deleted_entities": [],
+      "referenced_existing_entities": [
+        "Corporation",
+        "FinancialReport",
+        "ReportElement",
+        "StatementElement",
+        "Disclosure"
+      ],
+      "relationship_created_edges": [],
+      "relationship_created_entities": [],
+      "affected_persistence_region_entities": [],
+      "notes": "Read-only containment retrieval over financial reports and metric data."
+    },
+    "Q6_TechUSListedSecuritiesWithHighLastTradedValue": {
+      "operation_class": "read",
+      "created_entities": [],
+      "updated_entities": [],
+      "deleted_entities": [],
+      "referenced_existing_entities": [
+        "Corporation",
+        "Industry",
+        "Country",
+        "ListedSecurity"
+      ],
+      "relationship_created_edges": [],
+      "relationship_created_entities": [],
+      "affected_persistence_region_entities": [],
+      "notes": "Read-only filtered search / recommendation query."
+    },
+    "Q7_PersonsWhoBoughtMoreIBMThanSold": {
+      "operation_class": "read",
+      "created_entities": [],
+      "updated_entities": [],
+      "deleted_entities": [],
+      "referenced_existing_entities": [
+        "Person",
+        "FinancialServiceAccount",
+        "BuyTransaction",
+        "SellTransaction",
+        "Transaction",
+        "ListedSecurity",
+        "Corporation"
+      ],
+      "relationship_created_edges": [],
+      "relationship_created_entities": [],
+      "affected_persistence_region_entities": [],
+      "notes": "Read-only aggregation comparing buy and sell activity."
+    },
+    "Q8_IBMTransactionsBelowAverageSellingPrice": {
+      "operation_class": "read",
+      "created_entities": [],
+      "updated_entities": [],
+      "deleted_entities": [],
+      "referenced_existing_entities": [
+        "Transaction",
+        "SellTransaction",
+        "ListedSecurity",
+        "Corporation"
+      ],
+      "relationship_created_edges": [],
+      "relationship_created_entities": [],
+      "affected_persistence_region_entities": [],
+      "notes": "Read-only aggregation/comparison over IBM transactions."
+    },
+    "Q9_PersonsWhoBoughtAndSoldSameStock": {
+      "operation_class": "read",
+      "created_entities": [],
+      "updated_entities": [],
+      "deleted_entities": [],
+      "referenced_existing_entities": [
+        "Person",
+        "FinancialServiceAccount",
+        "BuyTransaction",
+        "SellTransaction",
+        "Transaction",
+        "ListedSecurity"
+      ],
+      "relationship_created_edges": [],
+      "relationship_created_entities": [],
+      "affected_persistence_region_entities": [],
+      "notes": "Read-only associative retrieval plus comparison."
+    },
+    "Q10_CreateAccountHoldingAndBuyTransaction": {
+      "operation_class": "insert_with_relationship_creation",
+      "created_entities": [
+        "FinancialServiceAccount",
+        "Holding",
+        "BuyTransaction",
+        "Transaction"
+      ],
+      "updated_entities": [],
+      "deleted_entities": [],
+      "referenced_existing_entities": [
+        "Person",
+        "ListedSecurity"
+      ],
+      "relationship_created_edges": [
+        "person_owns_financial_service_account",
+        "account_has_holding",
+        "holding_refers_to_listed_security",
+        "account_records_transaction",
+        "transaction_refers_to_listed_security",
+        "buy_transaction_is_transaction"
+      ],
+      "relationship_created_entities": [
+        "Person",
+        "FinancialServiceAccount",
+        "Holding",
+        "ListedSecurity",
+        "BuyTransaction",
+        "Transaction"
+      ],
+      "affected_persistence_region_entities": [
+        "Person",
+        "FinancialServiceAccount",
+        "Holding",
+        "ListedSecurity",
+        "BuyTransaction",
+        "Transaction"
+      ],
+      "notes": "Insertion query. It creates a financial service account, a holding, and a buy transaction, while linking them to an existing person and listed security."
+    }
+  },
+  "n_queries": 10,
+  "n_write_queries": 1,
+  "n_read_queries": 9,
+  "write_queries": [
+    "Q10_CreateAccountHoldingAndBuyTransaction"
+  ],
+  "n_modified_entity_long_rows": 68,
+  "n_relationship_creation_rows": 6,
+  "output_files": {
+    "modified_entities_by_query_csv": "variables/block_v14/modified_entities_by_query.csv",
+    "explicitly_modified_entities_csv": "variables/block_v14/explicitly_modified_entities.csv",
+    "query_modified_entities_csv": "variables/block_v14/query_modified_entities.csv",
+    "modified_entities_long_csv": "variables/block_v14/modified_entities_long.csv",
+    "relationship_creation_by_query_csv": "variables/block_v14/relationship_creation_by_query.csv",
+    "update_query_summary_csv": "variables/block_v14/update_query_summary.csv",
+    "modified_entity_frequency_csv": "variables/block_v14/modified_entity_frequency.csv",
+    "document_variable_matrix_with_modifications_csv": "variables/block_v14/document_variable_matrix_with_modifications.csv",
+    "write_queries_without_modified_entities_csv": "variables/block_v14/write_queries_without_modified_entities.csv",
+    "read_queries_with_explicit_modifications_csv": "variables/block_v14/read_queries_with_explicit_modifications.csv",
+    "missing_modification_merge_csv": "variables/block_v14/missing_modification_merge.csv"
+  }
+}

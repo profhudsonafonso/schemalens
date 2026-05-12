@@ -1,0 +1,8 @@
+selected_root,selection_strategy,n_queries,query_names,avg_entities_touched
+Corporation,query_subject,3,"['Q1_CompanyProfileIBM', 'Q2_CompanyWithIndustryCountryAndListedSecurities', 'Q5_ReportsAndMetricDataOfCompany']",3.3333333333333335
+Person,result_entity,2,"['Q7_PersonsWhoBoughtMoreIBMThanSold', 'Q9_PersonsWhoBoughtAndSoldSameStock']",6.5
+FinancialServiceAccount,container_entity,1,['Q3_SecuritiesHeldInEachFinancialServiceAccount'],4.0
+ListedSecurity,result_entity,1,['Q6_TechUSListedSecuritiesWithHighLastTradedValue'],4.0
+Person,traversal_start,1,['Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity'],5.0
+Person,update_owner,1,['Q10_CreateAccountHoldingAndBuyTransaction'],6.0
+Transaction,result_entity,1,['Q8_IBMTransactionsBelowAverageSellingPrice'],4.0

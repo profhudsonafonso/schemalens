@@ -1,0 +1,23 @@
+query_name,official_id,root_entity,preliminary_D_raw,uses_self_relationship,preliminary_D,official_D,D,depth_source,all_reachable,depth_note
+IS1_ProfileOfPerson,IS1,Person,1,False,1,1,1,official_query_path_override,True,Person profile plus location place.
+IS2_RecentMessagesOfPerson,IS2,Person,1,True,1,2,2,official_query_path_override,True,Person -> Message plus possible Comment -> original Post traversal.
+IS3_FriendsOfPerson,IS3,Person,0,True,1,1,1,official_query_path_override,True,Person -> knows -> Person.
+IS4_ContentOfMessage,IS4,Post,1,False,1,0,0,official_query_path_override,True,Direct lookup of Message content; represented physically as Post or Comment.
+IS5_CreatorOfMessage,IS5,Post,1,False,1,1,1,official_query_path_override,True,Message -> creator Person.
+IS6_ForumOfMessage,IS6,Post,1,True,1,3,3,official_query_path_override,True,Message -> original Post -> Forum -> Moderator Person. Comments may require reply traversal.
+IS7_RepliesOfMessage,IS7,Post,1,True,1,2,2,official_query_path_override,True,"Message -> replies -> reply creator, plus friendship check."
+IC1_TransitiveFriendsWithName,IC1,Person,1,True,1,4,4,official_query_path_override,True,Up to 3 knows hops plus profile/organisation/place expansion.
+IC2_RecentMessagesByFriends,IC2,Person,1,True,1,2,2,official_query_path_override,True,Person -> friend -> recent messages.
+IC3_FriendsAndFriendsOfFriendsInCountries,IC3,Person,1,True,1,4,4,official_query_path_override,True,Friends/friends-of-friends plus messages and country/place traversal.
+IC4_NewTopics,IC4,Person,1,True,1,3,3,official_query_path_override,True,Person -> friends -> posts -> tags.
+IC5_NewGroups,IC5,Person,1,True,1,3,3,official_query_path_override,True,Person -> friends/friends-of-friends -> forums -> posts.
+IC6_TagCoOccurrence,IC6,Person,1,True,1,3,3,official_query_path_override,True,Person -> friends/friends-of-friends -> posts -> tags.
+IC7_RecentLikers,IC7,Person,1,True,1,2,2,official_query_path_override,True,"Person messages -> likers, plus knows check."
+INS1_AddPerson,INS1,Person,1,False,1,1,1,official_query_path_override,True,"Insert Person plus direct relationships to Place, Tag and Organisation."
+INS2_AddLikeToPost,INS2,Person,1,False,1,1,1,official_query_path_override,True,Person -> likes -> Post.
+INS3_AddLikeToComment,INS3,Person,1,False,1,1,1,official_query_path_override,True,Person -> likes -> Comment.
+INS4_AddForum,INS4,Forum,1,False,1,1,1,official_query_path_override,True,Forum plus moderator and tags.
+INS5_AddForumMembership,INS5,Forum,1,False,1,1,1,official_query_path_override,True,Forum -> hasMember -> Person.
+INS6_AddPost,INS6,Post,1,False,1,1,1,official_query_path_override,True,"Post plus creator, forum, place and tags."
+INS7_AddComment,INS7,Comment,1,True,1,1,1,official_query_path_override,True,"Comment plus creator, reply target, place and tags."
+INS8_AddFriendship,INS8,Person,0,True,1,1,1,official_query_path_override,True,Person -> knows -> Person.

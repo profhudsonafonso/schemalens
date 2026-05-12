@@ -1,0 +1,26 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "n_queries": 10,
+  "known_semantic_types": [
+    "association",
+    "containment",
+    "descriptor",
+    "ownership",
+    "subtype"
+  ],
+  "n_query_relationship_edges": 36,
+  "n_queries_without_relationship_edges": 1,
+  "n_edges_missing_semantic_classification": 0,
+  "output_files": {
+    "query_relationship_edges_csv": "variables/block_v08/query_relationship_edges.csv",
+    "query_semantic_type_counts_csv": "variables/block_v08/query_semantic_type_counts.csv",
+    "query_semantic_profile_csv": "variables/block_v08/query_semantic_profile.csv",
+    "query_semantic_flags_csv": "variables/block_v08/query_semantic_flags.csv",
+    "relationship_types_by_query_csv": "variables/block_v08/relationship_types_by_query.csv",
+    "query_relationship_types_csv": "variables/block_v08/query_relationship_types.csv",
+    "missing_semantic_for_edges_csv": "variables/block_v08/missing_semantic_for_edges.csv",
+    "query_without_relationship_edges_csv": "variables/block_v08/query_without_relationship_edges.csv"
+  }
+}

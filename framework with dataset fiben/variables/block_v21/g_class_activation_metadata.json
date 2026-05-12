@@ -1,0 +1,81 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "g_class_catalog": {
+    "G0": {
+      "name": "Root-only document",
+      "description": "Use a simple root document when the query does not require relationship traversal."
+    },
+    "G1": {
+      "name": "Root with direct descriptors",
+      "description": "Embed or colocate descriptor attributes/entities directly attached to the selected root."
+    },
+    "G2": {
+      "name": "Root with contained children",
+      "description": "Embed containment children when the query benefits from nested document retrieval."
+    },
+    "G3": {
+      "name": "Root with associated references",
+      "description": "Represent associative relationships around the root using embedded summaries or references."
+    },
+    "G4": {
+      "name": "Deep nested traversal document",
+      "description": "Use multi-level nesting or path-oriented documents for deep traversal workloads."
+    },
+    "G5": {
+      "name": "Shared target reference strategy",
+      "description": "Prefer references or controlled duplication when target entities are highly shared."
+    },
+    "G6": {
+      "name": "Aggregation-oriented document",
+      "description": "Use precomputed or read-optimized structures for aggregation and ranking queries."
+    },
+    "G7": {
+      "name": "Update-aware document strategy",
+      "description": "Avoid excessive embedding when write/update volatility is relevant."
+    },
+    "G8": {
+      "name": "Hybrid embedded-reference strategy",
+      "description": "Use embedding for covered relationships and references for remaining external relationships."
+    },
+    "G9": {
+      "name": "Benchmark-required trade-off candidate",
+      "description": "Generate alternative configurations when read gain, update pressure, sharedness, or mapping risk create a design trade-off."
+    }
+  },
+  "n_queries": 10,
+  "n_activation_long_rows": 100,
+  "n_queries_without_activation": 0,
+  "n_failed_activation_logic_validation_checks": 0,
+  "primary_activation_counts": {
+    "G2": 6,
+    "G1": 2,
+    "G0": 1,
+    "G6": 1
+  },
+  "g_class_activation_counts": {
+    "G9": 9,
+    "G3": 8,
+    "G5": 8,
+    "G7": 8,
+    "G2": 6,
+    "G4": 6,
+    "G1": 2,
+    "G6": 2,
+    "G0": 1
+  },
+  "output_files": {
+    "g_class_rule_catalog_csv": "variables/block_v21/g_class_rule_catalog.csv",
+    "g_class_activation_by_query_csv": "variables/block_v21/g_class_activation_by_query.csv",
+    "generic_activation_by_query_csv": "variables/block_v21/generic_activation_by_query.csv",
+    "activation_g0_g9_csv": "variables/block_v21/activation_g0_g9.csv",
+    "g_class_activation_long_csv": "variables/block_v21/g_class_activation_long.csv",
+    "g_class_activation_summary_csv": "variables/block_v21/g_class_activation_summary.csv",
+    "primary_activation_summary_csv": "variables/block_v21/primary_activation_summary.csv",
+    "activation_by_generic_class_summary_csv": "variables/block_v21/activation_by_generic_class_summary.csv",
+    "document_variable_matrix_with_activation_csv": "variables/block_v21/document_variable_matrix_with_activation.csv",
+    "activation_logic_validation_csv": "variables/block_v21/activation_logic_validation.csv",
+    "queries_without_activation_csv": "variables/block_v21/queries_without_activation.csv"
+  }
+}

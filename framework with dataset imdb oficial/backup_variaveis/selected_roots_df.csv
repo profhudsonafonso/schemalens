@@ -1,0 +1,11 @@
+query_name,selected_root,root_decision_rationale
+QG1_WatchItemById,WatchItem,A query toca apenas WatchItem; WatchItem é a raiz natural.
+QG2_WatchItemByTitle,WatchItem,A query toca apenas WatchItem; WatchItem é a raiz natural.
+QG3_RecommendationByGenreAndSubtype,WatchItem,"WatchItem é a entidade central da query e concentra Genre, Movie, Series e Episode no subgrafo conceitual. Essa escolha também fica alinhada ao caso clássico de query rasa centrada em WatchItem."
+QG4_AllPersonsOfTypeForWatchItem,WatchItem,"Embora a query atravesse o caminho associativo WatchItem -> Role -> Person, ela é semanticamente centrada no watch item. Por isso, WatchItem foi mantido como raiz documental."
+QG5_AllPersonsForEpisodesOfSeries,WatchItem,"A query parte semanticamente de Series, mas no subgrafo mínimo WatchItem funciona como entidade mais central de ligação entre Series, Episode, Role e Person. Além disso, manter WatchItem como raiz ajuda a comparar esta query com a família associativa centrada no agregado principal."
+QG6_EpisodesOfSeries,Series,A query representa um caso de containment/composição; Series é a raiz natural do agregado Series -> Episode.
+QG7_UpdateWatchItemMetadata,WatchItem,A query toca apenas WatchItem; WatchItem é a raiz natural.
+QG8_AddPersonRoleToWatchItem,WatchItem,"Role é uma entidade associativa muito central estruturalmente, mas a decisão documental aqui é centrada em WatchItem, porque o vínculo criado é interpretado como parte do agregado do item."
+QG9_TopRatedSeriesByGenre,WatchItem,"Embora o ranking seja sobre Series, a estrutura da query passa por Genre e pelo subtipo Series como componente de WatchItem. Por isso, WatchItem foi escolhido como raiz principal."
+QG10_AdvancedSearchWatchItems,WatchItem,"A busca avançada continua centrada na entidade raiz WatchItem, com filtros adicionais sobre descritor e subtipo."

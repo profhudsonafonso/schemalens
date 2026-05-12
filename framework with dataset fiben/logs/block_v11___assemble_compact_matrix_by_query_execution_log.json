@@ -1,0 +1,15 @@
+{
+  "block_name": "BLOCK V11 — ASSEMBLE COMPACT MATRIX BY QUERY",
+  "timestamp": "2026-04-30T15:40:46",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_queries": 10,
+    "n_columns": 64,
+    "n_queries_with_reduction_potential": 9,
+    "n_queries_with_full_coverage_at_best_depth": 10,
+    "compact_matrix_by_query_csv": "variables/block_v11/compact_matrix_by_query.csv",
+    "query_cardinality_profile_csv": "variables/block_v11/query_cardinality_profile.csv",
+    "metadata_json": "variables/block_v11/compact_matrix_by_query_metadata.json"
+  }
+}

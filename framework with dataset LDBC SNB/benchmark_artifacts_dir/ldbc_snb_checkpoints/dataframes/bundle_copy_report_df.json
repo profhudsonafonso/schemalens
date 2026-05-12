@@ -1,0 +1,44 @@
+[
+  {
+    "bundle_section":"mongo_configurations",
+    "source_dir":"\/home\/jovyan\/privado\/framework evaluation approachs\/framework with dataset LDBC SNB\/benchmark_artifacts_dir\/ldbc_snb_mongo_configurations",
+    "target_dir":"\/home\/jovyan\/privado\/framework evaluation approachs\/framework with dataset LDBC SNB\/exported_benchmark_bundles\/ldbc_snb_sf0_1_mongo_benchmark_bundle\/mongo_configurations",
+    "n_files":13,
+    "status":"OK"
+  },
+  {
+    "bundle_section":"final_analytical_matrix",
+    "source_dir":"\/home\/jovyan\/privado\/framework evaluation approachs\/framework with dataset LDBC SNB\/benchmark_artifacts_dir\/ldbc_snb_final_analytical_matrix_official",
+    "target_dir":"\/home\/jovyan\/privado\/framework evaluation approachs\/framework with dataset LDBC SNB\/exported_benchmark_bundles\/ldbc_snb_sf0_1_mongo_benchmark_bundle\/final_analytical_matrix",
+    "n_files":4,
+    "status":"OK"
+  },
+  {
+    "bundle_section":"activation",
+    "source_dir":"\/home\/jovyan\/privado\/framework evaluation approachs\/framework with dataset LDBC SNB\/benchmark_artifacts_dir\/ldbc_snb_activation_official",
+    "target_dir":"\/home\/jovyan\/privado\/framework evaluation approachs\/framework with dataset LDBC SNB\/exported_benchmark_bundles\/ldbc_snb_sf0_1_mongo_benchmark_bundle\/activation",
+    "n_files":7,
+    "status":"OK"
+  },
+  {
+    "bundle_section":"volatility",
+    "source_dir":"\/home\/jovyan\/privado\/framework evaluation approachs\/framework with dataset LDBC SNB\/benchmark_artifacts_dir\/ldbc_snb_update_volatility_official",
+    "target_dir":"\/home\/jovyan\/privado\/framework evaluation approachs\/framework with dataset LDBC SNB\/exported_benchmark_bundles\/ldbc_snb_sf0_1_mongo_benchmark_bundle\/volatility",
+    "n_files":11,
+    "status":"OK"
+  },
+  {
+    "bundle_section":"sharedness",
+    "source_dir":"\/home\/jovyan\/privado\/framework evaluation approachs\/framework with dataset LDBC SNB\/benchmark_artifacts_dir\/ldbc_snb_observed_sharedness_official",
+    "target_dir":"\/home\/jovyan\/privado\/framework evaluation approachs\/framework with dataset LDBC SNB\/exported_benchmark_bundles\/ldbc_snb_sf0_1_mongo_benchmark_bundle\/sharedness",
+    "n_files":7,
+    "status":"OK"
+  },
+  {
+    "bundle_section":"structural_reduction",
+    "source_dir":"\/home\/jovyan\/privado\/framework evaluation approachs\/framework with dataset LDBC SNB\/benchmark_artifacts_dir\/ldbc_snb_structural_reduction_official",
+    "target_dir":"\/home\/jovyan\/privado\/framework evaluation approachs\/framework with dataset LDBC SNB\/exported_benchmark_bundles\/ldbc_snb_sf0_1_mongo_benchmark_bundle\/structural_reduction",
+    "n_files":4,
+    "status":"OK"
+  }
+]

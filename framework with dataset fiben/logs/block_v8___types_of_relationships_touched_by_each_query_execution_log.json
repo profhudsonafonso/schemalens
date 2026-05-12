@@ -1,0 +1,24 @@
+{
+  "block_name": "BLOCK V8 — TYPES OF RELATIONSHIPS TOUCHED BY EACH QUERY",
+  "timestamp": "2026-04-30T15:32:51",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_queries": 10,
+    "known_semantic_types": [
+      "association",
+      "containment",
+      "descriptor",
+      "ownership",
+      "subtype"
+    ],
+    "n_query_relationship_edges": 36,
+    "n_queries_without_relationship_edges": 1,
+    "n_edges_missing_semantic_classification": 0,
+    "query_relationship_edges_csv": "variables/block_v08/query_relationship_edges.csv",
+    "query_semantic_type_counts_csv": "variables/block_v08/query_semantic_type_counts.csv",
+    "query_semantic_profile_csv": "variables/block_v08/query_semantic_profile.csv",
+    "query_semantic_flags_csv": "variables/block_v08/query_semantic_flags.csv",
+    "metadata_json": "variables/block_v08/query_relationship_types_metadata.json"
+  }
+}

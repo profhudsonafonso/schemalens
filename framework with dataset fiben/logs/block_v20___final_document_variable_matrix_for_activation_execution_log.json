@@ -1,0 +1,16 @@
+{
+  "block_name": "BLOCK V20 — FINAL DOCUMENT VARIABLE MATRIX FOR ACTIVATION",
+  "timestamp": "2026-04-30T16:00:59",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_queries": 10,
+    "n_columns_final_matrix": 138,
+    "n_columns_activation_input": 62,
+    "n_failed_activation_validation_checks": 0,
+    "final_document_variable_matrix_csv": "variables/block_v20/final_document_variable_matrix.csv",
+    "activation_input_matrix_csv": "variables/block_v20/activation_input_matrix.csv",
+    "activation_validation_csv": "variables/block_v20/activation_validation.csv",
+    "metadata_json": "variables/block_v20/final_document_variable_matrix_metadata.json"
+  }
+}

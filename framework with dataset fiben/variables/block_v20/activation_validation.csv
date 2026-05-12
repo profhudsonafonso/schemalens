@@ -1,0 +1,13 @@
+check_name,status,details
+column_exists_query_name,passed,query_name
+column_exists_selected_root,passed,selected_root
+column_exists_document_depth,passed,document_depth
+column_exists_Rc,passed,Rc
+column_exists_Re,passed,Re
+column_exists_DeltaR,passed,DeltaR
+column_exists_DeltaRratio,passed,DeltaRratio
+column_exists_query_update_volatility_score,passed,query_update_volatility_score
+column_exists_max_observed_sharedness_score,passed,max_observed_sharedness_score
+no_missing_required_values,passed,missing_rows=0
+one_row_per_query,passed,duplicate_rows=0
+no_negative_delta,passed,negative_delta_rows=0

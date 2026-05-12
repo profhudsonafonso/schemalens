@@ -1,0 +1,18 @@
+{
+  "block_name": "BLOCK V24 — EXPORT BENCHMARK CONFIGURATION ARTIFACTS",
+  "timestamp": "2026-04-30T16:10:46",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "benchmark_artifacts_dir": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations",
+    "n_exported_artifacts": 15,
+    "n_selected_configurations": 60,
+    "n_candidate_specs": 60,
+    "n_failed_validation_checks": 0,
+    "n_warning_validation_checks": 0,
+    "exported_artifacts_csv": "variables/block_v24/exported_artifacts.csv",
+    "benchmark_export_validation_csv": "variables/block_v24/benchmark_export_validation.csv",
+    "benchmark_manifest_json": "variables/block_v24/benchmark_manifest.json",
+    "metadata_json": "variables/block_v24/benchmark_export_metadata.json"
+  }
+}

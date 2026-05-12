@@ -1,0 +1,3 @@
+update_volatility_level,n_entities,entities,avg_update_volatility_score,max_update_volatility_score
+high,6,"['BuyTransaction', 'FinancialServiceAccount', 'Holding', 'ListedSecurity', 'Person', 'Transaction']",0.8866666666666667,1.0
+none,9,"['Corporation', 'Country', 'Disclosure', 'FinancialReport', 'Industry', 'ReportElement', 'Security', 'SellTransaction', 'StatementElement']",0.0,0.0

@@ -1,0 +1,4 @@
+activation_high_read_gain,activation_high_update_pressure,activation_high_sharedness_pressure,n_queries,queries
+False,False,False,1,['Q1_CompanyProfileIBM']
+True,False,False,3,"['Q2_CompanyWithIndustryCountryAndListedSecurities', 'Q5_ReportsAndMetricDataOfCompany', 'Q6_TechUSListedSecuritiesWithHighLastTradedValue']"
+True,True,False,6,"['Q10_CreateAccountHoldingAndBuyTransaction', 'Q3_SecuritiesHeldInEachFinancialServiceAccount', 'Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity', 'Q7_PersonsWhoBoughtMoreIBMThanSold', 'Q8_IBMTransactionsBelowAverageSellingPrice', 'Q9_PersonsWhoBoughtAndSoldSameStock']"

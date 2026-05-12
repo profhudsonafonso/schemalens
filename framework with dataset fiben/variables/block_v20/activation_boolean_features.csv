@@ -1,0 +1,11 @@
+query_name,activation_has_relationship_traversal,activation_has_read_reduction,activation_full_relationship_reduction,activation_high_read_gain,activation_medium_or_high_read_gain,activation_has_depth_greater_than_zero,activation_has_multi_entity_query,activation_has_remaining_external_edges,activation_has_update_pressure,activation_high_update_pressure,activation_has_sharedness_pressure,activation_high_sharedness_pressure,activation_has_mapping_warning,touches_descriptor,touches_association,touches_ownership,touches_containment,touches_subtype,is_write_query,has_query_update_volatility,has_observed_sharedness
+Q10_CreateAccountHoldingAndBuyTransaction,True,True,True,True,True,True,True,False,True,True,True,False,False,False,True,True,True,True,True,True,True
+Q1_CompanyProfileIBM,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False,False
+Q2_CompanyWithIndustryCountryAndListedSecurities,True,True,True,True,True,True,True,False,True,False,True,False,True,True,True,False,False,False,False,True,True
+Q3_SecuritiesHeldInEachFinancialServiceAccount,True,True,True,True,True,True,True,False,True,True,True,False,True,False,True,False,True,False,False,True,True
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,True,True,True,True,True,True,True,False,True,True,True,False,True,False,True,True,True,False,False,True,True
+Q5_ReportsAndMetricDataOfCompany,True,True,True,True,True,True,True,False,False,False,True,False,True,False,False,False,True,False,False,False,True
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,True,True,True,True,True,True,True,False,True,False,True,False,True,True,True,False,False,False,False,True,True
+Q7_PersonsWhoBoughtMoreIBMThanSold,True,True,True,True,True,True,True,False,True,True,True,False,True,False,True,True,True,True,False,True,True
+Q8_IBMTransactionsBelowAverageSellingPrice,True,True,True,True,True,True,True,False,True,True,True,False,True,False,True,False,False,True,False,True,True
+Q9_PersonsWhoBoughtAndSoldSameStock,True,True,True,True,True,True,True,False,True,True,True,False,False,False,True,True,True,True,False,True,True

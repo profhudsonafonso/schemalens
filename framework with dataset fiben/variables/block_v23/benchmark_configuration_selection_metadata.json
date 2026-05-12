@@ -1,0 +1,41 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "n_selected_configurations": 60,
+  "n_queries": 10,
+  "n_primary_configurations": 33,
+  "n_secondary_affected_configurations": 17,
+  "n_control_configurations": 10,
+  "benchmark_group_counts": {
+    "primary": 33,
+    "secondary_affected": 17,
+    "control": 10
+  },
+  "design_pattern_counts": {
+    "normalized_reference_baseline": 10,
+    "benchmark_tradeoff_alternative": 9,
+    "shared_target_reference_strategy": 8,
+    "association_references": 8,
+    "update_aware_reference_design": 8,
+    "deep_nested_document": 6,
+    "embedded_containment": 6,
+    "embedded_descriptors": 2,
+    "aggregation_materialized_collection": 2,
+    "root_only_collection": 1
+  },
+  "n_failed_validation_checks": 0,
+  "n_warning_validation_checks": 0,
+  "output_files": {
+    "benchmark_configuration_selection_csv": "variables/block_v23/benchmark_configuration_selection.csv",
+    "primary_configurations_csv": "variables/block_v23/primary_configurations.csv",
+    "secondary_affected_configurations_csv": "variables/block_v23/secondary_affected_configurations.csv",
+    "control_configurations_csv": "variables/block_v23/control_configurations.csv",
+    "benchmark_execution_plan_csv": "variables/block_v23/benchmark_execution_plan.csv",
+    "benchmark_selection_by_query_csv": "variables/block_v23/benchmark_selection_by_query.csv",
+    "document_variable_matrix_with_benchmark_selection_csv": "variables/block_v23/document_variable_matrix_with_benchmark_selection.csv",
+    "benchmark_selection_summary_csv": "variables/block_v23/benchmark_selection_summary.csv",
+    "benchmark_group_summary_csv": "variables/block_v23/benchmark_group_summary.csv",
+    "benchmark_selection_validation_csv": "variables/block_v23/benchmark_selection_validation.csv"
+  }
+}

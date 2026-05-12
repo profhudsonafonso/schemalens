@@ -1,0 +1,7 @@
+query_name,generic_class,query_family,query_type,operation_class,is_write_query,entity,entity_role_in_query,update_volatility_score,update_volatility_level,has_update_volatility
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,BuyTransaction,write_related_entity,1.0,high,True
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,FinancialServiceAccount,write_related_entity,1.0,high,True
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,Holding,write_related_entity,1.0,high,True
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,ListedSecurity,write_related_entity,0.6599999999999999,high,True
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,Person,write_related_entity,0.6599999999999999,high,True
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,insert,insert_with_relationship_creation,True,Transaction,write_related_entity,1.0,high,True

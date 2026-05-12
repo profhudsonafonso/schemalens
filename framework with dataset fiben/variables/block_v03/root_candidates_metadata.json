@@ -1,0 +1,97 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "n_queries": 10,
+  "n_root_candidate_rows": 46,
+  "root_candidates_by_query": {
+    "Q10_CreateAccountHoldingAndBuyTransaction": [
+      "Person",
+      "FinancialServiceAccount",
+      "Holding",
+      "ListedSecurity",
+      "Transaction",
+      "BuyTransaction"
+    ],
+    "Q1_CompanyProfileIBM": [
+      "Corporation"
+    ],
+    "Q2_CompanyWithIndustryCountryAndListedSecurities": [
+      "Corporation",
+      "Industry",
+      "Country",
+      "ListedSecurity"
+    ],
+    "Q3_SecuritiesHeldInEachFinancialServiceAccount": [
+      "FinancialServiceAccount",
+      "Holding",
+      "ListedSecurity",
+      "Security"
+    ],
+    "Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity": [
+      "Person",
+      "FinancialServiceAccount",
+      "Holding",
+      "ListedSecurity",
+      "Corporation"
+    ],
+    "Q5_ReportsAndMetricDataOfCompany": [
+      "Corporation",
+      "FinancialReport",
+      "ReportElement",
+      "StatementElement",
+      "Disclosure"
+    ],
+    "Q6_TechUSListedSecuritiesWithHighLastTradedValue": [
+      "Corporation",
+      "Industry",
+      "Country",
+      "ListedSecurity"
+    ],
+    "Q7_PersonsWhoBoughtMoreIBMThanSold": [
+      "Person",
+      "FinancialServiceAccount",
+      "BuyTransaction",
+      "SellTransaction",
+      "Transaction",
+      "ListedSecurity",
+      "Corporation"
+    ],
+    "Q8_IBMTransactionsBelowAverageSellingPrice": [
+      "Transaction",
+      "SellTransaction",
+      "ListedSecurity",
+      "Corporation"
+    ],
+    "Q9_PersonsWhoBoughtAndSoldSameStock": [
+      "Person",
+      "FinancialServiceAccount",
+      "BuyTransaction",
+      "SellTransaction",
+      "Transaction",
+      "ListedSecurity"
+    ]
+  },
+  "unique_candidate_roots": [
+    "BuyTransaction",
+    "Corporation",
+    "Country",
+    "Disclosure",
+    "FinancialReport",
+    "FinancialServiceAccount",
+    "Holding",
+    "Industry",
+    "ListedSecurity",
+    "Person",
+    "ReportElement",
+    "Security",
+    "SellTransaction",
+    "StatementElement",
+    "Transaction"
+  ],
+  "output_files": {
+    "root_candidates_csv": "variables/block_v03/root_candidates.csv",
+    "root_candidate_summary_csv": "variables/block_v03/root_candidate_summary.csv",
+    "root_candidate_entity_frequency_csv": "variables/block_v03/root_candidate_entity_frequency.csv"
+  }
+}

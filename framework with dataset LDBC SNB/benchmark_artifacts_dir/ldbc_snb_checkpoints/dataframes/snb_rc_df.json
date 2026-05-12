@@ -1,0 +1,245 @@
+[
+  {
+    "query_name":"IS1_ProfileOfPerson",
+    "official_id":"IS1",
+    "Rc_distinct":1,
+    "Rc_weighted":1,
+    "weighted_relationships":[
+      "person_is_located_in_place x1"
+    ]
+  },
+  {
+    "query_name":"IS2_RecentMessagesOfPerson",
+    "official_id":"IS2",
+    "Rc_distinct":4,
+    "Rc_weighted":4,
+    "weighted_relationships":[
+      "post_has_creator_person x1",
+      "comment_has_creator_person x1",
+      "comment_reply_of_post x1",
+      "comment_reply_of_comment x1"
+    ]
+  },
+  {
+    "query_name":"IS3_FriendsOfPerson",
+    "official_id":"IS3",
+    "Rc_distinct":1,
+    "Rc_weighted":1,
+    "weighted_relationships":[
+      "person_knows_person x1"
+    ]
+  },
+  {
+    "query_name":"IS4_ContentOfMessage",
+    "official_id":"IS4",
+    "Rc_distinct":0,
+    "Rc_weighted":0,
+    "weighted_relationships":[
+
+    ]
+  },
+  {
+    "query_name":"IS5_CreatorOfMessage",
+    "official_id":"IS5",
+    "Rc_distinct":2,
+    "Rc_weighted":2,
+    "weighted_relationships":[
+      "post_has_creator_person x1",
+      "comment_has_creator_person x1"
+    ]
+  },
+  {
+    "query_name":"IS6_ForumOfMessage",
+    "official_id":"IS6",
+    "Rc_distinct":4,
+    "Rc_weighted":4,
+    "weighted_relationships":[
+      "forum_container_of_post x1",
+      "comment_reply_of_post x1",
+      "comment_reply_of_comment x1",
+      "forum_has_moderator_person x1"
+    ]
+  },
+  {
+    "query_name":"IS7_RepliesOfMessage",
+    "official_id":"IS7",
+    "Rc_distinct":5,
+    "Rc_weighted":5,
+    "weighted_relationships":[
+      "comment_reply_of_post x1",
+      "comment_reply_of_comment x1",
+      "comment_has_creator_person x1",
+      "post_has_creator_person x1",
+      "person_knows_person x1"
+    ]
+  },
+  {
+    "query_name":"IC1_TransitiveFriendsWithName",
+    "official_id":"IC1",
+    "Rc_distinct":5,
+    "Rc_weighted":7,
+    "weighted_relationships":[
+      "person_knows_person x3",
+      "person_is_located_in_place x1",
+      "person_study_at_organisation x1",
+      "person_work_at_organisation x1",
+      "organisation_is_located_in_place x1"
+    ]
+  },
+  {
+    "query_name":"IC2_RecentMessagesByFriends",
+    "official_id":"IC2",
+    "Rc_distinct":3,
+    "Rc_weighted":3,
+    "weighted_relationships":[
+      "person_knows_person x1",
+      "post_has_creator_person x1",
+      "comment_has_creator_person x1"
+    ]
+  },
+  {
+    "query_name":"IC3_FriendsAndFriendsOfFriendsInCountries",
+    "official_id":"IC3",
+    "Rc_distinct":7,
+    "Rc_weighted":8,
+    "weighted_relationships":[
+      "person_knows_person x2",
+      "person_is_located_in_place x1",
+      "post_has_creator_person x1",
+      "comment_has_creator_person x1",
+      "post_is_located_in_place x1",
+      "comment_is_located_in_place x1",
+      "place_is_part_of_place x1"
+    ]
+  },
+  {
+    "query_name":"IC4_NewTopics",
+    "official_id":"IC4",
+    "Rc_distinct":3,
+    "Rc_weighted":3,
+    "weighted_relationships":[
+      "person_knows_person x1",
+      "post_has_creator_person x1",
+      "post_has_tag x1"
+    ]
+  },
+  {
+    "query_name":"IC5_NewGroups",
+    "official_id":"IC5",
+    "Rc_distinct":4,
+    "Rc_weighted":5,
+    "weighted_relationships":[
+      "person_knows_person x2",
+      "forum_has_member_person x1",
+      "forum_container_of_post x1",
+      "post_has_creator_person x1"
+    ]
+  },
+  {
+    "query_name":"IC6_TagCoOccurrence",
+    "official_id":"IC6",
+    "Rc_distinct":3,
+    "Rc_weighted":4,
+    "weighted_relationships":[
+      "person_knows_person x2",
+      "post_has_creator_person x1",
+      "post_has_tag x1"
+    ]
+  },
+  {
+    "query_name":"IC7_RecentLikers",
+    "official_id":"IC7",
+    "Rc_distinct":5,
+    "Rc_weighted":5,
+    "weighted_relationships":[
+      "post_has_creator_person x1",
+      "comment_has_creator_person x1",
+      "person_likes_post x1",
+      "person_likes_comment x1",
+      "person_knows_person x1"
+    ]
+  },
+  {
+    "query_name":"INS1_AddPerson",
+    "official_id":"INS1",
+    "Rc_distinct":4,
+    "Rc_weighted":4,
+    "weighted_relationships":[
+      "person_is_located_in_place x1",
+      "person_has_interest_tag x1",
+      "person_study_at_organisation x1",
+      "person_work_at_organisation x1"
+    ]
+  },
+  {
+    "query_name":"INS2_AddLikeToPost",
+    "official_id":"INS2",
+    "Rc_distinct":1,
+    "Rc_weighted":1,
+    "weighted_relationships":[
+      "person_likes_post x1"
+    ]
+  },
+  {
+    "query_name":"INS3_AddLikeToComment",
+    "official_id":"INS3",
+    "Rc_distinct":1,
+    "Rc_weighted":1,
+    "weighted_relationships":[
+      "person_likes_comment x1"
+    ]
+  },
+  {
+    "query_name":"INS4_AddForum",
+    "official_id":"INS4",
+    "Rc_distinct":2,
+    "Rc_weighted":2,
+    "weighted_relationships":[
+      "forum_has_moderator_person x1",
+      "forum_has_tag x1"
+    ]
+  },
+  {
+    "query_name":"INS5_AddForumMembership",
+    "official_id":"INS5",
+    "Rc_distinct":1,
+    "Rc_weighted":1,
+    "weighted_relationships":[
+      "forum_has_member_person x1"
+    ]
+  },
+  {
+    "query_name":"INS6_AddPost",
+    "official_id":"INS6",
+    "Rc_distinct":4,
+    "Rc_weighted":4,
+    "weighted_relationships":[
+      "post_has_creator_person x1",
+      "forum_container_of_post x1",
+      "post_is_located_in_place x1",
+      "post_has_tag x1"
+    ]
+  },
+  {
+    "query_name":"INS7_AddComment",
+    "official_id":"INS7",
+    "Rc_distinct":5,
+    "Rc_weighted":5,
+    "weighted_relationships":[
+      "comment_has_creator_person x1",
+      "comment_reply_of_post x1",
+      "comment_reply_of_comment x1",
+      "comment_is_located_in_place x1",
+      "comment_has_tag x1"
+    ]
+  },
+  {
+    "query_name":"INS8_AddFriendship",
+    "official_id":"INS8",
+    "Rc_distinct":1,
+    "Rc_weighted":1,
+    "weighted_relationships":[
+      "person_knows_person x1"
+    ]
+  }
+]

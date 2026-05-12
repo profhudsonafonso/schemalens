@@ -1,0 +1,8 @@
+source,target,name,edge_id
+Genre,WatchItem,has_genre,Genre -- WatchItem [has_genre]
+Movie,WatchItem,movie_is_watchitem,Movie -- WatchItem [movie_is_watchitem]
+Series,WatchItem,series_is_watchitem,Series -- WatchItem [series_is_watchitem]
+Episode,WatchItem,episode_is_watchitem,Episode -- WatchItem [episode_is_watchitem]
+Person,Role,person_in_role,Person -- Role [person_in_role]
+Role,WatchItem,role_of_watchitem,Role -- WatchItem [role_of_watchitem]
+Series,Episode,series_contains_episode,Series -- Episode [series_contains_episode]

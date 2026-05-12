@@ -1,0 +1,3 @@
+operation_class,is_write_query,n_queries,queries,avg_created_entities,avg_explicitly_modified_entities,avg_relationship_created_edges,avg_affected_persistence_region_entities
+read,False,9,"['Q1_CompanyProfileIBM', 'Q2_CompanyWithIndustryCountryAndListedSecurities', 'Q3_SecuritiesHeldInEachFinancialServiceAccount', 'Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity', 'Q5_ReportsAndMetricDataOfCompany', 'Q6_TechUSListedSecuritiesWithHighLastTradedValue', 'Q7_PersonsWhoBoughtMoreIBMThanSold', 'Q8_IBMTransactionsBelowAverageSellingPrice', 'Q9_PersonsWhoBoughtAndSoldSameStock']",0.0,0.0,0.0,0.0
+insert_with_relationship_creation,True,1,['Q10_CreateAccountHoldingAndBuyTransaction'],4.0,4.0,6.0,6.0

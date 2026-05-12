@@ -1,0 +1,20 @@
+{
+  "block_name": "BLOCK V9 — STRUCTURAL ANALYSIS OF EDGES BY DEPTH",
+  "timestamp": "2026-04-30T15:35:06",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_edge_depth_rows": 75,
+    "n_structural_edges_by_depth": 38,
+    "n_queries": 10,
+    "n_queries_with_no_edges": 1,
+    "n_edges_missing_semantics": 0,
+    "edge_depth_csv": "variables/block_v09/edge_depth.csv",
+    "query_edges_with_semantics_csv": "variables/block_v09/query_edges_with_semantics.csv",
+    "structural_edges_by_depth_csv": "variables/block_v09/structural_edges_by_depth.csv",
+    "query_depth_summary_csv": "variables/block_v09/query_depth_summary.csv",
+    "entity_depth_summary_csv": "variables/block_v09/entity_depth_summary.csv",
+    "query_edge_depth_profile_csv": "variables/block_v09/query_edge_depth_profile.csv",
+    "metadata_json": "variables/block_v09/structural_edges_by_depth_metadata.json"
+  }
+}

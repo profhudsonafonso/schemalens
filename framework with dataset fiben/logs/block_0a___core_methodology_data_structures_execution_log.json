@@ -1,0 +1,17 @@
+{
+  "block_name": "BLOCK 0A — CORE METHODOLOGY DATA STRUCTURES",
+  "timestamp": "2026-04-30T14:40:32",
+  "notes": {
+    "status": "completed",
+    "defined_classes": [
+      "ScenarioSpec",
+      "FragmentSpec",
+      "RecommendationSpec",
+      "PhysicalDBSpec",
+      "MaterializationPlan",
+      "BenchmarkQuery",
+      "WorkloadSpec"
+    ],
+    "metadata_json": "variables/block00a/core_methodology_data_structures.json"
+  }
+}

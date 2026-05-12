@@ -1,0 +1,15 @@
+{
+  "block_name": "BLOCK V19 — INTEGRATE OBSERVED SHAREDNESS INTO THE ANALYTICAL MATRIX",
+  "timestamp": "2026-04-30T15:59:00",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_rows_before_merge": 10,
+    "n_rows_after_merge": 10,
+    "n_columns_after_merge": 122,
+    "n_failed_integration_checks": 0,
+    "document_variable_matrix_with_sharedness_csv": "variables/block_v19/document_variable_matrix_with_sharedness.csv",
+    "sharedness_integration_check_csv": "variables/block_v19/sharedness_integration_check.csv",
+    "metadata_json": "variables/block_v19/sharedness_integration_metadata.json"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "block_name": "BLOCK V15 — CALCULATE UPDATE VOLATILITY BY ENTITY",
+  "timestamp": "2026-04-30T15:52:45",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_total_queries": 10,
+    "n_write_queries": 1,
+    "n_entities": 15,
+    "n_entities_with_update_volatility": 6,
+    "n_entities_without_update_volatility": 9,
+    "update_volatility_by_entity_csv": "variables/block_v15/update_volatility_by_entity.csv",
+    "update_volatility_events_csv": "variables/block_v15/update_volatility_events.csv",
+    "update_volatility_summary_csv": "variables/block_v15/update_volatility_summary.csv",
+    "metadata_json": "variables/block_v15/update_volatility_by_entity_metadata.json"
+  }
+}

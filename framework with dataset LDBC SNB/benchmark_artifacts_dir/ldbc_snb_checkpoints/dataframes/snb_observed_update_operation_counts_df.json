@@ -1,0 +1,98 @@
+[
+  {
+    "operation_code":1,
+    "official_id":"INS1",
+    "query_name":"INS1_AddPerson",
+    "operation":"Add person",
+    "observed_update_count":172,
+    "files":[
+      "updateStream_0_0_person.csv"
+    ],
+    "min_fields":17,
+    "max_fields":17
+  },
+  {
+    "operation_code":2,
+    "official_id":"INS2",
+    "query_name":"INS2_AddLikeToPost",
+    "operation":"Add like to post",
+    "observed_update_count":44313,
+    "files":[
+      "updateStream_0_0_forum.csv"
+    ],
+    "min_fields":6,
+    "max_fields":6
+  },
+  {
+    "operation_code":3,
+    "official_id":"INS3",
+    "query_name":"INS3_AddLikeToComment",
+    "operation":"Add like to comment",
+    "observed_update_count":30395,
+    "files":[
+      "updateStream_0_0_forum.csv"
+    ],
+    "min_fields":6,
+    "max_fields":6
+  },
+  {
+    "operation_code":4,
+    "official_id":"INS4",
+    "query_name":"INS4_AddForum",
+    "operation":"Add forum",
+    "observed_update_count":3059,
+    "files":[
+      "updateStream_0_0_forum.csv"
+    ],
+    "min_fields":8,
+    "max_fields":8
+  },
+  {
+    "operation_code":5,
+    "official_id":"INS5",
+    "query_name":"INS5_AddForumMembership",
+    "operation":"Add forum membership",
+    "observed_update_count":126615,
+    "files":[
+      "updateStream_0_0_forum.csv"
+    ],
+    "min_fields":6,
+    "max_fields":6
+  },
+  {
+    "operation_code":6,
+    "official_id":"INS6",
+    "query_name":"INS6_AddPost",
+    "operation":"Add post",
+    "observed_update_count":32610,
+    "files":[
+      "updateStream_0_0_forum.csv"
+    ],
+    "min_fields":15,
+    "max_fields":15
+  },
+  {
+    "operation_code":7,
+    "official_id":"INS7",
+    "query_name":"INS7_AddComment",
+    "operation":"Add comment",
+    "observed_update_count":46969,
+    "files":[
+      "updateStream_0_0_forum.csv"
+    ],
+    "min_fields":14,
+    "max_fields":14
+  },
+  {
+    "operation_code":8,
+    "official_id":"INS8",
+    "query_name":"INS8_AddFriendship",
+    "operation":"Add friendship",
+    "observed_update_count":3197,
+    "files":[
+      "updateStream_0_0_forum.csv"
+    ],
+    "min_fields":6,
+    "max_fields":6
+  }
+]

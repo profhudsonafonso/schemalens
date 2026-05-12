@@ -1,0 +1,11 @@
+query_name,scale_label,best_config,best_group,best_design_pattern,best_p95_ms,best_avg_latency_ms,best_p99_ms,avg_documents_returned
+QG10_AdvancedSearchWatchItems,sf0.25,G9,secondary_affected,containment_family,115.31208974847686,66.54323310067412,116.78344754865977,6.9
+QG1_WatchItemById,sf0.25,G9,control,containment_family,0.2058836013020482,0.2011685988691169,0.2062695198401343,1.0
+QG2_WatchItemByTitle,sf0.25,G9,control,containment_family,0.2828345986927161,0.2629424998303875,0.2833357186318608,8.2
+QG3_RecommendationByGenreAndSubtype,sf0.25,G8,secondary_affected,containment_family,5.637626150928553,2.609850899898447,5.843572432422661,20.0
+QG4_AllPersonsOfTypeForWatchItem,sf0.25,G6,primary,associative_family,0.3935545493732206,0.3551597990735899,0.4003373111481778,39.5
+QG5_AllPersonsForEpisodesOfSeries,sf0.25,G4,primary,associative_family,81.24685599796065,53.64360720050172,84.14055759967596,767.4
+QG6_EpisodesOfSeries,sf0.25,G2,control,root_local_family,0.6322362009086646,0.5326362013875041,0.6341456403606571,3187.0
+QG7_UpdateWatchItemMetadata,sf0.25,G8,control,containment_family,0.262326949450653,0.2536132000386715,0.2636837909813039,0.0
+QG8_AddPersonRoleToWatchItem,sf0.25,G0,primary,root_local_family,0.4179502480837982,0.3882515993609559,0.4205404499953147,0.0
+QG9_TopRatedSeriesByGenre,sf0.25,G7,secondary_affected,containment_family,3.006609698422833,1.343326501228148,3.6503163376619354,20.0

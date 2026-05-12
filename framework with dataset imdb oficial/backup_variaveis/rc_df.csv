@@ -1,0 +1,11 @@
+query_name,query_type,entities_touched,n_entities_touched,Rc,Rc_selected_edges
+QG1_WatchItemById,select,['WatchItem'],1,0,[]
+QG2_WatchItemByTitle,select,['WatchItem'],1,0,[]
+QG3_RecommendationByGenreAndSubtype,select,"['WatchItem', 'Genre', 'Movie', 'Series', 'Episode']",5,4,"['Genre -- WatchItem [has_genre]', 'Movie -- WatchItem [movie_is_watchitem]', 'Series -- WatchItem [series_is_watchitem]', 'Episode -- WatchItem [episode_is_watchitem]']"
+QG4_AllPersonsOfTypeForWatchItem,select,"['WatchItem', 'Role', 'Person']",3,2,"['Person -- Role [person_in_role]', 'Role -- WatchItem [role_of_watchitem]']"
+QG5_AllPersonsForEpisodesOfSeries,select,"['Series', 'Episode', 'WatchItem', 'Role', 'Person']",5,4,"['Series -- WatchItem [series_is_watchitem]', 'Episode -- WatchItem [episode_is_watchitem]', 'Person -- Role [person_in_role]', 'Role -- WatchItem [role_of_watchitem]']"
+QG6_EpisodesOfSeries,select,"['Series', 'Episode']",2,1,['Series -- Episode [series_contains_episode]']
+QG7_UpdateWatchItemMetadata,update,['WatchItem'],1,0,[]
+QG8_AddPersonRoleToWatchItem,insert,"['Person', 'WatchItem', 'Role']",3,2,"['Person -- Role [person_in_role]', 'Role -- WatchItem [role_of_watchitem]']"
+QG9_TopRatedSeriesByGenre,select,"['WatchItem', 'Series', 'Genre']",3,2,"['Genre -- WatchItem [has_genre]', 'Series -- WatchItem [series_is_watchitem]']"
+QG10_AdvancedSearchWatchItems,select,"['WatchItem', 'Genre', 'Movie', 'Series', 'Episode']",5,4,"['Genre -- WatchItem [has_genre]', 'Movie -- WatchItem [movie_is_watchitem]', 'Series -- WatchItem [series_is_watchitem]', 'Episode -- WatchItem [episode_is_watchitem]']"

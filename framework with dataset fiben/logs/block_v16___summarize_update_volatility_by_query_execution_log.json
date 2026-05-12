@@ -1,0 +1,15 @@
+{
+  "block_name": "BLOCK V16 — SUMMARIZE UPDATE VOLATILITY BY QUERY",
+  "timestamp": "2026-04-30T15:54:14",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_queries": 10,
+    "n_queries_with_update_volatility": 8,
+    "n_write_queries": 1,
+    "update_volatility_by_query_csv": "variables/block_v16/update_volatility_by_query.csv",
+    "query_entity_long_csv": "variables/block_v16/query_entity_update_volatility_long.csv",
+    "query_summary_csv": "variables/block_v16/update_volatility_query_summary.csv",
+    "metadata_json": "variables/block_v16/update_volatility_by_query_metadata.json"
+  }
+}

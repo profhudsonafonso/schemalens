@@ -1,0 +1,2 @@
+query_name,generic_class,query_family,query_type,selected_root,n_entities_touched,max_entity_depth,max_edge_depth,n_unique_edges,edge_depths,semantic_types,relationship_names
+Q1_CompanyProfileIBM,QG1,Local lookup,select,Corporation,1,0,0,0,[],[],[]

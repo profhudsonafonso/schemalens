@@ -1,0 +1,11 @@
+query_name,Rc,Rc_selected_edges
+QG1_WatchItemById,0,[]
+QG2_WatchItemByTitle,0,[]
+QG3_RecommendationByGenreAndSubtype,4,"['Genre -- WatchItem [has_genre]', 'Movie -- WatchItem [movie_is_watchitem]', 'Series -- WatchItem [series_is_watchitem]', 'Episode -- WatchItem [episode_is_watchitem]']"
+QG4_AllPersonsOfTypeForWatchItem,2,"['Person -- Role [person_in_role]', 'Role -- WatchItem [role_of_watchitem]']"
+QG5_AllPersonsForEpisodesOfSeries,4,"['Series -- WatchItem [series_is_watchitem]', 'Episode -- WatchItem [episode_is_watchitem]', 'Person -- Role [person_in_role]', 'Role -- WatchItem [role_of_watchitem]']"
+QG6_EpisodesOfSeries,1,['Series -- Episode [series_contains_episode]']
+QG7_UpdateWatchItemMetadata,0,[]
+QG8_AddPersonRoleToWatchItem,2,"['Person -- Role [person_in_role]', 'Role -- WatchItem [role_of_watchitem]']"
+QG9_TopRatedSeriesByGenre,2,"['Genre -- WatchItem [has_genre]', 'Series -- WatchItem [series_is_watchitem]']"
+QG10_AdvancedSearchWatchItems,4,"['Genre -- WatchItem [has_genre]', 'Movie -- WatchItem [movie_is_watchitem]', 'Series -- WatchItem [series_is_watchitem]', 'Episode -- WatchItem [episode_is_watchitem]']"

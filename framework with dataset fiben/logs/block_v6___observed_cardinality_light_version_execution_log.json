@@ -1,0 +1,18 @@
+{
+  "block_name": "BLOCK V6 — OBSERVED CARDINALITY LIGHT VERSION",
+  "timestamp": "2026-04-30T15:05:38",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "row_limit": 200000,
+    "n_relationships": 15,
+    "n_computed_relationships": 2,
+    "n_uncomputed_relationships": 13,
+    "entity_view_mapping_csv": "variables/block_v06/fiben_entity_view_mapping.csv",
+    "candidate_join_columns_csv": "variables/block_v06/candidate_join_columns.csv",
+    "observed_cardinality_csv": "variables/block_v06/observed_cardinality_by_relationship.csv",
+    "observed_cardinality_summary_csv": "variables/block_v06/observed_cardinality_summary.csv",
+    "uncomputed_cardinality_csv": "variables/block_v06/uncomputed_cardinality_relationships.csv",
+    "metadata_json": "variables/block_v06/observed_cardinality_metadata.json"
+  }
+}

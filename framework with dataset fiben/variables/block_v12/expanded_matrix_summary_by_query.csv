@@ -1,0 +1,11 @@
+query_name,generic_class,query_family,selected_root,n_depth_rows,max_depth,max_DeltaRratio,max_DeltaR,min_Re,has_full_coverage,best_depth
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,Person,4,3,1.0,5,0,True,3
+Q1_CompanyProfileIBM,QG1,Local lookup,Corporation,1,0,0.0,0,0,True,0
+Q2_CompanyWithIndustryCountryAndListedSecurities,QG2,Shallow rooted retrieval,Corporation,2,1,1.0,3,0,True,1
+Q3_SecuritiesHeldInEachFinancialServiceAccount,QG3,Associative retrieval,FinancialServiceAccount,4,3,1.0,3,0,True,3
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,Person,5,4,1.0,4,0,True,4
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,Corporation,4,3,1.0,4,0,True,3
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,QG6,Filtered search / recommendation,ListedSecurity,3,2,1.0,3,0,True,2
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,Person,5,4,1.0,6,0,True,4
+Q8_IBMTransactionsBelowAverageSellingPrice,QG8,Aggregation / ranking,Transaction,3,2,1.0,3,0,True,2
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,Person,4,3,1.0,5,0,True,3

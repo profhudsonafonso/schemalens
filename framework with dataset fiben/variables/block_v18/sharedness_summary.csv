@@ -1,0 +1,9 @@
+observed_sharedness_level,semantic_type,n_relationships,relationships,avg_observed_sharedness_score,max_observed_sharedness_score
+low,containment,2,"['account_has_holding', 'account_records_transaction']",0.20903775000000002,0.2453325
+low,ownership,1,['person_owns_financial_service_account'],0.14579006888043589,0.14579006888043589
+medium,association,2,"['holding_refers_to_listed_security', 'transaction_refers_to_listed_security']",0.2958825,0.2958825
+medium,containment,2,"['corporation_has_financial_report', 'financial_report_contains_report_element']",0.2900932581209499,0.29462099999999997
+medium,descriptor,2,"['corporation_has_country', 'corporation_has_industry']",0.2756024096385542,0.2974182444061962
+none,association,2,"['corporation_has_listed_security', 'listed_security_represents_security']",0.0,0.0
+none,containment,2,"['financial_report_contains_disclosure', 'report_element_has_statement_element']",0.0,0.0
+none,subtype,2,"['buy_transaction_is_transaction', 'sell_transaction_is_transaction']",0.0,0.0

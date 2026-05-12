@@ -1,0 +1,27 @@
+{
+  "block_name": "BLOCK 3 — DERIVED CONCEPTUAL VIEWS FOR FIBEN",
+  "timestamp": "2026-04-30T14:30:07",
+  "notes": {
+    "status": "completed",
+    "selected_scale": "SF1",
+    "matched_entities": [
+      "corporations",
+      "reports",
+      "disclosures",
+      "securities",
+      "listed_securities"
+    ],
+    "unmatched_entities": [
+      "report_elements",
+      "statement_elements",
+      "accounts",
+      "industries",
+      "classifications"
+    ],
+    "n_created_semantic_views": 5,
+    "raw_column_dictionary_csv": "variables/block03/fiben_raw_column_dictionary.csv",
+    "conceptual_mapping_csv": "variables/block03/fiben_conceptual_view_mapping.csv",
+    "semantic_summary_csv": "variables/block03/fiben_semantic_views_summary.csv",
+    "semantic_metadata_json": "variables/block03/fiben_semantic_metadata.json"
+  }
+}

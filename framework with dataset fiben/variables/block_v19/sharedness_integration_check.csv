@@ -1,0 +1,5 @@
+check_name,status,details
+all_matrix_queries_have_sharedness_source,passed,[]
+no_extra_sharedness_queries,passed,[]
+no_queries_lost_after_merge,passed,[]
+row_count_preserved,passed,"{'before': 10, 'after': 10}"

@@ -1,0 +1,9 @@
+query_name,semantic_type,count
+QG10_AdvancedSearchWatchItems,association,4
+QG3_RecommendationByGenreAndSubtype,association,4
+QG4_AllPersonsOfTypeForWatchItem,associative,2
+QG5_AllPersonsForEpisodesOfSeries,association,2
+QG5_AllPersonsForEpisodesOfSeries,associative,2
+QG6_EpisodesOfSeries,containment,1
+QG8_AddPersonRoleToWatchItem,associative,2
+QG9_TopRatedSeriesByGenre,association,2

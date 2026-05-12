@@ -1,0 +1,31 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "n_rows_before_merge": 10,
+  "n_rows_after_merge": 10,
+  "n_columns_after_merge": 109,
+  "n_queries_with_update_volatility": 8,
+  "update_volatility_level_counts": {
+    "high": 6,
+    "none": 2,
+    "medium": 2
+  },
+  "update_embedding_tradeoff_counts": {
+    "high_read_gain_high_update_pressure": 6,
+    "no_update_pressure": 2,
+    "high_read_gain_manageable_update_pressure": 2
+  },
+  "n_failed_integration_checks": 0,
+  "output_files": {
+    "document_variable_matrix_with_update_volatility_csv": "variables/block_v17/document_variable_matrix_with_update_volatility.csv",
+    "analytical_matrix_with_update_volatility_csv": "variables/block_v17/analytical_matrix_with_update_volatility.csv",
+    "document_variable_matrix_update_enriched_csv": "variables/block_v17/document_variable_matrix_update_enriched.csv",
+    "document_variable_matrix_csv": "variables/block_v17/document_variable_matrix.csv",
+    "integration_check_csv": "variables/block_v17/update_volatility_integration_check.csv",
+    "matrix_summary_csv": "variables/block_v17/update_volatility_matrix_summary.csv",
+    "by_potential_summary_csv": "variables/block_v17/update_volatility_by_potential_summary.csv",
+    "missing_merge_csv": "variables/block_v17/missing_update_volatility_merge.csv",
+    "failed_checks_csv": "variables/block_v17/failed_update_integration_checks.csv"
+  }
+}

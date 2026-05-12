@@ -1,0 +1,11 @@
+query_name,generic_class,query_family,touches_association,touches_containment,touches_descriptor,touches_ownership,touches_subtype,n_association_edges,n_containment_edges,n_descriptor_edges,n_ownership_edges,n_subtype_edges
+Q1_CompanyProfileIBM,QG1,Local lookup,False,False,False,False,False,0,0,0,0,0
+Q2_CompanyWithIndustryCountryAndListedSecurities,QG2,Shallow rooted retrieval,True,False,True,False,False,1,0,2,0,0
+Q3_SecuritiesHeldInEachFinancialServiceAccount,QG3,Associative retrieval,True,True,False,False,False,2,1,0,0,0
+Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,QG4,Deep traversal,True,True,False,True,False,2,1,0,1,0
+Q5_ReportsAndMetricDataOfCompany,QG5,Containment retrieval,False,True,False,False,False,0,4,0,0,0
+Q6_TechUSListedSecuritiesWithHighLastTradedValue,QG6,Filtered search / recommendation,True,False,True,False,False,1,0,2,0,0
+Q7_PersonsWhoBoughtMoreIBMThanSold,QG7,Aggregation / ranking,True,True,False,True,True,2,1,0,1,2
+Q8_IBMTransactionsBelowAverageSellingPrice,QG8,Aggregation / ranking,True,False,False,False,True,2,0,0,0,1
+Q9_PersonsWhoBoughtAndSoldSameStock,QG9,Associative retrieval + comparison,True,True,False,True,True,1,1,0,1,2
+Q10_CreateAccountHoldingAndBuyTransaction,QG10,Update / insertion with relationship creation,True,True,False,True,True,1,2,0,1,1

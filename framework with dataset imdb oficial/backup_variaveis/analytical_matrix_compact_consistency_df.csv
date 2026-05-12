@@ -1,0 +1,11 @@
+query_name,selected_root,selected_root_v11,selected_root_match_v11,Rc,Rc_v11,Rc_match_v11,D_value,D_value_v11,D_value_match_v11,selected_document_depth,selected_document_depth_v11,selected_document_depth_match_v11,selected_Re,selected_Re_v11,selected_Re_match_v11,selected_DeltaR,selected_DeltaR_v11,selected_DeltaR_match_v11,depth_selection_reason_v13,depth_selection_reason_v11
+QG1_WatchItemById,WatchItem,WatchItem,True,0,0,True,0,0,True,,,False,,,False,,,False,max_tested_depth_no_total_absorption,
+QG10_AdvancedSearchWatchItems,WatchItem,WatchItem,True,4,4,True,1,1,True,1.0,1.0,True,0.0,0.0,True,4.0,4.0,True,min_depth_with_total_absorption,min_depth_with_total_absorption
+QG2_WatchItemByTitle,WatchItem,WatchItem,True,0,0,True,0,0,True,,,False,,,False,,,False,max_tested_depth_no_total_absorption,
+QG3_RecommendationByGenreAndSubtype,WatchItem,WatchItem,True,4,4,True,1,1,True,1.0,1.0,True,0.0,0.0,True,4.0,4.0,True,min_depth_with_total_absorption,min_depth_with_total_absorption
+QG4_AllPersonsOfTypeForWatchItem,WatchItem,WatchItem,True,2,2,True,2,2,True,2.0,2.0,True,0.0,0.0,True,2.0,2.0,True,min_depth_with_total_absorption,min_depth_with_total_absorption
+QG5_AllPersonsForEpisodesOfSeries,WatchItem,WatchItem,True,4,4,True,2,2,True,2.0,2.0,True,0.0,0.0,True,4.0,4.0,True,min_depth_with_total_absorption,min_depth_with_total_absorption
+QG6_EpisodesOfSeries,Series,Series,True,1,1,True,1,1,True,1.0,1.0,True,0.0,0.0,True,1.0,1.0,True,min_depth_with_total_absorption,min_depth_with_total_absorption
+QG7_UpdateWatchItemMetadata,WatchItem,WatchItem,True,0,0,True,0,0,True,,,False,,,False,,,False,max_tested_depth_no_total_absorption,
+QG8_AddPersonRoleToWatchItem,WatchItem,WatchItem,True,2,2,True,2,2,True,2.0,2.0,True,0.0,0.0,True,2.0,2.0,True,min_depth_with_total_absorption,min_depth_with_total_absorption
+QG9_TopRatedSeriesByGenre,WatchItem,WatchItem,True,2,2,True,1,1,True,1.0,1.0,True,0.0,0.0,True,2.0,2.0,True,min_depth_with_total_absorption,min_depth_with_total_absorption

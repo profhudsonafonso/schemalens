@@ -1,0 +1,17 @@
+{
+  "block_name": "INSTANCE 1 — REAL FIBEN SCENARIO",
+  "timestamp": "2026-04-30T14:41:05",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_entities": 15,
+    "n_relationships": 15,
+    "n_workload_queries": 10,
+    "entities_csv": "variables/instance01/fiben_conceptual_entities.csv",
+    "relationships_csv": "variables/instance01/fiben_conceptual_relationships.csv",
+    "workload_core_csv": "variables/instance01/fiben_workload_core.csv",
+    "workload_benchmark_csv": "variables/instance01/fiben_workload_benchmark.csv",
+    "query_class_summary_csv": "variables/instance01/fiben_query_class_summary.csv",
+    "scenario_metadata_json": "variables/instance01/fiben_scenario_metadata.json"
+  }
+}

@@ -1,0 +1,15 @@
+file_name,file_stem,alias,size_mb,path
+CORPORATION.csv,CORPORATION,corporation,0.0883,/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables/CORPORATION.csv
+COUNTRY.csv,COUNTRY,country,0.0048,/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables/COUNTRY.csv
+DISCLOSURE.csv,DISCLOSURE,disclosure,31.5834,/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables/DISCLOSURE.csv
+ELEMENTOFFINANCIALSTATEMENT.csv,ELEMENTOFFINANCIALSTATEMENT,elementoffinancialstatement,65.4888,/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables/ELEMENTOFFINANCIALSTATEMENT.csv
+ELEMENTSOFFINANCIALREPORT.csv,ELEMENTSOFFINANCIALREPORT,elementsoffinancialreport,130.4384,/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables/ELEMENTSOFFINANCIALREPORT.csv
+FINANCIALREPORT.csv,FINANCIALREPORT,financialreport,1.5662,/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables/FINANCIALREPORT.csv
+FINANCIALSERVICEACCOUNT.csv,FINANCIALSERVICEACCOUNT,financialserviceaccount,7.0501,/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables/FINANCIALSERVICEACCOUNT.csv
+HOLDING.csv,HOLDING,holding,27.1699,/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables/HOLDING.csv
+INDUSTRYSECTORCLASSIFIER.csv,INDUSTRYSECTORCLASSIFIER,industrysectorclassifier,0.0315,/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables/INDUSTRYSECTORCLASSIFIER.csv
+LISTEDSECURITY.csv,LISTEDSECURITY,listedsecurity,0.1748,/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables/LISTEDSECURITY.csv
+MONETARYAMOUNT.csv,MONETARYAMOUNT,monetaryamount,4.7175,/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables/MONETARYAMOUNT.csv
+PERSON.csv,PERSON,person,4.3242,/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables/PERSON.csv
+SECURITIESTRANSACTION.csv,SECURITIESTRANSACTION,securitiestransaction,36.5434,/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables/SECURITIESTRANSACTION.csv
+SECURITY.csv,SECURITY,security,0.0393,/home/jovyan/privado/fiben/fiben_sf_artifacts/sf1_materialized/tables/SECURITY.csv

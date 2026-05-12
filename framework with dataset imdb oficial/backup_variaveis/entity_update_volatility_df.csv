@@ -1,0 +1,8 @@
+entity,total_weighted_writes,update_volatility_score,update_volatility_label
+Person,1.0,0.1,low
+Role,1.0,0.1,low
+WatchItem,1.0,0.1,low
+Episode,0.0,0.0,zero
+Genre,0.0,0.0,zero
+Movie,0.0,0.0,zero
+Series,0.0,0.0,zero

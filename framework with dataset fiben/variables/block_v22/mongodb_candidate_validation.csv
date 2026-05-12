@@ -1,0 +1,5 @@
+check_name,status,details
+every_query_has_candidates,passed,queries_without_candidates=0
+every_query_has_control_candidate,passed,queries_without_control=0
+every_candidate_has_root,passed,candidates_without_root=0
+candidate_ids_are_unique,passed,duplicated_candidate_ids=0

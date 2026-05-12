@@ -1,0 +1,1098 @@
+{
+  "BASE_DIR": "/home/jovyan/privado/framework evaluation approachs/framework with dataset LDBC SNB/data/sf0.1",
+  "SNB_SNAPSHOT_DIR": "/home/jovyan/privado/framework evaluation approachs/framework with dataset LDBC SNB/data/sf0.1/social_network-sf0.1-CsvMergeForeign-StringDateFormatter",
+  "SNB_DYNAMIC_DIR": "/home/jovyan/privado/framework evaluation approachs/framework with dataset LDBC SNB/data/sf0.1/social_network-sf0.1-CsvMergeForeign-StringDateFormatter/dynamic",
+  "SNB_STATIC_DIR": "/home/jovyan/privado/framework evaluation approachs/framework with dataset LDBC SNB/data/sf0.1/social_network-sf0.1-CsvMergeForeign-StringDateFormatter/static",
+  "SNB_SUBSTITUTION_DIR": "/home/jovyan/privado/framework evaluation approachs/framework with dataset LDBC SNB/data/sf0.1/substitution_parameters-sf0.1",
+  "SNB_UPDATE_DIR": "/home/jovyan/privado/framework evaluation approachs/framework with dataset LDBC SNB/data/sf0.1/social_network-sf0.1-numpart-1",
+  "SNB_ENTITY_VIEW_MAP": {
+    "Person": "snb_persons_entity",
+    "Forum": "snb_forums_entity",
+    "Post": "snb_posts_entity",
+    "Comment": "snb_comments_entity",
+    "Place": "snb_places_entity",
+    "Organisation": "snb_organisations_entity",
+    "Tag": "snb_tags_entity",
+    "TagClass": "snb_tagclasses_entity"
+  },
+  "SNB_ENTITY_PK_MAP": {
+    "Person": "person_id",
+    "Forum": "forum_id",
+    "Post": "post_id",
+    "Comment": "comment_id",
+    "Place": "place_id",
+    "Organisation": "organisation_id",
+    "Tag": "tag_id",
+    "TagClass": "tagclass_id"
+  },
+  "SNB_COLLECTION_NAME_BY_ENTITY": {
+    "Person": "persons",
+    "Forum": "forums",
+    "Post": "posts",
+    "Comment": "comments",
+    "Place": "places",
+    "Organisation": "organisations",
+    "Tag": "tags",
+    "TagClass": "tagclasses"
+  },
+  "SNB_RELATIONSHIP_HINTS": {
+    "person_knows_person": {
+      "semantic_type": "association",
+      "source_entity": "Person",
+      "target_entity": "Person",
+      "view_name": "snb_knows_norm",
+      "source_column": "person1_id",
+      "target_column": "person2_id",
+      "relationship_kind": "many_to_many",
+      "is_bidirectional": true
+    },
+    "person_is_located_in_place": {
+      "semantic_type": "association",
+      "source_entity": "Person",
+      "target_entity": "Place",
+      "view_name": "snb_person_islocatedin_place",
+      "source_column": "person_id",
+      "target_column": "place_id",
+      "relationship_kind": "many_to_one",
+      "is_bidirectional": false
+    },
+    "person_has_interest_tag": {
+      "semantic_type": "association",
+      "source_entity": "Person",
+      "target_entity": "Tag",
+      "view_name": "snb_person_interests_norm",
+      "source_column": "person_id",
+      "target_column": "tag_id",
+      "relationship_kind": "many_to_many",
+      "is_bidirectional": false
+    },
+    "person_likes_post": {
+      "semantic_type": "associative",
+      "source_entity": "Person",
+      "target_entity": "Post",
+      "view_name": "snb_person_likes_posts_norm",
+      "source_column": "person_id",
+      "target_column": "post_id",
+      "relationship_kind": "many_to_many",
+      "is_bidirectional": false
+    },
+    "person_likes_comment": {
+      "semantic_type": "associative",
+      "source_entity": "Person",
+      "target_entity": "Comment",
+      "view_name": "snb_person_likes_comments_norm",
+      "source_column": "person_id",
+      "target_column": "comment_id",
+      "relationship_kind": "many_to_many",
+      "is_bidirectional": false
+    },
+    "person_study_at_organisation": {
+      "semantic_type": "association",
+      "source_entity": "Person",
+      "target_entity": "Organisation",
+      "view_name": "snb_person_studyat_norm",
+      "source_column": "person_id",
+      "target_column": "organisation_id",
+      "relationship_kind": "many_to_many",
+      "is_bidirectional": false
+    },
+    "person_work_at_organisation": {
+      "semantic_type": "association",
+      "source_entity": "Person",
+      "target_entity": "Organisation",
+      "view_name": "snb_person_workat_norm",
+      "source_column": "person_id",
+      "target_column": "organisation_id",
+      "relationship_kind": "many_to_many",
+      "is_bidirectional": false
+    },
+    "forum_has_moderator_person": {
+      "semantic_type": "association",
+      "source_entity": "Forum",
+      "target_entity": "Person",
+      "view_name": "snb_forum_hasmoderator_person",
+      "source_column": "forum_id",
+      "target_column": "person_id",
+      "relationship_kind": "many_to_one",
+      "is_bidirectional": false
+    },
+    "forum_has_member_person": {
+      "semantic_type": "associative",
+      "source_entity": "Forum",
+      "target_entity": "Person",
+      "view_name": "snb_forum_members_norm",
+      "source_column": "forum_id",
+      "target_column": "person_id",
+      "relationship_kind": "many_to_many",
+      "is_bidirectional": false
+    },
+    "forum_has_tag": {
+      "semantic_type": "association",
+      "source_entity": "Forum",
+      "target_entity": "Tag",
+      "view_name": "snb_forum_tags_norm",
+      "source_column": "forum_id",
+      "target_column": "tag_id",
+      "relationship_kind": "many_to_many",
+      "is_bidirectional": false
+    },
+    "forum_container_of_post": {
+      "semantic_type": "containment",
+      "source_entity": "Forum",
+      "target_entity": "Post",
+      "view_name": "snb_forum_containerof_post",
+      "source_column": "forum_id",
+      "target_column": "post_id",
+      "relationship_kind": "one_to_many",
+      "is_bidirectional": false
+    },
+    "post_has_creator_person": {
+      "semantic_type": "association",
+      "source_entity": "Post",
+      "target_entity": "Person",
+      "view_name": "snb_post_hascreator_person",
+      "source_column": "post_id",
+      "target_column": "person_id",
+      "relationship_kind": "many_to_one",
+      "is_bidirectional": false
+    },
+    "post_is_located_in_place": {
+      "semantic_type": "association",
+      "source_entity": "Post",
+      "target_entity": "Place",
+      "view_name": "snb_post_islocatedin_place",
+      "source_column": "post_id",
+      "target_column": "place_id",
+      "relationship_kind": "many_to_one",
+      "is_bidirectional": false
+    },
+    "post_has_tag": {
+      "semantic_type": "association",
+      "source_entity": "Post",
+      "target_entity": "Tag",
+      "view_name": "snb_post_tags_norm",
+      "source_column": "post_id",
+      "target_column": "tag_id",
+      "relationship_kind": "many_to_many",
+      "is_bidirectional": false
+    },
+    "comment_has_creator_person": {
+      "semantic_type": "association",
+      "source_entity": "Comment",
+      "target_entity": "Person",
+      "view_name": "snb_comment_hascreator_person",
+      "source_column": "comment_id",
+      "target_column": "person_id",
+      "relationship_kind": "many_to_one",
+      "is_bidirectional": false
+    },
+    "comment_is_located_in_place": {
+      "semantic_type": "association",
+      "source_entity": "Comment",
+      "target_entity": "Place",
+      "view_name": "snb_comment_islocatedin_place",
+      "source_column": "comment_id",
+      "target_column": "place_id",
+      "relationship_kind": "many_to_one",
+      "is_bidirectional": false
+    },
+    "comment_has_tag": {
+      "semantic_type": "association",
+      "source_entity": "Comment",
+      "target_entity": "Tag",
+      "view_name": "snb_comment_tags_norm",
+      "source_column": "comment_id",
+      "target_column": "tag_id",
+      "relationship_kind": "many_to_many",
+      "is_bidirectional": false
+    },
+    "comment_reply_of_post": {
+      "semantic_type": "containment",
+      "source_entity": "Post",
+      "target_entity": "Comment",
+      "view_name": "snb_comment_replyof_post",
+      "source_column": "post_id",
+      "target_column": "comment_id",
+      "relationship_kind": "one_to_many",
+      "is_bidirectional": false
+    },
+    "comment_reply_of_comment": {
+      "semantic_type": "containment",
+      "source_entity": "Comment",
+      "target_entity": "Comment",
+      "view_name": "snb_comment_replyof_comment",
+      "source_column": "parent_comment_id",
+      "target_column": "comment_id",
+      "relationship_kind": "one_to_many",
+      "is_bidirectional": false
+    },
+    "organisation_is_located_in_place": {
+      "semantic_type": "association",
+      "source_entity": "Organisation",
+      "target_entity": "Place",
+      "view_name": "snb_organisation_islocatedin_place",
+      "source_column": "organisation_id",
+      "target_column": "place_id",
+      "relationship_kind": "many_to_one",
+      "is_bidirectional": false
+    },
+    "tag_has_type_tagclass": {
+      "semantic_type": "association",
+      "source_entity": "Tag",
+      "target_entity": "TagClass",
+      "view_name": "snb_tag_hastype_tagclass",
+      "source_column": "tag_id",
+      "target_column": "tagclass_id",
+      "relationship_kind": "many_to_one",
+      "is_bidirectional": false
+    },
+    "tagclass_is_subclass_of_tagclass": {
+      "semantic_type": "association",
+      "source_entity": "TagClass",
+      "target_entity": "TagClass",
+      "view_name": "snb_tagclass_issubclassof_tagclass",
+      "source_column": "tagclass_id",
+      "target_column": "parent_tagclass_id",
+      "relationship_kind": "many_to_one",
+      "is_bidirectional": false
+    },
+    "place_is_part_of_place": {
+      "semantic_type": "containment",
+      "source_entity": "Place",
+      "target_entity": "Place",
+      "view_name": "snb_place_ispartof_place",
+      "source_column": "parent_place_id",
+      "target_column": "place_id",
+      "relationship_kind": "one_to_many",
+      "is_bidirectional": false
+    }
+  },
+  "SNB_OFFICIAL_WORKLOAD": [
+    {
+      "query_name": "IS1_ProfileOfPerson",
+      "official_id": "IS1",
+      "official_title": "Profile of a person",
+      "query_group": "short_read",
+      "operation_type": "read",
+      "root_entity": "Person",
+      "accessed_entities": [
+        "Person",
+        "Place"
+      ],
+      "relationships_used": [
+        "person_is_located_in_place"
+      ],
+      "description": "Official IS1: retrieve a person's profile and city of residence."
+    },
+    {
+      "query_name": "IS2_RecentMessagesOfPerson",
+      "official_id": "IS2",
+      "official_title": "Recent messages of a person",
+      "query_group": "short_read",
+      "operation_type": "read",
+      "root_entity": "Person",
+      "accessed_entities": [
+        "Person",
+        "Post",
+        "Comment"
+      ],
+      "relationships_used": [
+        "post_has_creator_person",
+        "comment_has_creator_person",
+        "comment_reply_of_post",
+        "comment_reply_of_comment"
+      ],
+      "description": "Official IS2: retrieve the last messages created by a person and the original post in the conversation."
+    },
+    {
+      "query_name": "IS3_FriendsOfPerson",
+      "official_id": "IS3",
+      "official_title": "Friends of a person",
+      "query_group": "short_read",
+      "operation_type": "read",
+      "root_entity": "Person",
+      "accessed_entities": [
+        "Person"
+      ],
+      "relationships_used": [
+        "person_knows_person"
+      ],
+      "description": "Official IS3: retrieve all friends of a person and the friendship creation date."
+    },
+    {
+      "query_name": "IS4_ContentOfMessage",
+      "official_id": "IS4",
+      "official_title": "Content of a message",
+      "query_group": "short_read",
+      "operation_type": "read",
+      "root_entity": "Post",
+      "accessed_entities": [
+        "Post",
+        "Comment"
+      ],
+      "relationships_used": [],
+      "description": "Official IS4: retrieve content and creation date of a Message. Message is represented by Post or Comment."
+    },
+    {
+      "query_name": "IS5_CreatorOfMessage",
+      "official_id": "IS5",
+      "official_title": "Creator of a message",
+      "query_group": "short_read",
+      "operation_type": "read",
+      "root_entity": "Post",
+      "accessed_entities": [
+        "Post",
+        "Comment",
+        "Person"
+      ],
+      "relationships_used": [
+        "post_has_creator_person",
+        "comment_has_creator_person"
+      ],
+      "description": "Official IS5: retrieve the author of a Message. Message is represented by Post or Comment."
+    },
+    {
+      "query_name": "IS6_ForumOfMessage",
+      "official_id": "IS6",
+      "official_title": "Forum of a message",
+      "query_group": "short_read",
+      "operation_type": "read",
+      "root_entity": "Post",
+      "accessed_entities": [
+        "Post",
+        "Comment",
+        "Forum",
+        "Person"
+      ],
+      "relationships_used": [
+        "forum_container_of_post",
+        "comment_reply_of_post",
+        "comment_reply_of_comment",
+        "forum_has_moderator_person"
+      ],
+      "description": "Official IS6: retrieve the forum containing a Message and the moderator of that forum."
+    },
+    {
+      "query_name": "IS7_RepliesOfMessage",
+      "official_id": "IS7",
+      "official_title": "Replies of a message",
+      "query_group": "short_read",
+      "operation_type": "read",
+      "root_entity": "Post",
+      "accessed_entities": [
+        "Post",
+        "Comment",
+        "Person"
+      ],
+      "relationships_used": [
+        "comment_reply_of_post",
+        "comment_reply_of_comment",
+        "comment_has_creator_person",
+        "post_has_creator_person",
+        "person_knows_person"
+      ],
+      "description": "Official IS7: retrieve one-hop replies of a Message and whether reply author knows original author."
+    },
+    {
+      "query_name": "IC1_TransitiveFriendsWithName",
+      "official_id": "IC1",
+      "official_title": "Transitive friends with a certain name",
+      "query_group": "complex_read",
+      "operation_type": "read",
+      "root_entity": "Person",
+      "accessed_entities": [
+        "Person",
+        "Place",
+        "Organisation"
+      ],
+      "relationships_used": [
+        "person_knows_person",
+        "person_is_located_in_place",
+        "person_study_at_organisation",
+        "person_work_at_organisation",
+        "organisation_is_located_in_place"
+      ],
+      "description": "Official IC1: find people connected by up to 3 knows hops with a given first name, including workplaces and studies."
+    },
+    {
+      "query_name": "IC2_RecentMessagesByFriends",
+      "official_id": "IC2",
+      "official_title": "Recent messages by your friends",
+      "query_group": "complex_read",
+      "operation_type": "read",
+      "root_entity": "Person",
+      "accessed_entities": [
+        "Person",
+        "Post",
+        "Comment"
+      ],
+      "relationships_used": [
+        "person_knows_person",
+        "post_has_creator_person",
+        "comment_has_creator_person"
+      ],
+      "description": "Official IC2: find recent messages created by the friends of a person."
+    },
+    {
+      "query_name": "IC3_FriendsAndFriendsOfFriendsInCountries",
+      "official_id": "IC3",
+      "official_title": "Friends and friends of friends that have been to given countries",
+      "query_group": "complex_read",
+      "operation_type": "read",
+      "root_entity": "Person",
+      "accessed_entities": [
+        "Person",
+        "Post",
+        "Comment",
+        "Place"
+      ],
+      "relationships_used": [
+        "person_knows_person",
+        "person_is_located_in_place",
+        "post_has_creator_person",
+        "comment_has_creator_person",
+        "post_is_located_in_place",
+        "comment_is_located_in_place",
+        "place_is_part_of_place"
+      ],
+      "description": "Official IC3: find friends and friends-of-friends who created messages in two countries."
+    },
+    {
+      "query_name": "IC4_NewTopics",
+      "official_id": "IC4",
+      "official_title": "New topics",
+      "query_group": "complex_read",
+      "operation_type": "read",
+      "root_entity": "Person",
+      "accessed_entities": [
+        "Person",
+        "Post",
+        "Tag"
+      ],
+      "relationships_used": [
+        "person_knows_person",
+        "post_has_creator_person",
+        "post_has_tag"
+      ],
+      "description": "Official IC4: find new tags attached to posts created by friends in a time interval."
+    },
+    {
+      "query_name": "IC5_NewGroups",
+      "official_id": "IC5",
+      "official_title": "New groups",
+      "query_group": "complex_read",
+      "operation_type": "read",
+      "root_entity": "Person",
+      "accessed_entities": [
+        "Person",
+        "Forum",
+        "Post"
+      ],
+      "relationships_used": [
+        "person_knows_person",
+        "forum_has_member_person",
+        "forum_container_of_post",
+        "post_has_creator_person"
+      ],
+      "description": "Official IC5: find forums joined by friends/friends-of-friends and count their posts."
+    },
+    {
+      "query_name": "IC6_TagCoOccurrence",
+      "official_id": "IC6",
+      "official_title": "Tag co-occurrence",
+      "query_group": "complex_read",
+      "operation_type": "read",
+      "root_entity": "Person",
+      "accessed_entities": [
+        "Person",
+        "Post",
+        "Tag"
+      ],
+      "relationships_used": [
+        "person_knows_person",
+        "post_has_creator_person",
+        "post_has_tag"
+      ],
+      "description": "Official IC6: find tags co-occurring with a given tag on posts by friends/friends-of-friends."
+    },
+    {
+      "query_name": "IC7_RecentLikers",
+      "official_id": "IC7",
+      "official_title": "Recent likers",
+      "query_group": "complex_read",
+      "operation_type": "read",
+      "root_entity": "Person",
+      "accessed_entities": [
+        "Person",
+        "Post",
+        "Comment"
+      ],
+      "relationships_used": [
+        "post_has_creator_person",
+        "comment_has_creator_person",
+        "person_likes_post",
+        "person_likes_comment",
+        "person_knows_person"
+      ],
+      "description": "Official IC7: find recent likes on a person's messages and whether likers are friends."
+    },
+    {
+      "query_name": "INS1_AddPerson",
+      "official_id": "INS1",
+      "official_title": "Add person",
+      "query_group": "insert",
+      "operation_type": "insert",
+      "root_entity": "Person",
+      "accessed_entities": [
+        "Person",
+        "Place",
+        "Tag",
+        "Organisation"
+      ],
+      "relationships_used": [
+        "person_is_located_in_place",
+        "person_has_interest_tag",
+        "person_study_at_organisation",
+        "person_work_at_organisation"
+      ],
+      "description": "Official INS1: add a Person connected by location, interests, studyAt and workAt."
+    },
+    {
+      "query_name": "INS2_AddLikeToPost",
+      "official_id": "INS2",
+      "official_title": "Add like to post",
+      "query_group": "insert",
+      "operation_type": "insert",
+      "root_entity": "Person",
+      "accessed_entities": [
+        "Person",
+        "Post"
+      ],
+      "relationships_used": [
+        "person_likes_post"
+      ],
+      "description": "Official INS2: add a likes edge from Person to Post."
+    },
+    {
+      "query_name": "INS3_AddLikeToComment",
+      "official_id": "INS3",
+      "official_title": "Add like to comment",
+      "query_group": "insert",
+      "operation_type": "insert",
+      "root_entity": "Person",
+      "accessed_entities": [
+        "Person",
+        "Comment"
+      ],
+      "relationships_used": [
+        "person_likes_comment"
+      ],
+      "description": "Official INS3: add a likes edge from Person to Comment."
+    },
+    {
+      "query_name": "INS4_AddForum",
+      "official_id": "INS4",
+      "official_title": "Add forum",
+      "query_group": "insert",
+      "operation_type": "insert",
+      "root_entity": "Forum",
+      "accessed_entities": [
+        "Forum",
+        "Person",
+        "Tag"
+      ],
+      "relationships_used": [
+        "forum_has_moderator_person",
+        "forum_has_tag"
+      ],
+      "description": "Official INS4: add a Forum connected to a moderator and tags."
+    },
+    {
+      "query_name": "INS5_AddForumMembership",
+      "official_id": "INS5",
+      "official_title": "Add forum membership",
+      "query_group": "insert",
+      "operation_type": "insert",
+      "root_entity": "Forum",
+      "accessed_entities": [
+        "Forum",
+        "Person"
+      ],
+      "relationships_used": [
+        "forum_has_member_person"
+      ],
+      "description": "Official INS5: add a hasMember edge between Forum and Person."
+    },
+    {
+      "query_name": "INS6_AddPost",
+      "official_id": "INS6",
+      "official_title": "Add post",
+      "query_group": "insert",
+      "operation_type": "insert",
+      "root_entity": "Post",
+      "accessed_entities": [
+        "Post",
+        "Person",
+        "Forum",
+        "Place",
+        "Tag"
+      ],
+      "relationships_used": [
+        "post_has_creator_person",
+        "forum_container_of_post",
+        "post_is_located_in_place",
+        "post_has_tag"
+      ],
+      "description": "Official INS6: add a Post connected by creator, forum, location and tags."
+    },
+    {
+      "query_name": "INS7_AddComment",
+      "official_id": "INS7",
+      "official_title": "Add comment",
+      "query_group": "insert",
+      "operation_type": "insert",
+      "root_entity": "Comment",
+      "accessed_entities": [
+        "Comment",
+        "Person",
+        "Post",
+        "Place",
+        "Tag"
+      ],
+      "relationships_used": [
+        "comment_has_creator_person",
+        "comment_reply_of_post",
+        "comment_reply_of_comment",
+        "comment_is_located_in_place",
+        "comment_has_tag"
+      ],
+      "description": "Official INS7: add a Comment connected by replyOf, creator, location and tags."
+    },
+    {
+      "query_name": "INS8_AddFriendship",
+      "official_id": "INS8",
+      "official_title": "Add friendship",
+      "query_group": "insert",
+      "operation_type": "insert",
+      "root_entity": "Person",
+      "accessed_entities": [
+        "Person"
+      ],
+      "relationships_used": [
+        "person_knows_person"
+      ],
+      "description": "Official INS8: add a knows edge between two Persons."
+    }
+  ],
+  "SNB_OFFICIAL_QUERY_PATH_OVERRIDES": {
+    "IS1_ProfileOfPerson": {
+      "official_D": 1,
+      "note": "Person profile plus location place."
+    },
+    "IS2_RecentMessagesOfPerson": {
+      "official_D": 2,
+      "note": "Person -> Message plus possible Comment -> original Post traversal."
+    },
+    "IS3_FriendsOfPerson": {
+      "official_D": 1,
+      "note": "Person -> knows -> Person."
+    },
+    "IS4_ContentOfMessage": {
+      "official_D": 0,
+      "note": "Direct lookup of Message content; represented physically as Post or Comment."
+    },
+    "IS5_CreatorOfMessage": {
+      "official_D": 1,
+      "note": "Message -> creator Person."
+    },
+    "IS6_ForumOfMessage": {
+      "official_D": 3,
+      "note": "Message -> original Post -> Forum -> Moderator Person. Comments may require reply traversal."
+    },
+    "IS7_RepliesOfMessage": {
+      "official_D": 2,
+      "note": "Message -> replies -> reply creator, plus friendship check."
+    },
+    "IC1_TransitiveFriendsWithName": {
+      "official_D": 4,
+      "note": "Up to 3 knows hops plus profile/organisation/place expansion."
+    },
+    "IC2_RecentMessagesByFriends": {
+      "official_D": 2,
+      "note": "Person -> friend -> recent messages."
+    },
+    "IC3_FriendsAndFriendsOfFriendsInCountries": {
+      "official_D": 4,
+      "note": "Friends/friends-of-friends plus messages and country/place traversal."
+    },
+    "IC4_NewTopics": {
+      "official_D": 3,
+      "note": "Person -> friends -> posts -> tags."
+    },
+    "IC5_NewGroups": {
+      "official_D": 3,
+      "note": "Person -> friends/friends-of-friends -> forums -> posts."
+    },
+    "IC6_TagCoOccurrence": {
+      "official_D": 3,
+      "note": "Person -> friends/friends-of-friends -> posts -> tags."
+    },
+    "IC7_RecentLikers": {
+      "official_D": 2,
+      "note": "Person messages -> likers, plus knows check."
+    },
+    "INS1_AddPerson": {
+      "official_D": 1,
+      "note": "Insert Person plus direct relationships to Place, Tag and Organisation."
+    },
+    "INS2_AddLikeToPost": {
+      "official_D": 1,
+      "note": "Person -> likes -> Post."
+    },
+    "INS3_AddLikeToComment": {
+      "official_D": 1,
+      "note": "Person -> likes -> Comment."
+    },
+    "INS4_AddForum": {
+      "official_D": 1,
+      "note": "Forum plus moderator and tags."
+    },
+    "INS5_AddForumMembership": {
+      "official_D": 1,
+      "note": "Forum -> hasMember -> Person."
+    },
+    "INS6_AddPost": {
+      "official_D": 1,
+      "note": "Post plus creator, forum, place and tags."
+    },
+    "INS7_AddComment": {
+      "official_D": 1,
+      "note": "Comment plus creator, reply target, place and tags."
+    },
+    "INS8_AddFriendship": {
+      "official_D": 1,
+      "note": "Person -> knows -> Person."
+    }
+  },
+  "SNB_RELATIONSHIP_MULTIPLICITY_OVERRIDES": {
+    "IC1_TransitiveFriendsWithName": {
+      "person_knows_person": 3
+    },
+    "IC3_FriendsAndFriendsOfFriendsInCountries": {
+      "person_knows_person": 2
+    },
+    "IC5_NewGroups": {
+      "person_knows_person": 2
+    },
+    "IC6_TagCoOccurrence": {
+      "person_knows_person": 2
+    }
+  },
+  "PERSISTENT_DUCKDB_PATH": "/home/jovyan/privado/framework evaluation approachs/framework with dataset LDBC SNB/duckdb/ldbc_snb_sf0_1_clean.duckdb",
+  "UPDATE_OPERATION_CODE_MAP": {
+    "1": {
+      "official_id": "INS1",
+      "query_name": "INS1_AddPerson",
+      "operation": "Add person"
+    },
+    "2": {
+      "official_id": "INS2",
+      "query_name": "INS2_AddLikeToPost",
+      "operation": "Add like to post"
+    },
+    "3": {
+      "official_id": "INS3",
+      "query_name": "INS3_AddLikeToComment",
+      "operation": "Add like to comment"
+    },
+    "4": {
+      "official_id": "INS4",
+      "query_name": "INS4_AddForum",
+      "operation": "Add forum"
+    },
+    "5": {
+      "official_id": "INS5",
+      "query_name": "INS5_AddForumMembership",
+      "operation": "Add forum membership"
+    },
+    "6": {
+      "official_id": "INS6",
+      "query_name": "INS6_AddPost",
+      "operation": "Add post"
+    },
+    "7": {
+      "official_id": "INS7",
+      "query_name": "INS7_AddComment",
+      "operation": "Add comment"
+    },
+    "8": {
+      "official_id": "INS8",
+      "query_name": "INS8_AddFriendship",
+      "operation": "Add friendship"
+    }
+  },
+  "GENERIC_CONFIGURATION_CLASSES": {
+    "G0": {
+      "family": "association",
+      "role": "baseline",
+      "label": "Root document with referenced associations",
+      "description": "Baseline root-centric document. Associated entities are kept mostly as references."
+    },
+    "G1": {
+      "family": "lookup",
+      "role": "baseline",
+      "label": "Single-entity lookup document",
+      "description": "Minimal document for direct lookup queries with no structural traversal."
+    },
+    "G2": {
+      "family": "association",
+      "role": "embedding_candidate",
+      "label": "Root document with embedded low-risk associations",
+      "description": "Embed associated data when reduction is high and sharedness/volatility are not high."
+    },
+    "G3": {
+      "family": "association",
+      "role": "reference_or_summary_candidate",
+      "label": "Root document with references or denormalized summaries",
+      "description": "Use references or summaries when association paths involve high sharedness, high volatility, or deeper traversals."
+    },
+    "G4": {
+      "family": "associative",
+      "role": "baseline",
+      "label": "Associative relationship as explicit document",
+      "description": "Represent associative relationships such as likes, membership, or friendship as first-class documents."
+    },
+    "G5": {
+      "family": "associative",
+      "role": "source_embedded_edges",
+      "label": "Source-root document with embedded associative edges",
+      "description": "Embed associative edges near the source when fanout/sharedness risk is manageable."
+    },
+    "G6": {
+      "family": "associative",
+      "role": "referenced_or_reverse_associative",
+      "label": "Referenced or reverse-indexed associative pattern",
+      "description": "Use references, reverse lookups, or edge collections when associative relationships are volatile or highly shared."
+    },
+    "G7": {
+      "family": "containment",
+      "role": "baseline",
+      "label": "Containment baseline",
+      "description": "Baseline containment-oriented root document."
+    },
+    "G8": {
+      "family": "containment",
+      "role": "deep_embedding_candidate",
+      "label": "Deep containment embedding",
+      "description": "Embed contained children when containment is deep and sharedness/volatility are low."
+    },
+    "G9": {
+      "family": "containment",
+      "role": "hybrid_containment_candidate",
+      "label": "Hybrid containment with references or summaries",
+      "description": "Use hybrid containment when fanout, sharedness, or volatility makes full embedding risky."
+    }
+  },
+  "ACTIVATION_THRESHOLDS": {
+    "high_delta_ratio": 0.75,
+    "medium_delta_ratio": 0.4,
+    "high_volatility": 0.75,
+    "medium_volatility": 0.35,
+    "high_sharedness": 0.75,
+    "medium_sharedness": 0.25,
+    "deep_depth": 3,
+    "medium_depth": 2,
+    "high_residual_traversal": 3
+  },
+  "MONGODB_CANDIDATES_DIR": "/home/jovyan/privado/framework evaluation approachs/framework with dataset LDBC SNB/benchmark_artifacts_dir/ldbc_snb_mongo_configurations",
+  "MONGODB_PATTERN_TEMPLATES": {
+    "G0": {
+      "mongodb_pattern": "root_with_references",
+      "document_strategy": "reference",
+      "description": "Root collection stores root entity fields and references to related entities.",
+      "embedding_level": "none_or_minimal",
+      "reference_level": "high",
+      "summary_level": "optional",
+      "risk_profile": "safe_baseline"
+    },
+    "G1": {
+      "mongodb_pattern": "single_entity_lookup",
+      "document_strategy": "single_collection",
+      "description": "Single entity collection optimized for direct lookup by primary key.",
+      "embedding_level": "none",
+      "reference_level": "none",
+      "summary_level": "none",
+      "risk_profile": "lookup_baseline"
+    },
+    "G2": {
+      "mongodb_pattern": "root_with_embedded_low_risk_associations",
+      "document_strategy": "embed",
+      "description": "Embed low-risk associated data inside the root document.",
+      "embedding_level": "medium",
+      "reference_level": "low",
+      "summary_level": "optional",
+      "risk_profile": "embedding_when_safe"
+    },
+    "G3": {
+      "mongodb_pattern": "root_with_references_or_summaries",
+      "document_strategy": "reference_summary",
+      "description": "Use references and/or denormalized summaries for associated entities.",
+      "embedding_level": "low",
+      "reference_level": "high",
+      "summary_level": "medium",
+      "risk_profile": "shared_or_volatile_safe"
+    },
+    "G4": {
+      "mongodb_pattern": "explicit_edge_collection",
+      "document_strategy": "edge_document",
+      "description": "Represent associative relationships as explicit edge/relationship collections.",
+      "embedding_level": "none",
+      "reference_level": "high",
+      "summary_level": "none",
+      "risk_profile": "associative_baseline"
+    },
+    "G5": {
+      "mongodb_pattern": "source_embedded_edges",
+      "document_strategy": "embed_edges",
+      "description": "Embed associative edges near the source root when fanout is manageable.",
+      "embedding_level": "medium",
+      "reference_level": "medium",
+      "summary_level": "optional",
+      "risk_profile": "direct_associative_embedding"
+    },
+    "G6": {
+      "mongodb_pattern": "referenced_or_reverse_indexed_edges",
+      "document_strategy": "edge_reference_reverse_index",
+      "description": "Use references, edge collections, and optional reverse indexes for volatile/shared associative relationships.",
+      "embedding_level": "low",
+      "reference_level": "high",
+      "summary_level": "optional",
+      "risk_profile": "volatile_associative_safe"
+    },
+    "G7": {
+      "mongodb_pattern": "containment_baseline",
+      "document_strategy": "containment_reference",
+      "description": "Baseline containment layout with parent-child references.",
+      "embedding_level": "low",
+      "reference_level": "medium",
+      "summary_level": "optional",
+      "risk_profile": "containment_baseline"
+    },
+    "G8": {
+      "mongodb_pattern": "deep_containment_embedding",
+      "document_strategy": "embed_contained_children",
+      "description": "Embed contained child entities inside the root document when risk is low.",
+      "embedding_level": "high",
+      "reference_level": "low",
+      "summary_level": "optional",
+      "risk_profile": "deep_embedding_when_safe"
+    },
+    "G9": {
+      "mongodb_pattern": "hybrid_containment",
+      "document_strategy": "hybrid_embed_reference_summary",
+      "description": "Use partial embedding, references, and summaries for containment paths with fanout/sharedness/volatility risk.",
+      "embedding_level": "medium_partial",
+      "reference_level": "high",
+      "summary_level": "medium",
+      "risk_profile": "hybrid_containment_safe"
+    }
+  },
+  "candidate_manifest": {
+    "dataset": "ldbc_snb",
+    "scale_label": "sf0.1",
+    "workload": "LDBC SNB Interactive v1 official-based subset",
+    "created_at": "2026-05-08T18:01:11.375015Z",
+    "n_queries": 22,
+    "n_activations": 64,
+    "n_candidates": 64,
+    "files": {
+      "candidate_specs": "mongodb_candidate_specs_by_candidate_id.json",
+      "candidate_specs_overview": "mongodb_candidate_specs_overview.csv",
+      "candidate_validation": "mongodb_candidate_validation.csv",
+      "candidate_summary_by_g_class": "mongodb_candidate_summary_by_g_class.csv",
+      "candidate_summary_by_query": "mongodb_candidate_summary_by_query.csv",
+      "pattern_templates": "mongodb_pattern_templates_g0_g9.csv"
+    },
+    "notes": [
+      "Candidates are generated from the official-based LDBC SNB Interactive workload subset.",
+      "These specs are not benchmark results; they define MongoDB materialization candidates.",
+      "Benchmark execution will be handled by a separate runner script."
+    ]
+  },
+  "BENCHMARK_PLAN_DIR": "/home/jovyan/privado/framework evaluation approachs/framework with dataset LDBC SNB/benchmark_artifacts_dir/ldbc_snb_mongo_configurations",
+  "benchmark_manifest": {
+    "dataset": "ldbc_snb",
+    "scale_label": "sf0.1",
+    "workload": "LDBC SNB Interactive v1 official-based subset",
+    "created_at": "2026-05-08T18:01:11.375015Z",
+    "n_queries": 22,
+    "n_activations": 64,
+    "n_candidates": 64,
+    "files": {
+      "candidate_specs": "mongodb_candidate_specs_by_candidate_id.json",
+      "candidate_specs_overview": "mongodb_candidate_specs_overview.csv",
+      "candidate_validation": "mongodb_candidate_validation.csv",
+      "candidate_summary_by_g_class": "mongodb_candidate_summary_by_g_class.csv",
+      "candidate_summary_by_query": "mongodb_candidate_summary_by_query.csv",
+      "pattern_templates": "mongodb_pattern_templates_g0_g9.csv",
+      "benchmark_execution_plan": "benchmark_execution_plan.csv",
+      "benchmark_execution_plan_smoke": "benchmark_execution_plan_smoke.csv",
+      "benchmark_plan_summary_by_group": "benchmark_plan_summary_by_group.csv",
+      "benchmark_plan_summary_by_g_class": "benchmark_plan_summary_by_g_class.csv",
+      "benchmark_plan_smoke_summary": "benchmark_plan_smoke_summary.csv",
+      "benchmark_plan_validation": "benchmark_plan_validation.csv"
+    },
+    "notes": [
+      "Candidates are generated from the official-based LDBC SNB Interactive workload subset.",
+      "These specs are not benchmark results; they define MongoDB materialization candidates.",
+      "Benchmark execution will be handled by a separate runner script."
+    ],
+    "updated_at": "2026-05-08T18:11:49.056622Z",
+    "n_benchmark_plan_rows": 64,
+    "n_smoke_plan_rows": 24,
+    "benchmark_groups": [
+      "control",
+      "primary",
+      "secondary_affected"
+    ]
+  },
+  "BUNDLE_DIR": "/home/jovyan/privado/framework evaluation approachs/framework with dataset LDBC SNB/exported_benchmark_bundles/ldbc_snb_sf0_1_mongo_benchmark_bundle",
+  "BUNDLE_ARCHIVE_PATH": "/home/jovyan/privado/framework evaluation approachs/framework with dataset LDBC SNB/exported_benchmark_bundles/ldbc_snb_sf0_1_mongo_benchmark_bundle.tar.gz",
+  "bundle_manifest": {
+    "bundle_name": "ldbc_snb_sf0_1_mongo_benchmark_bundle",
+    "dataset": "ldbc_snb",
+    "scale_label": "sf0.1",
+    "workload": "LDBC SNB Interactive v1 official-based subset",
+    "created_at": "2026-05-08T18:17:58.126412Z",
+    "methodology_stage": "after_candidate_generation_and_benchmark_plan_selection",
+    "summary": {
+      "n_final_queries": 22,
+      "n_mongodb_candidates": 64,
+      "n_full_plan_rows": 64,
+      "n_smoke_plan_rows": 24
+    },
+    "key_files": {
+      "candidate_specs_json": "mongo_configurations/mongodb_candidate_specs_by_candidate_id.json",
+      "candidate_specs_overview": "mongo_configurations/mongodb_candidate_specs_overview.csv",
+      "full_benchmark_plan": "mongo_configurations/benchmark_execution_plan.csv",
+      "smoke_benchmark_plan": "mongo_configurations/benchmark_execution_plan_smoke.csv",
+      "benchmark_manifest": "mongo_configurations/benchmark_manifest.json",
+      "final_analytical_matrix": "final_analytical_matrix/snb_final_analytical_matrix.csv",
+      "activation_matrix": "activation/snb_activation_matrix.csv",
+      "activation_summary": "activation/snb_activation_summary.csv",
+      "volatility_matrix": "volatility/matrix_with_update_volatility.csv",
+      "sharedness_matrix": "sharedness/matrix_with_sharedness.csv"
+    },
+    "benchmark_groups": [
+      "primary",
+      "secondary_affected",
+      "control"
+    ],
+    "notes": [
+      "This bundle contains methodology outputs and benchmark execution plans.",
+      "It does not contain raw LDBC SNB CSV data.",
+      "The benchmark runner should receive this bundle plus the extracted SF0.1 CSV dataset.",
+      "Use benchmark_execution_plan_smoke.csv first before running benchmark_execution_plan.csv."
+    ]
+  }
+}

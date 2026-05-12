@@ -1,0 +1,10 @@
+config_name,activated_class,selected_root,proposed_embedding_depth,embedding_variant,embedded_entities,snapshot_entities,referenced_entities,derived_from_queries,n_supporting_queries
+series_g7,G7,Series,0,containment_baseline,,,Episode,QG6_EpisodesOfSeries,1
+series_g8,G8,Series,1,containment_reduced,Episode,,,QG6_EpisodesOfSeries,1
+series_g9,G9,Series,1,containment_full,Episode,,,QG6_EpisodesOfSeries,1
+watchitem_g0,G0,WatchItem,0,baseline_document,,,"Genre, Movie, Series, Episode, Role, Person","QG10_AdvancedSearchWatchItems, QG1_WatchItemById, QG2_WatchItemByTitle, QG3_RecommendationByGenreAndSubtype, QG4_AllPersonsOfTypeForWatchItem, QG5_AllPersonsForEpisodesOfSeries, QG7_UpdateWatchItemMetadata, QG8_AddPersonRoleToWatchItem, QG9_TopRatedSeriesByGenre",9
+watchitem_g2,G2,WatchItem,1,shared_descriptor,Genre,,"Movie, Series, Episode","QG10_AdvancedSearchWatchItems, QG3_RecommendationByGenreAndSubtype, QG9_TopRatedSeriesByGenre",3
+watchitem_g3,G3,WatchItem,1,structural_component,"Episode, Movie, Series",,Genre,"QG10_AdvancedSearchWatchItems, QG3_RecommendationByGenreAndSubtype, QG9_TopRatedSeriesByGenre",3
+watchitem_g4,G4,WatchItem,1,associative_partial,Role,,"Person, Series, Episode","QG4_AllPersonsOfTypeForWatchItem, QG5_AllPersonsForEpisodesOfSeries, QG8_AddPersonRoleToWatchItem",3
+watchitem_g5,G5,WatchItem,2,associative_snapshot,Role,Person,"Person, Series, Episode","QG4_AllPersonsOfTypeForWatchItem, QG5_AllPersonsForEpisodesOfSeries, QG8_AddPersonRoleToWatchItem",3
+watchitem_g6,G6,WatchItem,2,associative_full,"Role, Person",,"Series, Episode","QG4_AllPersonsOfTypeForWatchItem, QG5_AllPersonsForEpisodesOfSeries, QG8_AddPersonRoleToWatchItem",3

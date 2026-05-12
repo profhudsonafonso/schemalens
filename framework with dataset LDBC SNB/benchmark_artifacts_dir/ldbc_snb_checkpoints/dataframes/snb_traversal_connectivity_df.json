@@ -1,0 +1,394 @@
+[
+  {
+    "source_entity":"Person",
+    "target_entity":"Forum",
+    "reachable":true,
+    "distance":1,
+    "path":"Person -> Forum"
+  },
+  {
+    "source_entity":"Person",
+    "target_entity":"Post",
+    "reachable":true,
+    "distance":1,
+    "path":"Person -> Post"
+  },
+  {
+    "source_entity":"Person",
+    "target_entity":"Comment",
+    "reachable":true,
+    "distance":1,
+    "path":"Person -> Comment"
+  },
+  {
+    "source_entity":"Person",
+    "target_entity":"Place",
+    "reachable":true,
+    "distance":1,
+    "path":"Person -> Place"
+  },
+  {
+    "source_entity":"Person",
+    "target_entity":"Organisation",
+    "reachable":true,
+    "distance":1,
+    "path":"Person -> Organisation"
+  },
+  {
+    "source_entity":"Person",
+    "target_entity":"Tag",
+    "reachable":true,
+    "distance":1,
+    "path":"Person -> Tag"
+  },
+  {
+    "source_entity":"Person",
+    "target_entity":"TagClass",
+    "reachable":true,
+    "distance":2,
+    "path":"Person -> Tag -> TagClass"
+  },
+  {
+    "source_entity":"Forum",
+    "target_entity":"Person",
+    "reachable":true,
+    "distance":1,
+    "path":"Forum -> Person"
+  },
+  {
+    "source_entity":"Forum",
+    "target_entity":"Post",
+    "reachable":true,
+    "distance":1,
+    "path":"Forum -> Post"
+  },
+  {
+    "source_entity":"Forum",
+    "target_entity":"Comment",
+    "reachable":true,
+    "distance":2,
+    "path":"Forum -> Person -> Comment"
+  },
+  {
+    "source_entity":"Forum",
+    "target_entity":"Place",
+    "reachable":true,
+    "distance":2,
+    "path":"Forum -> Person -> Place"
+  },
+  {
+    "source_entity":"Forum",
+    "target_entity":"Organisation",
+    "reachable":true,
+    "distance":2,
+    "path":"Forum -> Person -> Organisation"
+  },
+  {
+    "source_entity":"Forum",
+    "target_entity":"Tag",
+    "reachable":true,
+    "distance":1,
+    "path":"Forum -> Tag"
+  },
+  {
+    "source_entity":"Forum",
+    "target_entity":"TagClass",
+    "reachable":true,
+    "distance":2,
+    "path":"Forum -> Tag -> TagClass"
+  },
+  {
+    "source_entity":"Post",
+    "target_entity":"Person",
+    "reachable":true,
+    "distance":1,
+    "path":"Post -> Person"
+  },
+  {
+    "source_entity":"Post",
+    "target_entity":"Forum",
+    "reachable":true,
+    "distance":1,
+    "path":"Post -> Forum"
+  },
+  {
+    "source_entity":"Post",
+    "target_entity":"Comment",
+    "reachable":true,
+    "distance":1,
+    "path":"Post -> Comment"
+  },
+  {
+    "source_entity":"Post",
+    "target_entity":"Place",
+    "reachable":true,
+    "distance":1,
+    "path":"Post -> Place"
+  },
+  {
+    "source_entity":"Post",
+    "target_entity":"Organisation",
+    "reachable":true,
+    "distance":2,
+    "path":"Post -> Place -> Organisation"
+  },
+  {
+    "source_entity":"Post",
+    "target_entity":"Tag",
+    "reachable":true,
+    "distance":1,
+    "path":"Post -> Tag"
+  },
+  {
+    "source_entity":"Post",
+    "target_entity":"TagClass",
+    "reachable":true,
+    "distance":2,
+    "path":"Post -> Tag -> TagClass"
+  },
+  {
+    "source_entity":"Comment",
+    "target_entity":"Person",
+    "reachable":true,
+    "distance":1,
+    "path":"Comment -> Person"
+  },
+  {
+    "source_entity":"Comment",
+    "target_entity":"Forum",
+    "reachable":true,
+    "distance":2,
+    "path":"Comment -> Person -> Forum"
+  },
+  {
+    "source_entity":"Comment",
+    "target_entity":"Post",
+    "reachable":true,
+    "distance":1,
+    "path":"Comment -> Post"
+  },
+  {
+    "source_entity":"Comment",
+    "target_entity":"Place",
+    "reachable":true,
+    "distance":1,
+    "path":"Comment -> Place"
+  },
+  {
+    "source_entity":"Comment",
+    "target_entity":"Organisation",
+    "reachable":true,
+    "distance":2,
+    "path":"Comment -> Place -> Organisation"
+  },
+  {
+    "source_entity":"Comment",
+    "target_entity":"Tag",
+    "reachable":true,
+    "distance":1,
+    "path":"Comment -> Tag"
+  },
+  {
+    "source_entity":"Comment",
+    "target_entity":"TagClass",
+    "reachable":true,
+    "distance":2,
+    "path":"Comment -> Tag -> TagClass"
+  },
+  {
+    "source_entity":"Place",
+    "target_entity":"Person",
+    "reachable":true,
+    "distance":1,
+    "path":"Place -> Person"
+  },
+  {
+    "source_entity":"Place",
+    "target_entity":"Forum",
+    "reachable":true,
+    "distance":2,
+    "path":"Place -> Person -> Forum"
+  },
+  {
+    "source_entity":"Place",
+    "target_entity":"Post",
+    "reachable":true,
+    "distance":1,
+    "path":"Place -> Post"
+  },
+  {
+    "source_entity":"Place",
+    "target_entity":"Comment",
+    "reachable":true,
+    "distance":1,
+    "path":"Place -> Comment"
+  },
+  {
+    "source_entity":"Place",
+    "target_entity":"Organisation",
+    "reachable":true,
+    "distance":1,
+    "path":"Place -> Organisation"
+  },
+  {
+    "source_entity":"Place",
+    "target_entity":"Tag",
+    "reachable":true,
+    "distance":2,
+    "path":"Place -> Comment -> Tag"
+  },
+  {
+    "source_entity":"Place",
+    "target_entity":"TagClass",
+    "reachable":true,
+    "distance":3,
+    "path":"Place -> Comment -> Tag -> TagClass"
+  },
+  {
+    "source_entity":"Organisation",
+    "target_entity":"Person",
+    "reachable":true,
+    "distance":1,
+    "path":"Organisation -> Person"
+  },
+  {
+    "source_entity":"Organisation",
+    "target_entity":"Forum",
+    "reachable":true,
+    "distance":2,
+    "path":"Organisation -> Person -> Forum"
+  },
+  {
+    "source_entity":"Organisation",
+    "target_entity":"Post",
+    "reachable":true,
+    "distance":2,
+    "path":"Organisation -> Person -> Post"
+  },
+  {
+    "source_entity":"Organisation",
+    "target_entity":"Comment",
+    "reachable":true,
+    "distance":2,
+    "path":"Organisation -> Person -> Comment"
+  },
+  {
+    "source_entity":"Organisation",
+    "target_entity":"Place",
+    "reachable":true,
+    "distance":1,
+    "path":"Organisation -> Place"
+  },
+  {
+    "source_entity":"Organisation",
+    "target_entity":"Tag",
+    "reachable":true,
+    "distance":2,
+    "path":"Organisation -> Person -> Tag"
+  },
+  {
+    "source_entity":"Organisation",
+    "target_entity":"TagClass",
+    "reachable":true,
+    "distance":3,
+    "path":"Organisation -> Person -> Tag -> TagClass"
+  },
+  {
+    "source_entity":"Tag",
+    "target_entity":"Person",
+    "reachable":true,
+    "distance":1,
+    "path":"Tag -> Person"
+  },
+  {
+    "source_entity":"Tag",
+    "target_entity":"Forum",
+    "reachable":true,
+    "distance":1,
+    "path":"Tag -> Forum"
+  },
+  {
+    "source_entity":"Tag",
+    "target_entity":"Post",
+    "reachable":true,
+    "distance":1,
+    "path":"Tag -> Post"
+  },
+  {
+    "source_entity":"Tag",
+    "target_entity":"Comment",
+    "reachable":true,
+    "distance":1,
+    "path":"Tag -> Comment"
+  },
+  {
+    "source_entity":"Tag",
+    "target_entity":"Place",
+    "reachable":true,
+    "distance":2,
+    "path":"Tag -> Comment -> Place"
+  },
+  {
+    "source_entity":"Tag",
+    "target_entity":"Organisation",
+    "reachable":true,
+    "distance":2,
+    "path":"Tag -> Person -> Organisation"
+  },
+  {
+    "source_entity":"Tag",
+    "target_entity":"TagClass",
+    "reachable":true,
+    "distance":1,
+    "path":"Tag -> TagClass"
+  },
+  {
+    "source_entity":"TagClass",
+    "target_entity":"Person",
+    "reachable":true,
+    "distance":2,
+    "path":"TagClass -> Tag -> Person"
+  },
+  {
+    "source_entity":"TagClass",
+    "target_entity":"Forum",
+    "reachable":true,
+    "distance":2,
+    "path":"TagClass -> Tag -> Forum"
+  },
+  {
+    "source_entity":"TagClass",
+    "target_entity":"Post",
+    "reachable":true,
+    "distance":2,
+    "path":"TagClass -> Tag -> Post"
+  },
+  {
+    "source_entity":"TagClass",
+    "target_entity":"Comment",
+    "reachable":true,
+    "distance":2,
+    "path":"TagClass -> Tag -> Comment"
+  },
+  {
+    "source_entity":"TagClass",
+    "target_entity":"Place",
+    "reachable":true,
+    "distance":3,
+    "path":"TagClass -> Tag -> Comment -> Place"
+  },
+  {
+    "source_entity":"TagClass",
+    "target_entity":"Organisation",
+    "reachable":true,
+    "distance":3,
+    "path":"TagClass -> Tag -> Person -> Organisation"
+  },
+  {
+    "source_entity":"TagClass",
+    "target_entity":"Tag",
+    "reachable":true,
+    "distance":1,
+    "path":"TagClass -> Tag"
+  }
+]

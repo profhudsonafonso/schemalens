@@ -1,0 +1,48 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "n_candidates": 60,
+  "n_queries": 10,
+  "n_control_candidates": 11,
+  "n_primary_candidates": 32,
+  "n_secondary_affected_candidates": 17,
+  "design_pattern_counts": {
+    "normalized_reference_baseline": 10,
+    "benchmark_tradeoff_alternative": 9,
+    "association_references": 8,
+    "shared_target_reference_strategy": 8,
+    "update_aware_reference_design": 8,
+    "embedded_containment": 6,
+    "deep_nested_document": 6,
+    "embedded_descriptors": 2,
+    "aggregation_materialized_collection": 2,
+    "root_only_collection": 1
+  },
+  "g_class_counts": {
+    "CONTROL": 10,
+    "G9": 9,
+    "G3": 8,
+    "G5": 8,
+    "G7": 8,
+    "G2": 6,
+    "G4": 6,
+    "G1": 2,
+    "G6": 2,
+    "G0": 1
+  },
+  "n_failed_validation_checks": 0,
+  "output_files": {
+    "mongodb_configuration_candidates_csv": "variables/block_v22/mongodb_configuration_candidates.csv",
+    "concrete_mongodb_candidates_csv": "variables/block_v22/concrete_mongodb_candidates.csv",
+    "mongo_candidate_configurations_csv": "variables/block_v22/mongo_candidate_configurations.csv",
+    "mongodb_configuration_candidates_long_csv": "variables/block_v22/mongodb_configuration_candidates_long.csv",
+    "control_candidates_csv": "variables/block_v22/control_candidates.csv",
+    "candidate_profile_by_query_csv": "variables/block_v22/candidate_profile_by_query.csv",
+    "document_variable_matrix_with_candidates_csv": "variables/block_v22/document_variable_matrix_with_candidates.csv",
+    "mongodb_candidate_summary_csv": "variables/block_v22/mongodb_candidate_summary.csv",
+    "mongodb_candidate_by_query_csv": "variables/block_v22/mongodb_candidate_by_query.csv",
+    "mongodb_candidate_priority_summary_csv": "variables/block_v22/mongodb_candidate_priority_summary.csv",
+    "mongodb_candidate_validation_csv": "variables/block_v22/mongodb_candidate_validation.csv"
+  }
+}

@@ -1,0 +1,28 @@
+[
+  {
+    "check":"candidate_count_matches_activation_count",
+    "value":"64 \/ 64",
+    "status":"OK",
+    "details":null
+  },
+  {
+    "check":"candidate_ids_are_unique",
+    "value":"64 \/ 64",
+    "status":"OK",
+    "details":null
+  },
+  {
+    "check":"candidate_g_classes_valid",
+    "value":0,
+    "status":"OK",
+    "details":[
+
+    ]
+  },
+  {
+    "check":"candidate_root_entities_present",
+    "value":0,
+    "status":"OK",
+    "details":null
+  }
+]

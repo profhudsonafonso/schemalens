@@ -1,0 +1,11 @@
+generic_class,query_family,selected_root,n_queries,query_names
+QG1,Local lookup,Corporation,1,['Q1_CompanyProfileIBM']
+QG10,Update / insertion with relationship creation,Person,1,['Q10_CreateAccountHoldingAndBuyTransaction']
+QG2,Shallow rooted retrieval,Corporation,1,['Q2_CompanyWithIndustryCountryAndListedSecurities']
+QG3,Associative retrieval,FinancialServiceAccount,1,['Q3_SecuritiesHeldInEachFinancialServiceAccount']
+QG4,Deep traversal,Person,1,['Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity']
+QG5,Containment retrieval,Corporation,1,['Q5_ReportsAndMetricDataOfCompany']
+QG6,Filtered search / recommendation,ListedSecurity,1,['Q6_TechUSListedSecuritiesWithHighLastTradedValue']
+QG7,Aggregation / ranking,Person,1,['Q7_PersonsWhoBoughtMoreIBMThanSold']
+QG8,Aggregation / ranking,Transaction,1,['Q8_IBMTransactionsBelowAverageSellingPrice']
+QG9,Associative retrieval + comparison,Person,1,['Q9_PersonsWhoBoughtAndSoldSameStock']

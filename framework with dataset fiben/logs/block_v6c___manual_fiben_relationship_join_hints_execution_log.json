@@ -1,0 +1,13 @@
+{
+  "block_name": "BLOCK V6C — MANUAL FIBEN RELATIONSHIP JOIN HINTS",
+  "timestamp": "2026-04-30T15:19:51",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_join_hints": 15,
+    "n_invalid_join_hints": 0,
+    "join_hints_csv": "variables/block_v06c/fiben_relationship_join_hints.csv",
+    "invalid_join_hints_csv": "variables/block_v06c/invalid_relationship_join_hints.csv",
+    "metadata_json": "variables/block_v06c/fiben_relationship_join_hints_metadata.json"
+  }
+}

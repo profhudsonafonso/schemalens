@@ -1,0 +1,6 @@
+candidate_root,avg_distance_to_other_touched_entities,max_distance_to_other_touched_entities,direct_links_to_other_touched_entities
+WatchItem,1.0,1,4
+Series,1.5,2,2
+Episode,1.5,2,2
+Genre,1.75,2,1
+Movie,1.75,2,1

@@ -1,0 +1,2 @@
+relationship_name,source,target,semantic_group,semantic_detail,is_shared_descriptor,is_structural_component,is_associative_bridge,is_containment,notes,edge_id
+episode_is_watchitem,Episode,WatchItem,association,structural_association,False,True,False,False,Episode é subtipo/componente estrutural próximo da raiz WatchItem.,Episode -- WatchItem [episode_is_watchitem]

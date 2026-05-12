@@ -1,0 +1,14 @@
+{
+  "block_name": "BLOCK V6B — MANUAL FIBEN ENTITY VIEW OVERRIDES",
+  "timestamp": "2026-04-30T15:13:30",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_entity_overrides": 15,
+    "n_valid_entity_overrides": 15,
+    "semantic_view_creation_csv": "variables/block_v06b/fiben_semantic_view_creation.csv",
+    "entity_view_override_validation_csv": "variables/block_v06b/fiben_entity_view_override_validation.csv",
+    "entity_override_columns_csv": "variables/block_v06b/fiben_entity_override_columns.csv",
+    "metadata_json": "variables/block_v06b/fiben_entity_view_overrides_metadata.json"
+  }
+}

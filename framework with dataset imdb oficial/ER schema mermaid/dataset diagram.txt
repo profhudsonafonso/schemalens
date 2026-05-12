@@ -1,0 +1,61 @@
+erDiagram
+    WATCHITEM {
+        string watchitem_id PK
+        string title_type
+        string title
+        string original_title
+        string is_adult
+        string release_year
+        string end_year
+        string runtime_minutes
+        string genres_raw
+        string primary_genre
+        string avg_rating
+        string num_votes
+    }
+
+    PERSON {
+        string person_id PK
+        string person_name
+        string birth_year
+        string death_year
+        string primary_profession
+        string known_for_titles
+    }
+
+    ROLE {
+        string role_id PK
+        string watchitem_id FK
+        string person_id FK
+        string principal_order
+        string role_category
+        string job
+        string characters
+    }
+
+    GENRE {
+        string genre_name PK
+    }
+
+    MOVIE {
+        string watchitem_id PK, FK
+    }
+
+    SERIES {
+        string watchitem_id PK, FK
+    }
+
+    EPISODE {
+        string episode_watchitem_id PK, FK
+        string series_watchitem_id FK
+        string season_number
+        string episode_number
+    }
+
+    GENRE ||--o{ WATCHITEM : "primary_genre_of"
+    WATCHITEM ||--o{ ROLE : "has_role"
+    PERSON ||--o{ ROLE : "participates_as"
+    WATCHITEM ||--o| MOVIE : "subtype"
+    WATCHITEM ||--o| SERIES : "subtype"
+    WATCHITEM ||--o| EPISODE : "subtype"
+    SERIES ||--o{ EPISODE : "contains"

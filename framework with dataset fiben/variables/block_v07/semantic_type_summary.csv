@@ -1,0 +1,6 @@
+semantic_type,n_relationships,relationships,source_entities,target_entities
+association,4,"['corporation_has_listed_security', 'holding_refers_to_listed_security', 'listed_security_represents_security', 'transaction_refers_to_listed_security']","['Corporation', 'Holding', 'ListedSecurity', 'Transaction']","['ListedSecurity', 'Security']"
+containment,6,"['account_has_holding', 'account_records_transaction', 'corporation_has_financial_report', 'financial_report_contains_disclosure', 'financial_report_contains_report_element', 'report_element_has_statement_element']","['Corporation', 'FinancialReport', 'FinancialServiceAccount', 'ReportElement']","['Disclosure', 'FinancialReport', 'Holding', 'ReportElement', 'StatementElement', 'Transaction']"
+descriptor,2,"['corporation_has_country', 'corporation_has_industry']",['Corporation'],"['Country', 'Industry']"
+ownership,1,['person_owns_financial_service_account'],['Person'],['FinancialServiceAccount']
+subtype,2,"['buy_transaction_is_transaction', 'sell_transaction_is_transaction']","['BuyTransaction', 'SellTransaction']",['Transaction']

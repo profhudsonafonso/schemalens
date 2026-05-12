@@ -1,0 +1,11 @@
+g_class,g_class_name,description
+G0,Root-only document,Use a simple root document when the query does not require relationship traversal.
+G1,Root with direct descriptors,Embed or colocate descriptor attributes/entities directly attached to the selected root.
+G2,Root with contained children,Embed containment children when the query benefits from nested document retrieval.
+G3,Root with associated references,Represent associative relationships around the root using embedded summaries or references.
+G4,Deep nested traversal document,Use multi-level nesting or path-oriented documents for deep traversal workloads.
+G5,Shared target reference strategy,Prefer references or controlled duplication when target entities are highly shared.
+G6,Aggregation-oriented document,Use precomputed or read-optimized structures for aggregation and ranking queries.
+G7,Update-aware document strategy,Avoid excessive embedding when write/update volatility is relevant.
+G8,Hybrid embedded-reference strategy,Use embedding for covered relationships and references for remaining external relationships.
+G9,Benchmark-required trade-off candidate,"Generate alternative configurations when read gain, update pressure, sharedness, or mapping risk create a design trade-off."

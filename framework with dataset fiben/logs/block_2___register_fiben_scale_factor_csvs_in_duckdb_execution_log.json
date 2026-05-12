@@ -1,0 +1,13 @@
+{
+  "block_name": "BLOCK 2 — REGISTER FIBEN SCALE-FACTOR CSVs IN DUCKDB",
+  "timestamp": "2026-04-30T14:29:59",
+  "notes": {
+    "status": "completed",
+    "selected_scale": "SF1",
+    "raw_csv_files_registered": 14,
+    "raw_inventory_csv": "variables/block02/fiben_raw_inventory.csv",
+    "bundle_summary_csv": "variables/block02/fiben_duckdb_bundle_summary.csv",
+    "bundle_metadata_json": "variables/block02/fiben_duckdb_bundle_metadata.json",
+    "duckdb_file": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/duckdb/fiben_sf1.duckdb"
+  }
+}

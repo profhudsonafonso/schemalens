@@ -1,0 +1,12 @@
+{
+  "defined_classes": [
+    "ScenarioSpec",
+    "FragmentSpec",
+    "RecommendationSpec",
+    "PhysicalDBSpec",
+    "MaterializationPlan",
+    "BenchmarkQuery",
+    "WorkloadSpec"
+  ],
+  "purpose": "Dataset-independent dataclasses used by the methodology notebook to define conceptual scenarios, recommendation fragments, physical materialization plans, and benchmark workloads."
+}

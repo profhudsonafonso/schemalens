@@ -1,0 +1,119 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "benchmark_artifacts_dir": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations",
+  "n_exported_artifacts": 15,
+  "n_selected_configurations": 60,
+  "n_candidate_specs": 60,
+  "n_queries_in_mapping": 10,
+  "n_failed_validation_checks": 0,
+  "n_warning_validation_checks": 0,
+  "exported_artifacts": [
+    {
+      "artifact_name": "benchmark_execution_plan_csv",
+      "path": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/benchmark_execution_plan.csv",
+      "relative_path": "benchmark_artifacts/fiben_mongodb_configurations/benchmark_execution_plan.csv",
+      "exists": true,
+      "file_size_bytes": 125892
+    },
+    {
+      "artifact_name": "benchmark_execution_plan_json",
+      "path": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/benchmark_execution_plan.json",
+      "relative_path": "benchmark_artifacts/fiben_mongodb_configurations/benchmark_execution_plan.json",
+      "exists": true,
+      "file_size_bytes": 200981
+    },
+    {
+      "artifact_name": "mongodb_candidate_specs_json",
+      "path": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/mongodb_candidate_specs.json",
+      "relative_path": "benchmark_artifacts/fiben_mongodb_configurations/mongodb_candidate_specs.json",
+      "exists": true,
+      "file_size_bytes": 83412
+    },
+    {
+      "artifact_name": "mongodb_candidate_specs_by_candidate_id_json",
+      "path": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/mongodb_candidate_specs_by_candidate_id.json",
+      "relative_path": "benchmark_artifacts/fiben_mongodb_configurations/mongodb_candidate_specs_by_candidate_id.json",
+      "exists": true,
+      "file_size_bytes": 88440
+    },
+    {
+      "artifact_name": "query_to_candidate_mapping_json",
+      "path": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/query_to_candidate_mapping.json",
+      "relative_path": "benchmark_artifacts/fiben_mongodb_configurations/query_to_candidate_mapping.json",
+      "exists": true,
+      "file_size_bytes": 26626
+    },
+    {
+      "artifact_name": "benchmark_group_mapping_json",
+      "path": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/benchmark_group_mapping.json",
+      "relative_path": "benchmark_artifacts/fiben_mongodb_configurations/benchmark_group_mapping.json",
+      "exists": true,
+      "file_size_bytes": 7710
+    },
+    {
+      "artifact_name": "benchmark_groups_summary_csv",
+      "path": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/benchmark_groups_summary.csv",
+      "relative_path": "benchmark_artifacts/fiben_mongodb_configurations/benchmark_groups_summary.csv",
+      "exists": true,
+      "file_size_bytes": 5614
+    },
+    {
+      "artifact_name": "benchmark_selection_by_query_csv",
+      "path": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/benchmark_selection_by_query.csv",
+      "relative_path": "benchmark_artifacts/fiben_mongodb_configurations/benchmark_selection_by_query.csv",
+      "exists": true,
+      "file_size_bytes": 8527
+    },
+    {
+      "artifact_name": "primary_configurations_csv",
+      "path": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/primary_configurations.csv",
+      "relative_path": "benchmark_artifacts/fiben_mongodb_configurations/primary_configurations.csv",
+      "exists": true,
+      "file_size_bytes": 65751
+    },
+    {
+      "artifact_name": "secondary_affected_configurations_csv",
+      "path": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/secondary_affected_configurations.csv",
+      "relative_path": "benchmark_artifacts/fiben_mongodb_configurations/secondary_affected_configurations.csv",
+      "exists": true,
+      "file_size_bytes": 36768
+    },
+    {
+      "artifact_name": "control_configurations_csv",
+      "path": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/control_configurations.csv",
+      "relative_path": "benchmark_artifacts/fiben_mongodb_configurations/control_configurations.csv",
+      "exists": true,
+      "file_size_bytes": 20058
+    },
+    {
+      "artifact_name": "workload_query_metadata_json",
+      "path": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/workload_query_metadata.json",
+      "relative_path": "benchmark_artifacts/fiben_mongodb_configurations/workload_query_metadata.json",
+      "exists": true,
+      "file_size_bytes": 5593
+    },
+    {
+      "artifact_name": "document_variable_matrix_csv",
+      "path": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/document_variable_matrix.csv",
+      "relative_path": "benchmark_artifacts/fiben_mongodb_configurations/document_variable_matrix.csv",
+      "exists": true,
+      "file_size_bytes": 45176
+    },
+    {
+      "artifact_name": "benchmark_manifest_json",
+      "path": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/benchmark_manifest.json",
+      "relative_path": "benchmark_artifacts/fiben_mongodb_configurations/benchmark_manifest.json",
+      "exists": true,
+      "file_size_bytes": 9138
+    },
+    {
+      "artifact_name": "external_readme_md",
+      "path": "/home/jovyan/privado/framework evaluation approachs/framework with dataset fiben/benchmark_artifacts/fiben_mongodb_configurations/README_benchmark_artifacts.md",
+      "relative_path": "benchmark_artifacts/fiben_mongodb_configurations/README_benchmark_artifacts.md",
+      "exists": true,
+      "file_size_bytes": 1814
+    }
+  ]
+}

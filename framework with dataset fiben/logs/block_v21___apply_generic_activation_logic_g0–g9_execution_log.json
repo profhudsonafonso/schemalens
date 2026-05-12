@@ -1,0 +1,17 @@
+{
+  "block_name": "BLOCK V21 — APPLY GENERIC ACTIVATION LOGIC G0–G9",
+  "timestamp": "2026-04-30T16:04:11",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_queries": 10,
+    "n_activation_long_rows": 100,
+    "n_queries_without_activation": 0,
+    "n_failed_activation_logic_validation_checks": 0,
+    "g_class_activation_by_query_csv": "variables/block_v21/g_class_activation_by_query.csv",
+    "g_class_activation_long_csv": "variables/block_v21/g_class_activation_long.csv",
+    "document_variable_matrix_with_activation_csv": "variables/block_v21/document_variable_matrix_with_activation.csv",
+    "activation_logic_validation_csv": "variables/block_v21/activation_logic_validation.csv",
+    "metadata_json": "variables/block_v21/g_class_activation_metadata.json"
+  }
+}

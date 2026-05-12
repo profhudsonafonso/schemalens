@@ -1,0 +1,16 @@
+{
+  "scenario_name": "FIBEN_Q1_Q10",
+  "dataset_name": "FIBEN",
+  "selected_scale": "SF1",
+  "n_physical_views": 19,
+  "n_column_rows": 117,
+  "n_likely_key_columns": 34,
+  "n_relationships_need_review": 13,
+  "output_files": {
+    "physical_view_inventory_csv": "variables/block_v06a/fiben_physical_view_inventory.csv",
+    "physical_column_dictionary_csv": "variables/block_v06a/fiben_physical_column_dictionary.csv",
+    "likely_key_columns_csv": "variables/block_v06a/fiben_likely_key_columns.csv",
+    "entity_mapping_diagnostic_csv": "variables/block_v06a/fiben_entity_mapping_diagnostic.csv",
+    "relationships_need_manual_review_csv": "variables/block_v06a/relationships_need_manual_review.csv"
+  }
+}

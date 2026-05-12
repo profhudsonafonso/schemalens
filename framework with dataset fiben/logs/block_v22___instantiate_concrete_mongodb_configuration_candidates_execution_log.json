@@ -1,0 +1,18 @@
+{
+  "block_name": "BLOCK V22 — INSTANTIATE CONCRETE MONGODB CONFIGURATION CANDIDATES",
+  "timestamp": "2026-04-30T16:06:52",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_candidates": 60,
+    "n_queries": 10,
+    "n_control_candidates": 11,
+    "n_primary_candidates": 32,
+    "n_secondary_affected_candidates": 17,
+    "n_failed_validation_checks": 0,
+    "mongodb_configuration_candidates_csv": "variables/block_v22/mongodb_configuration_candidates.csv",
+    "mongodb_candidate_summary_csv": "variables/block_v22/mongodb_candidate_summary.csv",
+    "mongodb_candidate_validation_csv": "variables/block_v22/mongodb_candidate_validation.csv",
+    "metadata_json": "variables/block_v22/mongodb_configuration_candidates_metadata.json"
+  }
+}

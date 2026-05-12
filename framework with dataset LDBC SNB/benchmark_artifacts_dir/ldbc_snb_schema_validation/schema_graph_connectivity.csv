@@ -1,0 +1,57 @@
+source_entity,target_entity,reachable,distance,path
+Person,Forum,False,,
+Person,Post,True,1.0,Person -> Post
+Person,Comment,True,1.0,Person -> Comment
+Person,Place,True,1.0,Person -> Place
+Person,Organisation,True,1.0,Person -> Organisation
+Person,Tag,True,1.0,Person -> Tag
+Person,TagClass,True,2.0,Person -> Tag -> TagClass
+Forum,Person,True,1.0,Forum -> Person
+Forum,Post,True,1.0,Forum -> Post
+Forum,Comment,True,2.0,Forum -> Person -> Comment
+Forum,Place,True,2.0,Forum -> Person -> Place
+Forum,Organisation,True,2.0,Forum -> Person -> Organisation
+Forum,Tag,True,1.0,Forum -> Tag
+Forum,TagClass,True,2.0,Forum -> Tag -> TagClass
+Post,Person,True,1.0,Post -> Person
+Post,Forum,False,,
+Post,Comment,True,1.0,Post -> Comment
+Post,Place,True,1.0,Post -> Place
+Post,Organisation,True,2.0,Post -> Person -> Organisation
+Post,Tag,True,1.0,Post -> Tag
+Post,TagClass,True,2.0,Post -> Tag -> TagClass
+Comment,Person,True,1.0,Comment -> Person
+Comment,Forum,False,,
+Comment,Post,True,2.0,Comment -> Person -> Post
+Comment,Place,True,1.0,Comment -> Place
+Comment,Organisation,True,2.0,Comment -> Person -> Organisation
+Comment,Tag,True,1.0,Comment -> Tag
+Comment,TagClass,True,2.0,Comment -> Tag -> TagClass
+Place,Person,False,,
+Place,Forum,False,,
+Place,Post,False,,
+Place,Comment,False,,
+Place,Organisation,False,,
+Place,Tag,False,,
+Place,TagClass,False,,
+Organisation,Person,False,,
+Organisation,Forum,False,,
+Organisation,Post,False,,
+Organisation,Comment,False,,
+Organisation,Place,True,1.0,Organisation -> Place
+Organisation,Tag,False,,
+Organisation,TagClass,False,,
+Tag,Person,False,,
+Tag,Forum,False,,
+Tag,Post,False,,
+Tag,Comment,False,,
+Tag,Place,False,,
+Tag,Organisation,False,,
+Tag,TagClass,True,1.0,Tag -> TagClass
+TagClass,Person,False,,
+TagClass,Forum,False,,
+TagClass,Post,False,,
+TagClass,Comment,False,,
+TagClass,Place,False,,
+TagClass,Organisation,False,,
+TagClass,Tag,False,,

@@ -1,0 +1,15 @@
+{
+  "block_name": "BLOCK V17 — INTEGRATE UPDATE VOLATILITY INTO THE ANALYTICAL MATRIX",
+  "timestamp": "2026-04-30T15:55:36",
+  "notes": {
+    "status": "completed",
+    "scenario_name": "FIBEN_Q1_Q10",
+    "n_rows_before_merge": 10,
+    "n_rows_after_merge": 10,
+    "n_columns_after_merge": 109,
+    "n_failed_integration_checks": 0,
+    "document_variable_matrix_with_update_volatility_csv": "variables/block_v17/document_variable_matrix_with_update_volatility.csv",
+    "integration_check_csv": "variables/block_v17/update_volatility_integration_check.csv",
+    "metadata_json": "variables/block_v17/update_volatility_integration_metadata.json"
+  }
+}

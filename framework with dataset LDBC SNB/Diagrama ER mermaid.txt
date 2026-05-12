@@ -1,0 +1,111 @@
+erDiagram
+
+    PERSON {
+        bigint id PK
+        datetime creationDate
+        string firstName
+        string lastName
+        string gender
+        date birthday
+        string locationIP
+        string browserUsed
+        string language
+        string email
+    }
+
+    FORUM {
+        bigint id PK
+        datetime creationDate
+        string title
+    }
+
+    POST {
+        bigint id PK
+        datetime creationDate
+        string imageFile
+        string locationIP
+        string browserUsed
+        string language
+        string content
+        int length
+    }
+
+    COMMENT {
+        bigint id PK
+        datetime creationDate
+        string locationIP
+        string browserUsed
+        string content
+        int length
+    }
+
+    TAG {
+        bigint id PK
+        string name
+        string url
+    }
+
+    TAGCLASS {
+        bigint id PK
+        string name
+        string url
+    }
+
+    PLACE {
+        bigint id PK
+        string name
+        string url
+        string type
+    }
+
+    ORGANISATION {
+        bigint id PK
+        string type
+        string name
+        string url
+    }
+
+    MESSAGE {
+        bigint id PK
+        datetime creationDate
+        string content
+        int length
+    }
+
+    %% Inheritance-like relations
+    MESSAGE ||--o{ POST : "is subtype"
+    MESSAGE ||--o{ COMMENT : "is subtype"
+    PLACE ||--o{ PLACE : "isPartOf"
+    ORGANISATION }o--|| PLACE : "isLocatedIn"
+
+    %% Person relations
+    PERSON }o--o{ PERSON : "knows"
+    PERSON }o--o{ TAG : "hasInterest"
+    PERSON }o--|| PLACE : "isLocatedIn"
+    PERSON }o--o{ ORGANISATION : "studyAt"
+    PERSON }o--o{ ORGANISATION : "workAt"
+
+    %% Forum relations
+    FORUM ||--o{ POST : "containerOf"
+    FORUM }o--|| PERSON : "hasModerator"
+    FORUM }o--o{ PERSON : "hasMember"
+    FORUM }o--o{ TAG : "hasTag"
+
+    %% Message relations
+    POST }o--|| PERSON : "hasCreator"
+    COMMENT }o--|| PERSON : "hasCreator"
+    POST }o--|| PLACE : "isLocatedIn"
+    COMMENT }o--|| PLACE : "isLocatedIn"
+
+    POST }o--o{ TAG : "hasTag"
+    COMMENT }o--o{ TAG : "hasTag"
+
+    PERSON }o--o{ POST : "likes"
+    PERSON }o--o{ COMMENT : "likes"
+
+    COMMENT }o--|| POST : "replyOf"
+    COMMENT }o--|| COMMENT : "replyOf"
+
+    %% Tag hierarchy
+    TAG }o--|| TAGCLASS : "hasType"
+    TAGCLASS }o--o| TAGCLASS : "isSubclassOf"

@@ -1,0 +1,8 @@
+semantic_type,observed_cardinality,hint_confidence,n_relationships,relationships
+association,no_observed_matches,medium,2,"['corporation_has_listed_security', 'listed_security_represents_security']"
+association,observed_N_to_M,high,2,"['holding_refers_to_listed_security', 'transaction_refers_to_listed_security']"
+containment,no_observed_matches,low,2,"['financial_report_contains_disclosure', 'report_element_has_statement_element']"
+containment,observed_N_to_M,high,4,"['account_has_holding', 'account_records_transaction', 'corporation_has_financial_report', 'financial_report_contains_report_element']"
+descriptor,observed_N_to_M,high,2,"['corporation_has_country', 'corporation_has_industry']"
+ownership,observed_N_to_M,high,1,['person_owns_financial_service_account']
+subtype,observed_1_to_1,medium,2,"['buy_transaction_is_transaction', 'sell_transaction_is_transaction']"

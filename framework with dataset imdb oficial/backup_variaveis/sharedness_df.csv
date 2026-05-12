@@ -1,0 +1,8 @@
+root_entity,target_entity,relationship_context,n_target_instances_observed,avg_roots_per_target,max_roots_per_target
+Series,Episode,Series to Episode (containment),2294687,1.0,1
+WatchItem,Episode,Subtype identity: Episode is WatchItem,2294687,1.0,1
+WatchItem,Genre,WatchItem to Genre,28,106406.6429,644278
+WatchItem,Movie,Subtype identity: Movie is WatchItem,182165,1.0,1
+WatchItem,Person,WatchItem to Person via Role,2326466,6.4135,5692
+WatchItem,Role,WatchItem to Role,16451315,1.0,1
+WatchItem,Series,Subtype identity: Series is WatchItem,186514,1.0,1

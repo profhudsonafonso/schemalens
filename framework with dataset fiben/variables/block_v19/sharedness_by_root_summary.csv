@@ -1,0 +1,7 @@
+selected_root,query_observed_sharedness_level,n_queries,queries,avg_DeltaRratio,avg_sharedness_score
+Corporation,medium,2,"['Q2_CompanyWithIndustryCountryAndListedSecurities', 'Q5_ReportsAndMetricDataOfCompany']",1.0,0.2960196222030981
+Corporation,none,1,['Q1_CompanyProfileIBM'],0.0,0.0
+FinancialServiceAccount,medium,1,['Q3_SecuritiesHeldInEachFinancialServiceAccount'],1.0,0.2958825
+ListedSecurity,medium,1,['Q6_TechUSListedSecuritiesWithHighLastTradedValue'],1.0,0.2974182444061962
+Person,medium,4,"['Q10_CreateAccountHoldingAndBuyTransaction', 'Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity', 'Q7_PersonsWhoBoughtMoreIBMThanSold', 'Q9_PersonsWhoBoughtAndSoldSameStock']",1.0,0.2958825
+Transaction,medium,1,['Q8_IBMTransactionsBelowAverageSellingPrice'],1.0,0.2958825

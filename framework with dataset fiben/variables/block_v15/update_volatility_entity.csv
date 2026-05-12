@@ -1,0 +1,16 @@
+entity,weighted_update_events,n_update_event_rows,n_write_queries_affecting_entity,n_queries_referencing_entity,modification_categories,write_queries_affecting_entity,weighted_update_volatility_norm,write_query_coverage,update_volatility_score,has_update_volatility,update_volatility_level,has_created_activity,has_updated_activity,has_deleted_activity,has_relationship_created_activity,has_affected_persistence_region_activity,has_referenced_existing_activity
+BuyTransaction,2.0,5,1,3,"['affected_persistence_region', 'created', 'referenced_existing', 'relationship_created']",['Q10_CreateAccountHoldingAndBuyTransaction'],1.0,1.0,1.0,True,high,True,False,False,True,True,True
+FinancialServiceAccount,2.0,7,1,5,"['affected_persistence_region', 'created', 'referenced_existing', 'relationship_created']",['Q10_CreateAccountHoldingAndBuyTransaction'],1.0,1.0,1.0,True,high,True,False,False,True,True,True
+Holding,2.0,5,1,3,"['affected_persistence_region', 'created', 'referenced_existing', 'relationship_created']",['Q10_CreateAccountHoldingAndBuyTransaction'],1.0,1.0,1.0,True,high,True,False,False,True,True,True
+Transaction,2.0,6,1,4,"['affected_persistence_region', 'created', 'referenced_existing', 'relationship_created']",['Q10_CreateAccountHoldingAndBuyTransaction'],1.0,1.0,1.0,True,high,True,False,False,True,True,True
+ListedSecurity,1.15,10,1,8,"['affected_persistence_region', 'referenced_existing', 'relationship_created']",['Q10_CreateAccountHoldingAndBuyTransaction'],0.575,1.0,0.6599999999999999,True,high,False,False,False,True,True,True
+Person,1.15,6,1,4,"['affected_persistence_region', 'referenced_existing', 'relationship_created']",['Q10_CreateAccountHoldingAndBuyTransaction'],0.575,1.0,0.6599999999999999,True,high,False,False,False,True,True,True
+Corporation,0.0,7,0,7,['referenced_existing'],[],0.0,0.0,0.0,False,none,False,False,False,False,False,True
+Country,0.0,2,0,2,['referenced_existing'],[],0.0,0.0,0.0,False,none,False,False,False,False,False,True
+Disclosure,0.0,1,0,1,['referenced_existing'],[],0.0,0.0,0.0,False,none,False,False,False,False,False,True
+FinancialReport,0.0,1,0,1,['referenced_existing'],[],0.0,0.0,0.0,False,none,False,False,False,False,False,True
+Industry,0.0,2,0,2,['referenced_existing'],[],0.0,0.0,0.0,False,none,False,False,False,False,False,True
+ReportElement,0.0,1,0,1,['referenced_existing'],[],0.0,0.0,0.0,False,none,False,False,False,False,False,True
+Security,0.0,1,0,1,['referenced_existing'],[],0.0,0.0,0.0,False,none,False,False,False,False,False,True
+SellTransaction,0.0,3,0,3,['referenced_existing'],[],0.0,0.0,0.0,False,none,False,False,False,False,False,True
+StatementElement,0.0,1,0,1,['referenced_existing'],[],0.0,0.0,0.0,False,none,False,False,False,False,False,True

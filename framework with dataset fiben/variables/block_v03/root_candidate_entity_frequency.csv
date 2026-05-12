@@ -1,0 +1,16 @@
+candidate_root,n_queries_as_candidate,query_names,avg_candidate_entity_degree
+ListedSecurity,8,"['Q10_CreateAccountHoldingAndBuyTransaction', 'Q2_CompanyWithIndustryCountryAndListedSecurities', 'Q3_SecuritiesHeldInEachFinancialServiceAccount', 'Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity', 'Q6_TechUSListedSecuritiesWithHighLastTradedValue', 'Q7_PersonsWhoBoughtMoreIBMThanSold', 'Q8_IBMTransactionsBelowAverageSellingPrice', 'Q9_PersonsWhoBoughtAndSoldSameStock']",4.0
+Corporation,7,"['Q1_CompanyProfileIBM', 'Q2_CompanyWithIndustryCountryAndListedSecurities', 'Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity', 'Q5_ReportsAndMetricDataOfCompany', 'Q6_TechUSListedSecuritiesWithHighLastTradedValue', 'Q7_PersonsWhoBoughtMoreIBMThanSold', 'Q8_IBMTransactionsBelowAverageSellingPrice']",4.0
+FinancialServiceAccount,5,"['Q10_CreateAccountHoldingAndBuyTransaction', 'Q3_SecuritiesHeldInEachFinancialServiceAccount', 'Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity', 'Q7_PersonsWhoBoughtMoreIBMThanSold', 'Q9_PersonsWhoBoughtAndSoldSameStock']",3.0
+Person,4,"['Q10_CreateAccountHoldingAndBuyTransaction', 'Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity', 'Q7_PersonsWhoBoughtMoreIBMThanSold', 'Q9_PersonsWhoBoughtAndSoldSameStock']",1.0
+Transaction,4,"['Q10_CreateAccountHoldingAndBuyTransaction', 'Q7_PersonsWhoBoughtMoreIBMThanSold', 'Q8_IBMTransactionsBelowAverageSellingPrice', 'Q9_PersonsWhoBoughtAndSoldSameStock']",4.0
+BuyTransaction,3,"['Q10_CreateAccountHoldingAndBuyTransaction', 'Q7_PersonsWhoBoughtMoreIBMThanSold', 'Q9_PersonsWhoBoughtAndSoldSameStock']",1.0
+Holding,3,"['Q10_CreateAccountHoldingAndBuyTransaction', 'Q3_SecuritiesHeldInEachFinancialServiceAccount', 'Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity']",2.0
+SellTransaction,3,"['Q7_PersonsWhoBoughtMoreIBMThanSold', 'Q8_IBMTransactionsBelowAverageSellingPrice', 'Q9_PersonsWhoBoughtAndSoldSameStock']",1.0
+Country,2,"['Q2_CompanyWithIndustryCountryAndListedSecurities', 'Q6_TechUSListedSecuritiesWithHighLastTradedValue']",1.0
+Industry,2,"['Q2_CompanyWithIndustryCountryAndListedSecurities', 'Q6_TechUSListedSecuritiesWithHighLastTradedValue']",1.0
+Disclosure,1,['Q5_ReportsAndMetricDataOfCompany'],1.0
+FinancialReport,1,['Q5_ReportsAndMetricDataOfCompany'],3.0
+ReportElement,1,['Q5_ReportsAndMetricDataOfCompany'],2.0
+Security,1,['Q3_SecuritiesHeldInEachFinancialServiceAccount'],1.0
+StatementElement,1,['Q5_ReportsAndMetricDataOfCompany'],1.0

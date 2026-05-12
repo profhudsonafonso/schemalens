@@ -1,0 +1,5 @@
+observed_cardinality,computation_status,hint_confidence,n_relationships,relationships
+no_observed_matches,computed,low,2,"['financial_report_contains_disclosure', 'report_element_has_statement_element']"
+no_observed_matches,computed,medium,2,"['corporation_has_listed_security', 'listed_security_represents_security']"
+observed_1_to_1,computed,medium,2,"['buy_transaction_is_transaction', 'sell_transaction_is_transaction']"
+observed_N_to_M,computed,high,9,"['account_has_holding', 'account_records_transaction', 'corporation_has_country', 'corporation_has_financial_report', 'corporation_has_industry', 'financial_report_contains_report_element', 'holding_refers_to_listed_security', 'person_owns_financial_service_account', 'transaction_refers_to_listed_security']"

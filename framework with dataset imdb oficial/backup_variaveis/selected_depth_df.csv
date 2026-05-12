@@ -1,0 +1,8 @@
+query_name,selected_root_from_reduction,Rc_from_reduction,document_depth_selected,Re_selected,DeltaR_selected,DeltaRratio_selected,depth_selection_reason
+QG10_AdvancedSearchWatchItems,WatchItem,4,1,0,4,1.0,min_depth_with_total_absorption
+QG3_RecommendationByGenreAndSubtype,WatchItem,4,1,0,4,1.0,min_depth_with_total_absorption
+QG4_AllPersonsOfTypeForWatchItem,WatchItem,2,2,0,2,1.0,min_depth_with_total_absorption
+QG5_AllPersonsForEpisodesOfSeries,WatchItem,4,2,0,4,1.0,min_depth_with_total_absorption
+QG6_EpisodesOfSeries,Series,1,1,0,1,1.0,min_depth_with_total_absorption
+QG8_AddPersonRoleToWatchItem,WatchItem,2,2,0,2,1.0,min_depth_with_total_absorption
+QG9_TopRatedSeriesByGenre,WatchItem,2,1,0,2,1.0,min_depth_with_total_absorption

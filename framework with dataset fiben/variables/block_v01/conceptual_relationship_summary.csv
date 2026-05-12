@@ -1,0 +1,6 @@
+semantic_type,n_relationships,source_entities,target_entities
+association,4,"['Corporation', 'Holding', 'ListedSecurity', 'Transaction']","['ListedSecurity', 'Security']"
+containment,6,"['Corporation', 'FinancialReport', 'FinancialServiceAccount', 'ReportElement']","['Disclosure', 'FinancialReport', 'Holding', 'ReportElement', 'StatementElement', 'Transaction']"
+descriptor,2,['Corporation'],"['Country', 'Industry']"
+ownership,1,['Person'],['FinancialServiceAccount']
+subtype,2,"['BuyTransaction', 'SellTransaction']",['Transaction']
