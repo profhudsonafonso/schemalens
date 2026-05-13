@@ -1,0 +1,4 @@
+dataset,family,representative_query,scale_label,activated_configs,best_config,DSR,Top-1,Near-best(5%),Regret
+IMDb,Association,QG3_RecommendationByGenreAndSubtype,sf1,"G0, G2, G3",G8,0.6666666666666667,False,True,0.029756447033424116
+IMDb,Associative,QG4_AllPersonsOfTypeForWatchItem,sf0.25,"G0, G4, G5, G6",G6,0.5555555555555556,True,True,0.0
+IMDb,Containment,QG6_EpisodesOfSeries,sf0.5,"G7, G8, G9",G7,0.6666666666666667,True,True,0.0

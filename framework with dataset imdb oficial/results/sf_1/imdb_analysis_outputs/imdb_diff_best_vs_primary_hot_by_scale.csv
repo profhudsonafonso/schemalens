@@ -1,0 +1,5 @@
+official_id,query_name,scale_label,best_config,best_design_pattern,best_p95_ms,best_primary_config,best_primary_p95_ms,primary_regret
+QG10,QG10_AdvancedSearchWatchItems,sf1,G9,containment_family,299.80202334627387,G3,300.348336949537,0.001822247886006155
+QG3,QG3_RecommendationByGenreAndSubtype,sf1,G8,containment_family,10.41732880621566,G0,10.72731149906758,0.029756447033424116
+QG8,QG8_AddPersonRoleToWatchItem,sf1,G3,root_local_family,0.3732010467501823,G0,0.3756350502953864,0.0065219633395975545
+QG9,QG9_TopRatedSeriesByGenre,sf1,G7,containment_family,4.0780437040666575,G2,159.41339150376731,38.0906530366016

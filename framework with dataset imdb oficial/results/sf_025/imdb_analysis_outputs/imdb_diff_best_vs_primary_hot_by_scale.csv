@@ -1,0 +1,4 @@
+official_id,query_name,scale_label,best_config,best_design_pattern,best_p95_ms,best_primary_config,best_primary_p95_ms,primary_regret
+QG10,QG10_AdvancedSearchWatchItems,sf0.25,G9,containment_family,115.31208974847686,G3,117.93523374872166,0.022748213183600215
+QG3,QG3_RecommendationByGenreAndSubtype,sf0.25,G8,containment_family,5.637626150928553,G2,6.176213199796621,0.09553436755989199
+QG9,QG9_TopRatedSeriesByGenre,sf0.25,G7,containment_family,3.006609698422833,G0,40.19758284921407,12.369737638477112

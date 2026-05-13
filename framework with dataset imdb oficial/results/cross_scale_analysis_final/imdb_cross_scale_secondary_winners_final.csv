@@ -1,0 +1,11 @@
+scale_label,run_phase,official_id,query_name,best_config,best_design_pattern,best_p95_ms,best_primary_config,best_primary_p95_ms,primary_regret
+sf0_25,hot,QG10,QG10_AdvancedSearchWatchItems,G9,containment_family,115.31208974847686,G3,117.93523374872166,0.0227482131836002
+sf0_25,hot,QG3,QG3_RecommendationByGenreAndSubtype,G8,containment_family,5.637626150928553,G2,6.176213199796621,0.0955343675598919
+sf0_25,hot,QG9,QG9_TopRatedSeriesByGenre,G7,containment_family,3.006609698422833,G0,40.19758284921407,12.369737638477112
+sf0_50,hot,QG10,QG10_AdvancedSearchWatchItems,G7,containment_family,171.64141285902582,G3,174.50707810276066,0.0166956516845296
+sf0_50,hot,QG3,QG3_RecommendationByGenreAndSubtype,G8,containment_family,7.588796650088624,G0,7.950160656037042,0.0476180905366857
+sf0_50,hot,QG9,QG9_TopRatedSeriesByGenre,G7,containment_family,2.054242697340668,G2,78.13642835462812,37.03661001486344
+sf_1,hot,QG10,QG10_AdvancedSearchWatchItems,G9,containment_family,299.80202334627387,G3,300.348336949537,0.0018222478860061
+sf_1,hot,QG3,QG3_RecommendationByGenreAndSubtype,G8,containment_family,10.41732880621566,G0,10.72731149906758,0.0297564470334241
+sf_1,hot,QG8,QG8_AddPersonRoleToWatchItem,G3,root_local_family,0.3732010467501823,G0,0.3756350502953864,0.0065219633395975
+sf_1,hot,QG9,QG9_TopRatedSeriesByGenre,G7,containment_family,4.0780437040666575,G2,159.41339150376731,38.0906530366016
