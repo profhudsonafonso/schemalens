@@ -1,0 +1,7 @@
+official_id,query_name,scale_label,run_phase,best_config,best_design_pattern,best_p95_ms,best_primary_config,best_primary_p95_ms,primary_regret
+IC3,IC3_FriendsAndFriendsOfFriendsInCountries,sf1,hot,G7,containment_baseline,191.8174951424589,G3,196.6271597528248,0.025074170668289986
+IC5,IC5_NewGroups,sf1,hot,G6,referenced_or_reverse_indexed_edges,176.75362160953227,G0,185.6731383522856,0.05046299284581281
+INS6,INS6_AddPost,sf1,hot,G9,hybrid_containment,2.18829244695371,G3,2.343452487548347,0.07090461826097923
+INS7,INS7_AddComment,sf1,hot,G9,hybrid_containment,2.159610408125445,G3,2.172901641461067,0.0061544588253577516
+IS2,IS2_RecentMessagesOfPerson,sf1,hot,G9,hybrid_containment,3.2308551410096698,,,
+IS7,IS7_RepliesOfMessage,sf1,hot,G9,hybrid_containment,11.009078891947864,G0,11.44705885089934,0.0397835244210866

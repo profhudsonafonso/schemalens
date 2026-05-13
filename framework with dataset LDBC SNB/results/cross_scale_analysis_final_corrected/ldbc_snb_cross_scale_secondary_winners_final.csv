@@ -1,0 +1,17 @@
+scale_label,run_phase,official_id,query_name,best_config,best_design_pattern,best_p95_ms,best_primary_config,best_primary_p95_ms,primary_regret
+sf0.1,hot,IC5,IC5_NewGroups,G7,containment_baseline,135.32296839985065,G0,158.65669925042312,0.1724299365176962
+sf0.1,hot,IC7,IC7_RecentLikers,G4,explicit_edge_collection,7.464429102401482,G0,10.14522975165164,0.3591434271092052
+sf0.1,hot,IS2,IS2_RecentMessagesOfPerson,G6,referenced_or_reverse_indexed_edges,2.2557887037692126,,,
+sf1,hot,IC3,IC3_FriendsAndFriendsOfFriendsInCountries,G7,containment_baseline,191.8174951424589,G3,196.6271597528248,0.0250741706682899
+sf1,hot,IC5,IC5_NewGroups,G6,referenced_or_reverse_indexed_edges,176.75362160953227,G0,185.6731383522856,0.0504629928458128
+sf1,hot,INS6,INS6_AddPost,G9,hybrid_containment,2.18829244695371,G3,2.343452487548347,0.0709046182609792
+sf1,hot,INS7,INS7_AddComment,G9,hybrid_containment,2.159610408125445,G3,2.172901641461067,0.0061544588253577
+sf1,hot,IS2,IS2_RecentMessagesOfPerson,G9,hybrid_containment,3.2308551410096698,,,
+sf1,hot,IS7,IS7_RepliesOfMessage,G9,hybrid_containment,11.009078891947864,G0,11.44705885089934,0.0397835244210866
+sf3,hot,IC5,IC5_NewGroups,G7,containment_baseline,193.8014049548656,G3,205.2031500483281,0.0588321075180948
+sf3,hot,IC7,IC7_RecentLikers,G4,explicit_edge_collection,8.036814247316215,G0,9.72743819002062,0.210359962377999
+sf3,hot,INS6,INS6_AddPost,G7,containment_baseline,2.20732415036764,G0,2.5807798199821264,0.1691893189100865
+sf3,hot,INS7,INS7_AddComment,G7,containment_baseline,1.2418729689670729,G0,1.4061904716072602,0.1323142597884695
+sf3,hot,IS2,IS2_RecentMessagesOfPerson,G0,root_with_references,2.7112717303680247,,,
+sf3,hot,IS6,IS6_ForumOfMessage,G0,root_with_references,1.3323502091225234,G7,2.3992693721083924,0.8007798217621285
+sf3,hot,IS7,IS7_RepliesOfMessage,G7,containment_baseline,14.036817901069298,G3,21.146798258996554,0.5065236585697697

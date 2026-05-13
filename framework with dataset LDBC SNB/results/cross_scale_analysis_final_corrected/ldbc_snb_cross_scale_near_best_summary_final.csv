@@ -1,0 +1,4 @@
+scale_label,near_best_preservation,mean_activated_regret
+sf0.1,1.0,0.0
+sf1,0.9545454545454546,0.023536810663730146
+sf3,1.0,0.0

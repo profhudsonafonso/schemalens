@@ -1,0 +1,4 @@
+official_id,query_name,scale_label,run_phase,best_config,best_design_pattern,best_p95_ms,best_primary_config,best_primary_p95_ms,primary_regret
+IC5,IC5_NewGroups,sf0.1,hot,G7,containment_baseline,135.32296839985065,G0,158.65669925042312,0.17242993651769625
+IC7,IC7_RecentLikers,sf0.1,hot,G4,explicit_edge_collection,7.464429102401482,G0,10.14522975165164,0.35914342710920527
+IS2,IS2_RecentMessagesOfPerson,sf0.1,hot,G6,referenced_or_reverse_indexed_edges,2.2557887037692126,,,
