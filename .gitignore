@@ -25,3 +25,52 @@ framework with dataset LDBC SNB/benchmark_artifacts_dir/ldbc_snb_checkpoints/dat
 framework with dataset LDBC SNB/benchmark_artifacts_dir/ldbc_snb_update_volatility_official/update_stream_operations.csv
 
 framework with dataset LDBC SNB/exported_benchmark_bundles/ldbc_snb_sf0_1_mongo_benchmark_bundle/volatility/update_stream_operations.csv
+
+# ------------------------------------------------------------
+# Additional reproducibility cleanup
+# ------------------------------------------------------------
+
+# Jupyter checkpoints anywhere
+**/.ipynb_checkpoints/
+
+# DuckDB local databases and WAL files
+*.duckdb
+*.duckdb.wal
+
+# Generic local database/runtime files
+*.db
+*.sqlite
+*.sqlite3
+
+# MongoDB local runtime/dumps
+mongo_data/
+*.dump
+*.archive
+
+# Downloaded compressed datasets
+downloads/
+*.tar
+*.tar.gz
+*.tar.zst
+*.zip
+*.7z
+
+# Large generated raw datasets
+**/data/
+**/data_sf/
+**/datasf/
+**/data full/
+**/raw_data/
+
+# Keep benchmark results and analysis outputs
+!**/results/
+!**/results/**/*.csv
+!**/results/**/*.json
+!**/results/**/*.ipynb
+!**/results/**/*.log
+
+# Keep benchmark artifacts needed for reproduction
+!**/benchmark_artifacts/
+!**/benchmark_artifacts/**/*.csv
+!**/benchmark_artifacts/**/*.json
+!**/benchmark_artifacts/**/*.md

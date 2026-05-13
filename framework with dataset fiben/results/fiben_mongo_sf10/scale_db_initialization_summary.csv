@@ -1,0 +1,2 @@
+db_name,reused,corporations_inserted,industries_inserted,countries_inserted,securities_inserted,listed_securities_inserted,persons_inserted,financial_service_accounts_inserted,holdings_inserted,transactions_inserted,reports_inserted,report_elements_inserted,statement_elements_inserted,disclosures_inserted,scale_label
+fiben_exec_sf10,False,23240,452,249,27450,27450,50100,97270,534473,500000,48301,8120084,431426,208158,sf10

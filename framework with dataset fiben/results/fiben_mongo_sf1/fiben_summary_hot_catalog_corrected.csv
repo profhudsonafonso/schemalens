@@ -1,0 +1,2 @@
+scale_label,n_queries,avg_DSR,top1_preservation,top3_preservation,near_best_preservation,mean_activated_regret,mean_primary_regret,primary_winners,secondary_winners,control_winners,activation_source
+sf1,10,0.5000000000000001,0.8,1.0,0.8,0.15710601267973692,0.25635704143291915,4,4,2,catalog:final_benchmark_group

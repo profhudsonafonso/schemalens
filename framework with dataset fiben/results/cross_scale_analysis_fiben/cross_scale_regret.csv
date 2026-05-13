@@ -1,0 +1,11 @@
+official_id,query_name,sf1,sf10,sf30
+Q1,Q1_CompanyProfileIBM,1.3903518947787057,0.1556969272211012,0.0
+Q10,Q10_CreateAccountHoldingAndBuyTransaction,0.1910690660479382,0.0,0.0030492695492486
+Q2,Q2_CompanyWithIndustryCountryAndListedSecurities,0.0,0.0,0.0689135546268886
+Q3,Q3_SecuritiesHeldInEachFinancialServiceAccount,0.0,0.0,0.0
+Q4,Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,0.1807082320186638,0.0,0.0
+Q5,Q5_ReportsAndMetricDataOfCompany,0.0,0.676816449998192,0.004768456445382
+Q6,Q6_TechUSListedSecuritiesWithHighLastTradedValue,0.0871506261065414,0.6715243979123972,0.0
+Q7,Q7_PersonsWhoBoughtMoreIBMThanSold,0.0,0.0,0.0
+Q8,Q8_IBMTransactionsBelowAverageSellingPrice,0.6365470325125412,0.0,0.0
+Q9,Q9_PersonsWhoBoughtAndSoldSameStock,0.0777435628648014,0.0,0.0010015569422278

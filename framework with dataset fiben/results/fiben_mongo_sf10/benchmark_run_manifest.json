@@ -1,0 +1,18 @@
+{
+  "script": "run_fiben_mongo_benchmark.py",
+  "data_dir": "/home/hudson/Documents/framework_test/fiben/data_sf/sf10",
+  "artifacts_dir": "/home/hudson/Documents/framework_test/fiben/benchmark_artifacts_dir/fiben_mongo_configurations",
+  "results_dir": "/home/hudson/Documents/framework_test/fiben/results/fiben_mongo_sf10",
+  "scale_label": "sf10",
+  "execution_db_name": "fiben_exec_sf10",
+  "execution_log_file": "/home/hudson/Documents/framework_test/fiben/results/fiben_mongo_sf10/execution.log",
+  "n_selected_candidates": 60,
+  "n_selected_plan_rows": 60,
+  "repetitions": 10,
+  "phases": [
+    "cold",
+    "hot"
+  ],
+  "row_limit": null,
+  "batch_size": 500000
+}

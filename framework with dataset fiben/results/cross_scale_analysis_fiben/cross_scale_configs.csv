@@ -1,0 +1,11 @@
+official_id,query_name,sf1,sf10,sf30,stable_across_scales
+Q1,Q1_CompanyProfileIBM,CONTROL,CONTROL,G0,False
+Q10,Q10_CreateAccountHoldingAndBuyTransaction,G9,G3,G7,False
+Q2,Q2_CompanyWithIndustryCountryAndListedSecurities,G5,G1,G9,False
+Q3,Q3_SecuritiesHeldInEachFinancialServiceAccount,G5,G4,G5,False
+Q4,Q4_CompaniesReachedFromPersonThroughAccountHoldingListedSecurity,CONTROL,G5,G4,False
+Q5,Q5_ReportsAndMetricDataOfCompany,G2,G9,CONTROL,False
+Q6,Q6_TechUSListedSecuritiesWithHighLastTradedValue,G9,CONTROL,G3,False
+Q7,Q7_PersonsWhoBoughtMoreIBMThanSold,G4,G6,G3,False
+Q8,Q8_IBMTransactionsBelowAverageSellingPrice,G7,G5,G5,False
+Q9,Q9_PersonsWhoBoughtAndSoldSameStock,G7,G5,G7,False
