@@ -13,6 +13,15 @@ benchmark_artifacts_dir/**/checkpoints/
 # notebook cache
 .ipynb_checkpoints/
 
+# ignore heavy artifacts
+benchmark_artifacts_dir/**/dataframes/
+benchmark_artifacts_dir/**/checkpoints/
+
+# BUT keep final benchmark summaries
+!benchmark_artifacts_dir/**/benchmark_aggregate_results.csv
+!benchmark_artifacts_dir/**/benchmark_raw_results.csv
+!benchmark_artifacts_dir/**/benchmark_run_manifest.json
+
 # environments
 .venv/
 env/
